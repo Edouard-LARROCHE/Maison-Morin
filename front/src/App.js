@@ -1,7 +1,11 @@
+import Cookie from './components/Cookie';
+import Home from './pages/Home';
+
 function App() {
   return (
-    <div className='App'>
-      <h1>Maison Morin</h1>
+    <div>
+      <Cookie />
+      <Home />
     </div>
   );
 }

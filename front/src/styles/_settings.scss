@@ -1,9 +1,9 @@
-// Helvetica, Arial, sans-serif / font maison morin
+@import url('https://fonts.googleapis.com/css2?family=Cardo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:wght@300&display=swap');
 
 /********* FONT ************/
-$font-1: '';
-$font-2: '';
-$font-3: '';
+$font-1: 'Cardo', serif;
+$font-2: 'Cormorant', serif;
 
 /********* COLOR ************/
 
@@ -25,6 +25,18 @@ a {
 
 ul {
   list-style-type: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: $font-2;
+}
+
+p,
+span {
+  font-family: $font-1;
 }
 
 /********* DARK MODE ************/
