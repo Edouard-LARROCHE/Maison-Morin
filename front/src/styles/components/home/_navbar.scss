@@ -1,0 +1,47 @@
+/*********** NAV BAR *************/
+
+.all-nav {
+  display: grid;
+  grid-template-columns: 40% 20% 40%;
+
+  .nav-bar ul {
+    display: flex;
+    justify-content: center;
+    padding-top: 2rem;
+
+    li {
+      margin: 2rem;
+    }
+  }
+  /*********** LOGO *************/
+
+  .logo-home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1rem;
+
+    img {
+      width: 4rem;
+      cursor: pointer;
+    }
+
+    h2 {
+      letter-spacing: 0.2rem;
+      padding-top: 1rem;
+    }
+  }
+}
+
+/*********** OTHER NAV *************/
+
+.other-nav ul {
+  display: flex;
+  justify-content: center;
+  padding-top: 2rem;
+
+  li {
+    margin: 2rem;
+  }
+}

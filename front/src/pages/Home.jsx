@@ -1,12 +1,12 @@
 import React from 'react';
+import Footer from '../components/home/Footer';
+import NavBar from '../components/home/NavBar';
 
 const Home = () => {
   return (
-    <div className='home'>
-      <div className='logo-home'>
-        <img src='/logo/logo-morin.png' alt='logo-morin' />
-        <h2>MAISON MORIN</h2>
-      </div>
+    <div>
+      <NavBar />
+      <Footer />
     </div>
   );
 };

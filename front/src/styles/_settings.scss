@@ -1,15 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Cardo&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cormorant:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cardo&family=Cormorant:wght@300&display=swap');
 
 /********* FONT ************/
 $font-1: 'Cardo', serif;
 $font-2: 'Cormorant', serif;
 
 /********* COLOR ************/
+$color-4: #e5e5db;
+$color-5: #d4d5cd;
 
 $color-1: #f6fbf8;
 $color-2: #032953;
 $color-3: #f7ce7c;
+
+$white: #ddd;
+$black: #333;
 
 /********* STYLE GLOBAL ************/
 * {
@@ -21,10 +25,21 @@ $color-3: #f7ce7c;
 a {
   text-decoration: none;
   cursor: pointer;
+  color: black;
 }
 
 ul {
   list-style-type: none;
+}
+
+.underline {
+  text-decoration: none;
+  background: linear-gradient(to top, $black 0%, $black 10%, transparent 10.01%) no-repeat left bottom / 0 100%;
+  transition: background-size 0.5s;
+
+  &:hover {
+    background-size: 100% 100%;
+  }
 }
 
 h1,
