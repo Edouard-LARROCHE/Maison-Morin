@@ -1,0 +1,30 @@
+// Helvetica, Arial, sans-serif / font maison morin
+
+/********* FONT ************/
+$font-1: '';
+$font-2: '';
+$font-3: '';
+
+/********* COLOR ************/
+
+$color-1: #f6fbf8;
+$color-2: #032953;
+$color-3: #f7ce7c;
+
+/********* STYLE GLOBAL ************/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/********* DARK MODE ************/
