@@ -47,7 +47,9 @@ const Footer = () => {
             </Link>
           </li>
           <li>
-            <p>Cookies</p>
+            <Link to='/cookie'>
+              <p>Cookies</p>
+            </Link>
           </li>
         </ul>
         <ul className='copy'>
