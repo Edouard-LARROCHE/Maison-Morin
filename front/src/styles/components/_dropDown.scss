@@ -1,0 +1,16 @@
+.drop-down {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .item {
+    display: flex;
+  }
+}
+
+.isVisible {
+  visibility: visible;
+}
+.isHidden {
+  visibility: hidden;
+}
