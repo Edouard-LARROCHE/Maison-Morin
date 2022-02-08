@@ -3,6 +3,7 @@ import CopyrightIcon from '@material-ui/icons/Copyright';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import TwitterIcon from '@material-ui/icons/Twitter';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -41,7 +42,9 @@ const Footer = () => {
             <h2>NOS CONDITIONS</h2>
           </li>
           <li>
-            <p>Mentions légales</p>
+            <Link to='/mentions-legales'>
+              <p>Mentions légales</p>
+            </Link>
           </li>
           <li>
             <p>Cookies</p>
