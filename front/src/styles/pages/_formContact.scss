@@ -1,11 +1,9 @@
 .page-contact {
   display: grid;
-  grid-template-columns: 40% 20% 40%;
-  margin: 0 150px 0 150px;
-  padding: 4rem;
+  grid-template-columns: 50% 50%;
+  margin: 150px 400px 150px 400px;
 
-  .left-content,
-  .info-contact {
+  .left-content {
     display: flex;
     justify-content: center;
     align-items: center;

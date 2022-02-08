@@ -13,7 +13,7 @@ const Form = () => {
       <form className='contact-form'>
         <TextField
           className='text-field'
-          style={{ width: '18rem', paddingBottom: '3rem' }}
+          style={{ width: '18rem', paddingBottom: '2rem' }}
           type='text'
           id='name'
           name='name'
@@ -23,7 +23,7 @@ const Form = () => {
         />
         <TextField
           className='text-field'
-          style={{ width: '18rem', paddingBottom: '3rem' }}
+          style={{ width: '18rem', paddingBottom: '2rem' }}
           type='text'
           id='lastName'
           name='lastName'
@@ -33,7 +33,7 @@ const Form = () => {
         />
         <TextField
           className='text-field'
-          style={{ width: '18rem', paddingBottom: '3rem' }}
+          style={{ width: '18rem', paddingBottom: '2rem' }}
           type='tel'
           id='tel'
           name='tel'
@@ -45,7 +45,7 @@ const Form = () => {
 
         <TextField
           className='text-field'
-          style={{ width: '18rem', paddingBottom: '3rem' }}
+          style={{ width: '18rem', paddingBottom: '2rem' }}
           type='email'
           id='email'
           autoComplete='off'
@@ -57,7 +57,7 @@ const Form = () => {
 
         <TextField
           className='text-field'
-          style={{ width: '18rem', paddingBottom: '3rem' }}
+          style={{ width: '18rem', paddingBottom: '2rem' }}
           multiline
           minRows={2}
           maxRows={4}
@@ -69,10 +69,9 @@ const Form = () => {
           value={message}
         />
 
-        <div className='message-err' />
-
         <div className='form-message' />
       </form>
+      <p>Champs requis *</p>
       <div className='button'>
         <div className='effect effect-1'>
           <p>Envoyer</p>

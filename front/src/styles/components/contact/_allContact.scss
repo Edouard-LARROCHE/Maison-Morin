@@ -1,57 +1,50 @@
 /*********** CONTENT FORM **********/
 
 .content-form {
-  h2 {
-    font-size: 3rem;
+  text-align: center;
+  h1 {
+    font-size: 1.2rem;
     letter-spacing: 0.2rem;
-    padding-bottom: 1rem;
+    padding-bottom: 0.7rem;
     color: $black;
   }
 
   h3 {
-    padding-bottom: 1rem;
-    letter-spacing: 0.05rem;
+    font-size: 0.9rem;
+    letter-spacing: 0.1rem;
   }
 
   img {
     width: 25rem;
+    margin-top: 1rem;
     border-radius: 3%;
     box-shadow: 5px -5px 5px 0px rgba(0, 0, 0, 0.3);
   }
 }
 
-/*********** CONTACT **********/
-
-.contact {
-  h1 {
-    padding-bottom: 1rem;
-  }
-
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-}
-
 /*********** FORM **********/
 
 .form {
-  display: flex;
-  flex-direction: column;
-  padding: 15rem;
+  padding-top: 10rem;
+
+  form {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .button {
   display: flex;
   justify-content: space-around;
+  cursor: pointer;
 
   div {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #f2f5f8;
 
     p {
-      color: #444;
+      color: $black;
       font-size: 14px;
       font-family: Roboto, sans-serif;
     }
