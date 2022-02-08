@@ -1,1 +1,55 @@
 /*********** NOTICE **********/
+
+.legal-notice {
+  h2 {
+    padding-bottom: 1rem;
+  }
+
+  ul {
+    padding-left: 1rem;
+  }
+  li {
+    margin: 0.5rem 0 0.5rem 0;
+  }
+}
+
+.hosted {
+  padding: 1rem 0 1rem 1rem;
+
+  h3 {
+    margin: 0.5rem 0 0.5rem 0;
+  }
+  p {
+    margin: 0.5rem 0 0.5rem 1rem;
+  }
+}
+
+.dev {
+  padding-left: 1rem;
+
+  h3 {
+    margin: 0.5rem 0 0.5rem 0;
+  }
+  p,
+  span,
+  div {
+    margin: 0.5rem 0 0.5rem 1rem;
+  }
+}
+
+/*********** COPYRIGHT **********/
+
+.copy-right {
+  h2 {
+    padding: 2rem 0 1rem 0;
+  }
+}
+
+/*********** COPYRIGHT **********/
+
+.user-traces {
+  padding-bottom: 3rem;
+  h2 {
+    padding: 2rem 0 1rem 0;
+  }
+}
