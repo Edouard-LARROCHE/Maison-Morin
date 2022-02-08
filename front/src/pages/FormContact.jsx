@@ -9,12 +9,14 @@ const FormContact = () => {
   return (
     <>
       <NavBar />
-      <div>
-        <div>
+      <div className='page-contact'>
+        <div className='left-content'>
           <ContentForm />
+        </div>
+        <div className='info-contact'>
           <Contact />
         </div>
-        <div>
+        <div className='right-content'>
           <Form />
         </div>
       </div>
