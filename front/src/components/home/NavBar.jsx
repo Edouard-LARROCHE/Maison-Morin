@@ -22,7 +22,7 @@ const NavBar = () => {
             </Link>
           </li>
           <li className='underline'>
-            <Link to='/'>
+            <Link to='/contact'>
               <p>Nous contacter</p>
             </Link>
           </li>
