@@ -1,36 +1,29 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-const data = {
-  nav: [
-    {
-      mainTitle: 'morin1',
-      subItem: [{ title: 'item1' }, { title: 'item2' }],
-    },
-    {
-      mainTitle: 'morin2',
-      subItem: [{ title: 'item1' }, { title: 'item2' }],
-    },
-    {
-      mainTitle: 'morin3',
-      subItem: [{ title: 'item1' }, { title: 'item2' }],
-    },
-    {
-      mainTitle: 'morin4',
-      subItem: [{ title: 'item1' }, { title: 'item2' }],
-    },
-  ],
-};
+const DataItem = ({ navData, arrow }) => {
+  const [showDropdown, setShowDropdown] = useState(false);
 
-const DataItem = () => {
+  function handleEnter() {
+    setShowDropdown(true);
+  }
+
+  function handleLeave() {
+    setShowDropdown(false);
+  }
   return (
-    <div className='header-nav'>
-      <div className='content-nav'>
-        <ul>
-          {data.map((item) => {
-            return;
-          })}
-        </ul>
-      </div>
+    <div className='down'>
+      <li className='navitem' onMouseEnter={handleEnter} onMouseLeave={handleLeave}>
+        {navData.mainTitle} {arrow}
+      </li>
+      {showDropdown && (
+        <div className='dropdown' onMouseEnter={handleEnter} onMouseLeave={handleLeave}>
+          {navData.subItem.map((item) => (
+            <div className='items' key={item.title}>
+              {item.title}
+            </div>
+          ))}
+        </div>
+      )}
     </div>
   );
 };
