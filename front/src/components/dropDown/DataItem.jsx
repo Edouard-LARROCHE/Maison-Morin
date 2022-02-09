@@ -1,23 +1,25 @@
 import React from 'react';
 
-const data = [
-  {
-    mainTitle: 'morin1',
-    subItem: [{ title: 'item1' }, { title: 'item2' }],
-  },
-  {
-    mainTitle: 'morin2',
-    subItem: [{ title: 'item1' }, { title: 'item2' }],
-  },
-  {
-    mainTitle: 'morin3',
-    subItem: [{ title: 'item1' }, { title: 'item2' }],
-  },
-  {
-    mainTitle: 'morin4',
-    subItem: [{ title: 'item1' }, { title: 'item2' }],
-  },
-];
+const data = {
+  nav: [
+    {
+      mainTitle: 'morin1',
+      subItem: [{ title: 'item1' }, { title: 'item2' }],
+    },
+    {
+      mainTitle: 'morin2',
+      subItem: [{ title: 'item1' }, { title: 'item2' }],
+    },
+    {
+      mainTitle: 'morin3',
+      subItem: [{ title: 'item1' }, { title: 'item2' }],
+    },
+    {
+      mainTitle: 'morin4',
+      subItem: [{ title: 'item1' }, { title: 'item2' }],
+    },
+  ],
+};
 
 const DataItem = () => {
   return (
@@ -25,7 +27,7 @@ const DataItem = () => {
       <div className='content-nav'>
         <ul>
           {data.map((item) => {
-            return <div key={item}> {} </div>;
+            return;
           })}
         </ul>
       </div>
