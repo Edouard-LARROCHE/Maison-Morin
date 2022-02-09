@@ -8,6 +8,39 @@ const Form = () => {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
 
+  const sendBack = (templatedId, variables) => {
+    window.emailjs.send('service_ioi4pk3', templatedId, variables).then(() => {
+      setName('');
+      setLastName('');
+      setTel('');
+      setEmail('');
+      setMessage('');
+    });
+  };
+
+  const isEmail = () => {
+    const regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    if (email.match(regex)) {
+      return true;
+    } else {
+      return '';
+    }
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (name && isEmail() && message) {
+      sendBack('template_gvs6rqv', {
+        name,
+        lastName,
+        tel,
+        email,
+        message,
+      });
+    }
+  };
+
   return (
     <div className='form'>
       <form className='contact-form'>
@@ -72,7 +105,7 @@ const Form = () => {
         <div className='form-message' />
       </form>
       <p>Champs requis *</p>
-      <div className='button'>
+      <div className='button' onClick={handleSubmit}>
         <div className='effect effect-1'>
           <p>Envoyer</p>
         </div>
