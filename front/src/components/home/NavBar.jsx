@@ -3,7 +3,7 @@ import { TextField } from '@material-ui/core';
 import SearchIcon from '@material-ui/icons/Search';
 import PersonIcon from '@material-ui/icons/Person';
 import { Link } from 'react-router-dom';
-import DropDown from '../DropDown';
+import DropDown from '../../pages/DropDown';
 
 const NavBar = () => {
   const [name, setName] = useState('');
