@@ -63,7 +63,7 @@ const Footer = () => {
               <CopyrightIcon className='copy-icon' style={{ fontSize: 'small' }} /> Copyright Maison Morin
             </span>
           </li>
-          <li> {new Date().getFullYear()} </li>
+          <li style={{ color: '#012f6b' }}> {new Date().getFullYear()} </li>
         </ul>
       </div>
       <div className='social'>

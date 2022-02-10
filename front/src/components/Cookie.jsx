@@ -9,10 +9,10 @@ const Cookie = () => {
         buttonText="J'accepte"
         cookieName='myAwesomeCookieName2'
         style={{ background: '#032953' }}
-        buttonStyle={{ background: 'white', color: 'black', fontSize: '12px' }}
+        buttonStyle={{ background: '#ddb355', color: '#012f6b', fontSize: '12px' }}
         expires={0}>
         Ce site utilise des cookies pour améliorer l'expérience utilisateur.{' '}
-        <span style={{ fontSize: '12px', marginLeft: '1rem' }}>Maison Morin respecte votre vie privée</span>
+        <span style={{ fontSize: '12px', marginLeft: '1rem', color: 'white' }}>Maison Morin respecte votre vie privée</span>
       </CookieConsent>
     </div>
   );

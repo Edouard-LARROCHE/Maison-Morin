@@ -39,10 +39,10 @@ const NavBar = () => {
           <ul>
             <li>
               <TextField className='text-field' type='text' onChange={(e) => setName(e.target.value)} placeholder='Rechercher' value={name} />
-              <SearchIcon style={{ cursor: 'pointer' }} />
+              <SearchIcon style={{ cursor: 'pointer', color: '#012f6b' }} />
             </li>
             <li>
-              <PersonIcon style={{ cursor: 'pointer' }} />
+              <PersonIcon style={{ cursor: 'pointer', color: '#012f6b' }} />
             </li>
           </ul>
         </div>
