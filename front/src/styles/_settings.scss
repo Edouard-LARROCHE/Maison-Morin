@@ -9,8 +9,8 @@ $color-4: #e5e5db;
 $color-5: #d4d5cd;
 
 $color-1: #f6fbf8;
-$color-2: #032953;
-$color-3: #f7ce7c;
+$color-2: #012f6b;
+$color-3: #ddb355;
 
 $white: #ddd;
 $black: #333;
@@ -34,7 +34,7 @@ ul {
 
 .underline {
   text-decoration: none;
-  background: linear-gradient(to top, $black 0%, $black 10%, transparent 10.01%) no-repeat left bottom / 0 100%;
+  background: linear-gradient(to top, $color-3 0%, $color-3 10%, transparent 10.01%) no-repeat left bottom / 0 100%;
   transition: background-size 0.5s;
 
   &:hover {
@@ -47,11 +47,13 @@ h2,
 h3,
 h4 {
   font-family: $font-2;
+  color: $color-2;
 }
 
 p,
 span {
   font-family: $font-1;
+  color: $color-2;
 }
 
 /********* DARK MODE ************/

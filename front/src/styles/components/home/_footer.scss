@@ -9,6 +9,7 @@
     background: $color-2;
 
     img {
+      width: 9rem;
       display: flex;
       margin: 0 auto;
       padding: 1rem 0 1rem 0;
@@ -37,7 +38,7 @@
     margin: 0.2rem;
 
     &:hover {
-      opacity: 0.5;
+      color: $color-3;
     }
   }
 
