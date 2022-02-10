@@ -27,8 +27,46 @@ const Form = () => {
     }
   };
 
+  const succesMessage = () => {
+    const mess = document.querySelector(".form-message");
+    const regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    mess.innerHTML = 'Message envoyé';
+    console.log(mess);
+    if (name && (email.match(regex)) && message) {
+      mess.style.display = 'block';
+    } else {
+      mess.style.display = 'none';
+    }
+  };
+
+  const errGlobal = () => {
+    const messErr = document.querySelector('.form-err');
+    messErr.innerHTML = 'Merci de remplir les champs requis *';
+    if (message && email && name) {
+      messErr.style.display = 'none';
+    } else {
+      messErr.style.display = 'block';
+    }
+  };
+
+  const errMail = () => {
+    const messMail = document.querySelector(".email-err");
+    const regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    messMail.innerHTML = 'Renseigner un email correcte'
+    console.log(messMail);
+    if (email.match(regex)) {
+      messMail.style.display = 'none';
+    } else {
+      messMail.style.display = 'block';
+    }
+  };
+
+
   const handleSubmit = (e) => {
     e.preventDefault();
+    succesMessage();
+    errMail('');
+    errGlobal('');
 
     if (name && isEmail() && message) {
       sendBack('template_gvs6rqv', {
@@ -38,12 +76,16 @@ const Form = () => {
         email,
         message,
       });
+    } else {
+      errMail(); errGlobal(); succesMessage();
     }
   };
 
   return (
     <div className='form'>
       <form className='contact-form'>
+        <div className='nom-err' />
+
         <TextField
           className='text-field'
           style={{ width: '18rem', paddingBottom: '2rem' }}
@@ -87,6 +129,7 @@ const Form = () => {
           placeholder='Adresse mail *'
           value={email}
         />
+        <div className='text-err' />
 
         <TextField
           className='text-field'
@@ -101,10 +144,9 @@ const Form = () => {
           placeholder='Message *'
           value={message}
         />
-
+        <div className="form-err"></div>
         <div className='form-message' />
       </form>
-      <p>Champs requis *</p>
       <div className='button' onClick={handleSubmit}>
         <div className='effect effect-1'>
           <p>Envoyer</p>
