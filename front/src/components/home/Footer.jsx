@@ -9,7 +9,7 @@ const Footer = () => {
   return (
     <div className='footer'>
       <div className='top-footer'>
-        <img src='/logo/logo-morin.png' alt='logo-morin' />
+        <img src='/logo/Or.png' alt='logo-morin' />
       </div>
       <div className='bottom-footer'>
         <ul>

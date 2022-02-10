@@ -32,9 +32,8 @@ const NavBar = () => {
         </div>
         <div className='logo-home'>
           <Link to='/'>
-            <img src='/logo/logo-morin.png' alt='logo-morin' />
+            <img src='/logo/Maison Morin Bleu.png' alt='logo-morin' />
           </Link>
-          <h2>MAISON MORIN</h2>
         </div>
         <div className='other-nav'>
           <ul>
