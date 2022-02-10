@@ -4,24 +4,24 @@ import DataItem from './DataItem';
 
 const data = [
   {
-    mainTitle: 'morin1',
+    mainTitle: 'TRAITEUR',
     arrow: <KeyboardArrowDownIcon style={{ size: 'small' }} />,
-    subItem: [{ title: 'item1' }, { title: 'item2' }],
+    subItem: [{ title: 'VIANDE' }, { title: 'POISSON' }],
   },
   {
-    mainTitle: 'morin2',
+    mainTitle: 'PATISSERIE',
     arrow: <KeyboardArrowDownIcon style={{ size: 'small' }} />,
-    subItem: [{ title: 'item3' }, { title: 'item4' }],
+    subItem: [{ title: 'CAKES' }, { title: 'FRUITS' }],
   },
   {
-    mainTitle: 'morin3',
+    mainTitle: 'CAVE À VIN',
     arrow: <KeyboardArrowDownIcon style={{ size: 'small' }} />,
-    subItem: [{ title: 'item5' }, { title: 'item6' }],
+    subItem: [{ title: 'DON PADRE' }, { title: 'DON MADRE' }],
   },
   {
-    mainTitle: 'morin4',
+    mainTitle: 'DELICES',
     arrow: <KeyboardArrowDownIcon style={{ size: 'small' }} />,
-    subItem: [{ title: 'item7' }, { title: 'item8' }],
+    subItem: [{ title: 'CHOCO' }, { title: 'TRUFFES' }],
   },
 ];
 

@@ -3,7 +3,9 @@
 .header-nav {
   position: relative;
   display: flex;
-  margin-top: 1rem;
+  margin: 1rem 0 1rem 0;
+  height: 8rem;
+  color: $color-2;
 
   ul {
     display: flex;
@@ -14,21 +16,30 @@
 
 /**********DATA ITEM ***********/
 .down {
-  display: flex;
-  flex-direction: column;
+  font-family: $font-1;
 
   .navitem {
-    margin: 0 2rem 0 2rem;
-    font-family: $font-1;
+    display: flex;
+    margin: 1.5rem 3rem 0 3rem;
+    &:hover {
+      color: $color-3;
+    }
+  }
+
+  .arrow {
     cursor: pointer;
   }
+}
+.dropdown {
+  display: flex;
+  justify-content: center;
+}
 
-  .dropdown {
-    display: flex;
-    justify-content: center;
-  }
+.items {
+  cursor: pointer;
+  margin: 0.5rem 0.5rem 0 0.5rem;
 
-  .items {
-    margin: 0 0.5rem 0 0.5rem;
+  &:hover {
+    color: $color-3;
   }
 }

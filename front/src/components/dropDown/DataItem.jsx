@@ -12,9 +12,12 @@ const DataItem = ({ navData, arrow }) => {
   }
   return (
     <div className='down'>
-      <li className='navitem' onMouseEnter={handleEnter} onMouseLeave={handleLeave}>
-        {navData.mainTitle} {arrow}
-      </li>
+      <div className='navitem'>
+        <li>{navData.mainTitle}</li>
+        <li className='arrow' onMouseEnter={handleEnter} onMouseLeave={handleLeave}>
+          {arrow}
+        </li>
+      </div>
       {showDropdown && (
         <div className='dropdown' onMouseEnter={handleEnter} onMouseLeave={handleLeave}>
           {navData.subItem.map((item) => (
