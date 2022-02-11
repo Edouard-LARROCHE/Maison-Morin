@@ -12,7 +12,7 @@
 
   .modal-wrapper {
     width: 20rem;
-    height: 10rem;
+    height: 12rem;
   }
 
   .modal {
@@ -39,4 +39,9 @@
   form {
     padding: 1rem 3rem 0 3rem;
   }
+}
+
+.err-login {
+  font-size: 0.7rem;
+  color: red;
 }
