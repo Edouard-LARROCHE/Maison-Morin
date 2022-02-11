@@ -9,7 +9,7 @@ const data = [
     subItem: [{ title: 'VIANDE' }, { title: 'POISSON' }],
   },
   {
-    mainTitle: 'PATISSERIE',
+    mainTitle: 'PATISSERIES',
     arrow: <KeyboardArrowDownIcon style={{ size: 'small' }} />,
     subItem: [{ title: 'CAKES' }, { title: 'FRUITS' }],
   },
