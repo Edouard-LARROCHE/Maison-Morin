@@ -1,24 +1,35 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PersonIcon from '@material-ui/icons/Person';
+import { TextField } from '@material-ui/core';
 import useModal from './useModal';
 import Modal from './modal';
 
 const IndexModal = () => {
   const { isShowing: isLoginFormShowed, toggle: toggleLoginForm } = useModal();
 
+  const [name, setName] = useState('');
+  const [password, setPassword] = useState('');
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  };
+
   return (
-    <div>
+    <div className='login-component'>
       <PersonIcon className='modal-toggle' onClick={toggleLoginForm} style={{ cursor: 'pointer', color: '#012f6b' }} />
-      <Modal isShowing={isLoginFormShowed} hide={toggleLoginForm} title='Login'>
+      <Modal isShowing={isLoginFormShowed} hide={toggleLoginForm}>
         <form>
-          <div className='form-group'>
-            <input type='text' placeholder='Username' />
-          </div>
-          <div className='form-group'>
-            <input type='text' placeholder='Password' />
-          </div>
-          <div className='form-group'>
-            <input type='submit' value='Login' />
+          <TextField onChange={(e) => setName(e.target.value)} value={name} type='text' placeholder='Nom' style={{ paddingBottom: '0.5rem' }} />
+
+          <TextField
+            onChange={(e) => setPassword(e.target.value)}
+            value={password}
+            type='text'
+            placeholder='Mot de passe'
+            style={{ paddingBottom: '1rem' }}
+          />
+          <div className='button' onClick={handleSubmit}>
+            <p>Connexion</p>
           </div>
         </form>
       </Modal>
