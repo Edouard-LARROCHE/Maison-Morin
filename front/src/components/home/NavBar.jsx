@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { TextField } from '@material-ui/core';
 import SearchIcon from '@material-ui/icons/Search';
-import PersonIcon from '@material-ui/icons/Person';
 import { Link } from 'react-router-dom';
+import IndexModal from '../LoginModal/indexModal';
 
 const NavBar = () => {
   const [name, setName] = useState('');
@@ -41,7 +41,7 @@ const NavBar = () => {
               <SearchIcon style={{ cursor: 'pointer', color: '#012f6b' }} />
             </li>
             <li>
-              <PersonIcon style={{ cursor: 'pointer', color: '#012f6b' }} />
+              <IndexModal />
             </li>
           </ul>
         </div>
