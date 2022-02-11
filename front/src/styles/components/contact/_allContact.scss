@@ -5,7 +5,7 @@
   h1 {
     font-size: 1.2rem;
     letter-spacing: 0.2rem;
-    padding-bottom: 0.7rem;
+    padding-bottom: .7rem;
     color: $black;
   }
 
@@ -24,14 +24,10 @@
 
 /*********** FORM **********/
 
-.form {
-  padding-top: 10rem;
+// .form {
+//   padding-top: 5rem;
 
-  form {
-    display: flex;
-    flex-direction: column;
-  }
-}
+// }
 
 .button {
   display: flex;
@@ -55,7 +51,7 @@
   display: inline-block;
   position: relative;
   text-decoration: none;
-  color: $black;
+  color: $color-3;
   padding: 20px 0px;
   margin: 5px;
   width: 120px;
@@ -66,9 +62,13 @@
 .effect.effect-1 {
   transition: all 0.2s linear 0s;
 
+  p {
+    color: $color-3;
+  }
+
   &:before {
     content: '→';
-    color: $black;
+    color: $color-3;
     font-family: FontAwesome;
     font-size: 15px;
     position: absolute;

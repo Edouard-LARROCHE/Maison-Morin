@@ -31,7 +31,6 @@ const Form = () => {
     const mess = document.querySelector(".form-message");
     const regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
     mess.innerHTML = 'Message envoyé';
-    console.log(mess);
     if (name && (email.match(regex)) && message) {
       mess.style.display = 'block';
     } else {
@@ -61,14 +60,12 @@ const Form = () => {
     const messMail = document.querySelector(".email-err");
     const regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
     messMail.innerHTML = 'Renseigner un email correcte'
-    console.log(messMail);
     if (email.match(regex)) {
       messMail.style.display = 'none';
     } else {
       messMail.style.display = 'block';
     }
   };
-
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -90,14 +87,11 @@ const Form = () => {
     }
   };
 
-  return (
-    <div className='form'>
-      <form className='contact-form'>
+  return ( <>
         <div className='nom-err' />
-
         <TextField
-          className='text-field'
-          style={{ width: '18rem', paddingBottom: '2rem' }}
+          className='text-field-name'
+          style={{ paddingBottom: '2rem' }}
           type='text'
           id='name'
           name='name'
@@ -106,8 +100,8 @@ const Form = () => {
           value={name}
         />
         <TextField
-          className='text-field'
-          style={{ width: '18rem', paddingBottom: '2rem' }}
+          className='text-field-last-name'
+          style={{ paddingBottom: '2rem' }}
           type='text'
           id='lastName'
           name='lastName'
@@ -116,8 +110,8 @@ const Form = () => {
           value={lastName}
         />
         <TextField
-          className='text-field'
-          style={{ width: '18rem', paddingBottom: '2rem' }}
+          className='text-field-tel'
+          style={{ paddingBottom: '2rem' }}
           type='tel'
           id='tel'
           name='tel'
@@ -126,10 +120,9 @@ const Form = () => {
           value={tel}
         />
         <div className='email-err' />
-
         <TextField
-          className='text-field'
-          style={{ width: '18rem', paddingBottom: '2rem' }}
+          className='text-field-email'
+          style={{ paddingBottom: '2rem' }}
           type='email'
           id='email'
           autoComplete='off'
@@ -139,13 +132,12 @@ const Form = () => {
           value={email}
         />
         <div className='text-err' />
-
         <TextField
-          className='text-field'
-          style={{ width: '18rem', paddingBottom: '2rem' }}
+          className='text-field-message'
+          style={{ paddingBottom: '2rem' }}
           multiline
-          minRows={2}
-          maxRows={4}
+          minRows={1}
+          maxRows={6}
           type='textarea'
           id='message'
           name='message'
@@ -155,13 +147,12 @@ const Form = () => {
         />
         <div className="form-err"></div>
         <div className='form-message' />
-      </form>
       <div className='button' onClick={handleSubmit}>
         <div className='effect effect-1'>
           <p>Envoyer</p>
         </div>
       </div>
-    </div>
+      </>
   );
 };
 
