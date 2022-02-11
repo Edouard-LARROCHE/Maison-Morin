@@ -19,15 +19,13 @@
   font-family: $font-1;
 
   .navitem {
+    cursor: pointer;
     display: flex;
     margin: 1.5rem 3rem 0 3rem;
+
     &:hover {
       color: $color-3;
     }
-  }
-
-  .arrow {
-    cursor: pointer;
   }
 }
 .dropdown {

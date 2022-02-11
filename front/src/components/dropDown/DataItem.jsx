@@ -12,11 +12,9 @@ const DataItem = ({ navData, arrow }) => {
   }
   return (
     <div className='down'>
-      <div className='navitem'>
+      <div className='navitem' onMouseEnter={handleEnter} onMouseLeave={handleLeave}>
         <li>{navData.mainTitle}</li>
-        <li className='arrow' onMouseEnter={handleEnter} onMouseLeave={handleLeave}>
-          {arrow}
-        </li>
+        <li>{arrow}</li>
       </div>
       {showDropdown && (
         <div className='dropdown' onMouseEnter={handleEnter} onMouseLeave={handleLeave}>
