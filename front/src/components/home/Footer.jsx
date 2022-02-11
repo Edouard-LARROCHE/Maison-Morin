@@ -14,7 +14,7 @@ const Footer = () => {
       <div className='bottom-footer'>
         <ul>
           <li>
-            <h2>NOUS TROUVEZ</h2>
+            <h2>NOUS TROUVER</h2>
           </li>
           <li>
             <p>Notre boutique</p>
