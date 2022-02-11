@@ -39,6 +39,14 @@ const Form = () => {
     }
   };
 
+  const timeOut = () => { 
+    const mess = document.querySelector(".form-message");
+    setTimeout(hideElement, 4000);
+    function hideElement() {
+      mess.style.display = 'none'
+  }
+};
+
   const errGlobal = () => {
     const messErr = document.querySelector('.form-err');
     messErr.innerHTML = 'Merci de remplir les champs requis *';
@@ -67,6 +75,7 @@ const Form = () => {
     succesMessage();
     errMail('');
     errGlobal('');
+    timeOut();
 
     if (name && isEmail() && message) {
       sendBack('template_gvs6rqv', {
