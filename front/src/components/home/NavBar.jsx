@@ -3,6 +3,7 @@ import { TextField } from '@material-ui/core';
 import SearchIcon from '@material-ui/icons/Search';
 import { Link } from 'react-router-dom';
 import IndexModal from '../LoginModal/indexModal';
+import ButtonSwitch from '../darkMode/ButtonSwitch';
 
 const NavBar = () => {
   const [name, setName] = useState('');
@@ -42,6 +43,9 @@ const NavBar = () => {
             </li>
             <li>
               <IndexModal />
+            </li>
+            <li>
+              <ButtonSwitch />
             </li>
           </ul>
         </div>
