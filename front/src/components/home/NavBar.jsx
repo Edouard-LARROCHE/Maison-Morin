@@ -41,11 +41,11 @@ const NavBar = () => {
               <TextField className='text-field' type='text' onChange={(e) => setName(e.target.value)} placeholder='Rechercher' value={name} />
               <SearchIcon style={{ cursor: 'pointer', color: '#012f6b' }} />
             </li>
-            <li>
-              <IndexModal />
+            <li className='switch-mode'>
+              <ButtonSwitch />
             </li>
             <li>
-              <ButtonSwitch />
+              <IndexModal />
             </li>
           </ul>
         </div>
