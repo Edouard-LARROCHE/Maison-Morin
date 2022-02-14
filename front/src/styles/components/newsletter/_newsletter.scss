@@ -1,7 +1,15 @@
-.news-letter {
-    display: flex;
-    justify-content: center;
-    p {
-        color: red;
+/*********** BLOCK **********/
+.banner-nl {
+    display: grid;
+    grid-template-columns: repeat(6, calc(16.666666666666% - 10px));
+    grid-template-rows: repeat(4, 5em);
+    gap: .9em;
+    margin-bottom: 1em;
+
+    .content-nl {
+        grid-column: 2 / 6;
+        grid-row: 1 / 5;
+        align-self: center;   
+        background-color: gray;
     }
 }
