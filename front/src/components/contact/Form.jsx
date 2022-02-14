@@ -38,13 +38,13 @@ const Form = () => {
     }
   };
 
-  const timeOut = () => { 
+  const timeOut = () => {
     const mess = document.querySelector(".form-message");
     setTimeout(hideElement, 4000);
     function hideElement() {
       mess.style.display = 'none'
-  }
-};
+    }
+  };
 
   const errGlobal = () => {
     const messErr = document.querySelector('.form-err');
@@ -87,28 +87,30 @@ const Form = () => {
     }
   };
 
-  return ( <>
-        <div className='nom-err' />
-        <TextField
-          className='text-field-name'
-          style={{ paddingBottom: '2rem' }}
-          type='text'
-          id='name'
-          name='name'
-          onChange={(e) => setName(e.target.value)}
-          placeholder='Nom *'
-          value={name}
-        />
-        <TextField
-          className='text-field-last-name'
-          style={{ paddingBottom: '2rem' }}
-          type='text'
-          id='lastName'
-          name='lastName'
-          onChange={(e) => setLastName(e.target.value)}
-          placeholder='Prénom'
-          value={lastName}
-        />
+  return (<>
+    <div className='nom-err' />
+    <TextField
+      className='text-field-name'
+      style={{ paddingBottom: '2rem' }}
+      type='text'
+      id='name'
+      name='name'
+      onChange={(e) => setName(e.target.value)}
+      placeholder='Nom *'
+      value={name}
+    />
+    <TextField
+      className='text-field-last-name'
+      style={{ paddingBottom: '2rem' }}
+      type='text'
+      id='lastName'
+      name='lastName'
+      onChange={(e) => setLastName(e.target.value)}
+      placeholder='Prénom'
+      value={lastName}
+    />
+    <div className="input-message">
+      <div className="split">
         <TextField
           className='text-field-tel'
           style={{ paddingBottom: '2rem' }}
@@ -119,6 +121,9 @@ const Form = () => {
           placeholder='Téléphone'
           value={tel}
         />
+        <div className="form-err"></div>
+      </div>
+    </div>
         <div className='email-err' />
         <TextField
           className='text-field-email'
@@ -131,28 +136,27 @@ const Form = () => {
           placeholder='Adresse mail *'
           value={email}
         />
-        <div className='text-err' />
-        <TextField
-          className='text-field-message'
-          style={{ paddingBottom: '2rem' }}
-          multiline
-          minRows={1}
-          maxRows={6}
-          type='textarea'
-          id='message'
-          name='message'
-          onChange={(e) => setMessage(e.target.value)}
-          placeholder='Message *'
-          value={message}
-        />
-        <div className="form-err"></div>
-        <div className='form-message' />
-      <div className='button' onClick={handleSubmit}>
-        <div className='effect effect-1'>
-          <p>Envoyer</p>
-        </div>
+    <div className='text-err' />
+    <TextField
+      className='text-field-message'
+      style={{ paddingBottom: '2rem' }}
+      multiline
+      minRows={1}
+      maxRows={6}
+      type='textarea'
+      id='message'
+      name='message'
+      onChange={(e) => setMessage(e.target.value)}
+      placeholder='Message *'
+      value={message}
+    />
+    <div className='form-message' />
+    <div className='button' onClick={handleSubmit}>
+      <div className='effect effect-1'>
+        <p>Envoyer</p>
       </div>
-      </>
+    </div>
+  </>
   );
 };
 
