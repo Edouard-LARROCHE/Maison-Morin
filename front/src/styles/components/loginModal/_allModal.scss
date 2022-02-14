@@ -37,11 +37,13 @@
   height: 10rem;
 
   form {
-    padding: 1rem 3rem 0 3rem;
+    padding: 0 3rem 0 3rem;
   }
-}
 
-.err-login {
-  font-size: 0.7rem;
-  color: red;
+  button {
+    border: none;
+    background: $color-1;
+    color: $color-2;
+    cursor: pointer;
+  }
 }
