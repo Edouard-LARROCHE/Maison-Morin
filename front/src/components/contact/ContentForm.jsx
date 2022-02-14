@@ -8,16 +8,16 @@ const ContentForm = () => {
       <h3>57 Grande Rue, 77630 Barbizon</h3>
       <h3>01.60.66.40.26</h3>
       <h3>06.09.04.59.85</h3>
-      <CopyToClipboard text='contact@maison-morin.com' style={{ cursor: 'pointer', color: '#032953' }}>
+      <CopyToClipboard text='contact@maison-morin.com' style={{ cursor: 'pointer', color: '#032953' }}> 
         <h3
           onClick={() => {
             alert('Adresse mail copié !');
           }}>
           contact@maison-morin.com
         </h3>
-      </CopyToClipboard>
+      </CopyToClipboard>      
       {/* <img src='/assets/logo-gold.png' alt='logo-morin' /> */}
-    </div>
+    </div>   
   );
 };
 
