@@ -14,6 +14,12 @@ const FormContact = () => {
         <h3>Lorem ipsum dolor sit, amet consectetur adipisicing elit. </h3>
       </div>
       <div className='page-contact'>
+        <div className="heures-ouverture">
+        <h1>Du Lundi au Vendredi</h1>
+        <h3>De 09h00 à 20h00</h3>
+        <h3>Le Samedi</h3>
+        <h3>De 09h00 à 14h00</h3>
+        </div>
         <div className='left-content'>
           <ContentForm />
         </div>
