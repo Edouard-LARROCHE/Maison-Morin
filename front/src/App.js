@@ -6,6 +6,7 @@ import LegalNotice from './pages/LegalNotice';
 import Cookies from './pages/Cookies';
 import FormContact from './pages/FormContact';
 import IndexUpdate from './components/Update/IndexUpdate';
+import Shop from './pages/Shop';
 // DARK MODE
 import { ThemeContext } from './components/darkMode/ThemeContext';
 
@@ -23,6 +24,7 @@ function App() {
           <Route path='/cookie' element={<Cookies />} />
           <Route path='/contact' element={<FormContact />} />
           <Route path='/update' element={<IndexUpdate />} />
+          <Route path='/boutique' element={<Shop />} />
         </Routes>
       </div>
     </div>
