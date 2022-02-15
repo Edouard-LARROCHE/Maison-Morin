@@ -19,7 +19,7 @@ const NavBar = () => {
               </Link>
             </li>
             <li className='underline'>
-              <Link to='/'>
+              <Link to='/boutique'>
                 <p>Notre boutique</p>
               </Link>
             </li>

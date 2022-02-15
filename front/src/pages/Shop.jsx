@@ -1,18 +1,16 @@
 import React from 'react';
 import NavBar from '../components/home/NavBar';
-import MenuDrop from '../components/dropDown/MenuDrop';
-import Header from '../components/home/Header';
+// import Map from '../components/Shop/Map';
 import Footer from '../components/home/Footer';
 
-const Home = () => {
+const Shop = () => {
   return (
     <div>
       <NavBar />
-      <MenuDrop />
-      <Header />
+      {/* <Map /> */}
       <Footer />
     </div>
   );
 };
 
-export default Home;
+export default Shop;
