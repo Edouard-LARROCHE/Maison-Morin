@@ -15,9 +15,9 @@ const ContentForm = () => {
           }}>
           contact@maison-morin.com
         </h3>
-      </CopyToClipboard>      
+      </CopyToClipboard>
       {/* <img src='/assets/logo-gold.png' alt='logo-morin' /> */}
-    </div>   
+    </div>
   );
 };
 

@@ -5,11 +5,8 @@ const NewsLetter = () => {
     return (<>
         <div className="line"></div>
         <div className="banner-nl">
-                    <div className="logo-nl">
-                        <img src='/assets/morin_solo_blanc.png' alt='logo-morin' height='120em' width='120em' />
-                    </div>
                     <div className="titre-nl">
-                        <h1>News Letter</h1>
+                        <h1>Newsletter</h1>
                     </div>
                     <div className="text-info-nl">
                         <h3>Soyez les premiers à être informés de nos actualités !</h3>
@@ -24,7 +21,7 @@ const NewsLetter = () => {
                         placeholder='Votre adresse mail'
                     />
                 </div>
-                <div className="button-nl">
+                <div className="btn-nl">
                     <p>Je m'inscris</p>
                 </div>
         </div>
