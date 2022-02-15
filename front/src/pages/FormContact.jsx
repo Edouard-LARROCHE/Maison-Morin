@@ -27,7 +27,7 @@ const FormContact = () => {
           <div className="global-media">
             <div className="icon insta">
               <div className="tooltip">Instagram</div>
-              <span><i class="fab fa-instagram"></i></span>
+              <span><a class="fab fa-instagram" href='https://www.instagram.com/maison_morin/?hl=fr' target='_blank' rel='noopener noreferrer'></a></span>
               {/* <a className="insta" href='https://www.instagram.com/maison_morin/?hl=fr' target='_blank' rel='noopener noreferrer'>
                 <InstagramIcon
                   style={{ height: "1.20em", width: "1.20em" }}
@@ -36,7 +36,7 @@ const FormContact = () => {
             </div>
             <div className="icon fb">
               <div className="tooltip">Facebook</div>
-              <span><i class="fab fa-facebook-f"></i></span>
+              <span><a class="fab fa-facebook-f" href='https://www.facebook.com' target='_blank' rel='noopener noreferrer'></a></span>
               {/* <a className="fb" href='https://www.facebook.com' target='_blank' rel='noopener noreferrer'>
                 <FacebookIcon
                   style={{ height: "1.20em", width: "1.20em" }}
