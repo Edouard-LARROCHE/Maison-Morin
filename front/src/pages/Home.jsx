@@ -2,7 +2,7 @@ import React from 'react';
 import NavBar from '../components/home/NavBar';
 import MenuDrop from '../components/dropDown/MenuDrop';
 import Header from '../components/home/Header';
-// import Middle from '../components/home/Middle';
+import Middle from '../components/home/Middle';
 import Footer from '../components/home/Footer';
 
 const Home = () => {
@@ -11,7 +11,7 @@ const Home = () => {
       <NavBar />
       <MenuDrop />
       <Header />
-      {/* <Middle /> */}
+      <Middle />
       <Footer />
     </div>
   );

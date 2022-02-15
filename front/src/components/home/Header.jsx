@@ -25,7 +25,7 @@ const Header = () => {
       <div className='picture-head'>
         <div className='picture-1'>
           <Link to='/'>
-            <img src='/assets/cake-3.png' alt='cake3' style={{ width: '17rem' }} />
+            <img src='/assets/cake-3.png' alt='cake3' style={{ width: '15rem' }} />
           </Link>
         </div>
         <div className='diagonal-border'>
@@ -35,7 +35,7 @@ const Header = () => {
         <div className='picture-bottom'>
           <div className='picture-2'>
             <Link to='/'>
-              <img src='/assets/cake9.png' alt='cake9' style={{ width: '17rem' }} />
+              <img src='/assets/cake9.png' alt='cake9' style={{ width: '15rem' }} />
             </Link>
           </div>
           <div className='horizontal-line'>
@@ -43,7 +43,7 @@ const Header = () => {
           </div>
           <div className='picture-3'>
             <Link to='/'>
-              <img src='/assets/cake-10.png' alt='cake10' style={{ width: '17rem' }} />
+              <img src='/assets/cake-10.png' alt='cake10' style={{ width: '15rem' }} />
             </Link>
           </div>
         </div>
