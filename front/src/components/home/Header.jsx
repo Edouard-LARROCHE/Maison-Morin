@@ -3,7 +3,25 @@ import React from 'react';
 const Header = () => {
   return (
     <div className='header-home'>
-      <img src='/assets/prod1.jpeg' alt='inte' />
+      <div className='text-head'>
+        <p> BONJOUR & BIENVENUE</p>
+        <h1>Traiteur traditionnel français Maison-Morin</h1>
+        <div className='vertical-line' />
+        <div className='text-content'>
+          <p>
+            Notre boutique traîteur en Seine et Marne est spécialisé en cuisine traditionnelle française. Nous vous proposons de nombreux plats
+            régionaux et plats du terroir variés. Nous utilisons des produits frais et de saison.
+          </p>
+          <div className='vertical-line2' />
+          <p>
+            Nous les sélectionnons minutieusement chez nos fournisseurs français et locaux. Au Grand Vertois nous cultivons la culture du goût. Pour
+            nous, le plus important est la qualité de nos matières premières, qui révèlent des saveurs spectaculaires.
+          </p>
+          <div className='vertical-line2' />
+          <p>Nous changeons régulièrement la carte pour renouveler continuellement vos expériences et vous surprendre.</p>
+        </div>
+      </div>
+      <div className='picture-head'></div>
     </div>
   );
 };
