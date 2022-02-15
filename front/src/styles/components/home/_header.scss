@@ -1,11 +1,10 @@
 .header-home {
-  height: 100vh;
+  height: 80vh;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 1fr;
   grid-column-gap: 10px;
   padding: 1rem;
-  background: grey;
 }
 
 .text-head {
@@ -13,12 +12,40 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: red;
   grid-area: 1 / 1 / 2 / 2;
 }
 .picture-head {
-  background: green;
   grid-area: 1 / 2 / 2 / 3;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, 1fr);
+
+  .picture-1 {
+    grid-area: 1 / 1 / 2 / 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .picture-bottom {
+    grid-area: 2 / 1 / 3 / 2;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 130px;
+
+    .picture-2 {
+      grid-area: 1 / 2 / 2 / 3;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .picture-3 {
+      grid-area: 1 / 3 / 2 / 4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
 }
 
 .vertical-line {
@@ -43,4 +70,8 @@
 
 .text-content {
   padding: 1rem 10rem 0 10rem;
+
+  p {
+    padding: 0 3rem 0 3rem;
+  }
 }
