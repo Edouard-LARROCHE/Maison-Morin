@@ -5,7 +5,8 @@
   display: flex;
   margin: 1rem 0 1rem 0;
   height: 8rem;
-  color: $color-2;
+  color: $color-1;
+  background: $color-2;
 
   ul {
     width: 100%;
@@ -37,8 +38,7 @@
   transform: translateX(-50%);
   display: flex;
   justify-content: center;
-  border-top: 1px solid $color-2;
-  border-bottom: 1px solid $color-2;
+  border-top: 1px solid $color-1;
 }
 
 .items {
