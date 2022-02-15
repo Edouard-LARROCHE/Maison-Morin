@@ -103,9 +103,10 @@
 /*********** SOCIAL MEDIA **********/
   .social-media {
     grid-column: 5 / 6;
-    grid-row: 3;
-    align-self: end;
-    margin-left: 6em;
+    grid-row: 4;
+    align-self: center;
+    margin-left: 8.2em;
+    margin-bottom: .1em;
     .global-media {
       display: inline-flex;
     }
@@ -122,7 +123,7 @@
       justify-content: center;
       align-items: center;
       flex-direction: column;
-      box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 10px 10px rgba(0, 0, 0, .2);
       cursor: pointer;
       transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
         span {
@@ -160,7 +161,7 @@
       pointer-events: auto;
     }
     
-    .global-media .icon:hover span,
+    .global-media .icon:hover a,
     .global-media .icon:hover .tooltip {
       text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
       color: #ffffff;
