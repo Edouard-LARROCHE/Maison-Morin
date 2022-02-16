@@ -33,7 +33,7 @@ const FormContact = () => {
             </div>
             <div className='icon fb'>
               <div className='tooltip'>Facebook</div>
-              <a className='fab fa-facebook-f' href='https://www.facebook.com/' target='_blank' rel='noopener noreferrer'>
+              <a className='fab fa-facebook-f' href='https://www.facebook.com' target='_blank' rel='noopener noreferrer'>
                 {''}
               </a>
             </div>
