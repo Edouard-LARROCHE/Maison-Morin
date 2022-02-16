@@ -7,7 +7,6 @@
     margin-bottom: 1em;
 }
 
-
 /*********** BLOCK **********/
 .banner-nl {
     display: grid;
@@ -19,6 +18,7 @@
     box-sizing: border-box;
     margin-right: 19em;
     margin-left: 19em;
+    background-color: #fff;
     .titre-nl {
         grid-column: 2 / 4;
         grid-row: 2;
