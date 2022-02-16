@@ -1,0 +1,21 @@
+.middle-content {
+  margin: 100px 500px 0 500px;
+
+  h2 {
+    margin-bottom: 2rem;
+  }
+}
+
+.head-parent {
+  width: 5rem;
+  height: 25rem;
+  position: relative;
+  background: red;
+}
+.child-content {
+  width: 4rem;
+  height: 4rem;
+  position: absolute;
+  top: -10px;
+  background: green;
+}
