@@ -1,18 +1,20 @@
 import React from 'react';
 import NavBar from '../components/home/NavBar';
-// import Map from '../components/Shop/Map';
+import Header from '../components/maisonMorin/Header';
 import Footer from '../components/home/Footer';
+import Middle from '../components/maisonMorin/Middle';
 import HeadBand from '../components/HeadBand';
 
-const Shop = () => {
+const MaisonMorin = () => {
   return (
     <div>
       <NavBar />
       <HeadBand />
-      {/* <Map /> */}
+      <Header />
+      <Middle />
       <Footer />
     </div>
   );
 };
 
-export default Shop;
+export default MaisonMorin;

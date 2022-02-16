@@ -30,7 +30,9 @@ const Footer = () => {
             <h2>EN SAVOIR PLUS</h2>
           </li>
           <li>
-            <p>La maison Morin</p>
+            <Link to='/maison-morin'>
+              <p>La maison Morin</p>
+            </Link>
           </li>
           <li>
             <p>Entreprise engagée</p>
