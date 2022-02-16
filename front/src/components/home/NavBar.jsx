@@ -14,7 +14,7 @@ const NavBar = () => {
         <div className='nav-bar'>
           <ul>
             <li className='underline'>
-              <Link to='/'>
+              <Link to='/maison-morin'>
                 <p>La Maison Morin</p>
               </Link>
             </li>
