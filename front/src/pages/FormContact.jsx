@@ -27,11 +27,11 @@ const FormContact = () => {
           <div className="global-media">
             <div className="icon insta">
               <div className="tooltip">Instagram</div>
-              <span><a class="fab fa-instagram" href='https://www.instagram.com/maison_morin/?hl=fr' target='_blank' rel='noopener noreferrer'></a></span>
+              <span><a className="fab fa-instagram" href='https://www.instagram.com/maison_morin/?hl=fr' target='_blank' rel='noopener noreferrer'></a></span>
             </div>
             <div className="icon fb">
               <div className="tooltip">Facebook</div>
-              <span><a class="fab fa-facebook-f" href='https://www.facebook.com' target='_blank' rel='noopener noreferrer'></a></span>
+              <span><a className="fab fa-facebook-f" href='https://www.facebook.com' target='_blank' rel='noopener noreferrer'></a></span>
             </div>
           </div>
         </div>
