@@ -1,23 +1,49 @@
 .middle-content {
-  margin: 100px 500px 0 500px;
-
-  h2 {
-    margin-bottom: 4rem;
-  }
+  margin: 200px 500px 0 500px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-row-gap: 50px;
 }
 
 .head-parent {
+  grid-area: 1 / 1 / 2 / 2;
   width: 20rem;
   height: 100%;
   position: relative;
 }
 .child-content {
   border-radius: 1%;
-  width: 15rem;
+  width: 25rem;
   height: 12rem;
   position: absolute;
-  top: -50px;
-  left: -80px;
+  bottom: 0;
+  right: -300px;
   background: #fff;
-  padding: 10px;
+  padding: 12px;
+
+  h3 {
+    word-spacing: 5px;
+  }
+}
+
+.head-parent2 {
+  grid-area: 2 / 2 / 3 / 3;
+  width: 20rem;
+  height: 100%;
+  position: relative;
+}
+.child-content2 {
+  border-radius: 1%;
+  width: 25rem;
+  height: 12rem;
+  position: absolute;
+  bottom: 0;
+  left: -230px;
+  background: #fff;
+  padding: 12px;
+
+  h3 {
+    word-spacing: 5px;
+  }
 }
