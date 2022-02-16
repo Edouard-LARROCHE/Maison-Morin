@@ -4,6 +4,7 @@ import MenuDrop from '../components/dropDown/MenuDrop';
 import Header from '../components/home/Header';
 import Middle from '../components/home/Middle';
 import Footer from '../components/home/Footer';
+import Infos from '../components/home/Infos';
 
 const Home = () => {
   return (
@@ -12,6 +13,7 @@ const Home = () => {
       <MenuDrop />
       <Header />
       <Middle />
+      <Infos />
       <Footer />
     </div>
   );
