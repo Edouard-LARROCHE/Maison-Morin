@@ -27,20 +27,19 @@ const FormContact = () => {
           <div className='global-media'>
             <div className='icon insta'>
               <div className='tooltip'>Instagram</div>
-              <span>
-                <a className='fab fa-instagram' href='https://www.instagram.com/maison_morin/?hl=fr' target='_blank' rel='noopener noreferrer'></a>
-              </span>
+              <a className='fab fa-instagram' href='https://www.instagram.com/maison_morin/?hl=fr' target='_blank' rel='noopener noreferrer'>
+                {''}
+              </a>
             </div>
             <div className='icon fb'>
               <div className='tooltip'>Facebook</div>
-              <span>
-                <a className='fab fa-facebook-f' href='https://www.facebook.com' target='_blank' rel='noopener noreferrer'></a>
-              </span>
+              <a className='fab fa-facebook-f' href='https://www.facebook.com/' target='_blank' rel='noopener noreferrer'>
+                {''}
+              </a>
             </div>
           </div>
         </div>
       </div>
-
       <div className='banner-news'>
         <NewsLetter />
       </div>
