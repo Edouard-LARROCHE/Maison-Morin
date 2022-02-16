@@ -3,27 +3,21 @@ import React from "react";
 const Infos = () => {
     return (
         <div className="wrapper-info">
-            <div className="global-infos">
             <div className="eco">
-                <img className="eco-img" src="/assets/ecologie.png" alt="" />
+                <img class="eco-img" src="/assets/ecologie.png" alt="" />
+                <h3>Ecologie</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi quidem exercitationem sequi non officiis odit.</p>
             </div>
-            <h2>Ecologie</h2>
-            <p>Nos packaging sont recyclables</p>
-            </div>
-            <div className="global-infos">
             <div className="proxi">
-                <img className="proxi-img" src="/assets/proche.png" alt="" />
+                <img class="proxi-img" src="/assets/proche.png" alt="" />
+                <h3>Proximité</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi quidem exercitationem sequi non officiis odit.</p>
             </div>
-            <h2>Proximité</h2>
-            <p>Un circuit court, traditionnel</p>
-            </div>
-            <div className="global-infos">
             <div className="pat">
-                <img className="pat-img" src="/assets/cupcake.png" alt="" />
+                <img class="pat-img" src="/assets/cupcake.png" alt="" />
+                <h3>Patiserrie</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi quidem exercitationem sequi non officiis odit.</p>
             </div>
-            <h2>Patisserie</h2>
-            <p>Goûtez notre délicieuse patisserie</p>
-            </div>                
         </div>
     );
 };
