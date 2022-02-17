@@ -1,0 +1,68 @@
+.traiteur-card {
+  margin: 50px 300px 50px 300px;
+
+  h2 {
+    text-align: center;
+    font-style: italic;
+    margin-bottom: 4rem;
+  }
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+  padding: 1rem;
+  border: 1px solid;
+}
+
+.card h3 {
+  position: absolute;
+  z-index: 2;
+  color: #fff;
+  background: $black;
+}
+
+.card img {
+  width: 45rem;
+  height: 25rem;
+}
+
+// .btn-card {
+//   box-sizing: border-box;
+//   width: 10em;
+//   padding: 0.7em;
+//   padding-left: 1.7em;
+//   align-self: start;
+//   text-transform: uppercase;
+//   border: none;
+//   transition: ease-out 0.3s;
+//   outline: none;
+//   border: 2px solid $color-3;
+//   position: relative;
+//   z-index: 1;
+// }
+
+// .btn-card:hover {
+//   color: #fff;
+//   cursor: pointer;
+// }
+
+// .btn-card::before {
+//   transition: 0.5s all ease;
+//   position: absolute;
+//   top: 0;
+//   left: 50%;
+//   right: 50%;
+//   bottom: 0;
+//   opacity: 0;
+//   content: '';
+//   background-color: $color-3;
+// }
+
+// .btn-card:hover:before {
+//   transition: 0.5s all ease;
+//   left: 0;
+//   right: 0;
+//   opacity: 1;
+//   z-index: -1;
+// }
