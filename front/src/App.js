@@ -10,6 +10,7 @@ import Shop from './pages/Shop';
 import MaisonMorin from './pages/MaisonMorin';
 // DARK MODE
 import { ThemeContext } from './components/darkMode/ThemeContext';
+import TopArrow from './components/TopArrow';
 
 function App() {
   const theme = useContext(ThemeContext);
@@ -18,6 +19,7 @@ function App() {
   return (
     <div className={`bg ${darkMode ? 'bg-dark' : 'bg-light'}`}>
       <div className={`para ${darkMode ? 'para-dark' : 'para-light'}`}>
+        <TopArrow />
         <Cookie />
         <Routes>
           <Route path='/' element={<Home />} />

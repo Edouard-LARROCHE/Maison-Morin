@@ -1,0 +1,9 @@
+.scrool-top-resp {
+  z-index: 10;
+  cursor: pointer;
+  position: fixed;
+  right: 30px;
+  top: 650px;
+  transition: 0.5s ease-in-out;
+  border: 2px solid $color-2;
+}
