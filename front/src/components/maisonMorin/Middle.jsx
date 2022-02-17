@@ -25,6 +25,18 @@ const Middle = () => {
           </h3>
         </div>
       </div>
+      <div className='head-parent5'>
+        <img src='/assets/victorien2.png' alt='Victorien' style={{ width: '25rem' }} />
+        <div className='child-content5'>
+          <h2>- Barons de Rothschild -</h2>
+          <br />
+          <h3>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis, mollitia sint. Laborum ullam, distinctio ipsam omnis dolorum et porro
+            quo sapiente fugit. Inventore beatae modi, obcaecati totam mollitia quam necessitatibus repellendus illum dolor aliquid perspiciatis error
+            nesciunt quia distinctio rerum?
+          </h3>
+        </div>
+      </div>
       <div className='head-parent3'>
         <img src='/assets/inte.jpeg' alt='Victorien' style={{ width: '35rem' }} />
         <div className='child-content3'>
@@ -32,7 +44,7 @@ const Middle = () => {
           <br />
           <h3>
             Une façade d’un blanc éclatant, un intérieur blanc-bleu aux lumières tamisées, la boutique sent le neuf. « J’ai voulu montrer qu’il y
-            avait un changement pour affirmer ma patte, mais cela reste la Maison Morin. J’ai gardé quelques grands noms de la salaisons et bien sur
+            avait un changement pour affirmer ma patte, mais cela reste la Maison Morin. J’ai gardé quelques grands noms de la salaisons et bien sûr
             des terrines maisons ».
           </h3>
         </div>
