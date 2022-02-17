@@ -14,6 +14,11 @@ const NavBar = () => {
         <div className='nav-bar'>
           <ul>
             <li className='underline'>
+              <Link to='/'>
+                <p>Acceuil</p>
+              </Link>
+            </li>
+            <li className='underline'>
               <Link to='/maison-morin'>
                 <p>La Maison Morin</p>
               </Link>
