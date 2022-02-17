@@ -1,17 +1,107 @@
-.middle-home {
-  margin: 50px 300px 0 300px;
-  img {
-    position: relative;
-    width: 22rem;
-    border-radius: 3px;
-    z-index: 0;
+/* ===== BANNER ===== */
+
+.banner-second {
+  width: 100%;
+  background-color: $color-2;
+  height: 15em;
+  margin-top: 3.5em;
+  margin-bottom: 2em;
+  position: relative;
+  .title-second {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #fff;
+    box-shadow: 0px -5px 11px 2px rgba(0,0,0,0.07);
+    width: 30em;
+    height: 16em;
+    top: -3em;
   }
-  p {
-    background: #fff;
-    z-index: 1;
-    width: 20rem;
-    height: 17rem;
-    padding: 1rem;
-    margin-top: 30px;
-  }
+}
+
+/* ===== PHOTOS ===== */
+
+.photos {
+  width: 61%;
+  max-width: 61%;
+  margin-right: auto;
+  margin-left: auto;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 1.5rem;
+  grid-template-areas: 
+  "img-un  img-deux  img-trois"
+  "img-huit  img-cinq  img-six"
+  "img-huit img-quatre img-sept";
+}
+
+.test {
+  position: absolute;
+  grid-area: img-un;
+  justify-self: center;
+  align-self: center;
+  box-sizing: border-box;
+  margin: .5em;
+  background-color: #fff;
+  display: none;
+}
+
+.photos img {
+  height: 15rem;
+  width: 18rem;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.img-un {
+  grid-area: img-un;
+}
+
+.img-deux {
+  grid-area: img-deux;
+}
+
+.img-trois {
+  grid-area: img-trois;
+}
+
+.img-quatre {
+  grid-area: img-quatre;
+}
+
+.img-cinq{
+  grid-area: img-cinq;
+}
+
+.img-six {
+  grid-area: img-six;
+}
+
+.img-sept {
+  grid-area: img-sept;
+}
+
+.img-huit {
+  min-height: 100%;
+  grid-area: img-huit;
+}
+
+/* ===== PHOTOS HOVER===== */
+.photos img:hover + .test{
+  display: block;
+}
+
+.test:hover {
+  display: block;
 }
