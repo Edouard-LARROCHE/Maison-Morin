@@ -1,16 +1,15 @@
 const express = require('express');
 const router = express.Router();
+const { uploadErrors } = require('../utils/errors.utils');
 const fs = require('fs');
 const { promisify } = require('util');
 const pipeline = promisify(require('stream').pipeline);
 
 const Image = require('../models/uploadModel');
-const { uploadErrors } = require('../utils/errors.utils');
 
 router.post('/', async (req, res) => {
   try {
-    if (req.file.detectedMimeType !== 'image/jpg' && req.file.detectedMimeType !== 'image/png' && req.file.detectedMimeType !== 'image/jpeg')
-      throw Error('invalid file');
+    if (req.file.detectedFileExtension != '.jpg') throw Error('invalid file');
 
     if (req.file.size > 500000) throw Error('max size');
   } catch (err) {
@@ -21,6 +20,20 @@ router.post('/', async (req, res) => {
   const fileName = req.body.name + '.jpg';
 
   await pipeline(req.file.stream, fs.createWriteStream(`${__dirname}/../front/public/upload/${fileName}`));
+
+  //   try {
+  //     await uploadModel.findByIdAndUpdate(
+  //       req.body.userId,
+  //       { $set: { picture: './upload/' + fileName } },
+  //       { new: true, upsert: true, setDefaultsOnInsert: true },
+  //       (err, docs) => {
+  //         if (!err) return res.send(docs);
+  //         else return res.status(500).send({ message: err });
+  //       },
+  //     );
+  //   } catch (err) {
+  //     return res.status(500).send({ message: err });
+  //   }
 });
 
 module.exports = router;
