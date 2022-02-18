@@ -15,7 +15,7 @@ const Second = () => {
             <img className= 'img-gallerie' src={index.img} alt="oui"></img>
             <div className="icones">
               <div className="instagram">
-                <a className='fab fa-instagram' href="https://www.facebook.com">{''}</a>
+                <a className='fab fa-instagram' target='_blank' rel="noreferrer" href="https://www.instagram.com/maison_morin/?hl=fr">{''}</a>
               </div>
             </div>
           </div>

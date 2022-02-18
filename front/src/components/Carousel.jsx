@@ -4,6 +4,11 @@ function Carou() {
   const data = [
     {
       image: '/assets/cake4.png',
+      caption: `<div>
+                    San Testo
+                    <br />
+                    Next
+                </div>`
     },
     {
       image: '/assets/cake2.png',
