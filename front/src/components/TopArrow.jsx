@@ -4,7 +4,7 @@ import KeyboardArrowIcon from '@material-ui/icons/KeyboardArrowUp';
 const TopArrow = () => {
   const opacity = () => {
     const arrow = document.querySelector('.scrool-top-resp');
-    if (window.scrollY >= 500) {
+    if (window.scrollY >= 1000) {
       arrow.style.opacity = 1;
     } else {
       arrow.style.opacity = 0;

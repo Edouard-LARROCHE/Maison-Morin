@@ -6,6 +6,7 @@ import Second from '../components/home/Middle';
 import Footer from '../components/home/Footer';
 import Infos from '../components/home/Infos';
 import Carou from '../components/Carousel';
+import NewsLetter from '../components/newsletter/NewsLetter';
 
 const Home = () => {
   return (
@@ -16,6 +17,7 @@ const Home = () => {
       <Header />
       <Second />
       <Infos />
+      <NewsLetter />
       <Footer />
     </div>
   );
