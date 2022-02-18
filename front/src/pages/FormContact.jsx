@@ -14,10 +14,10 @@ const FormContact = () => {
       </div>
       <div className='page-contact'>
         <div className='heures-ouverture'>
-          <h1>Du Lundi au Vendredi</h1>
-          <h3>De 09h00 à 20h00</h3>
-          <h3>Le Samedi</h3>
-          <h3>De 09h00 à 14h00</h3>
+          <h1>Ouvert</h1>
+          <h1>Lundi, Jeudi, Vendredi, Samedi et Dimanche</h1>
+          <h3>De 09h00 à 13h00</h3>
+          <h3>De 15h00 à 19h30</h3>
         </div>
         <div className='left-content'>
           <ContentForm />
