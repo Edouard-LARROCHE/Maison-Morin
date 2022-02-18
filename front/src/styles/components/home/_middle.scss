@@ -23,85 +23,68 @@
 
 /* ===== PHOTOS ===== */
 
-.photos {
-  width: 61%;
-  max-width: 61%;
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+  width: 70%;
   margin-right: auto;
   margin-left: auto;
-  position: relative;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  gap: 1.5rem;
-  grid-template-areas: 
-  "img-un  img-deux  img-trois"
-  "img-huit  img-cinq  img-six"
-  "img-huit img-quatre img-sept";
 }
 
-.test {
-  position: absolute;
-  grid-area: img-un;
-  justify-self: center;
-  align-self: center;
-  box-sizing: border-box;
+.photos {
+  width: 23em;
+  height: 15em;
   margin: .5em;
-  background-color: #fff;
-  display: none;
+  position: relative;
+  // overflow: hidden;
 }
 
-.photos img {
-  height: 15rem;
-  width: 18rem;
+.img-gallerie {
+  position: absolute;
+  // margin: 0 auto;
+  width: 23em;
+  height: 15em;
+  // left: 40%;
+  // bottom: 50%;
+  color: red;
+  filter: blur(0);
+  transition: filter 0.3s linear;
+}
+
+.icones {  
+  height: 100%;
   width: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
   position: relative;
   display: flex;
-  align-items: center;
   justify-content: center;
-  cursor: pointer;
+  align-items: center;
 }
 
-.img-un {
-  grid-area: img-un;
+.instagram {
+  width: 3em;
+  height: 3em;
+  background-color: #fff;
+  border-radius: 50%;  
+  opacity: 0;
+  transition: visibility 0s, opacity 0.3s linear;
 }
 
-.img-deux {
-  grid-area: img-deux;
+.fab {
+  font-size: 28px;
+  color: $black;
+  display: flex;
+  justify-content: center;
+  margin: .4em;
 }
 
-.img-trois {
-  grid-area: img-trois;
-}
-
-.img-quatre {
-  grid-area: img-quatre;
-}
-
-.img-cinq{
-  grid-area: img-cinq;
-}
-
-.img-six {
-  grid-area: img-six;
-}
-
-.img-sept {
-  grid-area: img-sept;
-}
-
-.img-huit {
-  min-height: 100%;
-  grid-area: img-huit;
-}
-
-/* ===== PHOTOS HOVER===== */
-.photos img:hover + .test{
-  display: block;
-}
-
-.test:hover {
-  display: block;
+/* ===== PHOTOS HOVER ===== */
+.photos:hover {
+  .instagram {
+    opacity: 1;
+  }
+  .img-gallerie {
+    filter: blur(1.5px);
+  }
 }

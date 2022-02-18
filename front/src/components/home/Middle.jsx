@@ -1,4 +1,5 @@
 import React from 'react';
+import { data } from '../data/data';
 
 const Second = () => {
   return (<>
@@ -8,19 +9,20 @@ const Second = () => {
         <div className="support-second">
         </div>
       </div>
-      <div className="photos">
-        <img className='img-un' src='/assets/cake5.png' alt="" />
-        
-        <img className='img-deux' src='/assets/cake9.png' alt="" />
-        <img className='img-trois' src='/assets/index9.jpeg' alt="" />
-        <img className='img-quatre' src='/assets/index10.jpeg' alt="" />
-        <img className='img-cinq' src='/assets/cake4.png' alt="" />
-        <img className='img-six' src='/assets/index11.jpeg' alt="" />
-        <img className='img-sept' src='/assets/cake.png' alt="" />
-        <img className='img-huit' src='/assets/index8.jpeg' alt="" /><a className='test' href="https://www.facebook.com">Test</a>
-        {/* <img className='img-neuf' src='/assets/cake.png' alt="" /> */}
+      <div className="grid">
+        {data.map((index) => (
+          <div className="photos">
+            <img className= 'img-gallerie' src={index.img} alt="oui"></img>
+            <div className="icones">
+              <div className="instagram">
+                <a className='fab fa-instagram' href="https://www.facebook.com">{''}</a>
+              </div>
+            </div>
+          </div>
+        ))}
       </div>
   </>);
 };
+
 
 export default Second;
