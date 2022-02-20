@@ -2,9 +2,6 @@ const express = require('express');
 const app = express();
 require('./models/dbConfig');
 
-const multer = require('multer');
-const upload = multer();
-
 const postsRoutes = require('./routes/postsController');
 const loginRoutes = require('./routes/userController');
 const uploadRoutes = require('./routes/uploadController');
@@ -17,6 +14,6 @@ app.use(cors({ origin: 'https://localhost:3000/' }));
 
 app.use('/posts', postsRoutes);
 app.use('/login', loginRoutes);
-app.use('/upload', upload.single('file'), uploadRoutes);
+// app.use('/upload', uploadRoutes);
 
 app.listen(5500, () => console.log('Server started: 5500'));
