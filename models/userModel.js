@@ -9,6 +9,10 @@ const loginSchema = mongoose.Schema({
     type: String,
     required: true,
   },
+  picture: {
+    type: String,
+    default: './uploads/profil/random-user.png',
+  },
 });
 
 module.exports = mongoose.model('Login', loginSchema);

@@ -1,4 +1,5 @@
 const express = require('express');
+const router = require('express').Router();
 const app = express();
 require('./config/db');
 
@@ -17,6 +18,6 @@ app.use(cors({ origin: 'https://localhost:3000/' }));
 
 app.use('/posts', postsRoutes);
 app.use('/login', loginRoutes);
-app.use('/upload', upload.single('file'), uploadRoutes);
+router.post('/upload', upload.single('file'), uploadRoutes.uploadProfil);
 
 app.listen(5500, () => console.log('Server started: 5500'));
