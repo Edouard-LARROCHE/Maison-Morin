@@ -9,6 +9,11 @@ function App() {
   return (
     <div className='App'>
       <h1>requete API</h1>
+      <form method='post' encType='multipart/form-data'>
+        <input type='file' name='file' placeholder='Select file' />
+        <br />
+        <button>Upload</button>
+      </form>
     </div>
   );
 }

@@ -3,6 +3,7 @@ const app = express();
 const cors = require('cors');
 require('dotenv').config();
 const mongoose = require('mongoose');
+const path = require('path');
 
 const stuffRoutes = require('./routes/stuff');
 const userRoutes = require('./routes/user');
@@ -18,6 +19,8 @@ mongoose.connect(
 
 app.use(express.json());
 app.use(cors({ origin: 'https://localhost:3000/' }));
+
+app.use('/image', express.static(path.join(__dirname, 'image')));
 
 app.use('/api/stuff', stuffRoutes);
 app.use('/api/auth', userRoutes);
