@@ -1,39 +1,67 @@
 const express = require('express');
+const multer = require('multer');
+const mongoose = require('mongoose');
+const uuid = require('uuid');
 const router = express.Router();
-const { uploadErrors } = require('../utils/errors-utils');
-const fs = require('fs');
-const { promisify } = require('util');
-const pipeline = promisify(require('stream').pipeline);
+const DIR = './front/public/upload/';
 
-const Image = require('../models/uploadModel');
+const User = require('../models/userModel');
 
-router.post('/', async (req, res) => {
-  try {
-    if (req.file.detectedFileExtension != '.jpg') throw Error('invalid file');
+const storage = multer.diskStorage({
+  destination: (req, file, cb) => {
+    cb(null, DIR);
+  },
+  filename: (req, file, cb) => {
+    const fileName = file.originalname.toLowerCase().split(' ').join('-');
+    cb(null, uuid + '-' + fileName);
+  },
+});
 
-    if (req.file.size > 500000) throw Error('max size');
-  } catch (err) {
-    const errors = uploadErrors(err);
-    return res.status(201).json({ errors });
-  }
+const upload = multer({
+  storage: storage,
+  fileFilter: (req, file, cb) => {
+    if (file.mimetype == 'image/png' || file.mimetype == 'image/jpg' || file.mimetype == 'image/jpeg') {
+      cb(null, true);
+    } else {
+      cb(null, false);
+      return cb(new Error('Only .png, .jpg and .jpeg format allowed!'));
+    }
+  },
+});
 
-  const fileName = req.body.name + '.jpg';
+router.post('/', upload.single('profileImg'), (req, res, next) => {
+  const url = req.protocol + '://' + req.get('host');
+  const user = new User({
+    _id: new mongoose.Types.ObjectId(),
+    name: req.body.name,
+    profileImg: url + req.file.filename,
+  });
+  user
+    .save()
+    .then((result) => {
+      res.status(201).json({
+        message: 'Image bien enregistrée',
+        userCreated: {
+          _id: result._id,
+          profileImg: result.profileImg,
+        },
+      });
+    })
+    .catch((err) => {
+      console.log(err),
+        res.status(500).json({
+          error: err,
+        });
+    });
+});
 
-  await pipeline(req.file.stream, fs.createWriteStream(`${__dirname}/../front/public/assets/${fileName}`));
-
-  //   try {
-  //     await uploadModel.findByIdAndUpdate(
-  //       req.body.userId,
-  //       { $set: { picture: './upload/' + fileName } },
-  //       { new: true, upsert: true, setDefaultsOnInsert: true },
-  //       (err, docs) => {
-  //         if (!err) return res.send(docs);
-  //         else return res.status(500).send({ message: err });
-  //       },
-  //     );
-  //   } catch (err) {
-  //     return res.status(500).send({ message: err });
-  //   }
+router.get('/', (req, res, next) => {
+  User.find().then((data) => {
+    res.status(200).json({
+      message: 'Liste complete',
+      users: data,
+    });
+  });
 });
 
 module.exports = router;
