@@ -19,7 +19,7 @@ router.post('/', async (req, res) => {
 
   const fileName = req.body.name + '.jpg';
 
-  await pipeline(req.file.stream, fs.createWriteStream(`${__dirname}/../front/public/upload/${fileName}`));
+  await pipeline(req.file.stream, fs.createWriteStream(`${__dirname}/../front/public/assets/${fileName}`));
 
   //   try {
   //     await uploadModel.findByIdAndUpdate(
