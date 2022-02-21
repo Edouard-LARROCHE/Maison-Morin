@@ -1,13 +1,13 @@
 const express = require('express');
 const app = express();
-require('./models/dbConfig');
+require('./config/db');
 
 const multer = require('multer');
 const upload = multer();
 
-const postsRoutes = require('./routes/postsController');
-const loginRoutes = require('./routes/userController');
-const uploadRoutes = require('./routes/uploadController');
+const postsRoutes = require('./routes/postsRoute');
+const loginRoutes = require('./routes/userRoute');
+const uploadRoutes = require('./routes/uploadRoute');
 
 const bodyParser = require('body-parser');
 const cors = require('cors');
