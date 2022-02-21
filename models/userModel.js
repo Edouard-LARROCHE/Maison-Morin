@@ -1,18 +1,15 @@
 const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
 
-const loginSchema = mongoose.Schema({
-  name: {
-    type: String,
-    required: true,
+const userSchema = new Schema(
+  {
+    _id: mongoose.Schema.Types.ObjectId,
+    profileImg: {
+      type: String,
+    },
   },
-  password: {
-    type: String,
-    required: true,
+  {
+    collection: 'users',
   },
-  picture: {
-    type: String,
-    default: './uploads/profil/random-user.png',
-  },
-});
-
-module.exports = mongoose.model('Login', loginSchema);
+);
+module.exports = mongoose.model('User', userSchema);
