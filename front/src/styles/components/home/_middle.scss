@@ -18,6 +18,11 @@
     width: 30em;
     height: 16em;
     top: -3em;
+    text-align: center;
+    h1 {
+      margin-top: 1em;
+      margin-bottom: .7em;
+    }
   }
   .support-second {
     position: absolute;
@@ -27,8 +32,15 @@
     margin-right: auto;
     width: 30em;
     height: 16em;
+    text-align: center;
+    h3 {
+      margin-top: 3.5em;
+      margin-right: .9em;
+      margin-left: .9em;
+    }
   }
 }
+
 
 /* ===== PHOTOS ===== */
 

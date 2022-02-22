@@ -7,6 +7,7 @@ import Footer from '../components/home/Footer';
 import Infos from '../components/home/Infos';
 import Carou from '../components/Carousel';
 import NewsLetter from '../components/newsletter/NewsLetter';
+import Avis from '../components/Avis';
 
 const Home = () => {
   return (
@@ -17,6 +18,7 @@ const Home = () => {
       <Header />
       <Second />
       <Infos />
+      <Avis />
       <NewsLetter />
       <Footer />
     </div>
