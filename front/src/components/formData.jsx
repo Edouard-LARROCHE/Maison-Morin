@@ -3,22 +3,25 @@ import axios from 'axios';
 import { useEffect } from 'react';
 
 function App() {
-  const [upload, setUpload] = useState(null);
+  const [imgFile, setImgFile] = useState('');
 
   useEffect(() => {
-    axios.get('http://localhost:5500/upload').then((res) => {
-      const data = res.data.users;
-      setUpload(data);
-      console.log(data);
-    });
-  }, []);
+    axios
+      .get('http://localhost:5500/upload')
 
-  if (!upload) return null;
+      .then((res) => {
+        const data = res.data.img[0];
+        console.log(data);
+        setImgFile('http://localhost:5500/' + data.uploadImg);
+        console.log(imgFile);
+      });
+  });
 
   return (
     <div className='App' style={{ height: '20rem' }}>
-      <h1>requete API</h1>
-      <div> {upload.profileImg} </div>
+      <input type='file' name='image' accept='image/*' multiple={false} />
+
+      {imgFile && <img src={imgFile} alt='img' />}
     </div>
   );
 }
