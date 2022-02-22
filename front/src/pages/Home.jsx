@@ -9,6 +9,7 @@ import Carou from '../components/Carousel';
 import NewsLetter from '../components/newsletter/NewsLetter';
 import HeadBand from '../components/HeadBand';
 import Band from '../components/home/Band';
+import Avis from '../components/Avis';
 
 const Home = () => {
   return (
@@ -21,6 +22,7 @@ const Home = () => {
       <Band />
       <Second />
       <Infos />
+      <Avis />
       <NewsLetter />
       <Footer />
     </div>
