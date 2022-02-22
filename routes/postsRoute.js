@@ -5,7 +5,11 @@ const User = require('../models/postsModel');
 
 router.get('/', (req, res, next) => {
   User.find()
-    .then((user) => res.status(200).json(user))
+    .then(() =>
+      res.status(200).json({
+        message: 'Liste complete:',
+      }),
+    )
     .catch((error) => res.status(400).json({ error }));
 });
 

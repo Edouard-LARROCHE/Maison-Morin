@@ -3,22 +3,17 @@ import { Carousel } from 'react-carousel-minimal';
 function Carou() {
   const data = [
     {
+      image: '/assets/cake.png',
+    },
+    {
       image: '/assets/cake4.png',
-      caption: `<div>
-                    San Testo
-                    <br />
-                    Next
-                </div>`
+      caption: 'cake',
     },
     {
       image: '/assets/cake2.png',
     },
     {
       image: '/assets/index.jpeg',
-    },
-    {
-      image:
-        'https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Palace_of_Fine_Arts_%2816794p%29.jpg/1200px-Palace_of_Fine_Arts_%2816794p%29.jpg',
     },
     {
       image: 'https://i.natgeofe.com/n/f7732389-a045-402c-bf39-cb4eda39e786/scotland_travel_4x3.jpg',
@@ -52,8 +47,8 @@ function Carou() {
           <Carousel
             data={data}
             time={7000}
-            width='850px'
-            height='400px'
+            width='1000px'
+            height='600px'
             radius='10px'
             slideNumber={true}
             slideNumberStyle={slideNumberStyle}
@@ -68,8 +63,8 @@ function Carou() {
             thumbnailWidth='100px'
             style={{
               textAlign: 'center',
-              maxWidth: '850px',
-              maxHeight: '500px',
+              maxWidth: '1000px',
+              maxHeight: '600px',
               margin: '40px auto',
             }}
           />
