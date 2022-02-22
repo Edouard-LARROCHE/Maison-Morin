@@ -1,11 +1,10 @@
 const express = require('express');
 const multer = require('multer');
 const mongoose = require('mongoose');
-const uuid = require('uuid');
 const router = express.Router();
 const DIR = './front/public/upload/';
 
-const User = require('../models/userModel');
+const Img = require('../models/userModel');
 
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
@@ -13,7 +12,7 @@ const storage = multer.diskStorage({
   },
   filename: (req, file, cb) => {
     const fileName = file.originalname.toLowerCase().split(' ').join('-');
-    cb(null, uuid + '-' + fileName);
+    cb(null, fileName);
   },
 });
 
@@ -30,20 +29,20 @@ const upload = multer({
 });
 
 router.post('/', upload.single('profileImg'), (req, res, next) => {
-  const url = req.protocol + '://' + req.get('host');
-  const user = new User({
+  const url = req.protocol + '://' + req.get('host') + '/';
+  const user = new Img({
     _id: new mongoose.Types.ObjectId(),
     name: req.body.name,
-    profileImg: url + req.file.filename,
+    uploadImg: url + req.file.filename,
   });
   user
     .save()
     .then((result) => {
       res.status(201).json({
         message: 'Image bien enregistrée',
-        userCreated: {
+        uploadCreated: {
           _id: result._id,
-          profileImg: result.profileImg,
+          uploadImg: result.uploadImg,
         },
       });
     })
@@ -56,10 +55,10 @@ router.post('/', upload.single('profileImg'), (req, res, next) => {
 });
 
 router.get('/', (req, res, next) => {
-  User.find().then((data) => {
+  Img.find().then((data) => {
     res.status(200).json({
-      message: 'Liste complete',
-      users: data,
+      message: 'Liste complete:',
+      img: data,
     });
   });
 });
