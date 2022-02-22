@@ -12,10 +12,8 @@ const Header = () => {
         </div>
         <div className='vertical-line' />
         <div className='text-content'>
-          <p>
-            Notre boutique traîteur en Seine et Marne est spécialisé en cuisine traditionnelle française. Nous vous proposons de nombreux plats
-            régionaux et plats du terroir variés. Nous utilisons des produits frais et de saison.
-          </p>
+          <p>Notre boutique traîteur en Seine et Marne est spécialisée en cuisine traditionnelle française.</p>
+          <p>Nous vous proposons de nombreux plats régionaux et plats du terroir variés. Nous utilisons des produits frais et de saison.</p>
           <br />
           <p>
             Nous les sélectionnons minutieusement chez nos fournisseurs français et locaux. Chez la Maison Morin nous cultivons la culture du goût.

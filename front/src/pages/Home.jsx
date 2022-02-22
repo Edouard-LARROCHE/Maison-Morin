@@ -8,6 +8,7 @@ import Infos from '../components/home/Infos';
 import Carou from '../components/Carousel';
 import NewsLetter from '../components/newsletter/NewsLetter';
 import HeadBand from '../components/HeadBand';
+import Band from '../components/home/Band';
 
 const Home = () => {
   return (
@@ -17,6 +18,7 @@ const Home = () => {
       <MenuDrop />
       <Carou />
       <Header />
+      <Band />
       <Second />
       <Infos />
       <NewsLetter />
