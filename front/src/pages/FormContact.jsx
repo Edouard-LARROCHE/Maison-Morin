@@ -4,11 +4,13 @@ import Footer from '../components/home/Footer';
 import ContentForm from '../components/contact/ContentForm';
 import Form from '../components/contact/Form';
 import NewsLetter from '../components/newsletter/NewsLetter';
+import HeadBand from '../components/HeadBand';
 
 const FormContact = () => {
   return (
     <>
       <NavBar />
+      <HeadBand />
       <div className='texte'>
         <h1>Contactez-nous</h1>
       </div>
