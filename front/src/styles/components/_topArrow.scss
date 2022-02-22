@@ -3,11 +3,10 @@
   cursor: pointer;
   position: fixed;
   right: 50px;
-  top: 850px;
+  bottom: 50px;
   transition: 0.5s ease-in-out;
   border: 2px solid $black;
 }
-
 
 .scrool-top-resp:hover {
   background-color: $black;

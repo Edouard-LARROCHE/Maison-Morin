@@ -7,15 +7,19 @@ import Footer from '../components/home/Footer';
 import Infos from '../components/home/Infos';
 import Carou from '../components/Carousel';
 import NewsLetter from '../components/newsletter/NewsLetter';
+import HeadBand from '../components/HeadBand';
+import Band from '../components/home/Band';
 import Avis from '../components/Avis';
 
 const Home = () => {
   return (
     <div>
       <NavBar />
+      <HeadBand />
       <MenuDrop />
       <Carou />
       <Header />
+      <Band />
       <Second />
       <Infos />
       <Avis />

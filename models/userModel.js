@@ -4,12 +4,12 @@ const Schema = mongoose.Schema;
 const userSchema = new Schema(
   {
     _id: mongoose.Schema.Types.ObjectId,
-    profileImg: {
+    uploadImg: {
       type: String,
     },
   },
   {
-    collection: 'users',
+    collection: 'img',
   },
 );
-module.exports = mongoose.model('User', userSchema);
+module.exports = mongoose.model('Img', userSchema);

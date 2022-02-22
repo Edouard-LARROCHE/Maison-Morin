@@ -1,24 +1,19 @@
 import React, { useState } from 'react';
-import axios from 'axios';
-import { useEffect } from 'react';
 
 function App() {
-  const [upload, setUpload] = useState(null);
+  const [postPicture, setPostPicture] = useState(null);
+  const [setFile] = useState();
 
-  useEffect(() => {
-    axios.get('http://localhost:5500/upload').then((res) => {
-      const data = res.data.users;
-      setUpload(data);
-      console.log(data);
-    });
-  }, []);
-
-  if (!upload) return null;
+  const handlePicture = (e) => {
+    setPostPicture(URL.createObjectURL(e.target.files[0]));
+    setFile(e.target.files[0]);
+  };
 
   return (
-    <div className='App' style={{ height: '20rem' }}>
-      <h1>requete API</h1>
-      <div> {upload.profileImg} </div>
+    <div className='App'>
+      <input type='file' id='file-upload' name='file' accept='.jpg, .jpeg, .png' onChange={(e) => handlePicture(e)} />
+      <img src={postPicture} alt='test' />
+      <img src='/upload/devanture.jpeg' alt='test' />
     </div>
   );
 }
