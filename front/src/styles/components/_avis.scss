@@ -2,6 +2,9 @@
     width: 100%;
     height: 35em;
     background-color: $color-2;
+    background-image: url('../../../public/assets/devanture2000-35.png');
+    background-position-x: left;
+    background-position-y: -60rem;
     display: grid;
     grid-template-columns: 20% 60% 20%;
     grid-template-rows: repeat(3, 1fr);
@@ -9,15 +12,16 @@
 
 
 /************* BOX COMMENT *************/
+/******* BOX ONE *******/
 
 .comment-box-one {
+    margin-top: 2.5em;
     grid-column: 2;
-    grid-row: 2;
+    grid-row: 1;
     height: 6em;
     width: 16em;
     background-color: #fff;
     position: relative;
-    border-radius: 3px;
     h4 {
         position: absolute;
         z-index: 2;
@@ -44,9 +48,117 @@
         color: black;
         font-style: italic;
     }
-    p {
+}
+
+/******* BOX TWO *******/
+.comment-box-two {
+    margin-left: 12em;
+    margin-top: 7em;
+    grid-column: 1;
+    grid-row: 2;
+    height: 6em;
+    width: 16em;
+    background-color: #fff;
+    position: relative;
+    h4 {
+        position: absolute;
+        z-index: 2;
+        box-sizing: border-box;
+        padding: 1em;
+    }
+}    
+
+.arrow-two {
+    position: absolute;
+    height: 2em;
+    width: 2em;
+    background-color: #fff;
+    bottom: -7px;
+    left: 150px;
+    transform: rotate(45deg);
+    z-index: 1;
+}
+
+.comment-author-two {
+    margin-top: 120px;
+    margin-left: 55px;
+    h1 {
         color: black;
-        font-size: 1.1em;
-        margin-left: 60px;
+        font-style: italic;
+        text-align: center;
+    }
+}
+
+/******* BOX THREE *******/
+.comment-box-three {
+    grid-column: 3;
+    grid-row: 2;
+    height: 5em;
+    width: 15em;
+    background-color: #fff;
+    position: relative;
+    h4 {
+        position: absolute;
+        z-index: 2;
+        box-sizing: border-box;
+        padding: 1em;
+    }
+}    
+
+.arrow-three {
+    position: absolute;
+    height: 2em;
+    width: 2em;
+    background-color: #fff;
+    bottom: -7px;
+    left: 120px;
+    transform: rotate(45deg);
+    z-index: 1;
+}
+
+.comment-author-three {
+    margin-top: 103px;
+    margin-left: 75px;
+    h1 {
+        color: black;
+        font-style: italic;
+    }
+}
+
+/******* BOX FOUR *******/
+
+.comment-box-four {
+    grid-column: 2;
+    grid-row: 2;
+    margin: 0 auto;
+    height: 7em;
+    width: 25em;
+    background-color: #fff;
+    position: relative;
+    h4 {
+        position: absolute;
+        z-index: 2;
+        box-sizing: border-box;
+        padding: 1em;
+    }
+}    
+
+.arrow-four {
+    position: absolute;
+    height: 2em;
+    width: 2em;
+    background-color: #fff;
+    bottom: -7px;
+    left: 180px;
+    transform: rotate(45deg);
+    z-index: 1;
+}
+
+.comment-author-four {
+    margin-top: 135px;
+    margin-left: 130px;
+    h1 {
+        color: black;
+        font-style: italic;
     }
 }
