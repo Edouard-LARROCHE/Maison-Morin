@@ -40,7 +40,7 @@ const IndexModal = () => {
 
   return (
     <div className='login-component'>
-      <PersonIcon className='modal-toggle' onClick={toggleLoginForm} style={{ cursor: 'pointer', color: '#012f6b' }} />
+      <PersonIcon className='modal-toggle' onClick={toggleLoginForm} style={{ cursor: 'pointer', color: '#f6fbf8' }} />
       <Modal isShowing={isLoginFormShowed} hide={toggleLoginForm}>
         <form onSubmit={handleSubmit}>
           <TextField onChange={(e) => setName(e.target.value)} value={name} type='text' placeholder='Nom *' style={{ paddingBottom: '1rem' }} />

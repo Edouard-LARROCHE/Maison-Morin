@@ -1,6 +1,7 @@
 /*********** NAV BAR *************/
 
 .all-nav {
+  background: $color-2;
   display: grid;
   grid-template-columns: 40% 20% 40%;
 
@@ -12,18 +13,21 @@
     li {
       margin: 2rem;
     }
+
+    p {
+      color: $color-1;
+    }
   }
   /*********** LOGO *************/
 
   .logo-home {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     padding-top: 1rem;
 
     img {
-      width: 13rem;
+      width: 12rem;
       cursor: pointer;
     }
 
