@@ -17,8 +17,8 @@ const Home = () => {
       <NavBar />
       <HeadBand />
       <MenuDrop />
-      <Carou />
       <Header />
+      <Carou />
       <Band />
       <Second />
       <Infos />
