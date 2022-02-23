@@ -2,6 +2,7 @@
 
 .all-nav {
   background: $color-2;
+  clip-path: polygon(0 0, 0 100%, 45% 100%, 50% 75%, 55% 100%, 100% 100%, 100% 0);
   display: grid;
   grid-template-columns: 40% 20% 40%;
 
@@ -27,7 +28,7 @@
     padding-top: 1rem;
 
     img {
-      width: 12rem;
+      width: 10rem;
       cursor: pointer;
     }
 

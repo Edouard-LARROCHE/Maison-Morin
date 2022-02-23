@@ -62,13 +62,10 @@ span {
 }
 
 .vertical-line-global {
-  height: 70px;
-  width: 2px;
+  height: 2px;
   background: $color-3;
-  position: relative;
-  left: 50%;
-  border-radius: 2px;
-  margin: 0.5rem 0 0.5rem 0;
+  margin-top: 0.5rem;
+  // clip-path: polygon(0 35%, 0 100%, 100% 100%, 100% 35%, 53% 35%, 50% 0%, 47% 35%);
 }
 
 /********* DARK MODE ************/
