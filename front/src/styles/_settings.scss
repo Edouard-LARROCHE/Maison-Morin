@@ -61,16 +61,6 @@ span {
   color: $color-2;
 }
 
-.vertical-line-global {
-  height: 70px;
-  width: 2px;
-  background: $color-3;
-  position: relative;
-  left: 50%;
-  border-radius: 2px;
-  margin: 0.5rem 0 0.5rem 0;
-}
-
 /********* DARK MODE ************/
 
 /* Light Mode Styles */
@@ -88,7 +78,7 @@ span {
 }
 
 .btn-light {
-  color: $color-2;
+  color: $color-1;
 }
 
 /* Dark Mode Styles */
@@ -106,5 +96,5 @@ span {
 }
 
 .btn-dark {
-  color: $color-2;
+  color: $color-1;
 }

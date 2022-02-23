@@ -1,0 +1,42 @@
+.line-global {
+  height: 5rem;
+  display: grid;
+  grid-template-columns: 45.1% repeat(2, 4.9%) 45.1%;
+  grid-template-rows: 1fr;
+
+  .line-horizontal-left {
+    grid-area: 1 / 1 / 2 / 2;
+    height: 2px;
+    background: $color-3;
+    margin-top: 0.5rem;
+  }
+
+  .line-horizontal-right {
+    grid-area: 1 / 4 / 2 / 5;
+    height: 4px;
+    background: $color-3;
+    margin-top: 0.5rem;
+  }
+
+  .line-horizontal-left-deg {
+    grid-area: 1 / 2 / 2 / 3;
+    position: relative;
+    left: -10px;
+    top: -24px;
+    height: 2px;
+    width: 115px;
+    background: $color-3;
+    rotate: -34deg;
+  }
+
+  .line-horizontal-right-deg {
+    grid-area: 1 / 3 / 2 / 4;
+    position: relative;
+    right: 10px;
+    top: -24px;
+    height: 4px;
+    width: 115px;
+    background: $color-3;
+    rotate: 34deg;
+  }
+}
