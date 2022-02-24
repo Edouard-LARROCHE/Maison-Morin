@@ -18,7 +18,9 @@ const Header = () => {
         </div>
         <div className='vertical-line' />
       </div>
-      <div className='link-to'>Découvrir la Maison</div>
+      <div className='link-to'>
+        <p>Découvrir la Maison</p>
+      </div>
     </div>
   );
 };

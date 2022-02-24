@@ -46,13 +46,21 @@
 
   .link-to {
     grid-area: 2 / 2 / 3 / 3;
-    cursor: pointer;
     display: flex;
     justify-content: center;
-    margin-top: -1rem;
 
-    &:hover {
-      opacity: 0.6;
+    p {
+      cursor: pointer;
+      width: 9rem;
+      height: 1rem;
+      margin-top: -1rem;
+      color: $color-2;
+      font-style: italic;
+      font-size: 1.1rem;
+
+      &:hover {
+        opacity: 0.6;
+      }
     }
   }
 }
