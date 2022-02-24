@@ -1,0 +1,33 @@
+.display-third {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .head-text-third {
+    font-family: $font-1;
+    color: $color-3;
+    font-size: 25px;
+    font-style: italic;
+    letter-spacing: 0.2rem;
+  }
+
+  .head-title-third {
+    h1 {
+      letter-spacing: 0.1rem;
+    }
+  }
+}
+
+.presta-list {
+  height: 50vh; //warning delete
+
+  ul {
+    display: flex;
+    justify-content: center;
+
+    li {
+      margin: 1rem;
+      font-size: 0.9rem;
+    }
+  }
+}
