@@ -1,15 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const DisplayScrollThird = () => {
   const [third, setThird] = useState('all-display-third-before');
 
-  const handleDisplay = () => {
-    if (window.scrollY >= 1700) {
-      setThird('all-display-third');
-    }
-  };
+  useEffect(() => {
+    const handleDisplay = () => {
+      if (window.scrollY >= 1700) {
+        setThird('all-display-third');
+      }
+    };
 
-  window.addEventListener('scroll', handleDisplay);
+    window.addEventListener('scroll', handleDisplay);
+  }, [third]);
 
   return (
     <div className={third}>

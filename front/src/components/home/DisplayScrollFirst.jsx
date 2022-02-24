@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 const DisplayScroll = () => {
@@ -8,23 +8,25 @@ const DisplayScroll = () => {
   const [text, setText] = useState('text-content-before');
   const [linkTo, setLinkTo] = useState('link-to-first-before');
 
-  const handleScroll = () => {
-    if (window.scrollY >= 500) {
-      setHeadText('head-text');
-      setPicture('picture-first');
-    }
-    if (window.scrollY >= 700) {
-      setTitle('title-header');
-    }
-    if (window.scrollY >= 800) {
-      setText('text-content');
-    }
-    if (window.scrollY >= 1000) {
-      setLinkTo('link-to-first');
-    }
-  };
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY >= 500) {
+        setHeadText('head-text');
+        setPicture('picture-first');
+      }
+      if (window.scrollY >= 700) {
+        setTitle('title-header');
+      }
+      if (window.scrollY >= 800) {
+        setText('text-content');
+      }
+      if (window.scrollY >= 1000) {
+        setLinkTo('link-to-first');
+      }
+    };
 
-  window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll);
+  });
 
   return (
     <div className='display-first'>

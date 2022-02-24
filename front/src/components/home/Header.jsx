@@ -1,16 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 const Header = () => {
   const [display, setDisplay] = useState('link-to-before');
 
-  const handleScroll = () => {
-    if (window.scrollY >= 118) {
-      setDisplay('link-to');
-    }
-  };
-
-  window.addEventListener('scroll', handleScroll);
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY >= 118) {
+        setDisplay('link-to');
+      }
+    };
+    window.addEventListener('scroll', handleScroll);
+  });
 
   return (
     <div className='header-home'>
