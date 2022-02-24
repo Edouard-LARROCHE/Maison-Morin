@@ -1,0 +1,22 @@
+.display-first {
+  height: 150vh; //warnig delete after
+
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  grid-template-rows: 1fr 1rem;
+  grid-column-gap: 50px;
+  margin: 0 400px 200px 400px;
+
+  .picture-first {
+    grid-area: 1 / 2 / 2 / 3;
+
+    img {
+      width: 35rem;
+      height: 25rem;
+    }
+  }
+
+  .text-first {
+    grid-area: 1 / 1 / 2 / 2;
+  }
+}

@@ -9,6 +9,7 @@ import NewsLetter from '../components/newsletter/NewsLetter';
 import HeadBand from '../components/HeadBand';
 import Band from '../components/home/Band';
 import Avis from '../components/Avis';
+import DisplayScroll from '../components/home/DisplayScroll';
 
 const Home = () => {
   return (
@@ -17,6 +18,7 @@ const Home = () => {
       <HeadBand />
       <MenuDrop />
       <Header />
+      <DisplayScroll />
       <Band />
       <Second />
       <Infos />

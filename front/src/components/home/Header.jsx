@@ -22,7 +22,9 @@ const Header = () => {
         <div className='title-header'>
           <h1>TRAITEUR TRADITIONNEL</h1>
         </div>
-        <div className='vertical-line' />
+        <div className='V-position'>
+          <img className='V' src='/logo/V.png' alt='V' style={{ width: '2rem' }} />
+        </div>
         <div className='text-content'>
           <p>Notre boutique traîteur en Seine et Marne est spécialisée en cuisine traditionnelle française.</p>
           <p>Nous vous proposons de nombreux plats régionaux et plats du terroir variés. Nous utilisons des produits frais et de saison.</p>
