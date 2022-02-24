@@ -8,10 +8,10 @@ import Infos from '../components/home/Infos';
 import NewsLetter from '../components/newsletter/NewsLetter';
 import HeadBand from '../components/HeadBand';
 import Band from '../components/home/Band';
-import Avis from '../components/Avis';
 import DisplayScroll from '../components/home/DisplayScrollFirst';
 import DisplayScrollSecond from '../components/home/DisplayScrollSecond';
 import DisplayScrollThird from '../components/home/DisplayScrollThird';
+import Avis from '../components/Avis';
 
 const Home = () => {
   return (
