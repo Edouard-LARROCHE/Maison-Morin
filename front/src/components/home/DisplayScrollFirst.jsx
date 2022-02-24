@@ -9,17 +9,17 @@ const DisplayScroll = () => {
   const [linkTo, setLinkTo] = useState('link-to-first-before');
 
   const handleScroll = () => {
-    if (window.scrollY >= 400) {
+    if (window.scrollY >= 500) {
       setHeadText('head-text');
       setPicture('picture-first');
-      setTimeout(() => {
-        setTitle('title-header');
-      }, 500);
+    }
+    if (window.scrollY >= 700) {
+      setTitle('title-header');
     }
     if (window.scrollY >= 800) {
       setText('text-content');
     }
-    if (window.scrollY >= 1100) {
+    if (window.scrollY >= 1000) {
       setLinkTo('link-to-first');
     }
   };

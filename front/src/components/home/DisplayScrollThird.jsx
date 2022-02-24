@@ -1,8 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const DisplayScrollThird = () => {
+  const [third, setThird] = useState('all-display-third-before');
+
+  const handleDisplay = () => {
+    if (window.scrollY >= 1700) {
+      setThird('all-display-third');
+    }
+  };
+
+  window.addEventListener('scroll', handleDisplay);
+
   return (
-    <>
+    <div className={third}>
       <div className='display-third'>
         <div className='head-text-third'>TRAITEUR MAISON-MORIN</div>
         <div className='head-title-third'>
@@ -25,7 +35,7 @@ const DisplayScrollThird = () => {
           <li>Repas assis</li>
         </ul>
       </div>
-    </>
+    </div>
   );
 };
 
