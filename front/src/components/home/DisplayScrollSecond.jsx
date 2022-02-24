@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 const DisplayScrollSecond = () => {
@@ -8,23 +8,25 @@ const DisplayScrollSecond = () => {
   const [text, setText] = useState('text-content-before');
   const [linkTo, setLinkTo] = useState('link-to-second-before');
 
-  const handleScroll = () => {
-    if (window.scrollY >= 1150) {
-      setHeadText('head-text');
-      setPicture('picture-second');
-      setTimeout(() => {
-        setTitle('title-header');
-      }, 500);
-    }
-    if (window.scrollY >= 1300) {
-      setText('text-content');
-    }
-    if (window.scrollY >= 1500) {
-      setLinkTo('link-to-second');
-    }
-  };
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY >= 1150) {
+        setHeadText('head-text');
+        setPicture('picture-second');
+        setTimeout(() => {
+          setTitle('title-header');
+        }, 500);
+      }
+      if (window.scrollY >= 1300) {
+        setText('text-content');
+      }
+      if (window.scrollY >= 1500) {
+        setLinkTo('link-to-second');
+      }
+    };
 
-  window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll);
+  });
 
   return (
     <div className='display-second'>

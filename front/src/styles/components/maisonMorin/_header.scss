@@ -1,12 +1,17 @@
 .head-text {
   text-align: center;
-  margin: 70px 300px 0 300px;
+  margin: 70px 410px 0 410px;
+
+  h1 {
+    letter-spacing: 0.1rem;
+  }
 
   p {
-    font-size: 1.2rem;
+    font-size: 20px;
+    opacity: 0.7;
   }
 
   .bottom-text {
-    margin: 0 280px 0 280px;
+    margin: 0 200px 0 200px;
   }
 }

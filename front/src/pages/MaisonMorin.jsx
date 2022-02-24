@@ -13,7 +13,6 @@ const MaisonMorin = () => {
       <HeadBand />
       <Header />
       <Middle />
-      <HeadBand />
       <BottomCard />
       <Footer />
     </div>

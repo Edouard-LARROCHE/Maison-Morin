@@ -3,8 +3,10 @@ import React from 'react';
 const Header = () => {
   return (
     <div className='head-text'>
-      <h1>La Maison Morin à Barbizon</h1>
-      <br />
+      <h1>LA MAISON MORIN À BARBIZON</h1>
+      <div className='V-position'>
+        <img className='V' src='/logo/V.png' alt='V' style={{ width: '2rem' }} />
+      </div>
       <br />
       <p>
         C’est un véritable passage de témoins père-fils qui a eu lieu autour de la Maison Morin à Barbizon (Seine-et-Marne), très prisée des habitants
