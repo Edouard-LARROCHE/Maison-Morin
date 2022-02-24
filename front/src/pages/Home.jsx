@@ -11,6 +11,7 @@ import Band from '../components/home/Band';
 import Avis from '../components/Avis';
 import DisplayScroll from '../components/home/DisplayScrollFirst';
 import DisplayScrollSecond from '../components/home/DisplayScrollSecond';
+import DisplayScrollThird from '../components/home/DisplayScrollThird';
 
 const Home = () => {
   return (
@@ -21,6 +22,7 @@ const Home = () => {
       <Header />
       <DisplayScroll />
       <DisplayScrollSecond />
+      <DisplayScrollThird />
       <Band />
       <Second />
       <Infos />
