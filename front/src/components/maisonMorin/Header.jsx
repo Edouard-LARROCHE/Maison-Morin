@@ -24,5 +24,3 @@ const Header = () => {
 };
 
 export default Header;
-
-//"Victorien Morin et sont équipes vous propose des produits artisanaux (de l’entrée au dessert), des plats cuisinés fait maison élaborés sur place à partir de produits brut."

@@ -1,7 +1,7 @@
 .header-home {
   display: grid;
   grid-template-columns: repeat(2, 50%);
-  grid-template-rows: 1fr 3rem;
+  grid-template-rows: 1fr 1rem;
   grid-column-gap: 50px;
   margin: 0 400px 200px 400px;
 
@@ -44,18 +44,28 @@
     }
   }
 
+  /************ DISPLAY **************/
+
+  .link-to-before {
+    grid-area: 2 / 2 / 3 / 3;
+    width: 14.4rem;
+    transform: translateX(300px);
+    opacity: 0;
+  }
+
   .link-to {
     grid-area: 2 / 2 / 3 / 3;
     display: flex;
     justify-content: center;
+    transition: opacity 3s, transform 1s;
 
     p {
       cursor: pointer;
-      width: 9rem;
-      height: 1rem;
+      width: 14.4rem;
       margin-top: -1rem;
       color: $color-2;
       font-style: italic;
+      text-decoration: underline;
       font-size: 1.1rem;
 
       &:hover {
@@ -64,6 +74,8 @@
     }
   }
 }
+
+/************** LINE STYLE ****************/
 
 .vertical-line {
   height: 20px;

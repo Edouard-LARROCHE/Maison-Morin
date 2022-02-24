@@ -1,6 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
+  const [display, setDisplay] = useState('link-to-before');
+
+  const handleScroll = () => {
+    if (window.scrollY >= 118) {
+      setDisplay('link-to');
+    }
+  };
+
+  window.addEventListener('scroll', handleScroll);
+
   return (
     <div className='header-home'>
       <div className='picture-header'>
@@ -18,8 +29,10 @@ const Header = () => {
         </div>
         <div className='vertical-line' />
       </div>
-      <div className='link-to'>
-        <p>Découvrir la Maison</p>
+      <div className={display}>
+        <Link to='/maison-morin'>
+          <p>DECOUVRIR LA MAISON »</p>
+        </Link>
       </div>
     </div>
   );
