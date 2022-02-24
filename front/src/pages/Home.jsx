@@ -5,7 +5,6 @@ import Header from '../components/home/Header';
 import Second from '../components/home/Middle';
 import Footer from '../components/home/Footer';
 import Infos from '../components/home/Infos';
-import Carou from '../components/Carousel';
 import NewsLetter from '../components/newsletter/NewsLetter';
 import HeadBand from '../components/HeadBand';
 import Band from '../components/home/Band';
@@ -18,7 +17,6 @@ const Home = () => {
       <HeadBand />
       <MenuDrop />
       <Header />
-      <Carou />
       <Band />
       <Second />
       <Infos />
