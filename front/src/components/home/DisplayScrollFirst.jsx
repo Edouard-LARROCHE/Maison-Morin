@@ -29,12 +29,12 @@ const DisplayScroll = () => {
   return (
     <div className='display-first'>
       <div className={picture}>
-        <img src='/assets/macaron.png' alt='picute1' />
+        <img src='/assets/macaron.png' alt='picure1' />
       </div>
       <div className='text-first'>
         <div className={headText}>Une Passion au Quotidien </div>
         <div className={title}>
-          <h1>PÂTISSERIE</h1>
+          <h1>NOS PÂTISSERIE</h1>
           <div className='V-position'>
             <img className='V' src='/logo/V.png' alt='V' style={{ width: '2rem' }} />
           </div>

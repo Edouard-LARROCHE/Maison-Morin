@@ -9,7 +9,7 @@ import NewsLetter from '../components/newsletter/NewsLetter';
 import HeadBand from '../components/HeadBand';
 import Band from '../components/home/Band';
 import Avis from '../components/Avis';
-import DisplayScroll from '../components/home/DisplayScroll';
+import DisplayScroll from '../components/home/DisplayScrollFirst';
 import DisplayScrollSecond from '../components/home/DisplayScrollSecond';
 
 const Home = () => {
