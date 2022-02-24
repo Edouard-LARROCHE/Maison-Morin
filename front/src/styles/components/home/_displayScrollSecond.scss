@@ -5,8 +5,9 @@
   grid-column-gap: 50px;
   margin: 0 400px 200px 400px;
 
-  .picture-header {
+  .picture-second {
     grid-area: 1 / 1 / 2 / 2;
+    transition: opacity 3s, transform 1s;
     position: relative;
     width: 35rem;
     height: 21rem;
@@ -39,9 +40,11 @@
       font-style: italic;
       letter-spacing: 0.2rem;
       margin: -1rem 0 1rem 0;
+      transition: opacity 3s, transform 1s;
     }
 
     .title-header {
+      transition: opacity 3s, transform 1s;
       h1 {
         letter-spacing: 0.1rem;
       }
@@ -49,6 +52,7 @@
   }
 
   .text-content {
+    transition: opacity 3s, transform 1s;
     p {
       font-size: 20px;
       opacity: 0.7;
@@ -58,7 +62,42 @@
 
 /************ DISPLAY **************/
 
-.link-to {
+.head-text-before {
+  grid-area: 1 / 2 / 2 / 3;
+  transform: translateX(300px);
+  opacity: 0;
+}
+
+.title-header-before {
+  grid-area: 1 / 1 / 2 / 2;
+  transform: translateX(300px);
+  opacity: 0;
+}
+
+.text-content-before {
+  grid-area: 1 / 1 / 2 / 2;
+  transform: translateX(300px);
+  opacity: 0;
+}
+
+.picture-second-before {
+  grid-area: 1 / 1 / 2 / 2;
+  transform: translateX(-300px);
+  opacity: 0;
+
+  img {
+    width: 35rem;
+    height: 21rem;
+  }
+}
+
+.link-to-second-before {
+  grid-area: 2 / 2 / 3 / 3;
+  transform: translateX(300px);
+  opacity: 0;
+}
+
+.link-to-second {
   grid-area: 2 / 2 / 3 / 3;
   display: flex;
   justify-content: center;
