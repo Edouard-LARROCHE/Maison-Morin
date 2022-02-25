@@ -4,20 +4,21 @@ const Cookie = () => {
   return (
     <>
       <div className='cook-use'>
-        <h2>1. Que sont les cookies ? Comment sont-ils utilisés ?</h2>
+        <div className='V-position'>
+          <img className='V' src='/logo/V.png' alt='V' style={{ width: '3rem' }} />
+        </div>
+        <h1>1. Que sont les cookies ? Comment sont-ils utilisés ?</h1>
         <p>
           Un cookie est un fichier texte déposé sur l’appareil que vous utilisez pour accéder à Internet (ordinateur, téléphone mobile, tablette…)
           lorsque vous visitez un site via votre logiciel de navigation.
         </p>
-        <br />{' '}
+        <br />
         <p>
-          {' '}
           Nous plaçons un identifiant unique dans le cookie et utilisons le cookie pour relier votre ordinateur aux informations que nous stockons
           dans notre base de données.
         </p>
         <br />
         <p>
-          {' '}
           Il contient plusieurs données permettant de vous reconnaître :
           <br /> - le nom du serveur qui l'a déposé ;
           <br /> - un identifiant sous forme de numéro unique ;
@@ -25,7 +26,6 @@ const Cookie = () => {
         </p>
         <br />
         <p>
-          {' '}
           Les cookies peuvent être utilisés sur votre ordinateur ou votre appareil mobile pour des durées différentes. Certains cookies sont des
           "cookies de session", ce qui signifie qu'ils n'existent que lorsque votre navigateur est ouvert et sont automatiquement supprimés lorsque
           vous fermez votre navigateur ou que vous quittez l'application. D'autres cookies sont des "cookies permanents", impliquant qu'ils survivent
@@ -34,14 +34,13 @@ const Cookie = () => {
         </p>
         <br />
         <p>
-          {' '}
           Certains cookies que nous utilisons sont des cookies permanents. Lorsque votre consentement est requis quant à leur utilisation, le délai de
           validité du consentement au dépôt des Cookies varie de 2 jours à 2 ans. A l'expiration de ce délai, nous solliciterons de nouveau votre
           consentement.
         </p>
       </div>
       <div className='cook-control'>
-        <h2>2. Comment contrôler les cookies ?</h2>
+        <h1>2. Comment contrôler les cookies ?</h1>
         <p>
           Lors de votre première visite sur notre Site, une bannière d’information s’affichera en bas de page. Après avoir cliqué sur « J’accepte »,
           vous consentez à ce que la Maison Morin puisse déposer des cookies sur votre ordinateur ou appareil.

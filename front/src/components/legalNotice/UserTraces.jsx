@@ -3,7 +3,7 @@ import React from 'react';
 const UserTraces = () => {
   return (
     <div className='user-traces'>
-      <h2>3. Cookies utilisateurs</h2>
+      <h1>3. Cookies utilisateurs</h1>
       <p>
         Les cookies (témoins de connexion sous forme de petits fichiers envoyés sur le disque dur de votre ordinateur) éventuellement exploités sur ce
         site, et autres captures de variables d’environnement, ne seront exploités qu’aux seules fins d’analyse et d’optimisation du présent site par
