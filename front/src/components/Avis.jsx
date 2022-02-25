@@ -9,10 +9,7 @@ import 'swiper/scss/navigation';
 
 export default function Avis() {
     return (
-        <div className="container-avis">
-            <div className="add-avis">
-                {/* <h1>Quelques avis de nos clients</h1> */}
-            </div>                
+        <div className="container-avis">              
             <div className='avis-btn' href="#">
                 <a href="">Donner un avis Google</a>
             </div>
