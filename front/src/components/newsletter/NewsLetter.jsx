@@ -4,7 +4,6 @@ import { TextField } from '@material-ui/core';
 const NewsLetter = () => {
   return (
     <>
-      <div className='line'></div>
       <div className='banner-nl'>
         <div className='titre-nl'>
           <h1>Newsletter</h1>

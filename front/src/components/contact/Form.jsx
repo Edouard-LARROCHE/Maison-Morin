@@ -158,6 +158,7 @@ const Form = () => {
         </div>
       </div>
       <div className='form-message' />
+      <div className='line'></div>
     </>
   );
 };
