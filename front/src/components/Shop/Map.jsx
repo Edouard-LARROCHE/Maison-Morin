@@ -11,13 +11,13 @@ class Map extends Component {
       lat: 48.44,
       lng: 2.6,
     },
-    zoom: 2,
+    zoom: 6,
   };
 
   render() {
     return (
       <div className='map'>
-        <div className='google-map' style={{ height: '80vh' }}>
+        <div className='google-map' style={{ height: '90vh' }}>
           <GoogleMapReact bootstrapURLKeys={{ key: '' }} defaultCenter={this.props.center} defaultZoom={this.props.zoom}>
             <Logo lat={48.44551} lng={2.60484} />
           </GoogleMapReact>
@@ -34,8 +34,8 @@ class Map extends Component {
             <div className='info-shop'>
               <p>57 Grande Rue</p>
               <p>01.60.66.40.26</p>
-              <p>Horaires: de 09h00 à 13h00</p>
-              <p>de 15h00 à 19h30</p>
+              <p>06.09.04.59.85</p>
+              <p>contact@maison-morin.com</p>
             </div>
             <div className='go-to-shop'>
               <ul>
@@ -51,7 +51,21 @@ class Map extends Component {
               </ul>
             </div>
           </div>
-          <div className='content-shop'></div>
+          <div className='content-shop'>
+            <img src='/upload/devanture-small.png' alt='morin-maison' />
+            <div className='horaires'>
+              <h3>Horaires d'ouverture :</h3>
+              <ul>
+                <p>Lundi : 8h30/13h00 - 15h00/19h30</p>
+                <p>Mardi : Fermé</p>
+                <p>Mercredi : Fermé</p>
+                <p>Jeudi : 8h30/13h00 - 15h00/19h30</p>
+                <p>Vendredi : 8h30/13h00 - 15h00/19h30</p>
+                <p>Samedi : 8h30/13h00 - 15h00/19h30</p>
+                <p>Diamnche : 8h30/13h00 - 15h00/19h30</p>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     );
