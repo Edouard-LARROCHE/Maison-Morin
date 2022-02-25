@@ -11,6 +11,8 @@ import MaisonMorin from './pages/MaisonMorin';
 // DARK MODE
 import { ThemeContext } from './components/darkMode/ThemeContext';
 import TopArrow from './components/TopArrow';
+// SCROLL TO TOP
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   const theme = useContext(ThemeContext);
@@ -19,6 +21,7 @@ function App() {
   return (
     <div className={`bg ${darkMode ? 'bg-dark' : 'bg-light'}`}>
       <div className={`para ${darkMode ? 'para-dark' : 'para-light'}`}>
+        <ScrollToTop>
         <TopArrow />
         <Cookie />
         <Routes>
@@ -30,6 +33,7 @@ function App() {
           <Route path='/boutique' element={<Shop />} />
           <Route path='/maison-morin' element={<MaisonMorin />} />
         </Routes>
+        </ScrollToTop>
       </div>
     </div>
   );
