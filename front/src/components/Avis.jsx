@@ -17,10 +17,10 @@ export default function Avis() {
             slidesPerView={1}
             spaceBetween={30}
             loop={true}
-            autoplay={{
-                delay: 4500,
-                disableOnInteraction: false,
-            }}
+            // autoplay={{
+            //     delay: 4500,
+            //     disableOnInteraction: false,
+            // }}
             pagination={{
             clickable: true,
             }}
@@ -62,6 +62,25 @@ export default function Avis() {
                 <div className="arrow-kn"></div>
                 <div className="comment-author-kn">
                     <h1>Kelly Naar</h1>
+                </div>
+            </div>
+            </SwiperSlide>
+            <SwiperSlide>
+            <div className="comment-box-cm">
+                <h3> “ Produits frais, maisons et de qualité ! Très bon accueil. Nous avons apprécié les conseils donnés notamment sur la cuisson de nos plats.
+                    La boutique est magnifiquement décorée. Nous reviendrons sans hésiter. ”</h3>
+                <div className="arrow-cm"></div>
+                <div className="comment-author-cm">
+                    <h1>Chachou M</h1>
+                </div>
+            </div>
+            </SwiperSlide>
+            <SwiperSlide>
+            <div className="comment-box-vd">
+                <h3> “ Très bon charcutier traiteur, les terrines de lapin sont excellentes. ”</h3>
+                <div className="arrow-vd"></div>
+                <div className="comment-author-vd">
+                    <h1>Valerie Damas</h1>
                 </div>
             </div>
             </SwiperSlide>

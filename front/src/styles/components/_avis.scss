@@ -164,7 +164,7 @@
     width: 2em;
     background-color: #fff;
     bottom: -7px;
-    left: 60px;
+    left: 270px;
     transform: rotate(45deg);
     z-index: 1;
 }
@@ -197,7 +197,7 @@
     width: 2em;
     background-color: #fff;
     bottom: -7px;
-    left: 75px;
+    left: 175px;
     transform: rotate(45deg);
     z-index: 1;
 }
@@ -240,6 +240,78 @@
 
 .comment-author-kn {
     margin-top: 150px;
+    margin-left: 12px;
+    h1 {
+        color: black;
+        font-style: italic;
+    }
+}
+
+/******* BOX FIVE *******/
+
+.comment-box-cm {
+    height: 7.5em;
+    width: 30em;
+    margin-bottom: 4.8em;
+    background-color: #fff;
+    position: relative;
+    h3 {
+        position: absolute;
+        z-index: 2;
+        box-sizing: border-box;
+        padding: .8em;
+    }
+}    
+
+.arrow-cm {
+    position: absolute;
+    height: 2em;
+    width: 2em;
+    background-color: #fff;
+    bottom: -7px;
+    left: 300px;
+    transform: rotate(45deg);
+    z-index: 1;
+}
+
+.comment-author-cm {
+    margin-top: 150px;
+    margin-left: 12px;
+    h1 {
+        color: black;
+        font-style: italic;
+    }
+}
+
+/******* BOX SIX *******/
+
+.comment-box-vd {
+    height: 5em;
+    width: 20em;
+    margin-bottom: 1.7em;
+    background-color: #fff;
+    position: relative;
+    h3 {
+        position: absolute;
+        z-index: 2;
+        box-sizing: border-box;
+        padding: .8em;
+    }
+}    
+
+.arrow-vd {
+    position: absolute;
+    height: 2em;
+    width: 2em;
+    background-color: #fff;
+    bottom: -7px;
+    left: 135px;
+    transform: rotate(45deg);
+    z-index: 1;
+}
+
+.comment-author-vd {
+    margin-top: 100px;
     margin-left: 12px;
     h1 {
         color: black;
