@@ -8,6 +8,7 @@ import FormContact from './pages/FormContact';
 import IndexUpdate from './components/Update/IndexUpdate';
 import Shop from './pages/Shop';
 import MaisonMorin from './pages/MaisonMorin';
+import Traiteur from './components/gallery/Traiteur';
 // DARK MODE
 import { ThemeContext } from './components/darkMode/ThemeContext';
 import TopArrow from './components/TopArrow';
@@ -22,17 +23,18 @@ function App() {
     <div className={`bg ${darkMode ? 'bg-dark' : 'bg-light'}`}>
       <div className={`para ${darkMode ? 'para-dark' : 'para-light'}`}>
         <ScrollToTop>
-        <TopArrow />
-        <Cookie />
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/mentions-legales' element={<LegalNotice />} />
-          <Route path='/cookie' element={<Cookies />} />
-          <Route path='/contact' element={<FormContact />} />
-          <Route path='/update' element={<IndexUpdate />} />
-          <Route path='/boutique' element={<Shop />} />
-          <Route path='/maison-morin' element={<MaisonMorin />} />
-        </Routes>
+          <TopArrow />
+          <Cookie />
+          <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/mentions-legales' element={<LegalNotice />} />
+            <Route path='/cookie' element={<Cookies />} />
+            <Route path='/contact' element={<FormContact />} />
+            <Route path='/update' element={<IndexUpdate />} />
+            <Route path='/boutique' element={<Shop />} />
+            <Route path='/maison-morin' element={<MaisonMorin />} />
+            <Route path='/traiteur' element={<Traiteur />} />
+          </Routes>
         </ScrollToTop>
       </div>
     </div>
