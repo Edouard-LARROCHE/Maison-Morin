@@ -71,7 +71,7 @@ const Notice = () => {
           </div>
         </div>
         <div className='dev-al'>
-          <p>Alan DUBOSC</p>
+          <p>Alan DUBOSQ</p>
         </div>
       </div>
     </>

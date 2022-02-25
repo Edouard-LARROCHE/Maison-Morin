@@ -1,21 +1,27 @@
 .middle-content {
-  margin: 100px 0 50px 0;
+  margin: 100px 300px 50px 300px;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 40%);
   grid-template-rows: repeat(4, 1fr);
   grid-row-gap: 100px;
-  grid-column-gap: 100px;
+  // grid-column-gap: 100px;
 }
 
 .head-parent {
-  grid-area: 1 / 1 / 2 / 2;
+  grid-area: 1 / 2 / 2 / 3;
   height: 100%;
   position: relative;
 
   img {
-    border: 5px solid black;
     position: absolute;
     right: 0;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+
+    &:hover {
+      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    }
   }
 }
 .child-content {
@@ -35,7 +41,7 @@
 }
 
 .head-parent2 {
-  grid-area: 2 / 2 / 3 / 3;
+  grid-area: 1 / 1 / 2 / 2;
   width: 20rem;
   height: 100%;
   position: relative;
