@@ -5,7 +5,10 @@ const Notice = () => {
   return (
     <>
       <div className='legal-notice'>
-        <h2>1. Mentions légales</h2>
+        <div className='V-position'>
+          <img className='V' src='/logo/V.png' alt='V' style={{ width: '3rem' }} />
+        </div>
+        <h1>1. Mentions légales</h1>
         <ul>
           <li>
             <h3>CHARCUTERIE</h3>
@@ -24,23 +27,33 @@ const Notice = () => {
           </li>
         </ul>
         <div className='hosted'>
-          <h3>Hébergement : </h3>
+          <h2>Hébergement du site www.maison-morin.com : </h2>
           <p>Firebase (GOOGLE)</p>
         </div>
       </div>
+      <h2>Conception / Design / Développement : </h2>
+      <span>
+        <CopyrightIcon style={{ fontSize: 'small' }} /> Copyright Maison Morin {new Date().getFullYear()}
+      </span>
       <div className='dev'>
-        <h3>Conception / Design / Développement : </h3>
-        <p>Edouard LARROCHE</p>
-        <p>Allée RAVEL</p>
-        <p>92320 Châtillon</p>
-        <span>CONTACT : </span>
-        <a href='https://portfolio-c12b7.firebaseapp.com/' target='_blank' rel='noopener noreferrer'>
-          <div style={{ color: '#032953' }}>https://portfolio-c12b7.firebaseapp.com/</div>
-        </a>
-
-        <span>
-          <CopyrightIcon className='copy-icon' style={{ fontSize: 'small' }} /> Copyright Maison Morin {new Date().getFullYear()}
-        </span>
+        <div className='dev-ed'>
+          <img src='/upload/avatar1.jpg' alt='avatar' />
+          <div className='name'>
+            <p>Edouard LARROCHE</p>
+            <p>Developer web Full-Stack</p>
+          </div>
+          <div className='adress'>
+            <p>Allée RAVEL</p>
+            <p>92320 Châtillon</p>
+          </div>
+          <span>CONTACT : </span>
+          <a href='https://portfolio-c12b7.firebaseapp.com/' target='_blank' rel='noopener noreferrer'>
+            <div className='portfolio'>https://portfolio-c12b7.firebaseapp.com/</div>
+          </a>
+        </div>
+        <div className='dev-al'>
+          <p>Alan DUBOSC</p>
+        </div>
       </div>
     </>
   );

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const DataItem = ({ navData, arrow }) => {
   const [showDropdown, setShowDropdown] = useState(false);
@@ -19,9 +20,11 @@ const DataItem = ({ navData, arrow }) => {
       {showDropdown && (
         <div className='dropdown' onMouseEnter={handleEnter} onMouseLeave={handleLeave}>
           {navData.subItem.map((item) => (
-            <div className='items' key={item.title}>
-              {item.title}
-            </div>
+            <Link to='/traiteur'>
+              <div className='items' key={item.title}>
+                {item.title}
+              </div>
+            </Link>
           ))}
         </div>
       )}
