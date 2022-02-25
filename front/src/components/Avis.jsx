@@ -17,10 +17,10 @@ export default function Avis() {
             slidesPerView={1}
             spaceBetween={30}
             loop={true}
-            // autoplay={{
-            //     delay: 4500,
-            //     disableOnInteraction: false,
-            // }}
+            autoplay={{
+                delay: 4500,
+                disableOnInteraction: false,
+            }}
             pagination={{
             clickable: true,
             }}
