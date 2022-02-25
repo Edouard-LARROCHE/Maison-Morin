@@ -58,15 +58,17 @@ h2 {
     }
 
     .name {
+      width: 13rem;
       height: 4rem;
       position: relative;
       top: -75px;
       left: 100px;
 
       .social-contact {
+        width: 1rem;
         position: relative;
         top: -60px;
-        right: -80px;
+        right: -300px;
 
         ul li {
           margin: 1rem;
@@ -84,6 +86,7 @@ h2 {
     }
 
     .adress {
+      width: 8rem;
       position: relative;
       top: -30px;
       left: 10px;
@@ -98,6 +101,7 @@ h2 {
 
     .portfolio {
       color: $color-2;
+      width: 23rem;
 
       &:hover {
         opacity: 0.7;
