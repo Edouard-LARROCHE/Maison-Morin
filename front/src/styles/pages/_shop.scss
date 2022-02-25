@@ -1,3 +1,76 @@
 .map {
-  margin-bottom: 5rem;
+  margin: 4rem 0 5rem 0;
+  display: grid;
+  grid-template-columns: 75% 1fr;
+  grid-template-rows: 1fr;
+
+  .google-map {
+    grid-area: 1 / 1 / 2 / 2;
+  }
+
+  .location-shop {
+    grid-area: 1 / 2 / 2 / 3;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 45% 1fr;
+    background: $color-2;
+
+    .top-shop {
+      grid-area: 1 / 1 / 2 / 2;
+
+      .location-adress {
+        display: flex;
+
+        img {
+          margin: 1.5rem;
+        }
+
+        .adress {
+          position: relative;
+          top: 15px;
+          left: 10px;
+          text-align: center;
+          display: flex;
+          flex-direction: column;
+
+          h2,
+          p {
+            color: #fff;
+          }
+        }
+      }
+
+      .info-shop {
+        display: flex;
+        flex-direction: column;
+        margin-left: 110px;
+
+        p {
+          color: #fff;
+          font-size: 18px;
+        }
+      }
+
+      .go-to-shop {
+        margin-top: 1.5rem;
+        border-bottom: 1px solid #fff;
+
+        ul,
+        li {
+          display: flex;
+          justify-content: space-around;
+          color: #fff;
+          margin-bottom: 0.5rem;
+
+          &:hover {
+            color: $color-3;
+          }
+        }
+      }
+    }
+
+    .content-shop {
+      grid-area: 2 / 1 / 3 / 2;
+    }
+  }
 }

@@ -3,6 +3,7 @@ import NavBar from '../components/home/NavBar';
 import Map from '../components/Shop/Map';
 import HeadBand from '../components/HeadBand';
 import Footer from '../components/home/Footer';
+import NewsLetter from '../components/newsletter/NewsLetter';
 
 const Shop = () => {
   return (
@@ -10,6 +11,7 @@ const Shop = () => {
       <NavBar />
       <HeadBand />
       <Map />
+      <NewsLetter />
       <Footer />
     </div>
   );
