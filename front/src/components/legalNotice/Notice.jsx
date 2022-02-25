@@ -41,15 +41,34 @@ const Notice = () => {
           <div className='name'>
             <p>Edouard LARROCHE</p>
             <p>Developer web Full-Stack</p>
+            <div className='social-contact'>
+              <ul>
+                <li>
+                  <a href='https://www.linkedin.com/in/edouard-larroche-9099a6163/' target='_blank' rel='noopener noreferrer'>
+                    <i className='fab fa-linkedin' />
+                  </a>
+                </li>
+                <li>
+                  <a href='https://github.com/Edouard-LARROCHE' target='_blank' rel='noopener noreferrer'>
+                    <i className='fab fa-github' />
+                  </a>
+                </li>
+                <li>
+                  <a href='https://www.twitter.com' target='_blank' rel='noopener noreferrer'>
+                    <i className='fab fa-twitter' />
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
           <div className='adress'>
             <p>Allée RAVEL</p>
             <p>92320 Châtillon</p>
+            <span>CONTACT : </span>
+            <a href='https://portfolio-c12b7.firebaseapp.com/' target='_blank' rel='noopener noreferrer'>
+              <div className='portfolio'>https://portfolio-c12b7.firebaseapp.com/</div>
+            </a>
           </div>
-          <span>CONTACT : </span>
-          <a href='https://portfolio-c12b7.firebaseapp.com/' target='_blank' rel='noopener noreferrer'>
-            <div className='portfolio'>https://portfolio-c12b7.firebaseapp.com/</div>
-          </a>
         </div>
         <div className='dev-al'>
           <p>Alan DUBOSC</p>
