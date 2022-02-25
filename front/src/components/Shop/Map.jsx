@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
+import LocationOnIcon from '@material-ui/icons/LocationOn';
 import GoogleMapReact from 'google-map-react';
 
-const Logo = () => <img src='/assets/morin_solo_doree.png' alt='morin-doree' width='64px' height='64px' />;
+const Logo = () => <LocationOnIcon style={{ color: '#ddb355' }} />;
 
 class Map extends Component {
   static defaultProps = {
@@ -14,10 +15,13 @@ class Map extends Component {
 
   render() {
     return (
-      <div style={{ height: '70vh', width: '40%' }}>
-        <GoogleMapReact bootstrapURLKeys={{ key: '' }} defaultCenter={this.props.center} defaultZoom={this.props.zoom}>
-          <Logo lat={48.44551} lng={2.60484} />
-        </GoogleMapReact>
+      <div className='map'>
+        <div className='google-map' style={{ height: '70vh', width: '80%' }}>
+          <GoogleMapReact bootstrapURLKeys={{ key: '' }} defaultCenter={this.props.center} defaultZoom={this.props.zoom}>
+            <Logo lat={48.44551} lng={2.60484} />
+          </GoogleMapReact>
+        </div>
+        <div className='location-shop'></div>
       </div>
     );
   }
