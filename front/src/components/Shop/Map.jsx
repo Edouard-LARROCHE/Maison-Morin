@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import LocationOnIcon from '@material-ui/icons/LocationOn';
 import DirectionsIcon from '@material-ui/icons/Directions';
 import GoogleMapReact from 'google-map-react';
@@ -39,7 +40,9 @@ class Map extends Component {
             </div>
             <div className='go-to-shop'>
               <ul>
-                <li style={{ cursor: 'pointer' }}>Voir la fiche</li>
+                <Link to='/contact'>
+                  <li style={{ cursor: 'pointer' }}>Contact</li>
+                </Link>
                 <a
                   href='https://www.google.fr/maps/dir//Maison+Morin,+57+Grande+Rue,+77630+Barbizon/@48.445493,2.602645,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x47e5f2015d8671f1:0x2bb01a1211d0b1ad!2m2!1d2.6048435!2d48.4455059'
                   target='_blank'
