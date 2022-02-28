@@ -7,13 +7,11 @@ const Header = () => {
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY >= 118) {
-        return () => {
-          setDisplay('link-to');
-        };
+        return setDisplay('link-to');
       }
     };
     window.addEventListener('scroll', handleScroll);
-  }, [setDisplay]);
+  }, []);
 
   return (
     <div className='header-home'>
