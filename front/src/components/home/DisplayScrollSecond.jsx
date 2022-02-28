@@ -26,7 +26,7 @@ const DisplayScrollSecond = () => {
     };
 
     window.addEventListener('scroll', handleScroll);
-  });
+  }, []);
 
   return (
     <div className='display-second'>
