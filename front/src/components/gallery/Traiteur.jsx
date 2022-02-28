@@ -17,7 +17,7 @@ const Traiteur = () => {
       </div>
       <div className='grid'>
         {data.map((index) => (
-          <div className='photos'>
+          <div className='photos' key={index.id}>
             <img className='img-gallerie' src={index.img} alt='oui'></img>
             <div className='icones'>
               <div className='instagram'>
