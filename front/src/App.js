@@ -22,28 +22,30 @@ function App() {
   const location = useLocation();
 
   return (
-    <TransitionGroup>
-      <CSSTransition key={location.key} timeout={400} classNames='fade'>
-        <div className={`bg ${darkMode ? 'bg-dark' : 'bg-light'}`}>
-          <div className={`para ${darkMode ? 'para-dark' : 'para-light'}`}>
-            <ScrollToTop>
-              <TopArrow />
-              <Cookie />
-              <Routes>
-                <Route exact path='/' element={<Home />} />
-                <Route path='/mentions-legales' element={<LegalNotice />} />
-                <Route path='/cookie' element={<Cookies />} />
-                <Route path='/contact' element={<FormContact />} />
-                <Route path='/update' element={<IndexUpdate />} />
-                <Route path='/boutique' element={<Shop />} />
-                <Route path='/maison-morin' element={<MaisonMorin />} />
-                <Route path='/traiteur' element={<Traiteur />} />
-              </Routes>
-            </ScrollToTop>
+    <>
+      <Cookie />
+      <TopArrow />
+      <TransitionGroup>
+        <CSSTransition key={location.key} timeout={400} classNames='fade'>
+          <div className={`bg ${darkMode ? 'bg-dark' : 'bg-light'}`}>
+            <div className={`para ${darkMode ? 'para-dark' : 'para-light'}`}>
+              <ScrollToTop>
+                <Routes>
+                  <Route exact path='/' element={<Home />} />
+                  <Route path='/mentions-legales' element={<LegalNotice />} />
+                  <Route path='/cookie' element={<Cookies />} />
+                  <Route path='/contact' element={<FormContact />} />
+                  <Route path='/update' element={<IndexUpdate />} />
+                  <Route path='/boutique' element={<Shop />} />
+                  <Route path='/maison-morin' element={<MaisonMorin />} />
+                  <Route path='/traiteur' element={<Traiteur />} />
+                </Routes>
+              </ScrollToTop>
+            </div>
           </div>
-        </div>
-      </CSSTransition>
-    </TransitionGroup>
+        </CSSTransition>
+      </TransitionGroup>
+    </>
   );
 }
 

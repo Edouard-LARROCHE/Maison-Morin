@@ -131,7 +131,7 @@ span {
 .fade-appear-active,
 .fade-enter.fade-enter-active {
   opacity: 1;
-  transition: opacity 450ms linear 250ms;
+  transition: opacity 450ms linear 1000ms;
 }
 .fade-exit {
   opacity: 1;
