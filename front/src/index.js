@@ -7,13 +7,11 @@ import reportWebVitals from './reportWebVitals';
 import { ThemeProvider } from './components/darkMode/ThemeContext';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <BrowserRouter>
-      <ThemeProvider>
-        <App />
-      </ThemeProvider>
-    </BrowserRouter>
-  </React.StrictMode>,
+  <BrowserRouter>
+    <ThemeProvider>
+      <App />
+    </ThemeProvider>
+  </BrowserRouter>,
   document.getElementById('root'),
 );
 

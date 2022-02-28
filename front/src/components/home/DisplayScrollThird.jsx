@@ -11,7 +11,7 @@ const DisplayScrollThird = () => {
     };
 
     window.addEventListener('scroll', handleDisplay);
-  }, [third]);
+  }, []);
 
   return (
     <div className={third}>

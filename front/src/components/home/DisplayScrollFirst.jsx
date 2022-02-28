@@ -26,7 +26,7 @@ const DisplayScroll = () => {
     };
 
     window.addEventListener('scroll', handleScroll);
-  });
+  }, []);
 
   return (
     <div className='display-first'>
