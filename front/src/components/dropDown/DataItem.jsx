@@ -20,10 +20,8 @@ const DataItem = ({ navData, arrow }) => {
       {showDropdown && (
         <div className='dropdown' onMouseEnter={handleEnter} onMouseLeave={handleLeave}>
           {navData.subItem.map((item) => (
-            <Link to='/traiteur'>
-              <div className='items' key={item.title}>
-                {item.title}
-              </div>
+            <Link to='/traiteur' key={item.title}>
+              <div className='items'>{item.title}</div>
             </Link>
           ))}
         </div>
