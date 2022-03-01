@@ -120,3 +120,69 @@ span {
 .btn-dark {
   color: $color-1;
 }
+
+/********* LOADER ************/
+
+.spinner {
+  position: relative;
+  margin-right: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .V-spinner {
+    position: relative;
+    left: 70px;
+  }
+
+  .loader {
+    padding: 2rem;
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid $color-3;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    animation: spin 1s linear infinite;
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  }
+}
+
+/********* TRANSITION-PAGES ************/
+
+.transition-pages {
+  background: $color-2;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  overflow: auto;
+
+  .transition-position-typing {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 320px;
+  }
+
+  .transition-position-spinner {
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.text-typing {
+  color: $color-3;
+  font-size: 1.5rem;
+  letter-spacing: 0.2rem;
+}
