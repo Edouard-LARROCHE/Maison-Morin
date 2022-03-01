@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import NavBar from '../components/home/NavBar';
 import MenuDrop from '../components/dropDown/MenuDrop';
 import Header from '../components/home/Header';
@@ -11,23 +11,46 @@ import DisplayScroll from '../components/home/DisplayScrollFirst';
 import DisplayScrollSecond from '../components/home/DisplayScrollSecond';
 import DisplayScrollThird from '../components/home/DisplayScrollThird';
 import Avis from '../components/Avis';
+import Transition from './Transition';
+import TopArrow from '../components/TopArrow';
 
 const Home = () => {
+  const [transition, setTransition] = useState(true);
+
+  useEffect(() => {
+    const trans = () => {
+      setTransition(true);
+    };
+    setTimeout(() => {
+      trans();
+      setTransition(false);
+    }, 2000);
+  }, []);
+
   return (
-    <div>
-      <NavBar />
-      <HeadBand />
-      <MenuDrop />
-      <Header />
-      <DisplayScroll />
-      <DisplayScrollSecond />
-      <DisplayScrollThird />
-      <Band />
-      <Infos />
-      <Avis />
-      <NewsLetter />
-      <Footer />
-    </div>
+    <>
+      {transition ? (
+        <div>
+          <Transition />
+        </div>
+      ) : (
+        <div>
+          <NavBar />
+          <HeadBand />
+          <MenuDrop />
+          <Header />
+          <DisplayScroll />
+          <DisplayScrollSecond />
+          <DisplayScrollThird />
+          <Band />
+          <Infos />
+          <Avis />
+          <NewsLetter />
+          <Footer />
+          <TopArrow />
+        </div>
+      )}
+    </>
   );
 };
 

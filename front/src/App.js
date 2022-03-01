@@ -12,7 +12,6 @@ import Gallery from './pages/Gallery';
 import Transition from './pages/Transition';
 // DARK MODE
 import { ThemeContext } from './components/darkMode/ThemeContext';
-import TopArrow from './components/TopArrow';
 // SCROLL TO TOP
 import ScrollToTop from './components/ScrollToTop';
 
@@ -22,10 +21,9 @@ function App() {
 
   return (
     <>
-      <Cookie />
-      <TopArrow />
       <div className={`bg ${darkMode ? 'bg-dark' : 'bg-light'}`}>
         <div className={`para ${darkMode ? 'para-dark' : 'para-light'}`}>
+          <Cookie />
           <ScrollToTop>
             <Routes>
               <Route exact path='/' element={<Home />} />

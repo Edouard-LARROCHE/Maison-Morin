@@ -4,6 +4,7 @@ import Map from '../components/Shop/Map';
 import HeadBand from '../components/HeadBand';
 import Footer from '../components/home/Footer';
 import NewsLetter from '../components/newsletter/NewsLetter';
+import TopArrow from '../components/TopArrow';
 
 const Shop = () => {
   return (
@@ -13,6 +14,7 @@ const Shop = () => {
       <Map />
       <NewsLetter />
       <Footer />
+      <TopArrow />
     </div>
   );
 };

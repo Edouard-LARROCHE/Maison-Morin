@@ -1,320 +1,319 @@
 .swiper {
-    width: 100%;
-    height: 20em;
-    margin-left: auto;
-    margin-right: auto;
-    grid-column: 2;
-    grid-row: 2;
+  width: 100%;
+  height: 20em;
+  margin-left: auto;
+  margin-right: auto;
+  grid-column: 2;
+  grid-row: 2;
 }
 
 .swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    -webkit-justify-content: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
-    align-items: center;
+  text-align: center;
+  font-size: 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
 }
 
 .swiper-slide-active {
-    width: 80%;
+  width: 80%;
 }
 
 .swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .swiper-pagination-bullet-active {
-    background-color: $color-3;
+  background-color: $color-3;
 }
 
 .swiper-button-prev,
 .swiper-button-next {
-    color: $color-3;
+  color: $color-3;
 }
 
-
-/************  AVIS  ************/ 
+/************  AVIS  ************/
 
 .container-avis {
-    width: 100%;
-    height: 35em;
-    background-color: $color-2;
-    background-image: url('../../../public/assets/devanture2000-35.png');
-    background-position-x: left;
-    background-position-y: -60rem;
-    display: grid;
-    grid-template-columns: 20% 60% 20%;
-    grid-template-rows: repeat(3, 1fr);
+  width: 100%;
+  height: 35em;
+  background-color: $color-2;
+  background-image: url('../../../public/assets/devanture2000-35.png');
+  background-position-x: left;
+  background-position-y: -60rem;
+  display: grid;
+  grid-template-columns: 20% 60% 20%;
+  grid-template-rows: repeat(3, 1fr);
 }
 
 .avis-btn {
-    grid-column: 2;
-    grid-row: 3;
-    box-sizing: border-box;
-    width: 15.5em;
-    padding: 0.8em;
-    padding-left: 1.35em;
-    justify-self: center;
-    align-self: center;
-    text-transform: uppercase;
-    border: none;
-    transition: ease-out 0.3s;
-    outline: none;
-    background-color: #fff;
-    border: 2px solid $color-3;
-    position: relative;
-    z-index: 1;
-    a {
-        color: $color-2;
-        transition: ease-out 0.5s;
-    }
+  grid-column: 2;
+  grid-row: 3;
+  box-sizing: border-box;
+  width: 15.5em;
+  padding: 0.8em;
+  padding-left: 1.35em;
+  justify-self: center;
+  align-self: center;
+  text-transform: uppercase;
+  border: none;
+  transition: ease-out 0.3s;
+  outline: none;
+  background-color: #fff;
+  border: 2px solid $color-3;
+  position: relative;
+  z-index: 1;
+  a {
+    color: $color-2;
+    transition: ease-out 0.5s;
+  }
 }
 
 .avis-btn:hover {
-    color: #fff;
-    cursor: pointer;
+  color: #fff;
+  cursor: pointer;
 }
 
 .avis-btn::before {
-    transition: 0.5s all ease;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    right: 50%;
-    bottom: 0;
-    opacity: 0;
-    content: '';
-    background-color: $color-3;
+  transition: 0.5s all ease;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  opacity: 0;
+  content: '';
+  background-color: $color-3;
 }
 
 .avis-btn:hover:before {
-    transition: 0.5s all ease;
-    left: 0;
-    right: 0;
-    opacity: 1;
-    z-index: -1;
+  transition: 0.5s all ease;
+  left: 0;
+  right: 0;
+  opacity: 1;
+  z-index: -1;
 }
 
 /******* BOX ONE *******/
 
 .comment-box-sp {
-    height: 6em;
-    width: 20em;
-    margin-bottom: 3em;
-    background-color: #fff;
-    position: relative;
-    h3 {
-        position: absolute;
-        z-index: 2;
-        box-sizing: border-box;
-        padding: .8em;
-    }
-}    
+  height: 6em;
+  width: 20em;
+  margin-bottom: 3em;
+  background-color: #fff;
+  position: relative;
+  h3 {
+    position: absolute;
+    z-index: 2;
+    box-sizing: border-box;
+    padding: 0.8em;
+  }
+}
 
 .arrow-sp {
-    position: absolute;
-    height: 2em;
-    width: 2em;
-    background-color: #fff;
-    bottom: -7px;
-    left: 80px;
-    transform: rotate(45deg);
-    z-index: 1;
+  position: absolute;
+  height: 2em;
+  width: 2em;
+  background-color: #fff;
+  bottom: -7px;
+  left: 80px;
+  transform: rotate(45deg);
+  z-index: 1;
 }
 
 .comment-author-sp {
-    margin-top: 120px;
-    margin-left: 12px;
-    h1 {
-        color: black;
-        font-style: italic;
-    }
+  margin-top: 120px;
+  margin-left: 12px;
+  h1 {
+    color: black;
+    font-style: italic;
+  }
 }
 
 /******* BOX TWO *******/
 .comment-box-stp {
-    height: 6em;
-    width: 20em;
-    margin-bottom: 2.8em;
-    background-color: #fff;
-    position: relative;
-    h3 {
-        position: absolute;
-        z-index: 2;
-        box-sizing: border-box;
-        padding: .8em;
-    }
-}    
+  height: 6em;
+  width: 20em;
+  margin-bottom: 2.8em;
+  background-color: #fff;
+  position: relative;
+  h3 {
+    position: absolute;
+    z-index: 2;
+    box-sizing: border-box;
+    padding: 0.8em;
+  }
+}
 
 .arrow-stp {
-    position: absolute;
-    height: 2em;
-    width: 2em;
-    background-color: #fff;
-    bottom: -7px;
-    left: 270px;
-    transform: rotate(45deg);
-    z-index: 1;
+  position: absolute;
+  height: 2em;
+  width: 2em;
+  background-color: #fff;
+  bottom: -7px;
+  left: 270px;
+  transform: rotate(45deg);
+  z-index: 1;
 }
 
 .comment-author-stp {
-    margin-top: 120px;
-    h1 {
-        color: black;
-        font-style: italic;
-    }
+  margin-top: 120px;
+  h1 {
+    color: black;
+    font-style: italic;
+  }
 }
 /******* BOX THREE *******/
 .comment-box-sl {
-    height: 5em;
-    width: 20em;
-    margin-bottom: 1.7em;
-    background-color: #fff;
-    position: relative;
-    h3 {
-        position: absolute;
-        z-index: 2;
-        box-sizing: border-box;
-        padding: .8em;
-    }
-}    
+  height: 5em;
+  width: 20em;
+  margin-bottom: 1.7em;
+  background-color: #fff;
+  position: relative;
+  h3 {
+    position: absolute;
+    z-index: 2;
+    box-sizing: border-box;
+    padding: 0.8em;
+  }
+}
 
 .arrow-sl {
-    position: absolute;
-    height: 2em;
-    width: 2em;
-    background-color: #fff;
-    bottom: -7px;
-    left: 175px;
-    transform: rotate(45deg);
-    z-index: 1;
+  position: absolute;
+  height: 2em;
+  width: 2em;
+  background-color: #fff;
+  bottom: -7px;
+  left: 175px;
+  transform: rotate(45deg);
+  z-index: 1;
 }
 
 .comment-author-sl {
-    margin-top: 100px;
-    margin-left: 12px;
-    h1 {
-        color: black;
-        font-style: italic;
-    }
+  margin-top: 100px;
+  margin-left: 12px;
+  h1 {
+    color: black;
+    font-style: italic;
+  }
 }
 
 /******* BOX FOUR *******/
 
 .comment-box-kn {
-    height: 7.5em;
-    width: 30em;
-    margin-bottom: 4.8em;
-    background-color: #fff;
-    position: relative;
-    h3 {
-        position: absolute;
-        z-index: 2;
-        box-sizing: border-box;
-        padding: .8em;
-    }
-}    
+  height: 7.5em;
+  width: 30em;
+  margin-bottom: 4.8em;
+  background-color: #fff;
+  position: relative;
+  h3 {
+    position: absolute;
+    z-index: 2;
+    box-sizing: border-box;
+    padding: 0.8em;
+  }
+}
 
 .arrow-kn {
-    position: absolute;
-    height: 2em;
-    width: 2em;
-    background-color: #fff;
-    bottom: -7px;
-    left: 220px;
-    transform: rotate(45deg);
-    z-index: 1;
+  position: absolute;
+  height: 2em;
+  width: 2em;
+  background-color: #fff;
+  bottom: -7px;
+  left: 220px;
+  transform: rotate(45deg);
+  z-index: 1;
 }
 
 .comment-author-kn {
-    margin-top: 150px;
-    margin-left: 12px;
-    h1 {
-        color: black;
-        font-style: italic;
-    }
+  margin-top: 150px;
+  margin-left: 12px;
+  h1 {
+    color: black;
+    font-style: italic;
+  }
 }
 
 /******* BOX FIVE *******/
 
 .comment-box-cm {
-    height: 7.5em;
-    width: 30em;
-    margin-bottom: 4.8em;
-    background-color: #fff;
-    position: relative;
-    h3 {
-        position: absolute;
-        z-index: 2;
-        box-sizing: border-box;
-        padding: .8em;
-    }
-}    
+  height: 7.5em;
+  width: 30em;
+  margin-bottom: 4.8em;
+  background-color: #fff;
+  position: relative;
+  h3 {
+    position: absolute;
+    z-index: 2;
+    box-sizing: border-box;
+    padding: 0.8em;
+  }
+}
 
 .arrow-cm {
-    position: absolute;
-    height: 2em;
-    width: 2em;
-    background-color: #fff;
-    bottom: -7px;
-    left: 300px;
-    transform: rotate(45deg);
-    z-index: 1;
+  position: absolute;
+  height: 2em;
+  width: 2em;
+  background-color: #fff;
+  bottom: -7px;
+  left: 300px;
+  transform: rotate(45deg);
+  z-index: 1;
 }
 
 .comment-author-cm {
-    margin-top: 150px;
-    margin-left: 12px;
-    h1 {
-        color: black;
-        font-style: italic;
-    }
+  margin-top: 150px;
+  margin-left: 12px;
+  h1 {
+    color: black;
+    font-style: italic;
+  }
 }
 
 /******* BOX SIX *******/
 
 .comment-box-vd {
-    height: 5em;
-    width: 20em;
-    margin-bottom: 1.7em;
-    background-color: #fff;
-    position: relative;
-    h3 {
-        position: absolute;
-        z-index: 2;
-        box-sizing: border-box;
-        padding: .8em;
-    }
-}    
+  height: 5em;
+  width: 20em;
+  margin-bottom: 1.7em;
+  background-color: #fff;
+  position: relative;
+  h3 {
+    position: absolute;
+    z-index: 2;
+    box-sizing: border-box;
+    padding: 0.8em;
+  }
+}
 
 .arrow-vd {
-    position: absolute;
-    height: 2em;
-    width: 2em;
-    background-color: #fff;
-    bottom: -7px;
-    left: 135px;
-    transform: rotate(45deg);
-    z-index: 1;
+  position: absolute;
+  height: 2em;
+  width: 2em;
+  background-color: #fff;
+  bottom: -7px;
+  left: 135px;
+  transform: rotate(45deg);
+  z-index: 1;
 }
 
 .comment-author-vd {
-    margin-top: 100px;
-    margin-left: 12px;
-    h1 {
-        color: black;
-        font-style: italic;
-    }
+  margin-top: 100px;
+  margin-left: 12px;
+  h1 {
+    color: black;
+    font-style: italic;
+  }
 }

@@ -19,14 +19,39 @@ const Traiteur = () => {
       }
       setLoading(false);
     };
-    setTimeout(() => {
-      fetchData();
-    }, 5000);
+
+    fetchData();
   }, []);
 
   return (
     <>
-      <div className='banner-second'>
+      {loading ? (
+        <div>
+          <Loader />
+        </div>
+      ) : (
+        <div className='grid'>
+          {data.map((index) => (
+            <div className='photos' key={index.id}>
+              <img className='img-gallerie' src={index.img} alt='Photos-produits' />
+              <div className='icones'>
+                <div className='instagram'>
+                  <a className='fab fa-instagram' target='_blank' rel='noreferrer' href='https://www.instagram.com/maison_morin/?hl=fr'>
+                    {''}
+                  </a>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
+    </>
+  );
+};
+
+export default Traiteur;
+{
+  /* <div className='banner-second'>
         <div className='title-second'>
           <h1>Retrouvez nos saveurs</h1>
         </div>
@@ -36,38 +61,5 @@ const Traiteur = () => {
             consulter notre instagram pour vous donner encore plus envie de goûter nos créations.
           </h3>
         </div>
-      </div>
-      <div className='grid'>
-        {loading ? (
-          <div>
-            <Loader />
-          </div>
-        ) : (
-          <div>
-            <h1>Data fetching</h1>
-            {data.map((index) => (
-              <div key={index.title}>
-                <p> {index.title} </p>
-              </div>
-            ))}
-          </div>
-        )}
-
-        {/* {data.map((index) => (
-          <div className='photos' key={index.id}>
-            <img className='img-gallerie' src={index.img} alt='oui'></img>
-            <div className='icones'>
-              <div className='instagram'>
-                <a className='fab fa-instagram' target='_blank' rel='noreferrer' href='https://www.instagram.com/maison_morin/?hl=fr'>
-                  {''}
-                </a>
-              </div>
-            </div>
-          </div>
-        ))} */}
-      </div>
-    </>
-  );
-};
-
-export default Traiteur;
+      </div> */
+}
