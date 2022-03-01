@@ -4,6 +4,7 @@ import NavBar from '../components/home/NavBar';
 import HeadBand from '../components/HeadBand';
 import Traiteur from '../components/gallery/Traiteur';
 import Transition from './Transition';
+import TopArrow from '../components/TopArrow';
 
 const Gallery = () => {
   const [transition, setTransition] = useState(true);
@@ -30,6 +31,7 @@ const Gallery = () => {
           <HeadBand />
           <Traiteur />
           <Footer />
+          <TopArrow />
         </div>
       )}
     </>

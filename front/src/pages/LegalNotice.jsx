@@ -5,6 +5,7 @@ import Notice from '../components/legalNotice/Notice';
 import Copyright from '../components/legalNotice/Copyright';
 import UserTraces from '../components/legalNotice/UserTraces';
 import HeadBand from '../components/HeadBand';
+import TopArrow from '../components/TopArrow';
 
 const LegalNotice = () => {
   return (
@@ -17,6 +18,7 @@ const LegalNotice = () => {
         <UserTraces />
       </div>
       <Footer />
+      <TopArrow />
     </div>
   );
 };

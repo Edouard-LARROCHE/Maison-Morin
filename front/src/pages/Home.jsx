@@ -12,6 +12,7 @@ import DisplayScrollSecond from '../components/home/DisplayScrollSecond';
 import DisplayScrollThird from '../components/home/DisplayScrollThird';
 import Avis from '../components/Avis';
 import Transition from './Transition';
+import TopArrow from '../components/TopArrow';
 
 const Home = () => {
   const [transition, setTransition] = useState(true);
@@ -46,6 +47,7 @@ const Home = () => {
           <Avis />
           <NewsLetter />
           <Footer />
+          <TopArrow />
         </div>
       )}
     </>
