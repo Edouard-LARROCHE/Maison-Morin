@@ -15,7 +15,7 @@ const Gallery = () => {
     setTimeout(() => {
       trans();
       setTransition(false);
-    }, 2000);
+    }, 60000);
   }, []);
 
   return (

@@ -125,11 +125,14 @@ span {
 
 .spinner {
   position: relative;
+  margin-right: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   .V-spinner {
     position: relative;
-    top: 75px;
-    left: 35px;
+    left: 70px;
   }
 
   .loader {
@@ -153,3 +156,20 @@ span {
 }
 
 /********* TRANSITION-PAGES ************/
+
+.transition-pages {
+  background: $color-2;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  overflow: auto;
+
+  .transition-position {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+}
