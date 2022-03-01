@@ -21,7 +21,7 @@ const TypingText = ({ content = '', speed = 0 }) => {
     setTyping((typing) => typing + content[index]);
   }, [index, content]);
 
-  return <>{typing}</>;
+  return <div className='text-typing'>{typing}</div>;
 };
 
 const textTyping = `MAISON-MORIN`;
@@ -30,8 +30,10 @@ const Transition = () => {
   return (
     <>
       <div className='transition-pages'>
-        <div className='transition-position'>
-          {/* <TypingText content={textTyping} speed={120} /> */}
+        <div className='transition-position-typing'>
+          <TypingText content={textTyping} speed={120} />
+        </div>
+        <div className='transition-position-spinner'>
           <Loader />
         </div>
       </div>

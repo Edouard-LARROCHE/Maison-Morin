@@ -166,10 +166,23 @@ span {
   right: 0;
   overflow: auto;
 
-  .transition-position {
+  .transition-position-typing {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 320px;
+  }
+
+  .transition-position-spinner {
+    height: 90%;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100%;
   }
+}
+
+.text-typing {
+  color: $color-3;
+  font-size: 1.5rem;
+  letter-spacing: 0.2rem;
 }
