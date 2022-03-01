@@ -40,9 +40,7 @@ const Traiteur = () => {
       <div className='grid'>
         {loading ? (
           <div>
-            <h1>
-              <Loader />
-            </h1>
+            <Loader />
           </div>
         ) : (
           <div>

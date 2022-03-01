@@ -9,6 +9,7 @@ import IndexUpdate from './components/Update/IndexUpdate';
 import Shop from './pages/Shop';
 import MaisonMorin from './pages/MaisonMorin';
 import Gallery from './pages/Gallery';
+import Transition from './pages/Transition';
 // DARK MODE
 import { ThemeContext } from './components/darkMode/ThemeContext';
 import TopArrow from './components/TopArrow';
@@ -35,6 +36,7 @@ function App() {
               <Route path='/boutique' element={<Shop />} />
               <Route path='/maison-morin' element={<MaisonMorin />} />
               <Route path='/traiteur' element={<Gallery />} />
+              <Route path='/transition' element={<Transition />} />
             </Routes>
           </ScrollToTop>
         </div>
