@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Routes, Route, useLocation } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import Cookie from './components/Cookie';
 import Home from './pages/Home';
 import LegalNotice from './pages/LegalNotice';
@@ -8,7 +8,7 @@ import FormContact from './pages/FormContact';
 import IndexUpdate from './components/Update/IndexUpdate';
 import Shop from './pages/Shop';
 import MaisonMorin from './pages/MaisonMorin';
-import Traiteur from './components/gallery/Traiteur';
+import Gallery from './pages/Gallery';
 // DARK MODE
 import { ThemeContext } from './components/darkMode/ThemeContext';
 import TopArrow from './components/TopArrow';
@@ -34,7 +34,7 @@ function App() {
               <Route path='/update' element={<IndexUpdate />} />
               <Route path='/boutique' element={<Shop />} />
               <Route path='/maison-morin' element={<MaisonMorin />} />
-              <Route path='/traiteur' element={<Traiteur />} />
+              <Route path='/traiteur' element={<Gallery />} />
             </Routes>
           </ScrollToTop>
         </div>

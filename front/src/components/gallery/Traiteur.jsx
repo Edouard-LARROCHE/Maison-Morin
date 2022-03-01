@@ -1,7 +1,29 @@
-import React from 'react';
-import { data } from '../data/data';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+import Loader from '../Loader';
+// import { data } from '../data/data';
 
 const Traiteur = () => {
+  const [loading, setLoading] = useState(true);
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      setLoading(true);
+      try {
+        const { data: res } = await axios.get(' https://jsonplaceholder.typicode.com/todos');
+        console.log(res);
+        setData(res);
+      } catch (err) {
+        console.log(err);
+      }
+      setLoading(false);
+    };
+    setTimeout(() => {
+      fetchData();
+    }, 5000);
+  }, []);
+
   return (
     <>
       <div className='banner-second'>
@@ -16,7 +38,24 @@ const Traiteur = () => {
         </div>
       </div>
       <div className='grid'>
-        {data.map((index) => (
+        {loading ? (
+          <div>
+            <h1>
+              <Loader />
+            </h1>
+          </div>
+        ) : (
+          <div>
+            <h1>Data fetching</h1>
+            {data.map((index) => (
+              <div key={index.title}>
+                <p> {index.title} </p>
+              </div>
+            ))}
+          </div>
+        )}
+
+        {/* {data.map((index) => (
           <div className='photos' key={index.id}>
             <img className='img-gallerie' src={index.img} alt='oui'></img>
             <div className='icones'>
@@ -27,7 +66,7 @@ const Traiteur = () => {
               </div>
             </div>
           </div>
-        ))}
+        ))} */}
       </div>
     </>
   );
