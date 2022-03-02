@@ -55,7 +55,7 @@ class Map extends Component {
             </div>
           </div>
           <div className='content-shop'>
-            <img src='/upload/devanture-small.png' alt='morin-maison' />
+            <img src='/assets/devanture-small.png' alt='morin-maison' />
             <div className='horaires'>
               <h3>Horaires d'ouverture :</h3>
               <ul>
