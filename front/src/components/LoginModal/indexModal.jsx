@@ -18,7 +18,7 @@ const IndexModal = () => {
 
     await axios({
       method: 'get',
-      url: 'http://localhost:5500/api/auth',
+      url: 'http://localhost:5500/login',
       withCredentials: true,
       data: {
         name,

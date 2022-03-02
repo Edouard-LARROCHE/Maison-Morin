@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const router = express.Router();
 const DIR = './front/public/upload/';
 
-const Img = require('../models/userModel');
+const Img = require('../models/uploadModel');
 
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
@@ -28,14 +28,14 @@ const upload = multer({
   },
 });
 
-router.post('/', upload.single('profileImg'), (req, res, next) => {
+router.post('/', upload.single('uploadImg'), (req, res, next) => {
   const url = req.protocol + '://' + req.get('host') + '/';
-  const user = new Img({
+  const img = new Img({
     _id: new mongoose.Types.ObjectId(),
     name: req.body.name,
     uploadImg: url + req.file.filename,
   });
-  user
+  img
     .save()
     .then((result) => {
       res.status(201).json({
