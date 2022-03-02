@@ -20,9 +20,30 @@ const DataItem = ({ navData, arrow }) => {
       {showDropdown && (
         <div className='dropdown' onMouseEnter={handleEnter} onMouseLeave={handleLeave}>
           {navData.subItem.map((item) => (
-            <Link to='/traiteur' key={item.title}>
-              <div className='items'>{item.title}</div>
-            </Link>
+            <div key={item.id}>
+              <ul>
+                <li>
+                  <Link to='/traiteur'>
+                    <div className='items'>{item.titleTraiteur}</div>
+                  </Link>
+                </li>
+                <li>
+                  <Link to='/patisseries'>
+                    <div className='items'>{item.titlePatisserie}</div>
+                  </Link>
+                </li>
+                <li>
+                  <Link to='/cave'>
+                    <div className='items'>{item.titleCave}</div>
+                  </Link>
+                </li>
+                <li>
+                  <Link to='/delices'>
+                    <div className='items'>{item.titleDelice}</div>
+                  </Link>
+                </li>
+              </ul>
+            </div>
           ))}
         </div>
       )}
