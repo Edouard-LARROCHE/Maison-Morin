@@ -5,16 +5,11 @@ const User = require('../models/postsModel');
 
 router.get('/', (req, res, next) => {
   User.find()
-    .then(() =>
-      res.status(200).json({
-        message: 'Liste complete:',
-      }),
-    )
+    .then((posts) => res.status(200).json(posts))
     .catch((error) => res.status(400).json({ error }));
 });
 
 router.post('/', (req, res, next) => {
-  delete req.body._id;
   const user = new User({
     ...req.body,
   });
