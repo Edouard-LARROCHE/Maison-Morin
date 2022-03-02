@@ -204,7 +204,7 @@
   animation-name: animationClick;
   animation-duration: 0.9s;
   box-sizing: border-box;
-  margin-top: 1.4em;
+  margin-top: 3.6em;
   padding: .8em;
     h2 {
     display: flex;
@@ -214,10 +214,11 @@
   }
     p {
       color: white;
+      font-size: large;
     }
 }
 
-@keyframes animationClick {
+@keyframes animationClick{
   from {
     transform: translateY(-20%);
     opacity: 0;
@@ -245,6 +246,7 @@
       margin-right: 3em;
       margin-left: 3em;
       color: white;
+      font-size: large;
     }
 }
 
