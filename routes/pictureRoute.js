@@ -9,4 +9,14 @@ picture.get('/', (req, res) => {
     .catch((error) => res.status(400).json({ error }));
 });
 
+picture.post('/', (req, res) => {
+  const image = new Picture({
+    ...req.body,
+  });
+  image
+    .save()
+    .then(() => res.status(201).json({ message: 'Image enregistrée' }))
+    .catch((error) => res.status(400).json({ error }));
+});
+
 module.exports = picture;

@@ -15,7 +15,7 @@ router.post('/', (req, res, next) => {
   });
   user
     .save()
-    .then(() => res.status(201).json({ message: 'Objet enregistré !' }))
+    .then(() => res.status(201).json({ message: 'Objet enregistré' }))
     .catch((error) => res.status(400).json({ error }));
 });
 
