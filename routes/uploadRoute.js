@@ -28,7 +28,7 @@ const upload = multer({
   },
 });
 
-router.post('/', upload.single('profileImg'), (req, res, next) => {
+router.post('/', upload.single('uploadImg'), (req, res, next) => {
   const url = req.protocol + '://' + req.get('host') + '/';
   const img = new Img({
     _id: new mongoose.Types.ObjectId(),
