@@ -34,10 +34,10 @@ const Infos = () => {
                             </div>
                         </div>
                         <div className={display}>
-                            <h2>Lorem</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus voluptates, eveniet recusandae facilis tempora, expedita hic voluptatibus nesciunt est tempore quia dolores mollitia doloremque. Neque libero itaque quos dolore non.
-                            In pariatur, tempore ab eius voluptates a neque quibusdam dolorem corporis molestiae, voluptatum soluta blanditiis numquam fuga doloribus commodi! Quo adipisci dignissimos impedit, tempore a iure fugiat nemo amet expedita?
-                            In, omnis nemo placeat natus adipisci quo nesciunt expedita ea veritatis harum, numquam dolore temporibus mollitia commodi recusandae reiciendis ad voluptatibus pariatur ex. Iste magni quibusdam dolorem porro eaque</p>
+                            <h2>Des produits de qualité</h2>
+                            <p>Chez Maison Morin, nous favorisons les circuits court afin de faire vivre les producteurs proches de chez vous. Venez découvrir les saveurs de notre magnifique région 
+                            et tout ce qu'elle a à vous offrir, nos produits artisanaux de l'entrée au désert, nos plats cuisiniés fait maison élaborés sur place ou encore nos vins, vous trouverez 
+                            de quoi combler vos envies.</p>
                         </div>
                     </div>
                 </div>
@@ -57,9 +57,10 @@ const Infos = () => {
                             </div>
                         </div>
                         <div className={display3}>
-                            <h2>Lorem</h2>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea cupiditate eum nisi velit eius maxime tempore. Tempore sapiente quidem excepturi laboriosam omnis ducimus corporis voluptatibus, recusandae, facere, voluptatem optio odio?
-                            Voluptas repudiandae illum non pariatur numquam animi ab esse eum eaque.</p>
+                            <h2>La planète</h2>
+                            <p>L'écologie occupe une part importante chez Maison Morin, nos packaging sont entièrement recyclables, favorisant un circuit court, nous réduisons les distances de transport
+                            afin de limiter l'impact environnemental négatif.                            
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -80,10 +81,10 @@ const Infos = () => {
                             </div>
                         </div>
                         <div className={display2}>
-                            <h2>Lorem</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus voluptates, eveniet recusandae facilis tempora, expedita hic voluptatibus nesciunt est tempore quia dolores mollitia doloremque. Neque libero itaque quos dolore non.
-                            In pariatur, tempore ab eius voluptates a neque quibusdam dolorem corporis molestiae, voluptatum soluta blanditiis numquam fuga doloribus commodi! Quo adipisci dignissimos impedit, tempore a iure fugiat nemo amet expedita?
-                            In, omnis nemo placeat natus adipisci quo nesciunt expedita ea veritatis harum, numquam dolore temporibus mollitia commodi recusandae reiciendis ad voluptatibus pariatur ex. Iste magni quibusdam dolorem porro eaque</p>
+                            <h2>De nouvelles gourmandises</h2>
+                            <p>Avis aux becs sucrés ! Venez découvrir nos nouvelles pâtisseries qui vous feront frétiller les papilles. Chez Maison Morin, venez découvrir sans cesse de nouvelles pâtisseries,
+                            nous nous efforçons de retranscrir le maximum de saveur dans nos gâteaux, de quoi égayer votre journée, n'hésitez pas à venir prendre des viénoisseries pour le plaisir des enfants
+                            comme des plus grands.</p>
                         </div>
                     </div>
                 </div>
