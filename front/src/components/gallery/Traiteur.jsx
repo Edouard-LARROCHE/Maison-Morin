@@ -11,7 +11,7 @@ const Traiteur = () => {
     const fetchData = async () => {
       setLoading(true);
       try {
-        const { data: res } = await axios.get(' https://jsonplaceholder.typicode.com/todos');
+        const { data: res } = await axios.get('http://localhost:5500/posts');
         console.log(res);
         setData(res);
       } catch (err) {
@@ -32,8 +32,8 @@ const Traiteur = () => {
       ) : (
         <div className='grid'>
           {data.map((index) => (
-            <div className='photos' key={index.id}>
-              <img className='img-gallerie' src={index.img} alt='Photos-produits' />
+            <div className='photos' key={index._id}>
+              <img className='img-gallerie' src={index.author} alt='Photos-produits' />
               <div className='icones'>
                 <div className='instagram'>
                   <a className='fab fa-instagram' target='_blank' rel='noreferrer' href='https://www.instagram.com/maison_morin/?hl=fr'>
