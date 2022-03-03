@@ -1,0 +1,79 @@
+.text-acceuil-fetch {
+  width: 60%;
+  margin: -5rem auto 3rem;
+  // display: flex;
+}
+
+/* ===== PHOTOS ===== */
+
+.fetch-card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+  width: 70%;
+  margin: auto;
+}
+
+.photos {
+  width: 23em;
+  height: 19em;
+  margin: 0.5em;
+  position: relative;
+}
+
+.img-gallerie {
+  position: absolute;
+  width: 23em;
+  height: 19em;
+  filter: blur(0);
+  transition: filter 0.3s linear;
+}
+
+.icones {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.instagram {
+  width: 3em;
+  height: 3em;
+  background-color: #fff;
+  border-radius: 50%;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.3s linear;
+}
+
+.fab {
+  font-size: 28px;
+  color: $black;
+  display: flex;
+  justify-content: center;
+  margin: 0.4em;
+}
+
+/* ===== PHOTOS HOVER ===== */
+
+.photos:hover {
+  .instagram {
+    opacity: 1;
+  }
+
+  .img-gallerie {
+    filter: blur(1.5px);
+  }
+}
+
+.info-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  p {
+    margin-bottom: 0.6rem;
+  }
+}
