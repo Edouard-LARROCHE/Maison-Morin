@@ -25,16 +25,8 @@ const FormContact = () => {
           </p>
         </div>
       </div>
+      <ContentForm />
       <div className='page-contact'>
-        {/* <div className='heures-ouverture'>
-          <h1>Ouvert</h1>
-          <h1>Lundi, Jeudi, Vendredi, Samedi et Dimanche</h1>
-          <h3>De 09h00 à 13h00</h3>
-          <h3>De 15h00 à 19h30</h3>
-        </div> */}
-        <div className='left-content'>
-          <ContentForm />
-        </div>
         <Form />
         <div className='social-media'>
           <div className='global-media'>

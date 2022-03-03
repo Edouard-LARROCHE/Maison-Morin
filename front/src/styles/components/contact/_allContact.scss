@@ -1,18 +1,22 @@
 /*********** CONTENT FORM **********/
 
 .content-form {
-  text-align: center;
-  h1 {
-    font-size: 1.2rem;
-    letter-spacing: 0.2rem;
-    padding-bottom: 0.7rem;
-    color: $color-2;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 1fr;
+
+  .content1 {
+    grid-column: 3 / 5;
+
+    p {
+      font-family: $font-1;
+      letter-spacing: 0.1rem;
+    }
   }
 
-  h3 {
-    font-family: $font-1;
-    // font-size: 0.9rem;
-    letter-spacing: 0.1rem;
+  .content2 {
+    margin: 1.5rem 0 3rem 0;
+    grid-column: 3 / 6;
   }
 }
 
