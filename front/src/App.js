@@ -8,8 +8,10 @@ import FormContact from './pages/FormContact';
 import IndexUpdate from './components/Update/IndexUpdate';
 import Shop from './pages/Shop';
 import MaisonMorin from './pages/MaisonMorin';
-import Gallery from './pages/gallery/Gallery';
 import Transition from './pages/Transition';
+// ROUTES GALLERY
+import TraiteurViande from './pages/gallery/traiteur/TraiteurViande';
+import TraiteurPoisson from './pages/gallery/traiteur/TraiteurPoisson';
 // DARK MODE
 import { ThemeContext } from './components/darkMode/ThemeContext';
 // SCROLL TO TOP
@@ -33,8 +35,9 @@ function App() {
               <Route path='/update' element={<IndexUpdate />} />
               <Route path='/boutique' element={<Shop />} />
               <Route path='/maison-morin' element={<MaisonMorin />} />
-              <Route path='/traiteur' element={<Gallery />} />
               <Route path='/transition' element={<Transition />} />
+              <Route path='/traiteur-viandes' element={<TraiteurViande />} />
+              <Route path='/traiteur-poisson' element={<TraiteurPoisson />} />
             </Routes>
           </ScrollToTop>
         </div>
