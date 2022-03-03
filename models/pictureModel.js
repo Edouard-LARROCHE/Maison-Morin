@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const pictureSchema = mongoose.Schema(
+const pictureViandeSchema = mongoose.Schema(
   {
     pictureUrl: {
       type: String,
@@ -17,15 +17,27 @@ const pictureSchema = mongoose.Schema(
   {
     collection: 'pictureViande',
   },
+);
+
+const pictureCakeSchema = mongoose.Schema(
   {
-    collection: 'picturePoisson',
+    pictureUrl: {
+      type: String,
+      required: true,
+    },
+    name: {
+      type: String,
+      required: true,
+    },
+    price: {
+      type: String,
+    },
   },
+
   {
     collection: 'pictureCake',
   },
-  {
-    collection: 'pictureFruit',
-  },
 );
 
-module.exports = mongoose.model('Picture', pictureSchema);
+module.exports = mongoose.model('PictureViande', pictureViandeSchema);
+module.exports = mongoose.model('PictureCake', pictureCakeSchema);

@@ -11,7 +11,7 @@ const Poissons = () => {
       setLoading(true);
       try {
         const { data: res } = await axios.get('http://localhost:5500/picture/traiteur/poisson');
-        console.log(res);
+        // console.log(res);
         setData(res);
       } catch (err) {
         console.log(err);
