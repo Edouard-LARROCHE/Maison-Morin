@@ -6,11 +6,24 @@ const pictureSchema = mongoose.Schema(
       type: String,
       required: true,
     },
+    name: {
+      type: String,
+      required: true,
+    },
+    price: {
+      type: String,
+    },
   },
   {
     collection: 'pictureViande',
+  },
+  {
     collection: 'picturePoisson',
+  },
+  {
     collection: 'pictureCake',
+  },
+  {
     collection: 'pictureFruit',
   },
 );
