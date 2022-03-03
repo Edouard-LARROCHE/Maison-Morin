@@ -28,7 +28,7 @@ const DataItem = ({ navData, arrow }) => {
                   </Link>
                 </li>
                 <li>
-                  <Link to='/traiteur-poisson'>
+                  <Link to='/traiteur-poissons'>
                     <div className='items'>{item.titleTraiteurPoisson}</div>
                   </Link>
                 </li>
@@ -63,7 +63,7 @@ const DataItem = ({ navData, arrow }) => {
                   </Link>
                 </li>
                 <li>
-                  <Link to='/delices-choco'>
+                  <Link to='/delices-chocolat'>
                     <div className='items'>{item.titleDeliceChoco}</div>
                   </Link>
                 </li>

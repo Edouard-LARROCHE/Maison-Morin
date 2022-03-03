@@ -18,6 +18,8 @@ import CaveRouge from './pages/gallery/cave/CaveRouge';
 import CaveBlanc from './pages/gallery/cave/CaveBlanc';
 import CaveRose from './pages/gallery/cave/CaveRose';
 import CaveBulle from './pages/gallery/cave/CaveBulle';
+import DeliceChocolat from './pages/gallery/delice/DeliceChocolat';
+import DeliceTruffe from './pages/gallery/delice/DeliceTruffe';
 // DARK MODE
 import { ThemeContext } from './components/darkMode/ThemeContext';
 // SCROLL TO TOP
@@ -43,13 +45,15 @@ function App() {
               <Route path='/maison-morin' element={<MaisonMorin />} />
               <Route path='/transition' element={<Transition />} />
               <Route path='/traiteur-viandes' element={<TraiteurViande />} />
-              <Route path='/traiteur-poisson' element={<TraiteurPoisson />} />
+              <Route path='/traiteur-poissons' element={<TraiteurPoisson />} />
               <Route path='/patisseries-cakes' element={<PatisserieCake />} />
               <Route path='/patisseries-fruits' element={<PatisserieFruit />} />
               <Route path='/cave-rouge' element={<CaveRouge />} />
               <Route path='/cave-blanc' element={<CaveBlanc />} />
               <Route path='/cave-rose' element={<CaveRose />} />
               <Route path='/cave-bulle' element={<CaveBulle />} />
+              <Route path='/delices-chocolat' element={<DeliceChocolat />} />
+              <Route path='/delices-truffe' element={<DeliceTruffe />} />
             </Routes>
           </ScrollToTop>
         </div>

@@ -25,7 +25,7 @@ const data = [
     id: 4,
     mainTitle: 'DELICES',
     arrow: <KeyboardArrowDownIcon style={{ size: 'small' }} />,
-    subItem: [{ id: 4 }, { titleDeliceChoco: 'CHOCO' }, { titleDeliceTruffe: 'TRUFFES' }],
+    subItem: [{ id: 4 }, { titleDeliceChoco: 'CHOCOLAT' }, { titleDeliceTruffe: 'TRUFFES' }],
   },
 ];
 
