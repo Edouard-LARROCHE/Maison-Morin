@@ -1,16 +1,16 @@
 const express = require('express');
-const picture = express.Router();
+const pictureViande = express.Router();
 
-const Picture = require('../models/pictureModel');
+const PictureViande = require('../models/pictureViandeModel');
 
-picture.get('/', (req, res) => {
-  Picture.find()
+pictureViande.get('/', (req, res) => {
+  PictureViande.find()
     .then((picture) => res.status(200).json(picture))
     .catch((error) => res.status(400).json({ error }));
 });
 
-picture.post('/', (req, res) => {
-  const image = new Picture({
+pictureViande.post('/', (req, res) => {
+  const image = new PictureViande({
     ...req.body,
   });
   image
@@ -19,4 +19,4 @@ picture.post('/', (req, res) => {
     .catch((error) => res.status(400).json({ error }));
 });
 
-module.exports = picture;
+module.exports = pictureViande;

@@ -41,15 +41,16 @@
   transform: translateX(-50%);
   display: flex;
   justify-content: center;
+  align-items: center;
   border-top: 1px solid $color-1;
-}
 
-.items {
-  cursor: pointer;
-  margin: 1rem 1rem 0 1rem;
-  color: $color-1;
+  .items {
+    margin: 2px;
+    cursor: pointer;
+    color: $color-1;
 
-  &:hover {
-    color: $color-3;
+    &:hover {
+      color: $color-3;
+    }
   }
 }

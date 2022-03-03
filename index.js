@@ -7,7 +7,7 @@ const cors = require('cors');
 const postsRoutes = require('./routes/postsRoute');
 const loginRoutes = require('./routes/userRoute');
 const uploadRoutes = require('./routes/uploadRoute');
-const pictureRoutes = require('./routes/pictureRoute');
+const pictureViandeRoutes = require('./routes/pictureViandeRoute');
 
 const corsOption = {
   origin: process.env.CLIENT_URL,
@@ -24,6 +24,6 @@ app.use(bodyParser.json());
 app.use('/posts', postsRoutes);
 app.use('/login', loginRoutes);
 app.use('/upload', uploadRoutes);
-app.use('/picture', pictureRoutes);
+app.use('/picture/traiteur/viande', pictureViandeRoutes);
 
 app.listen(5500, () => console.log('Server started: 5500'));

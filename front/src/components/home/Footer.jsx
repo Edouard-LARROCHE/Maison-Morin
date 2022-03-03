@@ -3,6 +3,7 @@ import CopyrightIcon from '@material-ui/icons/Copyright';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import TwitterIcon from '@material-ui/icons/Twitter';
+import ShareIcon from '@material-ui/icons/Share';
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
@@ -87,6 +88,9 @@ const Footer = () => {
             <a href='https://www.twitter.com' target='_blank' rel='noopener noreferrer'>
               <TwitterIcon />
             </a>
+          </li>
+          <li>
+            <ShareIcon style={{ cursor: 'pointer' }} />
           </li>
         </ul>
       </div>

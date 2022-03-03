@@ -73,9 +73,11 @@
     display: flex;
     margin-left: 1rem;
 
+    li,
     a {
+      transform: translateY(5px);
       color: $color-2;
-      margin: 0 0.7rem 0 0.7rem;
+      margin: 0 0.3rem 0 0.3rem;
       transition: 0.3s ease-in-out;
 
       &:hover {

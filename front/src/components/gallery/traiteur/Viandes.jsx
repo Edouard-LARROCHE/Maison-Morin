@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import Loader from '../Loader';
+import Loader from '../../Loader';
 
-const Traiteur = () => {
+const Viandes = () => {
   const [loading, setLoading] = useState(true);
   const [data, setData] = useState([]);
 
@@ -10,7 +10,7 @@ const Traiteur = () => {
     const fetchData = async () => {
       setLoading(true);
       try {
-        const { data: res } = await axios.get('http://localhost:5500/picture');
+        const { data: res } = await axios.get('http://localhost:5500/picture/traiteur/viande');
         console.log(res);
         setData(res);
       } catch (err) {
@@ -48,17 +48,4 @@ const Traiteur = () => {
   );
 };
 
-export default Traiteur;
-{
-  /* <div className='banner-second'>
-        <div className='title-second'>
-          <h1>Retrouvez nos saveurs</h1>
-        </div>
-        <div className='support-second'>
-          <h3>
-            À la Maison-Morin, nous portons de l'importance à la qualité de nos produits, tant dans la saveur que dans l'aspesct, n'hésitez pas à
-            consulter notre instagram pour vous donner encore plus envie de goûter nos créations.
-          </h3>
-        </div>
-      </div> */
-}
+export default Viandes;
