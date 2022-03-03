@@ -12,15 +12,26 @@ const FormContact = () => {
       <NavBar />
       <HeadBand />
       <div className='texte'>
-        <h1>Contactez-nous</h1>
+        <div className='para1'>
+          <p>N'HÉSITEZ PAS À NOUS CONTACTER</p>
+          <br />
+          <div className='line2' />
+        </div>
+        <div className='para2'>
+          <br />
+          <p>
+            Si vous rencontrez le moindre problème, ou si vous avez une suggestion, n'hésitez pas à remplir le formulaire ci-dessous. Nos équipes sont
+            à votre écoute, et ferons le maximum pour répondre à vos attentes.
+          </p>
+        </div>
       </div>
       <div className='page-contact'>
-        <div className='heures-ouverture'>
+        {/* <div className='heures-ouverture'>
           <h1>Ouvert</h1>
           <h1>Lundi, Jeudi, Vendredi, Samedi et Dimanche</h1>
           <h3>De 09h00 à 13h00</h3>
           <h3>De 15h00 à 19h30</h3>
-        </div>
+        </div> */}
         <div className='left-content'>
           <ContentForm />
         </div>
@@ -42,6 +53,7 @@ const FormContact = () => {
           </div>
         </div>
       </div>
+      <div className='line'></div>
       <div className='banner-news'>
         <NewsLetter />
       </div>

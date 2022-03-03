@@ -6,19 +6,13 @@
     font-size: 1.2rem;
     letter-spacing: 0.2rem;
     padding-bottom: 0.7rem;
-    color: $black;
+    color: $color-2;
   }
 
   h3 {
-    font-size: 0.9rem;
+    font-family: $font-1;
+    // font-size: 0.9rem;
     letter-spacing: 0.1rem;
-  }
-
-  img {
-    width: 25rem;
-    margin-top: 1rem;
-    border-radius: 3%;
-    box-shadow: 5px -5px 5px 0px rgba(0, 0, 0, 0.3);
   }
 }
 
@@ -89,13 +83,18 @@
 /*********** LINE **********/
 
 .line {
-  grid-column: 1 / 7;
-  grid-row: 4;
   position: relative;
-  align-self: end;
   width: auto;
   height: 1px;
   background-color: $color-3;
   opacity: 0.5;
-  top: 3.5em;
+  margin: 6rem 0 2rem 0;
+}
+
+.line2 {
+  position: relative;
+  width: auto;
+  height: 1px;
+  background-color: $color-3;
+  opacity: 0.5;
 }
