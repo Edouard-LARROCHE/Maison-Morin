@@ -24,22 +24,52 @@ const DataItem = ({ navData, arrow }) => {
               <ul>
                 <li>
                   <Link to='/traiteur-viandes'>
-                    <div className='items'>{item.titleTraiteur}</div>
+                    <div className='items'>{item.titleTraiteurViande}</div>
                   </Link>
                 </li>
                 <li>
-                  <Link to='/patisseries'>
-                    <div className='items'>{item.titlePatisserie}</div>
+                  <Link to='/traiteur-poisson'>
+                    <div className='items'>{item.titleTraiteurPoisson}</div>
                   </Link>
                 </li>
                 <li>
-                  <Link to='/cave'>
-                    <div className='items'>{item.titleCave}</div>
+                  <Link to='/patisseries-cakes'>
+                    <div className='items'>{item.titlePatisserieCake}</div>
                   </Link>
                 </li>
                 <li>
-                  <Link to='/delices'>
-                    <div className='items'>{item.titleDelice}</div>
+                  <Link to='/patisseries-fruits'>
+                    <div className='items'>{item.titlePatisserieFruit}</div>
+                  </Link>
+                </li>
+                <li>
+                  <Link to='/cave-rouge'>
+                    <div className='items'>{item.titleCaveRouge}</div>
+                  </Link>
+                </li>
+                <li>
+                  <Link to='/cave-blanc'>
+                    <div className='items'>{item.titleCaveBlanc}</div>
+                  </Link>
+                </li>
+                <li>
+                  <Link to='/cave-rosé'>
+                    <div className='items'>{item.titleCaveRosé}</div>
+                  </Link>
+                </li>
+                <li>
+                  <Link to='/cave-bulle'>
+                    <div className='items'>{item.titleCaveBulle}</div>
+                  </Link>
+                </li>
+                <li>
+                  <Link to='/delices-choco'>
+                    <div className='items'>{item.titleDeliceChoco}</div>
+                  </Link>
+                </li>
+                <li>
+                  <Link to='/delices-truffe'>
+                    <div className='items'>{item.titleDeliceTruffe}</div>
                   </Link>
                 </li>
               </ul>

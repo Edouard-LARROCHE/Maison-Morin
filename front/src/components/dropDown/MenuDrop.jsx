@@ -7,25 +7,25 @@ const data = [
     id: 1,
     mainTitle: 'TRAITEUR',
     arrow: <KeyboardArrowDownIcon style={{ size: 'small' }} />,
-    subItem: [{ id: 1 }, { titleTraiteur: 'VIANDE' }, { titleTraiteur: 'POISSON' }],
+    subItem: [{ id: 1 }, { titleTraiteurViande: 'VIANDE' }, { titleTraiteurPoisson: 'POISSON' }],
   },
   {
     id: 2,
     mainTitle: 'PATISSERIES',
     arrow: <KeyboardArrowDownIcon style={{ size: 'small' }} />,
-    subItem: [{ id: 2 }, { titlePatisserie: 'CAKES' }, { titlePatisserie: 'FRUITS' }],
+    subItem: [{ id: 2 }, { titlePatisserieCake: 'CAKES' }, { titlePatisserieFruit: 'FRUITS' }],
   },
   {
     id: 3,
     mainTitle: 'CAVE À VIN',
     arrow: <KeyboardArrowDownIcon style={{ size: 'small' }} />,
-    subItem: [{ id: 3 }, { titleCave: 'DON PADRE' }, { titleCave: 'DON MADRE' }],
+    subItem: [{ id: 3 }, { titleCaveRouge: 'ROUGE' }, { titleCaveBlanc: 'BLANC' }, { titleCaveRosé: 'ROSÉ' }, { titleCaveBulle: 'BULLES' }],
   },
   {
     id: 4,
     mainTitle: 'DELICES',
     arrow: <KeyboardArrowDownIcon style={{ size: 'small' }} />,
-    subItem: [{ id: 4 }, { titleDelice: 'CHOCO' }, { titleDelice: 'TRUFFES' }],
+    subItem: [{ id: 4 }, { titleDeliceChoco: 'CHOCO' }, { titleDeliceTruffe: 'TRUFFES' }],
   },
 ];
 
