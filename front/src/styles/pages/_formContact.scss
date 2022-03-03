@@ -4,14 +4,19 @@
   grid-template-columns: repeat(6, 16.6666%);
   grid-template-rows: 1fr;
   margin-top: 3rem;
-  margin-bottom: 7rem;
-  text-align: center;
+  margin-bottom: 3rem;
 
-  h1 {
+  .para1 {
     grid-column: 3 / 5;
-    font-family: $font-1;
-    // font-style: italic;
-    letter-spacing: 0.28em;
+
+    p {
+      font-family: $font-1;
+      letter-spacing: 0.1rem;
+    }
+  }
+
+  .para2 {
+    grid-column: 3 / 6;
   }
 }
 
@@ -21,21 +26,28 @@
   display: grid;
   grid-template-columns: repeat(6, calc(16.666666666666% - 9.5px));
   grid-template-rows: repeat(4, 5em);
-  gap: 0.7em;
+  gap: 1em;
+  height: 60vh;
   margin-bottom: 3.5em;
+  padding: 4rem;
   z-index: 1;
+  background: $color-6;
+
   .input-message {
     grid-column: 3 / 5;
     grid-row: 3;
+
     .split {
       display: grid;
       grid-template-columns: repeat(2, 50%);
       grid-template-rows: repeat(3, 41%);
+
       .text-field-tel {
         grid-column: 1 / 2;
         grid-row: 1;
         margin-top: 0.23em;
       }
+
       .form-err {
         grid-column: 1 / 3;
         grid-row: 3;
@@ -93,38 +105,6 @@
     width: 100%;
   }
 
-  /*********** LEFT CONTENT **********/
-
-  .heures-ouverture {
-    grid-column: 1 / 3;
-    grid-row: 2 / 5;
-    align-self: center;
-    text-align: center;
-    box-sizing: border-box;
-    margin-right: 10em;
-    margin-left: 10em;
-    padding: 1em;
-    border-radius: 3%;
-    border: 1px solid $color-3;
-    h1 {
-      margin-top: 0.3em;
-      font-size: 1.2rem;
-      letter-spacing: 0.2rem;
-      padding-bottom: 0.7rem;
-      color: $black;
-    }
-
-    h3 {
-      font-size: 0.9rem;
-      letter-spacing: 0.1rem;
-    }
-  }
-
-  .left-content {
-    grid-column: 1 / 3;
-    grid-row: 1 / 2;
-  }
-
   /*********** BOUTON **********/
   .button {
     grid-column: 3 / 5;
@@ -144,9 +124,11 @@
     align-self: center;
     margin-left: 8.2em;
     margin-bottom: 0.1em;
+
     .global-media {
       display: inline-flex;
     }
+
     .global-media .icon {
       position: relative;
       background-color: #fff;
@@ -163,6 +145,7 @@
       box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
       cursor: pointer;
       transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
       span {
         color: black;
       }
@@ -180,6 +163,7 @@
       pointer-events: none;
       transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     }
+
     .global-media .tooltip::before {
       position: absolute;
       content: '';
@@ -191,6 +175,7 @@
       transform: translate(-50%) rotate(45deg);
       transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     }
+
     .global-media .icon:hover .tooltip {
       top: -45px;
       opacity: 1;
@@ -210,6 +195,7 @@
       background-color: #3b5999;
       color: #ffffff;
     }
+
     .global-media .insta:hover,
     .global-media .insta:hover .tooltip,
     .global-media .insta:hover .tooltip::before {
