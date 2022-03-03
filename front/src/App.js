@@ -8,7 +8,7 @@ import FormContact from './pages/FormContact';
 import IndexUpdate from './components/Update/IndexUpdate';
 import Shop from './pages/Shop';
 import MaisonMorin from './pages/MaisonMorin';
-import Gallery from './pages/Gallery';
+import Gallery from './pages/gallery/Gallery';
 import Transition from './pages/Transition';
 // DARK MODE
 import { ThemeContext } from './components/darkMode/ThemeContext';
