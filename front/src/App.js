@@ -14,6 +14,10 @@ import TraiteurViande from './pages/gallery/traiteur/TraiteurViande';
 import TraiteurPoisson from './pages/gallery/traiteur/TraiteurPoisson';
 import PatisserieCake from './pages/gallery/patisserie/PatisserieCake';
 import PatisserieFruit from './pages/gallery/patisserie/PattisserieFruit';
+import CaveRouge from './pages/gallery/cave/CaveRouge';
+import CaveBlanc from './pages/gallery/cave/CaveBlanc';
+import CaveRose from './pages/gallery/cave/CaveRose';
+import CaveBulle from './pages/gallery/cave/CaveBulle';
 // DARK MODE
 import { ThemeContext } from './components/darkMode/ThemeContext';
 // SCROLL TO TOP
@@ -42,6 +46,10 @@ function App() {
               <Route path='/traiteur-poisson' element={<TraiteurPoisson />} />
               <Route path='/patisseries-cakes' element={<PatisserieCake />} />
               <Route path='/patisseries-fruits' element={<PatisserieFruit />} />
+              <Route path='/cave-rouge' element={<CaveRouge />} />
+              <Route path='/cave-blanc' element={<CaveBlanc />} />
+              <Route path='/cave-rose' element={<CaveRose />} />
+              <Route path='/cave-bulle' element={<CaveBulle />} />
             </Routes>
           </ScrollToTop>
         </div>
