@@ -3,7 +3,7 @@ import React from 'react';
 const Cakes = () => {
   return (
     <div>
-      <h1>Page Cake</h1>
+      <h1>Fetch cakes</h1>
     </div>
   );
 };

@@ -12,6 +12,8 @@ import Transition from './pages/Transition';
 // ROUTES GALLERY
 import TraiteurViande from './pages/gallery/traiteur/TraiteurViande';
 import TraiteurPoisson from './pages/gallery/traiteur/TraiteurPoisson';
+import PatisserieCake from './pages/gallery/patisserie/PatisserieCake';
+import PatisserieFruit from './pages/gallery/patisserie/PattisserieFruit';
 // DARK MODE
 import { ThemeContext } from './components/darkMode/ThemeContext';
 // SCROLL TO TOP
@@ -38,6 +40,8 @@ function App() {
               <Route path='/transition' element={<Transition />} />
               <Route path='/traiteur-viandes' element={<TraiteurViande />} />
               <Route path='/traiteur-poisson' element={<TraiteurPoisson />} />
+              <Route path='/patisseries-cakes' element={<PatisserieCake />} />
+              <Route path='/patisseries-fruits' element={<PatisserieFruit />} />
             </Routes>
           </ScrollToTop>
         </div>
