@@ -4,7 +4,7 @@ const pictureFruit = express.Router();
 const PictureFruit = require('../models/pictureModel');
 
 pictureFruit.get('/', (req, res) => {
-  PicturePoisson.find()
+  PictureFruit.find()
     .then((picture) => res.status(200).json(picture))
     .catch((error) => res.status(400).json({ error }));
 });

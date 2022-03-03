@@ -4,7 +4,7 @@ const pictureCake = express.Router();
 const PictureCake = require('../models/pictureModel');
 
 pictureCake.get('/', (req, res) => {
-  PicturePoisson.find()
+  PictureCake.find()
     .then((picture) => res.status(200).json(picture))
     .catch((error) => res.status(400).json({ error }));
 });
