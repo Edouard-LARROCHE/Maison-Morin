@@ -6,6 +6,7 @@ import BottomCard from '../components/maisonMorin/BottomCard';
 import TopArrow from '../components/TopArrow';
 import Content1 from '../components/maisonMorin/Content1';
 import Content2 from '../components/maisonMorin/Content2';
+import Content3 from '../components/maisonMorin/Content3';
 
 const MaisonMorin = () => {
   return (
@@ -14,6 +15,7 @@ const MaisonMorin = () => {
       <HeadBand />
       <Content1 />
       <Content2 />
+      <Content3 />
       <BottomCard />
       <Footer />
       <TopArrow />
