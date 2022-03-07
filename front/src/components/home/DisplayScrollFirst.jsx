@@ -31,7 +31,7 @@ const DisplayScroll = () => {
   return (
     <div className='display-first'>
       <div className={picture}>
-        <img src='/assets/macaron.png' alt='picure1' />
+        <img src='/assets/patisserie5.jpeg' alt='picure1' />
       </div>
       <div className='text-first'>
         <div className={headText}>Une Passion au Quotidien </div>

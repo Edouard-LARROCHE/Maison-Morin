@@ -31,7 +31,7 @@ const DisplayScrollSecond = () => {
   return (
     <div className='display-second'>
       <div className={picture}>
-        <img src='/assets/baron-champagne.png' alt='picute2' />
+        <img src='/assets/baron.png' alt='picute2' />
       </div>
       <div className='text-second'>
         <div className={headText}>Une Gamme Préstigieuse</div>
