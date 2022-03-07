@@ -1,16 +1,16 @@
 const express = require('express');
 const pictureViande = express.Router();
 
-const PictureViande = require('../models/pictureModel');
+const { Viande } = require('../models/pictureModel');
 
 pictureViande.get('/', (req, res) => {
-  PictureViande.find()
+  Viande.find()
     .then((picture) => res.status(200).json(picture))
     .catch((error) => res.status(400).json({ error }));
 });
 
 pictureViande.post('/', (req, res) => {
-  const image = new PictureViande({
+  const image = new Viande({
     ...req.body,
   });
   image
