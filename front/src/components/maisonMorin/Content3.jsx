@@ -8,10 +8,9 @@ const Content3 = () => {
         <br />
         <div className='line2' />
         <br />
-        <p>
-          On pourrait croire que tout a changé dans la Maison Morin. Mais une chose est restée : la filiation, car c’est Victorien, le fils de Laurent
-          qui a repris les rênes de la boutique.
-        </p>
+        <p>On pourrait croire que tout a changé dans la Maison Morin. Mais une chose est restée : la filiation.</p>
+        <br />
+        <p>Car c’est Victorien, le fils de Laurent qui a repris les rênes de la boutique.</p>
       </div>
       <div className='right-content'>
         <img src='/assets/vic-bg.png' alt='victorien' />
