@@ -4,7 +4,7 @@ const Content2 = () => {
   return (
     <div className='head-content2'>
       <div className='right-content2'>
-        <div className='test'>
+        <div className='back-text'>
           <p>« C'ÉTAIT UNE ÉVIDENCE »</p>
           <br />
           <div className='line2' />

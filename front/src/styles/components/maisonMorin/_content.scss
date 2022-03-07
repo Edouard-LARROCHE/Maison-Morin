@@ -10,11 +10,6 @@
   .right-content2 {
     grid-area: 1 / 2 / 2 / 3;
     padding: 5rem 5rem 5rem 0;
-
-    .test {
-      background: #fff;
-      border: 50px solid #fff;
-    }
   }
 
   .left-content2 {
@@ -30,6 +25,16 @@
       border: 20px solid #fff;
     }
   }
+}
+
+.back-text {
+  background: #fff;
+  padding: 4rem;
+}
+
+.back-text-last {
+  background: #fff;
+  padding: 2rem;
 }
 
 /************** LAST CONTENT ****************/
