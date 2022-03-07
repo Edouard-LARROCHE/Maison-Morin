@@ -9,6 +9,7 @@ import Content2 from '../components/maisonMorin/Content2';
 import Content3 from '../components/maisonMorin/Content3';
 import Content4 from '../components/maisonMorin/Content4';
 import Content5 from '../components/maisonMorin/Content5';
+import NewsLetter from '../components/newsletter/NewsLetter';
 
 const MaisonMorin = () => {
   return (
@@ -21,6 +22,8 @@ const MaisonMorin = () => {
       <Content4 />
       <Content5 />
       <BottomCard />
+      <div className='line'></div>
+      <NewsLetter />
       <Footer />
       <TopArrow />
     </div>
