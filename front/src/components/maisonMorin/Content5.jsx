@@ -4,7 +4,7 @@ const Content5 = () => {
   return (
     <div className='last-content'>
       <div className='left-content5'>
-        <img src='/assets/interieur4.jpeg' alt='facade' />
+        <img src='/assets/devanture.jpeg' alt='facade' />
       </div>
       <div className='center-content5'>
         <p>« MA PATTE »</p>
@@ -18,7 +18,7 @@ const Content5 = () => {
         <p>J’ai gardé quelques grands noms de la salaisons et bien sûr des terrines maisons ».</p>
       </div>
       <div className='right-content5'>
-        <img src='/assets/devanture.jpeg' alt='facade' />
+        <img src='/assets/interieur4.jpeg' alt='facade' />
       </div>
     </div>
   );
