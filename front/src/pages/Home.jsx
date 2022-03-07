@@ -42,9 +42,10 @@ const Home = () => {
           <DisplayScroll />
           <DisplayScrollSecond />
           <DisplayScrollThird />
-          <Band />
+          {/* <Band /> */}
           <Infos />
           <Avis />
+          <div className='line'></div>
           <NewsLetter />
           <Footer />
           <TopArrow />

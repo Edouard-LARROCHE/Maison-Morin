@@ -4,6 +4,7 @@ const Copyright = () => {
   return (
     <div className='copy-right'>
       <h1>2. Droit d'auteur - Copyright - Marques</h1>
+      <div className='line-all'></div>
       <p>
         L’ensemble de ce site (contenu et présentation) constitue une œuvre protégée par la législation française et internationale en vigueur sur le
         droit d’auteur et d’une manière générale sur la propriété intellectuelle et industrielle. Tous les droits de propriété intellectuelle et

@@ -4,6 +4,7 @@ const UserTraces = () => {
   return (
     <div className='user-traces'>
       <h1>3. Cookies utilisateurs</h1>
+      <div className='line-all'></div>
       <p>
         Les cookies (témoins de connexion sous forme de petits fichiers envoyés sur le disque dur de votre ordinateur) éventuellement exploités sur ce
         site, et autres captures de variables d’environnement, ne seront exploités qu’aux seules fins d’analyse et d’optimisation du présent site par

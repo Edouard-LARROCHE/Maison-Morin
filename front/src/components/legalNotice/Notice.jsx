@@ -9,6 +9,7 @@ const Notice = () => {
           <img className='V' src='/logo/V.png' alt='V' style={{ width: '3rem' }} />
         </div>
         <h1>1. Mentions légales</h1>
+        <div className='line-all'></div>
         <ul>
           <li>
             <h3>CHARCUTERIE</h3>

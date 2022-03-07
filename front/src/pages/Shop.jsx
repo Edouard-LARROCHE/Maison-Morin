@@ -12,6 +12,7 @@ const Shop = () => {
       <NavBar />
       <HeadBand />
       <Map />
+      <div className='line'></div>
       <NewsLetter />
       <Footer />
       <TopArrow />
