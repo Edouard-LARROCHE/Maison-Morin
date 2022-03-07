@@ -1,16 +1,16 @@
 const express = require('express');
 const pictureFruit = express.Router();
 
-const PictureFruit = require('../models/pictureModel');
+const { Fruit } = require('../models/pictureModel');
 
 pictureFruit.get('/', (req, res) => {
-  PictureFruit.find()
+  Fruit.find()
     .then((picture) => res.status(200).json(picture))
     .catch((error) => res.status(400).json({ error }));
 });
 
 pictureFruit.post('/', (req, res) => {
-  const image = new PictureFruit({
+  const image = new Fruit({
     ...req.body,
   });
   image

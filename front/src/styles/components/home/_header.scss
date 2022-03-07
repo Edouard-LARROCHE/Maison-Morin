@@ -2,8 +2,9 @@
   display: grid;
   grid-template-columns: repeat(2, 50%);
   grid-template-rows: 1fr 1rem;
-  grid-column-gap: 50px;
+  grid-column-gap: 5px;
   margin: 0 400px 200px 400px;
+  background: $color-6;
 
   .picture-header {
     grid-area: 1 / 1 / 2 / 2;
@@ -29,12 +30,13 @@
     text-align: center;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
+    margin-top: 2rem;
 
     .head-text {
       font-family: $font-1;
       color: $color-3;
-      font-size: 25px;
+      font-size: 20px;
       font-style: italic;
       letter-spacing: 0.2rem;
       margin: -1rem 0 1rem 0;

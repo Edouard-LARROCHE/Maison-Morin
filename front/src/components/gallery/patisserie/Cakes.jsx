@@ -11,7 +11,6 @@ const Cakes = () => {
       setLoading(true);
       try {
         const { data: res } = await axios.get('http://localhost:5500/picture/patisserie/cake');
-        console.log(res);
         setData(res);
       } catch (err) {
         console.log(err);
