@@ -21,12 +21,6 @@ const data = [
     arrow: <KeyboardArrowDownIcon style={{ size: 'small' }} />,
     subItem: [{ id: 3 }, { titleCaveRouge: 'ROUGE' }, { titleCaveBlanc: 'BLANC' }, { titleCaveRosé: 'ROSÉ' }, { titleCaveBulle: 'BULLES' }],
   },
-  {
-    id: 4,
-    mainTitle: 'DELICES',
-    arrow: <KeyboardArrowDownIcon style={{ size: 'small' }} />,
-    subItem: [{ id: 4 }, { titleDeliceChoco: 'CHOCOLAT' }, { titleDeliceTruffe: 'TRUFFES' }],
-  },
 ];
 
 const MenuDrop = () => {
