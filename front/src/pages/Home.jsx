@@ -38,13 +38,14 @@ const Home = () => {
           <NavBar />
           <HeadBand />
           <MenuDrop />
+          <Band />
           <Header />
           <DisplayScroll />
           <DisplayScrollSecond />
           <DisplayScrollThird />
-          <Band />
           <Infos />
           <Avis />
+          <div className='line'></div>
           <NewsLetter />
           <Footer />
           <TopArrow />

@@ -8,6 +8,7 @@ const Cookie = () => {
           <img className='V' src='/logo/V.png' alt='V' style={{ width: '3rem' }} />
         </div>
         <h1>1. Que sont les cookies ? Comment sont-ils utilisés ?</h1>
+        <div className='line-all'></div>
         <p>
           Un cookie est un fichier texte déposé sur l’appareil que vous utilisez pour accéder à Internet (ordinateur, téléphone mobile, tablette…)
           lorsque vous visitez un site via votre logiciel de navigation.
@@ -41,6 +42,7 @@ const Cookie = () => {
       </div>
       <div className='cook-control'>
         <h1>2. Comment contrôler les cookies ?</h1>
+        <div className='line-all'></div>
         <p>
           Lors de votre première visite sur notre Site, une bannière d’information s’affichera en bas de page. Après avoir cliqué sur « J’accepte »,
           vous consentez à ce que la Maison Morin puisse déposer des cookies sur votre ordinateur ou appareil.
