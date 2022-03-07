@@ -1,17 +1,27 @@
-.head-text {
-  text-align: center;
-  margin: 70px 410px 0 410px;
+.head-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 20px;
+  background: $color-6;
+  margin: 0 300px 100px 300px;
 
-  h1 {
-    letter-spacing: 0.1rem;
+  .left-content {
+    grid-area: 1 / 1 / 2 / 2;
+    padding: 5rem;
   }
 
-  p {
-    font-size: 20px;
-    opacity: 0.7;
-  }
+  .right-content {
+    grid-area: 1 / 2 / 2 / 3;
+    width: 80%;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
 
-  .bottom-text {
-    margin: 0 200px 0 200px;
+    img {
+      height: 30rem;
+      width: 35rem;
+      border: 20px solid #fff;
+    }
   }
 }

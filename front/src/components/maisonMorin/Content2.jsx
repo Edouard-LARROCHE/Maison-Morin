@@ -1,20 +1,28 @@
 import React from 'react';
 
-const Middle = () => {
+const Content2 = () => {
   return (
-    <div className='middle-content'>
-      <div className='head-parent'>
-        <img src='/assets/victorien3.png' alt='Victorien' style={{ width: '25rem' }} />
-        <div className='child-content'>
-          <h2>« C’était une évidence »</h2>
-          <br />
-          <h3>
-            « Quand mon père a pris sa décision de partir à la retraite, c’est tout naturellement que j’ai pensé à prendre sa place. J’ai, depuis mes
-            12 ans, baigné dans l’odeur de la boutique et de l’atelier, c’était pour moi une évidence ».
-          </h3>
-        </div>
+    <div className='head-content2'>
+      <div className='right-content2'>
+        <p>« C'ÉTAIT UNE ÉVIDENCE »</p>
+        <br />
+        <div className='line2' />
+        <br />
+        <p>« Quand mon père a pris sa décision de partir à la retraite, c’est tout naturellement que j’ai pensé à prendre sa place.</p>
+        <br />
+        <p>J’ai, depuis mes 12 ans, baigné dans l’odeur de la boutique et de l’atelier, c’était pour moi une évidence ».</p>
       </div>
-      <div className='head-parent2'>
+      <div className='left-content2'>
+        <img src='/assets/vic-baby.png' alt='comptoir' />
+      </div>
+    </div>
+  );
+};
+
+export default Content2;
+
+{
+  /* <div className='head-parent2'>
         <img src='/assets/victorien.png' alt='Victorien' style={{ width: '25rem' }} />
         <div className='child-content2'>
           <h2>- La filiation -</h2>
@@ -51,9 +59,5 @@ const Middle = () => {
       </div>
       <div className='head-parent4'>
         <img src='/assets/devanture1.png' alt='Victorien' style={{ width: '35rem' }} />
-      </div>
-    </div>
-  );
-};
-
-export default Middle;
+      </div> */
+}

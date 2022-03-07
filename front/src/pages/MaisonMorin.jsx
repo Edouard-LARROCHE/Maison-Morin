@@ -1,19 +1,19 @@
 import React from 'react';
 import NavBar from '../components/home/NavBar';
-import Header from '../components/maisonMorin/Header';
 import Footer from '../components/home/Footer';
-import Middle from '../components/maisonMorin/Middle';
 import HeadBand from '../components/HeadBand';
 import BottomCard from '../components/maisonMorin/BottomCard';
 import TopArrow from '../components/TopArrow';
+import Content1 from '../components/maisonMorin/Content1';
+import Content2 from '../components/maisonMorin/Content2';
 
 const MaisonMorin = () => {
   return (
     <div>
       <NavBar />
       <HeadBand />
-      <Header />
-      <Middle />
+      <Content1 />
+      <Content2 />
       <BottomCard />
       <Footer />
       <TopArrow />
