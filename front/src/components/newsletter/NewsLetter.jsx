@@ -1,5 +1,6 @@
 import React from 'react';
-import { TextField } from '@material-ui/core';
+import MailchimpSubscribe from 'react-mailchimp-subscribe';
+import CustomForm from './CustomForm';
 
 const NewsLetter = () => {
   return (
@@ -11,19 +12,10 @@ const NewsLetter = () => {
         <div className='text-info-nl'>
           <h3>Soyez les premiers à être informés de nos actualités !</h3>
         </div>
-        <div className='email-nl'>
-          <TextField
-            className='textfield-email'
-            style={{ paddingBottom: '2rem' }}
-            type='text'
-            id='email'
-            name='email'
-            placeholder='Votre adresse mail'
-          />
-        </div>
-        <div className='btn-nl'>
-          <p>Je m'inscris</p>
-        </div>
+        <MailchimpSubscribe url={'https://gmail.us14.list-manage.com/subscribe/post?u=3d643a3976eec9ec481f6a43f&amp;id=f9244b0c4c'} render={({ subscribe, status, message }) => (
+              <CustomForm status={status} message={message} onValidated={formData => subscribe(formData)} />
+                )}
+            />
       </div>
     </>
   );
