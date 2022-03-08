@@ -36,14 +36,20 @@ const Poissons = () => {
       ) : (
         <div className='fetch-card'>
           {data.map((index) => (
-            <div className='photos' key={index._id}>
-              <img className='img-gallerie' src={index.pictureUrl} alt='Photos-produits' />
-              <div className='icones'>
-                <div className='instagram'>
-                  <a className='fab fa-instagram' target='_blank' rel='noreferrer' href='https://www.instagram.com/maison_morin/?hl=fr'>
-                    {''}
-                  </a>
+            <div key={index._id}>
+              <div className='photos'>
+                <img className='img-gallerie' src={index.pictureUrl} alt='Photos-produits' />
+                <div className='icones'>
+                  <div className='instagram'>
+                    <a className='fab fa-instagram' target='_blank' rel='noreferrer' href='https://www.instagram.com/maison_morin/?hl=fr'>
+                      {''}
+                    </a>
+                  </div>
                 </div>
+              </div>
+              <div className='info-card'>
+                <p> {index.name} </p>
+                <p> {index.price} </p>
               </div>
             </div>
           ))}
