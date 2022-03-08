@@ -23,12 +23,18 @@ const Poissons = () => {
 
   return (
     <>
+      <div className='text-acceuil-fetch'>
+        <p>PRODUITS ARTISANAUX ELABORÉS DANS NOS CUISINES, AU QUOTIDIEN.</p>
+        <p style={{ fontSize: '10px', marginTop: '0.5rem' }}>NOTRE GAMME TRAITEUR</p>
+        <br />
+        <div className='line2' />
+      </div>
       {loading ? (
         <div>
           <Loader />
         </div>
       ) : (
-        <div className='grid'>
+        <div className='fetch-card'>
           {data.map((index) => (
             <div className='photos' key={index._id}>
               <img className='img-gallerie' src={index.pictureUrl} alt='Photos-produits' />
@@ -43,6 +49,14 @@ const Poissons = () => {
           ))}
         </div>
       )}
+      <div className='text-order'>
+        <p>PASSER COMMANDE.</p>
+        <p style={{ fontSize: '10px', marginTop: '0.5rem' }}>
+          EN PRÉVISION D'UN FUTUR SERVICE DE COMMANDE, MERCI DE COMMANDER POUR L'INSTANT DIRECTEMENT PAR MAIL OU TÉLÉPHONE.
+        </p>
+        <br />
+        <div className='line2' />
+      </div>
     </>
   );
 };
