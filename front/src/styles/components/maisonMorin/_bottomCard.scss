@@ -3,25 +3,35 @@
 }
 
 .card-traiteur {
+  margin: 50px 320px 50px 320px;
+  height: 60vh;
+  background-image: url('https://i.ibb.co/br6BRdZ/traiteur1.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
   display: flex;
   justify-content: center;
-  margin-top: 3rem;
   position: relative;
+
+  &:hover {
+    background-image: url('https://i.ibb.co/JFtLkPP/traiteur.jpg');
+  }
 
   h3 {
     position: absolute;
-    bottom: 10px;
-    color: $color-3;
-    padding: 2rem;
-    width: 35rem;
+    top: 30px;
+    color: $color-1;
+    width: 33rem;
     text-align: center;
-  }
-  img {
-    height: 35rem;
   }
 }
 
 /************ BOUTTON ***************/
+
+.btn-position {
+  position: absolute;
+  bottom: 50px;
+  height: 3.5rem;
+}
 
 .btn-card {
   box-sizing: border-box;
@@ -34,6 +44,10 @@
   border: 2px solid $color-3;
   position: relative;
   z-index: 1;
+
+  p {
+    color: #fff;
+  }
 }
 
 .btn-card:hover {

@@ -16,12 +16,13 @@ const BottomCard = () => {
       <br />
       <div className='card-traiteur'>
         <h3>Bien évidement, la Maison Morin peut également organiser vos soirées pour répondre à toutes les attentes de ses clients.</h3>
-        <img src='/assets/traiteur.png' alt='traiteur' />
-      </div>
-      <div className='btn-card'>
-        <Link to='/contact'>
-          <p>NOUS CONTACTER</p>
-        </Link>
+        <div className='btn-position'>
+          <div className='btn-card'>
+            <Link to='/contact'>
+              <p>NOUS CONTACTER</p>
+            </Link>
+          </div>
+        </div>
       </div>
     </div>
   );
