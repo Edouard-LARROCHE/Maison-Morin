@@ -56,6 +56,14 @@ const Rouge = () => {
           ))}
         </div>
       )}
+      <div className='text-order'>
+        <p>PASSER COMMANDE.</p>
+        <p style={{ fontSize: '10px', marginTop: '0.5rem' }}>
+          EN PRÉVISION D'UN FUTUR SERVICE DE COMMANDE, MERCI DE COMMANDER POUR L'INSTANT DIRECTEMENT PAR MAIL OU TÉLÉPHONE.
+        </p>
+        <br />
+        <div className='line2' />
+      </div>
     </>
   );
 };
