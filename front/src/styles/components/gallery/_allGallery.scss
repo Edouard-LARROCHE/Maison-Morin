@@ -1,7 +1,6 @@
 .text-acceuil-fetch {
   width: 60%;
   margin: -5rem auto 3rem;
-  // display: flex;
 }
 
 /* ===== PHOTOS ===== */
@@ -13,12 +12,13 @@
   position: relative;
   width: 70%;
   margin: auto;
+  padding-bottom: 5rem;
 }
 
 .photos {
   width: 23em;
   height: 19em;
-  margin: 0.5em;
+  margin: 1em;
   position: relative;
 }
 
@@ -76,4 +76,9 @@
   p {
     margin-bottom: 0.6rem;
   }
+}
+
+.text-order {
+  width: 60%;
+  margin: 0 auto 3rem;
 }
