@@ -45,7 +45,6 @@ const Home = () => {
           <DisplayScrollThird />
           <Infos />
           <Avis />
-          <div className='line'></div>
           <NewsLetter />
           <Footer />
           <TopArrow />
