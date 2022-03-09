@@ -8,7 +8,10 @@ const modal = ({ isShowing, hide, ...props }) => {
         <div className='modal-overlay'>
           <div className='modal-wrapper'>
             <div className='modal'>
-              <CloseIcon className='modal-close-button' onClick={hide} style={{ cursor: 'pointer', color: '#012f6b', fontSize: 'small' }} />
+              <div className='modal-header'>
+                <h3>Administration du site</h3>
+                <CloseIcon className='modal-close-button' onClick={hide} style={{ cursor: 'pointer', color: '#012f6b' }} />
+              </div>
               <div>{props.children}</div>
             </div>
           </div>

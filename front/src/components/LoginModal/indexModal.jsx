@@ -39,27 +39,25 @@ const IndexModal = () => {
   };
 
   return (
-    <div className='login-component'>
+    <>
       <PersonIcon className='modal-toggle' onClick={toggleLoginForm} style={{ cursor: 'pointer', color: '#f6fbf8' }} />
+
       <Modal isShowing={isLoginFormShowed} hide={toggleLoginForm}>
         <form onSubmit={handleSubmit}>
-          <TextField onChange={(e) => setName(e.target.value)} value={name} type='text' placeholder='Nom *' style={{ paddingBottom: '1rem' }} />
+          <div className='textfield'>
+            <TextField onChange={(e) => setName(e.target.value)} value={name} type='text' placeholder='Nom *' style={{ paddingBottom: '1rem' }} />
 
-          <TextField
-            onChange={(e) => setPassword(e.target.value)}
-            value={password}
-            type='password'
-            placeholder='Mot de passe *'
-            style={{ paddingBottom: '1rem' }}
-          />
-          <div className='fail-login' style={{ color: 'red', fontSize: '0.7rem' }} />
-
-          <button type='submit'>
-            <p>Connexion</p>
-          </button>
+            <TextField onChange={(e) => setPassword(e.target.value)} value={password} type='password' placeholder='Mot de passe *' />
+          </div>
+          <div className='fail-login' style={{ color: 'red', fontSize: '0.8rem' }} />
+          <div className='btn-position-admin'>
+            <button className='btn-admin' type='submit'>
+              <p>Connexion</p>
+            </button>
+          </div>
         </form>
       </Modal>
-    </div>
+    </>
   );
 };
 

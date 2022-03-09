@@ -5,12 +5,14 @@ import ContentForm from '../components/contact/ContentForm';
 import Form from '../components/contact/Form';
 import NewsLetter from '../components/newsletter/NewsLetter';
 import HeadBand from '../components/HeadBand';
+import DropWithoutMenu from '../components/dropDown/DropWithoutMenu';
 
 const FormContact = () => {
   return (
     <>
       <NavBar />
       <HeadBand />
+      <DropWithoutMenu />
       <div className='texte'>
         <div className='para1'>
           <p>N'HÉSITEZ PAS À NOUS CONTACTER</p>

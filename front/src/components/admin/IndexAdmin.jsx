@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const IndexUpdate = () => {
+const IndexAdmin = () => {
   return (
     <div>
       <h1>Crud update data</h1>
@@ -12,4 +12,4 @@ const IndexUpdate = () => {
   );
 };
 
-export default IndexUpdate;
+export default IndexAdmin;
