@@ -10,12 +10,14 @@ import Content3 from '../components/maisonMorin/Content3';
 import Content4 from '../components/maisonMorin/Content4';
 import Content5 from '../components/maisonMorin/Content5';
 import NewsLetter from '../components/newsletter/NewsLetter';
+import DropWithoutMenu from '../components/dropDown/DropWithoutMenu';
 
 const MaisonMorin = () => {
   return (
     <div>
       <NavBar />
       <HeadBand />
+      <DropWithoutMenu />
       <Content1 />
       <Content2 />
       <Content3 />

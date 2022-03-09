@@ -1,11 +1,7 @@
 import React from 'react';
 
 const DropWithoutMenu = () => {
-  return (
-    <div>
-      <div className='drop-without-menu'></div>
-    </div>
-  );
+  return <div className='drop-without-menu'></div>;
 };
 
 export default DropWithoutMenu;
