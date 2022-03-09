@@ -45,7 +45,6 @@ const FormContact = () => {
           </div>
         </div>
       </div>
-      <div className='line'></div>
       <NewsLetter />
       <Footer />
     </>

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 const Infos = () => {
     const [display, setDisplay] = useState('second-half-left');
