@@ -7,16 +7,18 @@ const IndexAdmin = () => {
   const [password, setPassword] = useState('');
   const [data, setData] = useState([]);
 
-  const handleUpdate = async () => {
+  const handleUpdate = () => {
     const updateData = {
       name: name,
       password: password,
     };
-    await axios
+    axios
       .get('http://localhost:5500/login', updateData)
       .then((res) => {
         setData(res.data);
         console.log(data);
+        setName('');
+        setPassword('');
       })
       .catch((err) => {
         console.log(err);
