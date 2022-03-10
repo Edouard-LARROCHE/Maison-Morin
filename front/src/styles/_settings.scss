@@ -126,25 +126,17 @@ span {
 /********* LOADER ************/
 
 .spinner {
-  position: relative;
-  margin: 2rem 2rem 4rem 0;
   display: flex;
   justify-content: center;
   align-items: center;
 
-  .V-spinner {
-    position: relative;
-    left: 70px;
-  }
-
   .loader {
-    padding: 2rem;
-    border: 3px solid #f3f3f3;
+    border: 2px solid #f3f3f3;
     border-top: 3px solid $color-3;
     border-radius: 50%;
-    width: 100px;
-    height: 100px;
-    animation: spin 1s linear infinite;
+    width: 50px;
+    height: 50px;
+    animation: spin 1.3s linear infinite;
 
     @keyframes spin {
       0% {
@@ -168,25 +160,34 @@ span {
   right: 0;
   overflow: auto;
 
-  .transition-position-typing {
+  .img-position {
     display: flex;
     justify-content: center;
     position: relative;
-    top: 320px;
+    top: 240px;
+  }
+
+  img {
+    animation: slide-in-fwd-center 6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+
+    @keyframes slide-in-fwd-center {
+      0% {
+        transform: translateZ(-1400px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateZ(0);
+        opacity: 1;
+      }
+    }
   }
 
   .transition-position-spinner {
-    height: 90%;
+    height: 70%;
     display: flex;
     align-items: center;
     justify-content: center;
   }
-}
-
-.text-typing {
-  color: $color-3;
-  font-size: 1.5rem;
-  letter-spacing: 0.2rem;
 }
 
 /*********** LINE **********/

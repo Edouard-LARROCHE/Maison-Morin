@@ -24,7 +24,7 @@ const Home = () => {
     setTimeout(() => {
       trans();
       setTransition(false);
-    }, 2000);
+    }, 2500);
   }, []);
 
   return (
