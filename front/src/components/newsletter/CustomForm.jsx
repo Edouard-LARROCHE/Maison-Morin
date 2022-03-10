@@ -1,5 +1,12 @@
 import React from 'react';
 
+const timeOut = () => {
+        setTimeout(hideElement, 4000);
+    function hideElement() {
+        document.querySelector('.customFormSuccess' && '.customFormError').style.display='none';
+    }
+};
+
 const CustomForm = ({ status, message, onValidated }) => {
     let email;
     const submit = () =>
@@ -8,9 +15,26 @@ const CustomForm = ({ status, message, onValidated }) => {
         onValidated({
             EMAIL: email.value,
         });
+
+    const handle = (e) =>{
+        submit();
+        timeOut();
+    };
+        
     return (
         <>
             <div className='email-nl'>
+            {status === "sending" && <div className="customFormSending">Envoie en cours...</div>}
+            {status === "error" && (
+                <div className="customFormError"
+                dangerouslySetInnerHTML={{ __html: 'Erreur, réessayez' }}
+                />
+            )}
+            {status === "success" && (
+                <div className="customFormSuccess"
+                dangerouslySetInnerHTML={{ __html: 'Mail bien enregistré, merci !' }}
+                />
+            )}
                 <input
                     className='textfield-email'
                     ref={node => (email = node)}
@@ -21,7 +45,7 @@ const CustomForm = ({ status, message, onValidated }) => {
                     placeholder='Votre adresse mail'
                 />
             </div>
-            <div className='btn-nl' onClick={submit}>
+            <div className='btn-nl' onClick={handle}>
             <p>Je m'inscris</p>
             </div>
         </>
