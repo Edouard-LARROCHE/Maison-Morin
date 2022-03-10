@@ -1,5 +1,12 @@
 import React from 'react';
 
+const timeOut = () => {
+        setTimeout(hideElement, 4000);
+    function hideElement() {
+        document.querySelector('.customFormSuccess' && '.customFormError').style.display='none';
+    }
+};
+
 const CustomForm = ({ status, message, onValidated }) => {
     let email;
     const submit = () =>
@@ -9,6 +16,11 @@ const CustomForm = ({ status, message, onValidated }) => {
             EMAIL: email.value,
         });
 
+    const handle = (e) =>{
+        submit();
+        timeOut();
+    };
+        
     return (
         <>
             <div className='email-nl'>
@@ -33,7 +45,7 @@ const CustomForm = ({ status, message, onValidated }) => {
                     placeholder='Votre adresse mail'
                 />
             </div>
-            <div className='btn-nl' onClick={submit}>
+            <div className='btn-nl' onClick={handle}>
             <p>Je m'inscris</p>
             </div>
         </>
