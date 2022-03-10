@@ -8,9 +8,21 @@ const CustomForm = ({ status, message, onValidated }) => {
         onValidated({
             EMAIL: email.value,
         });
+
     return (
         <>
             <div className='email-nl'>
+            {status === "sending" && <div className="customFormSending">Envoie en cours...</div>}
+            {status === "error" && (
+                <div className="customFormError"
+                dangerouslySetInnerHTML={{ __html: 'Erreur, réessayez' }}
+                />
+            )}
+            {status === "success" && (
+                <div className="customFormSuccess"
+                dangerouslySetInnerHTML={{ __html: 'Mail bien enregistré, merci !' }}
+                />
+            )}
                 <input
                     className='textfield-email'
                     ref={node => (email = node)}

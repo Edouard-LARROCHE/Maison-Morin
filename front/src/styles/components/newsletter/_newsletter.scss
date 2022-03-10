@@ -36,6 +36,24 @@
     margin-right: 0.8em;
     align-self: start;
 
+      /*********** MESSAGE **********/
+
+    .customFormSending,
+    .customFormError,
+    .customFormSuccess {
+      position: absolute;
+      transform: translateY(-27px);
+      font-family: $font-3;
+      font-style: italic;
+    }
+    .customFormSuccess {
+      color: green;
+    }
+
+    .customFormError {
+      color: red;
+    }
+
 /*********** EMAIL **********/
     .textfield-email {
       -webkit-appearance: none;
@@ -108,3 +126,4 @@
     z-index: -1;
   }
 }
+
