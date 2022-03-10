@@ -9,4 +9,10 @@ login.get('/', (req, res) => {
     .catch((error) => res.status(400).json({ error }));
 });
 
+login.put('/:id', (req, res, next) => {
+  Login.updateOne({ _id: req.params.id }, { ...req.body, _id: req.params.id })
+    .then(() => res.status(200).json({ message: 'Nom et mot de passe modifié' }))
+    .catch((error) => res.status(400).json({ error }));
+});
+
 module.exports = login;
