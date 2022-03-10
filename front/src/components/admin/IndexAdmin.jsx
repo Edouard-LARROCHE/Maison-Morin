@@ -1,19 +1,21 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import DisplayLogin from './DisplayLogin';
 
 const IndexAdmin = () => {
   const [name, setName] = useState('');
   const [password, setPassword] = useState('');
   const [data, setData] = useState([]);
 
-  const handleUpdate = () => {
+  const handleUpdate = async (e) => {
+    e.preventDefault();
     const updateData = {
       name: name,
       password: password,
     };
-    axios
-      .get('http://localhost:5500/login', updateData)
+    await axios
+      .put('http://localhost:5500/login/621f6aa824ffab4ecdeda3d4', updateData)
       .then((res) => {
         setData(res.data);
         console.log(data);
@@ -40,12 +42,7 @@ const IndexAdmin = () => {
           MODIFIER
         </button>
       </div>
-      {data.map((index) => (
-        <div key={index}>
-          <p> {index.name} </p>
-          <p> {index.password} </p>
-        </div>
-      ))}
+      <DisplayLogin />
     </div>
   );
 };
