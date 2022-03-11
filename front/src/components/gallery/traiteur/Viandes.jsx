@@ -5,6 +5,7 @@ import Loader from '../../Loader';
 const Viandes = () => {
   const [loading, setLoading] = useState(true);
   const [data, setData] = useState([]);
+  const [search, setSearch] = useState('');
 
   useEffect(() => {
     const fetchData = async () => {
@@ -19,7 +20,13 @@ const Viandes = () => {
     };
 
     fetchData();
+    // eslint-disable-next-line
   }, []);
+
+  const handleSearch = (e) => {
+    let value = e.target.value;
+    setSearch(value);
+  };
 
   return (
     <>
@@ -29,30 +36,36 @@ const Viandes = () => {
         <br />
         <div className='line2' />
       </div>
+      <input type='text' placeholder='Rechercher' onChange={handleSearch} />
+
       {loading ? (
         <div>
           <Loader />
         </div>
       ) : (
         <div className='fetch-card'>
-          {data.map((index) => (
-            <div key={index._id}>
-              <div className='photos'>
-                <img className='img-gallerie' src={index.pictureUrl} alt='Photos-produits' />
-                <div className='icones'>
-                  <div className='instagram'>
-                    <a className='fab fa-instagram' target='_blank' rel='noreferrer' href='https://www.instagram.com/maison_morin/?hl=fr'>
-                      {''}
-                    </a>
+          {data
+            .filter((val) => {
+              return val.name.toLowerCase().includes(search.toLowerCase()) || val.price.toLowerCase().includes(search.toLowerCase());
+            })
+            .map((val) => (
+              <div key={val._id}>
+                <div className='photos'>
+                  <img className='img-gallerie' src={val.pictureUrl} alt='Photos-produits' />
+                  <div className='icones'>
+                    <div className='instagram'>
+                      <a className='fab fa-instagram' target='_blank' rel='noreferrer' href='https://www.instagram.com/maison_morin/?hl=fr'>
+                        {''}
+                      </a>
+                    </div>
                   </div>
                 </div>
+                <div className='info-card'>
+                  <p> {val.name} </p>
+                  <p> {val.price} </p>
+                </div>
               </div>
-              <div className='info-card'>
-                <p> {index.name} </p>
-                <p> {index.price} </p>
-              </div>
-            </div>
-          ))}
+            ))}
         </div>
       )}
       <div className='text-order'>
