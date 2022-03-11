@@ -24,7 +24,7 @@ const Header = () => {
           <h1>TRAITEUR TRADITIONNEL</h1>
         </div>
         <div className='V-position'>
-          <img className='V' src='/logo/V.png' alt='V' style={{ width: '2rem' }} />
+          <div className="V-line"></div>
         </div>
         <div className='text-content'>
           <p>Notre boutique traîteur en Seine et Marne est spécialisée en cuisine traditionnelle française.</p>

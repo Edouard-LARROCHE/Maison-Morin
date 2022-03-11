@@ -38,7 +38,7 @@ const DisplayScrollSecond = () => {
         <div className={title}>
           <h1>LA CAVE À VIN</h1>
           <div className='V-position'>
-            <img className='V' src='/logo/V.png' alt='V' style={{ width: '2rem' }} />
+            <div className="V-line"></div>
           </div>
         </div>
         <div className={text}>

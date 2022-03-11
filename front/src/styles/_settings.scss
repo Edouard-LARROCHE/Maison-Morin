@@ -54,19 +54,18 @@ ul {
   display: flex;
   justify-content: center;
 
-  .V {
-    margin: 1rem 0 2rem 0;
+  .V-line {
+    margin: 1.7rem 0 1.3rem 0;
+    width: 30%;
+    height: 1px;
+    background-color: $color-3;
   }
-}
-
-.vertical-line {
-  height: 20px;
-  width: 2px;
-  background: $color-3;
-  position: relative;
-  left: 50%;
-  border-radius: 2px;
-  margin: 1rem 0 1rem 0;
+  .V-line2 {
+    margin: 1rem 0 2rem 0;
+    width: 60%;
+    height: 1px;
+    background-color: $color-3;
+  }
 }
 
 /****************************************/
