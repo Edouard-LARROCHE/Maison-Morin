@@ -24,7 +24,8 @@
     height: 20px;
     width: 130px;
     background: $color-3;
-    transform: rotate(-35deg);
+    transform: rotate(-35.65deg);
+    -webkit-transform : rotate(-35.65deg);
   }
 
   .line-horizontal-right-deg {
@@ -35,6 +36,7 @@
     height: 20px;
     width: 130px;
     background: $color-3;
-    transform: rotate(35deg);
+    transform: rotate(35.65deg);
+    -webkit-transform: rotate(35.65deg);
   }
 }
