@@ -92,7 +92,7 @@ const Form = () => {
   return (
     <>
       <TextField
-        className='text-field-name'
+        className='text-field-last-name'
         style={{ paddingBottom: '2rem' }}
         type='text'
         id='name'
@@ -102,7 +102,7 @@ const Form = () => {
         value={name}
       />
       <TextField
-        className='text-field-last-name'
+        className='text-field-name'
         style={{ paddingBottom: '2rem' }}
         type='text'
         id='lastName'
