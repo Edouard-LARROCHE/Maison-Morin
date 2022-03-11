@@ -26,7 +26,7 @@ class Map extends Component {
         <div className='location-shop'>
           <div className='top-shop'>
             <div className='location-adress'>
-              <img src='/logo/V.png' alt='V' style={{ width: '3rem' }} />
+              <img src='/logo/Or.png' alt='V'/>
               <div className='adress'>
                 <h2>Barbizon - Grande rue</h2>
                 <p>La boutique Maison Morin</p>
