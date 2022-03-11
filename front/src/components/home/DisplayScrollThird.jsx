@@ -20,7 +20,7 @@ const DisplayScrollThird = () => {
         <div className='head-title-third'>
           <h1>PRESTATAIRE INCONTOURNABLE</h1>
           <div className='V-position'>
-            <img className='V' src='/logo/V.png' alt='V' style={{ width: '2rem' }} />
+            <div className="V-line2"></div>
           </div>
         </div>
       </div>
