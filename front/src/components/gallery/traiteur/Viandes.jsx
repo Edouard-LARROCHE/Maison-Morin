@@ -3,6 +3,7 @@ import axios from 'axios';
 import Loader from '../../Loader';
 import { TextField } from '@material-ui/core';
 import SearchIcon from '@material-ui/icons/Search';
+import Card from '../Card';
 
 const Viandes = () => {
   const [loading, setLoading] = useState(true);
@@ -54,26 +55,11 @@ const Viandes = () => {
       ) : (
         <div className='fetch-card'>
           {data
-            .filter((val) => {
-              return val.name.toLowerCase().includes(search.toLowerCase()) || val.price.toLowerCase().includes(search.toLowerCase());
+            .filter((gallery) => {
+              return gallery.name.toLowerCase().includes(search.toLowerCase()) || gallery.price.toLowerCase().includes(search.toLowerCase());
             })
-            .map((val) => (
-              <div key={val._id}>
-                <div className='photos'>
-                  <img className='img-gallerie' src={val.pictureUrl} alt='Photos-produits' />
-                  <div className='icones'>
-                    <div className='instagram'>
-                      <a className='fab fa-instagram' target='_blank' rel='noreferrer' href='https://www.instagram.com/maison_morin/?hl=fr'>
-                        {''}
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div className='info-card'>
-                  <p> {val.name} </p>
-                  <p> {val.price} </p>
-                </div>
-              </div>
+            .map((gallery) => (
+              <Card key={gallery._id} gallery={gallery} />
             ))}
         </div>
       )}
