@@ -3,6 +3,15 @@
   margin: -5rem auto 3rem;
 }
 
+.flex-position {
+  display: flex;
+
+  .search-bar {
+    position: relative;
+    left: 18rem;
+  }
+}
+
 /* ===== PHOTOS ===== */
 
 .fetch-card {

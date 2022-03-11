@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Loader from '../../Loader';
+import { TextField } from '@material-ui/core';
+import SearchIcon from '@material-ui/icons/Search';
 
 const Viandes = () => {
   const [loading, setLoading] = useState(true);
@@ -31,12 +33,19 @@ const Viandes = () => {
   return (
     <>
       <div className='text-acceuil-fetch'>
-        <p>PRODUITS ARTISANAUX ELABORÉS DANS NOS CUISINES, AU QUOTIDIEN.</p>
-        <p style={{ fontSize: '10px', marginTop: '0.5rem' }}>NOTRE GAMME TRAITEUR</p>
+        <div className='flex-position'>
+          <p>PRODUITS ARTISANAUX ELABORÉS DANS NOS CUISINES, AU QUOTIDIEN.</p>
+          <div className='search-bar'>
+            <TextField className='text-field' type='text' onChange={handleSearch} placeholder='Rechercher' style={{ color: '#f6fbf8' }} />
+            <SearchIcon style={{ cursor: 'pointer', color: '#012f6b' }} />
+
+            <p style={{ fontSize: '10px', marginTop: '0.5rem' }}>PAR NOM / PRIX</p>
+          </div>
+        </div>
+        <p style={{ fontSize: '10px' }}>NOTRE GAMME TRAITEUR</p>
         <br />
         <div className='line2' />
       </div>
-      <input type='text' placeholder='Rechercher' onChange={handleSearch} />
 
       {loading ? (
         <div>
