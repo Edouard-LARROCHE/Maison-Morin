@@ -9,6 +9,7 @@ const Viandes = () => {
   const [loading, setLoading] = useState(true);
   const [data, setData] = useState([]);
   const [search, setSearch] = useState('');
+  const [itemsMore, setItemsMore] = useState(6);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -27,8 +28,16 @@ const Viandes = () => {
   }, []);
 
   const handleSearch = (e) => {
-    let value = e.target.value;
+    let value = e.target.value.replace(/\s/g, '');
     setSearch(value);
+  };
+
+  const handleShowMore = () => {
+    setItemsMore(data.length);
+  };
+
+  const handleShowLess = () => {
+    setItemsMore(6);
   };
 
   return (
@@ -40,7 +49,7 @@ const Viandes = () => {
             <TextField className='text-field' type='text' onChange={handleSearch} placeholder='Rechercher' style={{ color: '#f6fbf8' }} />
             <SearchIcon style={{ cursor: 'pointer', color: '#012f6b' }} />
 
-            <p style={{ fontSize: '10px', marginTop: '0.5rem' }}>PAR NOM / PRIX</p>
+            <p style={{ fontSize: '10px', marginTop: '0.5rem' }}>PAR NOM</p>
           </div>
         </div>
         <p style={{ fontSize: '10px' }}>NOTRE GAMME TRAITEUR</p>
@@ -55,14 +64,16 @@ const Viandes = () => {
       ) : (
         <div className='fetch-card'>
           {data
+            .slice(0, itemsMore)
             .filter((gallery) => {
-              return gallery.name.toLowerCase().includes(search.toLowerCase()) || gallery.price.toLowerCase().includes(search.toLowerCase());
+              return gallery.name.toLowerCase().includes(search.toLowerCase());
             })
             .map((gallery) => (
               <Card key={gallery._id} gallery={gallery} />
             ))}
         </div>
       )}
+      {itemsMore === 6 ? <button onClick={handleShowMore}>+</button> : <button onClick={handleShowLess}>-</button>}
       <div className='text-order'>
         <p>PASSER COMMANDE.</p>
         <p style={{ fontSize: '10px', marginTop: '0.5rem' }}>
