@@ -31,7 +31,17 @@
       color: $color-3;
     }
   }
+
+  .navitem-woa {
+    color: #fff;
+    margin-right: -2rem;
+
+    &:hover {
+      color: $color-3;
+    }
+  }
 }
+
 .dropdown {
   text-align: center;
   width: 100%;

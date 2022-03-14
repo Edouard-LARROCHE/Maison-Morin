@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { Routes, Route } from 'react-router-dom';
+// IMPORT
 import Cookie from './components/Cookie';
 import Home from './pages/Home';
 import LegalNotice from './pages/LegalNotice';
@@ -9,7 +10,7 @@ import IndexAdmin from './components/admin/IndexAdmin';
 import Shop from './pages/Shop';
 import MaisonMorin from './pages/MaisonMorin';
 import Transition from './pages/Transition';
-// ROUTES GALLERY
+// IMPORT GALLERY
 import TraiteurViande from './pages/gallery/traiteur/TraiteurViande';
 import TraiteurPoisson from './pages/gallery/traiteur/TraiteurPoisson';
 import PatisserieCake from './pages/gallery/patisserie/PatisserieCake';
@@ -25,7 +26,6 @@ import PageProduitsDexception from './pages/gallery/PageProduitsDexception';
 import { ThemeContext } from './components/darkMode/ThemeContext';
 // SCROLL TO TOP
 import ScrollToTop from './components/ScrollToTop';
-
 
 function App() {
   const theme = useContext(ThemeContext);
@@ -56,7 +56,7 @@ function App() {
               <Route path='/cave-rose' element={<CaveRose />} />
               <Route path='/cave-bulle' element={<CaveBulle />} />
               <Route path='/cocktails' element={<PageCocktails />} />
-              <Route path='/produits-dexception' element={<PageProduitsDexception />} />
+              <Route path="/produits-d'exception" element={<PageProduitsDexception />} />
             </Routes>
           </ScrollToTop>
         </div>

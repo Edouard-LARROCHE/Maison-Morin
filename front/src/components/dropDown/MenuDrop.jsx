@@ -23,15 +23,15 @@ const data = [
   },
   {
     id: 4,
-    mainTitle: 'COCKTAILS',
-    arrow: <KeyboardArrowDownIcon style={{ size: 'small' }} />,
-    subItem: [{ id: 4 }, { titleCocktails: 'COCKTAILS' }],
+    mainTitleWOA1: 'COCKTAILS',
+    arrow: <KeyboardArrowDownIcon style={{ opacity: 0 }} />,
+    subItem: [{ id: 4 }],
   },
   {
     id: 5,
-    mainTitle: "PRODUITS D'EXCEPTION",
-    arrow: <KeyboardArrowDownIcon style={{ size: 'small' }} />,
-    subItem: [{ id: 5 }, { titleProduitsDexception: "PRODUITS D'EXCEPTION" }],
+    mainTitleWOA2: "PRODUITS D'EXCEPTION",
+    arrow: <KeyboardArrowDownIcon style={{ opacity: 0 }} />,
+    subItem: [{ id: 5 }],
   },
 ];
 
