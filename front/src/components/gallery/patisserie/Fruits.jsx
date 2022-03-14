@@ -23,6 +23,19 @@ const Fruits = () => {
 
   return (
     <>
+    <div className="Macarons-headBand">
+      <div className="Macarons-enterText">
+        <h1>MACARONS</h1>
+        <p className='Presentation-macarons'>Nos macarons sont fabriqués de manière artisanale avec uniquement des ingrédients et colorants naturels, peu sucrés révèlent la puissance et la finesse de chaque saveur,
+          chocolat noir, vanille, pistache, framboise, caramel... Le plus? Toujours dans une démarche végétale afin de mieux respecter l'environnement et vontre santé, la maison morin
+          vous propose des macarons entièrement végétales.
+        </p>
+      </div>
+      <p className='cons-degus'>
+          Conservation & dégustation: Nos macarons se dégustent frais. Nous vous conseillons une conservation de 6 jours au réfrigérateur, ne pas congeler afin de garantir toutes les qualités organoleptiques optimales.
+      </p>        
+    </div>        
+      
       <div className='text-acceuil-fetch'>
         <p>PRODUITS ARTISANAUX ELABORÉS DANS NOS CUISINES, AU QUOTIDIEN.</p>
         <p style={{ fontSize: '10px', marginTop: '0.5rem' }}>NOS PÂTISSERIES</p>
