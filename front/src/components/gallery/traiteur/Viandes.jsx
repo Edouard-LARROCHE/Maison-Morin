@@ -59,10 +59,10 @@ const Viandes = () => {
               <span>&#183;</span> 9
             </p>
             <p onClick={handleShowStep2}>
-              <span>&#183;</span>12
+              <span>&#183;</span> 12
             </p>
             <p onClick={handleShowAll}>
-              <span>&#183;</span>24
+              <span>&#183;</span> 24
             </p>
           </div>
           <div className='search-bar'>
