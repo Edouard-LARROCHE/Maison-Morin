@@ -9,7 +9,7 @@ const Viandes = () => {
   const [loading, setLoading] = useState(true);
   const [data, setData] = useState([]);
   const [search, setSearch] = useState('');
-  const [itemsMore, setItemsMore] = useState(6);
+  const [itemsMore, setItemsMore] = useState(3);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -28,16 +28,20 @@ const Viandes = () => {
   }, []);
 
   const handleSearch = (e) => {
-    let value = e.target.value.replace(/\s/g, '');
+    let value = e.target.value;
     setSearch(value);
   };
 
-  const handleShowMore = () => {
-    setItemsMore(data.length);
+  const handleShowStep1 = () => {
+    setItemsMore(6, data.length);
   };
 
-  const handleShowLess = () => {
-    setItemsMore(6);
+  const handleShowStep2 = () => {
+    setItemsMore(9, data.length);
+  };
+
+  const handleShowAll = () => {
+    setItemsMore(data.length);
   };
 
   return (
@@ -48,15 +52,21 @@ const Viandes = () => {
           <div className='search-bar'>
             <TextField className='text-field' type='text' onChange={handleSearch} placeholder='Rechercher' style={{ color: '#f6fbf8' }} />
             <SearchIcon style={{ cursor: 'pointer', color: '#012f6b' }} />
-
             <p style={{ fontSize: '10px', marginTop: '0.5rem' }}>PAR NOM</p>
           </div>
         </div>
         <p style={{ fontSize: '10px' }}>NOTRE GAMME TRAITEUR</p>
         <br />
         <div className='line2' />
+        <br />
+        <div className='filter-display'>
+          <p>AFFICHER :</p>
+          <div onClick={handleShowStep1}>9</div>
+          <div onClick={handleShowStep2}>12</div>
+          <div onClick={handleShowAll}>TOUT</div>
+        </div>
+        <div className='line2' />
       </div>
-
       {loading ? (
         <div>
           <Loader />
@@ -73,7 +83,7 @@ const Viandes = () => {
             ))}
         </div>
       )}
-      {itemsMore === 6 ? <button onClick={handleShowMore}>+</button> : <button onClick={handleShowLess}>-</button>}
+
       <div className='text-order'>
         <p>PASSER COMMANDE.</p>
         <p style={{ fontSize: '10px', marginTop: '0.5rem' }}>
