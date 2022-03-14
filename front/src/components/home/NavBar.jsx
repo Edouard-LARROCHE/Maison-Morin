@@ -1,13 +1,9 @@
-import React, { useState } from 'react';
-import { TextField } from '@material-ui/core';
-import SearchIcon from '@material-ui/icons/Search';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import IndexModal from '../LoginModal/indexModal';
 import ButtonSwitch from '../darkMode/ButtonSwitch';
 
 const NavBar = () => {
-  const [name, setName] = useState('');
-
   return (
     <>
       <div className='all-nav'>
@@ -42,17 +38,6 @@ const NavBar = () => {
         </div>
         <div className='other-nav'>
           <ul>
-            <li>
-              <TextField
-                className='text-field'
-                type='text'
-                onChange={(e) => setName(e.target.value)}
-                placeholder='Rechercher'
-                value={name}
-                style={{ color: '#f6fbf8' }}
-              />
-              <SearchIcon style={{ cursor: 'pointer', color: '#f6fbf8' }} />
-            </li>
             <li className='switch-mode'>
               <ButtonSwitch />
             </li>

@@ -43,8 +43,9 @@
 
 .other-nav ul {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   padding-top: 2rem;
+  padding-right: 2rem;
 
   li {
     margin: 2rem;
