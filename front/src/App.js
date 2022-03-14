@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { Routes, Route } from 'react-router-dom';
+// IMPORT
 import Cookie from './components/Cookie';
 import Home from './pages/Home';
 import LegalNotice from './pages/LegalNotice';
@@ -9,7 +10,7 @@ import IndexAdmin from './components/admin/IndexAdmin';
 import Shop from './pages/Shop';
 import MaisonMorin from './pages/MaisonMorin';
 import Transition from './pages/Transition';
-// ROUTES GALLERY
+// IMPORT GALLERY
 import TraiteurViande from './pages/gallery/traiteur/TraiteurViande';
 import TraiteurPoisson from './pages/gallery/traiteur/TraiteurPoisson';
 import PatisserieCake from './pages/gallery/patisserie/PatisserieCake';
