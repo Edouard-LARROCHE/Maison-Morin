@@ -1,6 +1,6 @@
 .text-acceuil-fetch {
   width: 60%;
-  margin: -5rem auto 3rem;
+  margin: 3rem auto 3rem;
 }
 
 .flex-position {
@@ -90,4 +90,42 @@
 .text-order {
   width: 60%;
   margin: 0 auto 3rem;
+}
+
+/* ===== PHOTOS ENTER MACARONS ===== */
+
+.Macarons-headBand {
+  width: 100%;
+  height: 35em;
+  background-image: url('../../../../public/assets/Fond-floral-45.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: -9em 0 2em 0;
+  display: flex;  
+  & .cons-degus {
+    color: #fff;
+    position: absolute;
+    margin-left: 15em;
+    bottom: 2em;
+  }
+}
+
+.Macarons-enterText {
+  align-self: center;
+  margin: 0 auto;
+  width: 50em;
+  height: auto;
+
+  & h1 {
+    text-align: center;
+    color: #fff;
+    font-size: 2.7em;
+    letter-spacing: .05em;
+  }
+  & .Presentation-macarons {
+    color: #fff;
+    font-size: 1.2em;
+    text-align: center;
+    margin: .9em 2.1em .9em 2.1em;
+  }
 }
