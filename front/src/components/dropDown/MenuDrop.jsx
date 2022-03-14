@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
 import DataItem from './DataItem';
 
@@ -29,9 +30,13 @@ const data = [
   },
   {
     id: 5,
-    mainTitle: "PRODUITS D'EXCEPTION",
-    arrow: <KeyboardArrowDownIcon style={{ size: 'small' }} />,
-    subItem: [{ id: 5 }, { titleProduitsDexception: "PRODUITS D'EXCEPTION" }],
+    mainTitle: (
+      <Link to="/produits-d'exception" style={{ color: '#fff' }}>
+        PRODUITS D'EXCEPTION
+      </Link>
+    ),
+    arrow: <KeyboardArrowDownIcon style={{ opacity: 0 }} />,
+    subItem: [{ id: 5 }],
   },
 ];
 

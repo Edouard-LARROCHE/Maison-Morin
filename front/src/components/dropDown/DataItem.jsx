@@ -69,12 +69,7 @@ const DataItem = ({ navData, arrow }) => {
                 </li>
                 <li>
                   <Link to='/cocktails'>
-                  <div className='items'>{item.titleCocktails}</div>
-                  </Link>
-                </li>
-                <li>
-                  <Link to='/produits-dexception'>
-                  <div className='items'>{item.titleProduitsDexception}</div>
+                    <div className='items'>{item.titleCocktails}</div>
                   </Link>
                 </li>
               </ul>

@@ -26,7 +26,6 @@ import { ThemeContext } from './components/darkMode/ThemeContext';
 // SCROLL TO TOP
 import ScrollToTop from './components/ScrollToTop';
 
-
 function App() {
   const theme = useContext(ThemeContext);
   const darkMode = theme.state.darkMode;
@@ -56,7 +55,7 @@ function App() {
               <Route path='/cave-rose' element={<CaveRose />} />
               <Route path='/cave-bulle' element={<CaveBulle />} />
               <Route path='/cocktails' element={<PageCocktails />} />
-              <Route path='/produits-dexception' element={<PageProduitsDexception />} />
+              <Route path="/produits-d'exception" element={<PageProduitsDexception />} />
             </Routes>
           </ScrollToTop>
         </div>
