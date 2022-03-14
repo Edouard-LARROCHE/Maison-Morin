@@ -3,11 +3,13 @@ import axios from 'axios';
 import Loader from '../../Loader';
 import { TextField } from '@material-ui/core';
 import SearchIcon from '@material-ui/icons/Search';
+import Card from '../Card';
 
 const Viandes = () => {
   const [loading, setLoading] = useState(true);
   const [data, setData] = useState([]);
   const [search, setSearch] = useState('');
+  const [itemsMore, setItemsMore] = useState(3);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -30,6 +32,18 @@ const Viandes = () => {
     setSearch(value);
   };
 
+  const handleShowStep1 = () => {
+    setItemsMore(6, data.length);
+  };
+
+  const handleShowStep2 = () => {
+    setItemsMore(9, data.length);
+  };
+
+  const handleShowAll = () => {
+    setItemsMore(data.length);
+  };
+
   return (
     <>
       <div className='text-acceuil-fetch'>
@@ -38,15 +52,21 @@ const Viandes = () => {
           <div className='search-bar'>
             <TextField className='text-field' type='text' onChange={handleSearch} placeholder='Rechercher' style={{ color: '#f6fbf8' }} />
             <SearchIcon style={{ cursor: 'pointer', color: '#012f6b' }} />
-
-            <p style={{ fontSize: '10px', marginTop: '0.5rem' }}>PAR NOM / PRIX</p>
+            <p style={{ fontSize: '10px', marginTop: '0.5rem' }}>PAR NOM</p>
           </div>
         </div>
         <p style={{ fontSize: '10px' }}>NOTRE GAMME TRAITEUR</p>
         <br />
         <div className='line2' />
+        <br />
+        <div className='filter-display'>
+          <p>AFFICHER :</p>
+          <div onClick={handleShowStep1}>9</div>
+          <div onClick={handleShowStep2}>12</div>
+          <div onClick={handleShowAll}>TOUT</div>
+        </div>
+        <div className='line2' />
       </div>
-
       {loading ? (
         <div>
           <Loader />
@@ -54,29 +74,16 @@ const Viandes = () => {
       ) : (
         <div className='fetch-card'>
           {data
-            .filter((val) => {
-              return val.name.toLowerCase().includes(search.toLowerCase()) || val.price.toLowerCase().includes(search.toLowerCase());
+            .slice(0, itemsMore)
+            .filter((gallery) => {
+              return gallery.name.toLowerCase().includes(search.toLowerCase());
             })
-            .map((val) => (
-              <div key={val._id}>
-                <div className='photos'>
-                  <img className='img-gallerie' src={val.pictureUrl} alt='Photos-produits' />
-                  <div className='icones'>
-                    <div className='instagram'>
-                      <a className='fab fa-instagram' target='_blank' rel='noreferrer' href='https://www.instagram.com/maison_morin/?hl=fr'>
-                        {''}
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                <div className='info-card'>
-                  <p> {val.name} </p>
-                  <p> {val.price} </p>
-                </div>
-              </div>
+            .map((gallery) => (
+              <Card key={gallery._id} gallery={gallery} />
             ))}
         </div>
       )}
+
       <div className='text-order'>
         <p>PASSER COMMANDE.</p>
         <p style={{ fontSize: '10px', marginTop: '0.5rem' }}>
