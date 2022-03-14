@@ -9,7 +9,7 @@ const Viandes = () => {
   const [loading, setLoading] = useState(true);
   const [data, setData] = useState([]);
   const [search, setSearch] = useState('');
-  const [itemsMore, setItemsMore] = useState(3);
+  const [itemsMore, setItemsMore] = useState(6);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -33,11 +33,11 @@ const Viandes = () => {
   };
 
   const handleShowStep1 = () => {
-    setItemsMore(6, data.length);
+    setItemsMore(9, data.length);
   };
 
   const handleShowStep2 = () => {
-    setItemsMore(9, data.length);
+    setItemsMore(12, data.length);
   };
 
   const handleShowAll = () => {
