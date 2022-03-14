@@ -3,12 +3,28 @@
   margin: 3rem auto 3rem;
 }
 
-.flex-position {
-  display: flex;
+.option-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  margin-bottom: 0.5rem;
 
   .search-bar {
+    grid-area: 1 / 2 / 2 / 3;
     position: relative;
     left: 18rem;
+  }
+
+  .filter-display {
+    grid-area: 1 / 1 / 2 / 2;
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+
+    p:hover {
+      cursor: pointer;
+      color: $color-3;
+    }
   }
 }
 
@@ -101,7 +117,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   margin: -9em 0 2em 0;
-  display: flex;  
+  display: flex;
   & .cons-degus {
     color: #fff;
     position: absolute;
@@ -120,12 +136,12 @@
     text-align: center;
     color: #fff;
     font-size: 2.7em;
-    letter-spacing: .05em;
+    letter-spacing: 0.05em;
   }
   & .Presentation-macarons {
     color: #fff;
     font-size: 1.2em;
     text-align: center;
-    margin: .9em 2.1em .9em 2.1em;
+    margin: 0.9em 2.1em 0.9em 2.1em;
   }
 }

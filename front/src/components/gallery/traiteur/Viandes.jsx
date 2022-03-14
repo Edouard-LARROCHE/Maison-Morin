@@ -47,23 +47,29 @@ const Viandes = () => {
   return (
     <>
       <div className='text-acceuil-fetch'>
-        <div className='flex-position'>
-          <p>PRODUITS ARTISANAUX ELABORÉS DANS NOS CUISINES, AU QUOTIDIEN.</p>
+        <p>PRODUITS ARTISANAUX ELABORÉS DANS NOS CUISINES, AU QUOTIDIEN.</p>
+        <p style={{ fontSize: '10px', marginTop: '0.5rem' }}>NOTRE GAMME TRAITEUR</p>
+        <br />
+        <div className='line2' />
+        <br />
+        <div className='option-gallery'>
+          <div className='filter-display'>
+            <span>AFFICHER :</span>
+            <p onClick={handleShowStep1}>
+              <span>&#183;</span> 9
+            </p>
+            <p onClick={handleShowStep2}>
+              <span>&#183;</span>12
+            </p>
+            <p onClick={handleShowAll}>
+              <span>&#183;</span>24
+            </p>
+          </div>
           <div className='search-bar'>
             <TextField className='text-field' type='text' onChange={handleSearch} placeholder='Rechercher' style={{ color: '#f6fbf8' }} />
             <SearchIcon style={{ cursor: 'pointer', color: '#012f6b' }} />
             <p style={{ fontSize: '10px', marginTop: '0.5rem' }}>PAR NOM</p>
           </div>
-        </div>
-        <p style={{ fontSize: '10px' }}>NOTRE GAMME TRAITEUR</p>
-        <br />
-        <div className='line2' />
-        <br />
-        <div className='filter-display'>
-          <p>AFFICHER :</p>
-          <div onClick={handleShowStep1}>9</div>
-          <div onClick={handleShowStep2}>12</div>
-          <div onClick={handleShowAll}>TOUT</div>
         </div>
         <div className='line2' />
       </div>
