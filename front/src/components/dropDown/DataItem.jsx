@@ -43,6 +43,11 @@ const DataItem = ({ navData, arrow }) => {
                   </Link>
                 </li>
                 <li>
+                  <Link to='/patisseries-macarons'>
+                    <div className='items'>{item.titlePatisserieMacaron}</div>
+                  </Link>
+                </li>
+                <li>
                   <Link to='/cave-rouge'>
                     <div className='items'>{item.titleCaveRouge}</div>
                   </Link>
@@ -60,6 +65,16 @@ const DataItem = ({ navData, arrow }) => {
                 <li>
                   <Link to='/cave-bulle'>
                     <div className='items'>{item.titleCaveBulle}</div>
+                  </Link>
+                </li>
+                <li>
+                  <Link to='/cocktails'>
+                  <div className='items'>{item.titleCocktails}</div>
+                  </Link>
+                </li>
+                <li>
+                  <Link to='/produits-dexception'>
+                  <div className='items'>{item.titleProduitsDexception}</div>
                   </Link>
                 </li>
               </ul>

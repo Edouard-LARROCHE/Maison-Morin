@@ -14,14 +14,18 @@ import TraiteurViande from './pages/gallery/traiteur/TraiteurViande';
 import TraiteurPoisson from './pages/gallery/traiteur/TraiteurPoisson';
 import PatisserieCake from './pages/gallery/patisserie/PatisserieCake';
 import PatisserieFruit from './pages/gallery/patisserie/PattisserieFruit';
+import PatisserieMacaron from './pages/gallery/patisserie/PatisserieMacaron';
 import CaveRouge from './pages/gallery/cave/CaveRouge';
 import CaveBlanc from './pages/gallery/cave/CaveBlanc';
 import CaveRose from './pages/gallery/cave/CaveRose';
 import CaveBulle from './pages/gallery/cave/CaveBulle';
+import PageCocktails from './pages/gallery/PageCocktails';
+import PageProduitsDexception from './pages/gallery/PageProduitsDexception';
 // DARK MODE
 import { ThemeContext } from './components/darkMode/ThemeContext';
 // SCROLL TO TOP
 import ScrollToTop from './components/ScrollToTop';
+
 
 function App() {
   const theme = useContext(ThemeContext);
@@ -46,10 +50,13 @@ function App() {
               <Route path='/traiteur-poissons' element={<TraiteurPoisson />} />
               <Route path='/patisseries-cakes' element={<PatisserieCake />} />
               <Route path='/patisseries-fruits' element={<PatisserieFruit />} />
+              <Route path='/patisseries-macarons' element={<PatisserieMacaron />} />
               <Route path='/cave-rouge' element={<CaveRouge />} />
               <Route path='/cave-blanc' element={<CaveBlanc />} />
               <Route path='/cave-rose' element={<CaveRose />} />
               <Route path='/cave-bulle' element={<CaveBulle />} />
+              <Route path='/cocktails' element={<PageCocktails />} />
+              <Route path='/produits-dexception' element={<PageProduitsDexception />} />
             </Routes>
           </ScrollToTop>
         </div>

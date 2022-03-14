@@ -13,13 +13,25 @@ const data = [
     id: 2,
     mainTitle: 'PATISSERIES',
     arrow: <KeyboardArrowDownIcon style={{ size: 'small' }} />,
-    subItem: [{ id: 2 }, { titlePatisserieCake: 'CAKES' }, { titlePatisserieFruit: 'FRUITS' }],
+    subItem: [{ id: 2 }, { titlePatisserieCake: 'CAKES' }, { titlePatisserieFruit: 'FRUITS' }, { titlePatisserieMacaron: 'MACARONS' }],
   },
   {
     id: 3,
     mainTitle: 'CAVE À VIN',
     arrow: <KeyboardArrowDownIcon style={{ size: 'small' }} />,
     subItem: [{ id: 3 }, { titleCaveRouge: 'ROUGE' }, { titleCaveBlanc: 'BLANC' }, { titleCaveRosé: 'ROSÉ' }, { titleCaveBulle: 'BULLES' }],
+  },
+  {
+    id: 4,
+    mainTitle: 'COCKTAILS',
+    arrow: <KeyboardArrowDownIcon style={{ size: 'small' }} />,
+    subItem: [{ id: 4 }, { titleCocktails: 'COCKTAILS' }],
+  },
+  {
+    id: 5,
+    mainTitle: "PRODUITS D'EXCEPTION",
+    arrow: <KeyboardArrowDownIcon style={{ size: 'small' }} />,
+    subItem: [{ id: 5 }, { titleProduitsDexception: "PRODUITS D'EXCEPTION" }],
   },
 ];
 
