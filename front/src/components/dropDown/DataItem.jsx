@@ -14,7 +14,15 @@ const DataItem = ({ navData, arrow }) => {
   return (
     <div className='down'>
       <div className='navitem' onMouseEnter={handleEnter} onMouseLeave={handleLeave}>
-        <li>{navData.mainTitle}</li>
+        <li>
+          {navData.mainTitle}
+          <Link to='/cocktails'>
+            <div className='navitem-woa'>{navData.mainTitleWOA1}</div>
+          </Link>
+          <Link to="/produits-d'exception">
+            <div className='navitem-woa'>{navData.mainTitleWOA2}</div>
+          </Link>
+        </li>
         <li>{arrow}</li>
       </div>
       {showDropdown && (
@@ -65,11 +73,6 @@ const DataItem = ({ navData, arrow }) => {
                 <li>
                   <Link to='/cave-bulle'>
                     <div className='items'>{item.titleCaveBulle}</div>
-                  </Link>
-                </li>
-                <li>
-                  <Link to='/cocktails'>
-                    <div className='items'>{item.titleCocktails}</div>
                   </Link>
                 </li>
               </ul>
