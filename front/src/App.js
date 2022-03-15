@@ -6,7 +6,7 @@ import Home from './pages/Home';
 import LegalNotice from './pages/LegalNotice';
 import Cookies from './pages/Cookies';
 import FormContact from './pages/FormContact';
-import IndexAdmin from './components/admin/IndexAdmin';
+import Admin from './pages/Admin';
 import Shop from './pages/Shop';
 import MaisonMorin from './pages/MaisonMorin';
 import Transition from './pages/Transition';
@@ -42,7 +42,7 @@ function App() {
               <Route path='/mentions-legales' element={<LegalNotice />} />
               <Route path='/cookie' element={<Cookies />} />
               <Route path='/contact' element={<FormContact />} />
-              <Route path='/update' element={<IndexAdmin />} />
+              <Route path='/update' element={<Admin />} />
               <Route path='/boutique' element={<Shop />} />
               <Route path='/maison-morin' element={<MaisonMorin />} />
               <Route path='/transition' element={<Transition />} />
