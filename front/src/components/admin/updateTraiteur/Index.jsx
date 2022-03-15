@@ -1,5 +1,5 @@
 import React from 'react';
-import IndexTraiteurViande from './IndexTraiteurViande';
+import IndexTraiteurViande from './updateViande/IndexTraiteurViande';
 
 const Index = () => {
   return (
