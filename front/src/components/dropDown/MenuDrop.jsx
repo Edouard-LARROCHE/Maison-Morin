@@ -13,7 +13,7 @@ const data = [
     id: 2,
     mainTitle: 'PATISSERIES',
     arrow: <KeyboardArrowDownIcon style={{ size: 'small' }} />,
-    subItem: [{ id: 2 }, { titlePatisserieCake: 'CAKES' }, { titlePatisserieFruit: 'FRUITS' }, { titlePatisserieMacaron: 'MACARONS' }],
+    subItem: [{ id: 2 }, { titlePatisserieCake: 'CAKES' }, { titlePatisserieMacaron: 'MACARONS' }],
   },
   {
     id: 3,
