@@ -1,7 +1,17 @@
 import React from 'react';
+import axios from 'axios';
 
 const Table = (props) => {
-  const handleDelete = (id) => {
+  const handleDelete = async (id) => {
+    await axios
+      .delete(`http://localhost:5500/picture/traiteur/viande/${id}`)
+      .then((res) => {
+        console.log(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+
     let popUp = window.confirm('Tu es sûr ?');
     if (popUp) {
       props.deleteCard(id);

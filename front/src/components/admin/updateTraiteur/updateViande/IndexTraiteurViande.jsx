@@ -14,7 +14,6 @@ const IndexTraiteurViande = () => {
         .get('http://localhost:5500/picture/traiteur/viande')
         .then((res) => {
           setData(res.data);
-          console.log(data);
         })
         .catch((err) => {
           console.log(err);
