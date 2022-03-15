@@ -16,6 +16,8 @@ const pictureVinRougeRoutes = require('./routes/pictureVinRougeRoute');
 const pictureVinBlancRoutes = require('./routes/pictureVinBlancRoute');
 const pictureVinRoseRoutes = require('./routes/pictureVinRoseRoute');
 const pictureBullesRoutes = require('./routes/pictureBullesRoute');
+const pictureCocktailsRoutes = require('./routes/pictureCocktailsRoute');
+const pictureProduitsExcepRoutes = require('./routes/pictureProduitsExcepRoute');
 
 const corsOption = {
   origin: process.env.CLIENT_URL,
@@ -41,5 +43,7 @@ app.use('/picture/cave/rouge', pictureVinRougeRoutes);
 app.use('/picture/cave/blanc', pictureVinBlancRoutes);
 app.use('/picture/cave/rose', pictureVinRoseRoutes);
 app.use('/picture/cave/bulles', pictureBullesRoutes);
+app.use('/picture/cocktails', pictureCocktailsRoutes);
+app.use('/picture/produitsExcep', pictureProduitsExcepRoutes);
 
 app.listen(5500, () => console.log('Server started: 5500'));

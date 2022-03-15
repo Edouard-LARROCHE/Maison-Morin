@@ -152,6 +152,44 @@ const pictureBullesSchema = mongoose.Schema(
   },
 );
 
+const pictureCocktailsSchema = mongoose.Schema(
+  {
+    pictureUrl: {
+      type: String,
+      required: true,
+    },
+    name: {
+      type: String,
+      required: true,
+    },
+    price: {
+      type: String,
+    },
+  },
+  {
+    collection: 'pictureCocktails',
+  },
+);
+
+const pictureProduitsExcepSchema = mongoose.Schema(
+  {
+    pictureUrl: {
+      type: String,
+      required: true,
+    },
+    name: {
+      type: String,
+      required: true,
+    },
+    price: {
+      type: String,
+    },
+  },
+  {
+    collection: 'pictureProduitsExcep',
+  },
+);
+
 const Viande = mongoose.model('Viande', pictureViandeSchema);
 const Patisserie = mongoose.model('Cake', picturePatisseriesSchema);
 const Charcuterie = mongoose.model('Charcuterie', pictureCharcuterieSchema);
@@ -160,5 +198,7 @@ const VinRouge = mongoose.model('VinRouge', pictureRougeSchema);
 const VinBlanc = mongoose.model('VinBlanc', pictureBlancSchema);
 const VinRose = mongoose.model('VinRose', pictureRoseSchema);
 const Bulles = mongoose.model('Bulles', pictureBullesSchema);
+const Cocktails = mongoose.model('Cocktails', pictureCocktailsSchema);
+const ProduitsExcep = mongoose.model('ProduitsExcep', pictureProduitsExcepSchema);
 
-module.exports = { Charcuterie, Viande, Patisserie, Poisson, VinRouge, VinBlanc, VinRose, Bulles };
+module.exports = { Charcuterie, Viande, Patisserie, Poisson, VinRouge, VinBlanc, VinRose, Bulles, Cocktails, ProduitsExcep };
