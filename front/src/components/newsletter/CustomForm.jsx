@@ -1,9 +1,13 @@
 import React from 'react';
 
 const timeOut = () => {
-        setTimeout(hideElement, 4000);
-    function hideElement() {
-        document.querySelector('.customFormSuccess' && '.customFormError').style.display='none';
+        setTimeout(hideSuccess, 5000);
+        setTimeout(hideError, 5000);
+    function hideError() {
+        document.querySelector('.customFormError').style.display='none';
+    }
+    function hideSuccess() {
+        document.querySelector('.customFormSuccess').style.display='none';
     }
 };
 
@@ -20,7 +24,7 @@ const CustomForm = ({ status, message, onValidated }) => {
         submit();
         timeOut();
     };
-        
+    
     return (
         <>
             <div className='email-nl'>
