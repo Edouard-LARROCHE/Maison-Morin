@@ -25,4 +25,10 @@ pictureViande.post('/', (req, res) => {
     .catch((error) => res.status(400).json({ error }));
 });
 
+pictureViande.delete('/:id', (req, res, next) => {
+  Viande.deleteOne({ _id: req.params.id })
+    .then(() => res.status(200).json({ message: 'Objet supprimé !' }))
+    .catch((error) => res.status(400).json({ error }));
+});
+
 module.exports = pictureViande;

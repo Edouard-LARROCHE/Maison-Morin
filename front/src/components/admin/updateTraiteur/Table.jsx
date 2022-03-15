@@ -1,8 +1,8 @@
 import React from 'react';
 
-const TableTraiteurViande = (props) => {
+const Table = (props) => {
   const handleDelete = (id) => {
-    let popUp = window.confirm('Tu es sûr?');
+    let popUp = window.confirm('Tu es sûr ?');
     if (popUp) {
       props.deleteCard(id);
     }
@@ -33,7 +33,7 @@ const TableTraiteurViande = (props) => {
                     }}>
                     MODIFIER
                   </button>
-                  <button onClick={() => handleDelete(index.id)}>SUPPRIMER</button>
+                  <button onClick={() => handleDelete(index._id)}>SUPPRIMER</button>
                 </td>
               </tr>
             ))
@@ -48,4 +48,4 @@ const TableTraiteurViande = (props) => {
   );
 };
 
-export default TableTraiteurViande;
+export default Table;

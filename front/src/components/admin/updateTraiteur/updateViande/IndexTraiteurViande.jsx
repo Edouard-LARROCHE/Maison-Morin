@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import TableTraiteurViande from './TableTraiteurViande';
+import Table from '../Table';
 import UpdateForm from './UpdateForm';
 import PostForm from './PostForm';
 
@@ -64,7 +64,7 @@ const IndexTraiteurViande = () => {
       </div>
       <div>
         <h2>Données actuelles:</h2>
-        <TableTraiteurViande data={data} editRow={editRow} deleteCard={deleteCard} />
+        <Table data={data} editRow={editRow} deleteCard={deleteCard} />
       </div>
     </div>
   );
