@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import TableTraiteurViande from './TableTraiteurViande';
+import UpdateForm from './UpdateForm';
+import PostForm from './PostForm';
 
 const IndexTraiteurViande = () => {
   const [data, setData] = useState([]);
@@ -25,7 +27,7 @@ const IndexTraiteurViande = () => {
   const initialForm = { _id: null, pictureUrl: '', name: '', price: '' };
   const [currentCard, setCurrentCard] = useState(initialForm);
   const addCard = (index) => {
-    index.id = data.length + 1;
+    index._id = data.length + 1;
     setData([...data, index]);
   };
 
@@ -41,7 +43,7 @@ const IndexTraiteurViande = () => {
 
   const editRow = (index) => {
     setEditing(true);
-    setCurrentCard({ id: index._id, pictureUrl: index.pictureUrl, name: index.name, price: index.price });
+    setCurrentCard({ _id: index._id, pictureUrl: index.pictureUrl, name: index.name, price: index.price });
   };
 
   return (
@@ -51,12 +53,12 @@ const IndexTraiteurViande = () => {
         {editing ? (
           <div>
             <h2>Modifier</h2>
-            <form></form>
+            <UpdateForm editing={editing} setEditing={setEditing} currentCard={currentCard} updateCard={updateCard} />
           </div>
         ) : (
           <div>
             <h2>Ajouter</h2>
-            <form></form>
+            <PostForm addCard={addCard} />
           </div>
         )}
       </div>
