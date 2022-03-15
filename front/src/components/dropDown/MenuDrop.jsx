@@ -11,9 +11,9 @@ const data = [
   },
   {
     id: 2,
-    mainTitle: 'PATISSERIES',
+    mainTitle: 'PÂTISSERIES',
     arrow: <KeyboardArrowDownIcon style={{ size: 'small' }} />,
-    subItem: [{ id: 2 }, { titlePatisserieCake: 'CAKES' }, { titlePatisserieMacaron: 'MACARONS' }],
+    subItem: [{ id: 2 }, { titlePatisseries: 'NOS PÂTISSERIES' }, { titlePatisserieMacaron: 'MACARONS' }],
   },
   {
     id: 3,

@@ -57,7 +57,7 @@ const pictureCharcuterieSchema = mongoose.Schema(
   },
 );
 
-const pictureCakeSchema = mongoose.Schema(
+const picturePatisseriesSchema = mongoose.Schema(
   {
     pictureUrl: {
       type: String,
@@ -72,7 +72,7 @@ const pictureCakeSchema = mongoose.Schema(
     },
   },
   {
-    collection: 'pictureCake',
+    collection: 'picturePatisserie',
   },
 );
 
@@ -153,7 +153,7 @@ const pictureBullesSchema = mongoose.Schema(
 );
 
 const Viande = mongoose.model('Viande', pictureViandeSchema);
-const Cake = mongoose.model('Cake', pictureCakeSchema);
+const Patisserie = mongoose.model('Cake', picturePatisseriesSchema);
 const Charcuterie = mongoose.model('Charcuterie', pictureCharcuterieSchema);
 const Poisson = mongoose.model('Poisson', picturePoissonSchema);
 const VinRouge = mongoose.model('VinRouge', pictureRougeSchema);
@@ -161,4 +161,4 @@ const VinBlanc = mongoose.model('VinBlanc', pictureBlancSchema);
 const VinRose = mongoose.model('VinRose', pictureRoseSchema);
 const Bulles = mongoose.model('Bulles', pictureBullesSchema);
 
-module.exports = { Charcuterie, Viande, Cake, Poisson, VinRouge, VinBlanc, VinRose, Bulles };
+module.exports = { Charcuterie, Viande, Patisserie, Poisson, VinRouge, VinBlanc, VinRose, Bulles };

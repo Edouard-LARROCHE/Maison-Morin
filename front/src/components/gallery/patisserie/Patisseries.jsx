@@ -5,7 +5,7 @@ import { TextField } from '@material-ui/core';
 import SearchIcon from '@material-ui/icons/Search';
 import Card from '../Card';
 
-const Macarons = () => {
+const Patisseries = () => {
   const [loading, setLoading] = useState(true);
   const [data, setData] = useState([]);
   const [search, setSearch] = useState('');
@@ -15,7 +15,7 @@ const Macarons = () => {
     const fetchData = async () => {
       setLoading(true);
       try {
-        const { data: res } = await axios.get('http://localhost:5500/posts');
+        const { data: res } = await axios.get('http://localhost:5500/picture/patisserie/patisseries');
         setData(res);
       } catch (err) {
         console.log(err);
@@ -43,26 +43,11 @@ const Macarons = () => {
   const handleShowAll = () => {
     setItemsMore(data.length);
   };
-
   return (
     <>
-      <div className='Macarons-headBand'>
-        <div className='Infos-enterText'>
-          <h1>MACARONS</h1>
-          <p className='Presentation-macarons'>
-            Nos macarons sont fabriqués de manière artisanale avec uniquement des ingrédients et colorants naturels, peu sucrés révèlent la puissance
-            et la finesse de chaque saveur, chocolat noir, vanille, pistache, framboise, caramel... Le plus? Toujours dans une démarche végétale afin
-            de mieux respecter l'environnement et vontre santé, la maison morin vous propose des macarons entièrement végétales.
-          </p>
-        </div>
-        <p className='cons-degus'>
-          Conservation & dégustation: Nos macarons se dégustent frais. Nous vous conseillons une conservation de 6 jours au réfrigérateur, ne pas
-          congeler afin de garantir toutes les qualités organoleptiques optimales.
-        </p>
-      </div>
       <div className='text-acceuil-fetch'>
         <p>PRODUITS ARTISANAUX ELABORÉS DANS NOS CUISINES, AU QUOTIDIEN.</p>
-        <p style={{ fontSize: '10px', marginTop: '0.5rem' }}>NOTRE GAMME MACARONS</p>
+        <p style={{ fontSize: '10px', marginTop: '0.5rem' }}>NOTRE GAMME PÂTISSERIE</p>
         <br />
         <div className='line2' />
         <br />
@@ -116,4 +101,4 @@ const Macarons = () => {
   );
 };
 
-export default Macarons;
+export default Patisseries;

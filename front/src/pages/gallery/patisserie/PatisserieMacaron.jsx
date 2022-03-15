@@ -7,16 +7,16 @@ import Macarons from '../../../components/gallery/patisserie/Macarons';
 import TopArrow from '../../../components/TopArrow';
 
 const PatisserieMacaron = () => {
-    return (
-        <div>
-        <NavBar />
-        <HeadBand />
-        <MenuDrop />
-        <Macarons />
-        <Footer />
-        <TopArrow />
-        </div>
-    );
+  return (
+    <div>
+      <NavBar />
+      <HeadBand />
+      <MenuDrop />
+      <Macarons />
+      <Footer />
+      <TopArrow />
+    </div>
+  );
 };
 
 export default PatisserieMacaron;

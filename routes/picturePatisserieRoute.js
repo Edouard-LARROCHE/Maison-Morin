@@ -1,16 +1,16 @@
 const express = require('express');
-const pictureCake = express.Router();
+const picturePatisserie = express.Router();
 
-const { Cake } = require('../models/pictureModel');
+const { Patisserie } = require('../models/pictureModel');
 
-pictureCake.get('/', (req, res) => {
-  Cake.find()
+picturePatisserie.get('/', (req, res) => {
+  Patisserie.find()
     .then((picture) => res.status(200).json(picture))
     .catch((error) => res.status(400).json({ error }));
 });
 
-pictureCake.post('/', (req, res) => {
-  const image = new Cake({
+picturePatisserie.post('/', (req, res) => {
+  const image = new Patisserie({
     ...req.body,
   });
   image
@@ -19,4 +19,4 @@ pictureCake.post('/', (req, res) => {
     .catch((error) => res.status(400).json({ error }));
 });
 
-module.exports = pictureCake;
+module.exports = picturePatisserie;
