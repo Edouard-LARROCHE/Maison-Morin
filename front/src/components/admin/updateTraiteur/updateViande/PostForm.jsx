@@ -8,6 +8,13 @@ const PostForm = (props) => {
   const [name, setName] = useState('');
   const [price, setPrice] = useState('');
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (!card.pictureUrl || !card.name || !card.price) return;
+    props.addCard(card);
+    setCard(initialForm);
+  };
+
   const handlePost = async (e) => {
     e.preventDefault();
 
@@ -30,21 +37,9 @@ const PostForm = (props) => {
       });
   };
 
-  const handleChange = (e) => {
-    const { name, value } = e.currentTarget;
-    setCard({ ...card, [name]: value });
-  };
-
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   if (!pictureUrl || !name || !price) return;
-  //   props.addCard(card);
-  //   setCard(initialForm);
-  // };
-
   return (
     <div>
-      <form onSubmit={handleChange}>
+      <form onSubmit={handleSubmit}>
         <input type='text' placeholder='Photo URL' name='pictureUrl' value={pictureUrl} onChange={(e) => setPictureUrl(e.target.value)} />
 
         <input type='text' placeholder='Nom' name='name' value={name} onChange={(e) => setName(e.target.value)} />
