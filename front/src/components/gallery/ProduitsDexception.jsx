@@ -58,7 +58,7 @@ const ProduitsDexception = () => {
       </div>
       <div className='text-acceuil-fetch'>
         <p>PRODUITS ARTISANAUX ELABORÉS DANS NOS CUISINES, AU QUOTIDIEN.</p>
-        <p style={{ fontSize: '10px', marginTop: '0.5rem' }}>NOTRE GAMME TRAITEUR</p>
+        <p style={{ fontSize: '10px', marginTop: '0.5rem' }}>NOTRE GAMME D'EXCEPTION</p>
         <br />
         <div className='line2' />
         <br />

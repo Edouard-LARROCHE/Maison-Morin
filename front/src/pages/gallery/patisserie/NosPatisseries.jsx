@@ -3,20 +3,20 @@ import Footer from '../../../components/home/Footer';
 import NavBar from '../../../components/home/NavBar';
 import HeadBand from '../../../components/HeadBand';
 import MenuDrop from '../../../components/dropDown/MenuDrop';
-import Macarons from '../../../components/gallery/patisserie/Macarons';
+import Patisseries from '../../../components/gallery/patisserie/Patisseries';
 import TopArrow from '../../../components/TopArrow';
 
-const PatisserieMacaron = () => {
+const NosPatisseries = () => {
   return (
     <div>
       <NavBar />
       <HeadBand />
       <MenuDrop />
-      <Macarons />
+      <Patisseries />
       <Footer />
       <TopArrow />
     </div>
   );
 };
 
-export default PatisserieMacaron;
+export default NosPatisseries;

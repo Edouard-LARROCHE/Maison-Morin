@@ -7,13 +7,13 @@ const data = [
     id: 1,
     mainTitle: 'TRAITEUR',
     arrow: <KeyboardArrowDownIcon style={{ size: 'small' }} />,
-    subItem: [{ id: 1 }, { titleTraiteurViande: 'VIANDE' }, { titleTraiteurPoisson: 'POISSON' }],
+    subItem: [{ id: 1 }, { titleTraiteurCharcuterie: 'CHARCUTERIE' }, { titleTraiteurViande: 'VIANDE' }, { titleTraiteurPoisson: 'POISSON' }],
   },
   {
     id: 2,
-    mainTitle: 'PATISSERIES',
+    mainTitle: 'PÂTISSERIES',
     arrow: <KeyboardArrowDownIcon style={{ size: 'small' }} />,
-    subItem: [{ id: 2 }, { titlePatisserieCake: 'CAKES' }, { titlePatisserieMacaron: 'MACARONS' }],
+    subItem: [{ id: 2 }, { titlePatisseries: 'NOS PÂTISSERIES' }, { titlePatisserieMacaron: 'MACARONS' }],
   },
   {
     id: 3,

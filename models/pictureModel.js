@@ -38,7 +38,7 @@ const picturePoissonSchema = mongoose.Schema(
   },
 );
 
-const pictureCakeSchema = mongoose.Schema(
+const pictureCharcuterieSchema = mongoose.Schema(
   {
     pictureUrl: {
       type: String,
@@ -53,11 +53,11 @@ const pictureCakeSchema = mongoose.Schema(
     },
   },
   {
-    collection: 'pictureCake',
+    collection: 'pictureCharcuterie',
   },
 );
 
-const pictureFruitSchema = mongoose.Schema(
+const picturePatisseriesSchema = mongoose.Schema(
   {
     pictureUrl: {
       type: String,
@@ -72,7 +72,7 @@ const pictureFruitSchema = mongoose.Schema(
     },
   },
   {
-    collection: 'pictureFruit',
+    collection: 'picturePatisserie',
   },
 );
 
@@ -152,13 +152,53 @@ const pictureBullesSchema = mongoose.Schema(
   },
 );
 
+const pictureCocktailsSchema = mongoose.Schema(
+  {
+    pictureUrl: {
+      type: String,
+      required: true,
+    },
+    name: {
+      type: String,
+      required: true,
+    },
+    price: {
+      type: String,
+    },
+  },
+  {
+    collection: 'pictureCocktails',
+  },
+);
+
+const pictureProduitsExcepSchema = mongoose.Schema(
+  {
+    pictureUrl: {
+      type: String,
+      required: true,
+    },
+    name: {
+      type: String,
+      required: true,
+    },
+    price: {
+      type: String,
+    },
+  },
+  {
+    collection: 'pictureProduitsExcep',
+  },
+);
+
 const Viande = mongoose.model('Viande', pictureViandeSchema);
-const Cake = mongoose.model('Cake', pictureCakeSchema);
+const Patisserie = mongoose.model('Cake', picturePatisseriesSchema);
+const Charcuterie = mongoose.model('Charcuterie', pictureCharcuterieSchema);
 const Poisson = mongoose.model('Poisson', picturePoissonSchema);
-const Fruit = mongoose.model('Fruit', pictureFruitSchema);
 const VinRouge = mongoose.model('VinRouge', pictureRougeSchema);
 const VinBlanc = mongoose.model('VinBlanc', pictureBlancSchema);
 const VinRose = mongoose.model('VinRose', pictureRoseSchema);
 const Bulles = mongoose.model('Bulles', pictureBullesSchema);
+const Cocktails = mongoose.model('Cocktails', pictureCocktailsSchema);
+const ProduitsExcep = mongoose.model('ProduitsExcep', pictureProduitsExcepSchema);
 
-module.exports = { Viande, Cake, Poisson, Fruit, VinRouge, VinBlanc, VinRose, Bulles };
+module.exports = { Charcuterie, Viande, Patisserie, Poisson, VinRouge, VinBlanc, VinRose, Bulles, Cocktails, ProduitsExcep };
