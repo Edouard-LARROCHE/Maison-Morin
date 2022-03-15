@@ -10,37 +10,41 @@ const PostForm = (props) => {
 
   const handlePost = async (e) => {
     e.preventDefault();
+
     const postData = {
       pictureUrl: pictureUrl,
       name: name,
       price: price,
     };
+
     await axios
       .post('http://localhost:5500/picture/traiteur/viande', postData)
       .then((res) => {
         setCard(res.data);
-        console.log(card);
+        setPictureUrl('');
+        setName('');
+        setPrice('');
       })
       .catch((err) => {
         console.log(err);
       });
   };
 
-  // const handleChange = (e) => {
-  //   const { name, value } = e.currentTarget;
-  //   setCard({ ...card, [name]: value });
-  // };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (!card.pictureUrl || !card.name || !card.price) return;
-    props.addCard(card);
-    setCard(initialForm);
+  const handleChange = (e) => {
+    const { name, value } = e.currentTarget;
+    setCard({ ...card, [name]: value });
   };
+
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   if (!pictureUrl || !name || !price) return;
+  //   props.addCard(card);
+  //   setCard(initialForm);
+  // };
 
   return (
     <div>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleChange}>
         <input type='text' placeholder='Photo URL' name='pictureUrl' value={pictureUrl} onChange={(e) => setPictureUrl(e.target.value)} />
 
         <input type='text' placeholder='Nom' name='name' value={name} onChange={(e) => setName(e.target.value)} />
