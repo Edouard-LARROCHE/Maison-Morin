@@ -31,6 +31,11 @@ const DataItem = ({ navData, arrow }) => {
             <div key={item.id}>
               <ul>
                 <li>
+                  <Link to='/traiteur-charcuterie'>
+                    <div className='items'>{item.titleTraiteurCharcuterie}</div>
+                  </Link>
+                </li>
+                <li>
                   <Link to='/traiteur-viandes'>
                     <div className='items'>{item.titleTraiteurViande}</div>
                   </Link>

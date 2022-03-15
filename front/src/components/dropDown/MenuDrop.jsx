@@ -7,7 +7,7 @@ const data = [
     id: 1,
     mainTitle: 'TRAITEUR',
     arrow: <KeyboardArrowDownIcon style={{ size: 'small' }} />,
-    subItem: [{ id: 1 }, { titleTraiteurViande: 'VIANDE' }, { titleTraiteurPoisson: 'POISSON' }],
+    subItem: [{ id: 1 }, { titleTraiteurCharcuterie: 'CHARCUTERIE' }, { titleTraiteurViande: 'VIANDE' }, { titleTraiteurPoisson: 'POISSON' }],
   },
   {
     id: 2,
