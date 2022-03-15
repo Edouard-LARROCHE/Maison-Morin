@@ -48,11 +48,16 @@
     }
     .customFormSuccess {
       color: green;
+      animation-name: example;
+      animation-duration: 1s;
     }
 
     .customFormError {
       color: red;
+      animation-name: example;
+      animation-duration: 1s;
     }
+
 
 /*********** EMAIL **********/
     .textfield-email {
@@ -127,3 +132,7 @@
   }
 }
 
+@keyframes example {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
