@@ -6,18 +6,15 @@ const Table = (props) => {
     let popUp = window.confirm('Tu es sûr ?');
     if (popUp) {
       props.deleteCard(id);
+      await axios
+        .delete(`http://localhost:5500/picture/traiteur/viande/${id}`)
+        .then((res) => {
+          console.log(res.data);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
     }
-  };
-
-  const handleDeleteApi = async (id) => {
-    await axios
-      .delete(`http://localhost:5500/picture/traiteur/viande/${id}`)
-      .then((res) => {
-        console.log(res.data);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
   };
 
   return (
@@ -45,7 +42,7 @@ const Table = (props) => {
                     }}>
                     MODIFIER
                   </button>
-                  <button onClick={() => handleDelete(index._id) && handleDeleteApi(index._id)}>SUPPRIMER</button>
+                  <button onClick={() => handleDelete(index._id)}>SUPPRIMER</button>
                 </td>
               </tr>
             ))
