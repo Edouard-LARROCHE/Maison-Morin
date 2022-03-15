@@ -14,7 +14,6 @@ import Transition from './pages/Transition';
 import TraiteurViande from './pages/gallery/traiteur/TraiteurViande';
 import TraiteurPoisson from './pages/gallery/traiteur/TraiteurPoisson';
 import PatisserieCake from './pages/gallery/patisserie/PatisserieCake';
-import PatisserieFruit from './pages/gallery/patisserie/PattisserieFruit';
 import PatisserieMacaron from './pages/gallery/patisserie/PatisserieMacaron';
 import CaveRouge from './pages/gallery/cave/CaveRouge';
 import CaveBlanc from './pages/gallery/cave/CaveBlanc';
@@ -49,7 +48,6 @@ function App() {
               <Route path='/traiteur-viandes' element={<TraiteurViande />} />
               <Route path='/traiteur-poissons' element={<TraiteurPoisson />} />
               <Route path='/patisseries-cakes' element={<PatisserieCake />} />
-              <Route path='/patisseries-fruits' element={<PatisserieFruit />} />
               <Route path='/patisseries-macarons' element={<PatisserieMacaron />} />
               <Route path='/cave-rouge' element={<CaveRouge />} />
               <Route path='/cave-blanc' element={<CaveBlanc />} />
