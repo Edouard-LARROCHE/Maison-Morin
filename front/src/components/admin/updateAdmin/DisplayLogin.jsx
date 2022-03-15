@@ -7,7 +7,7 @@ const DisplayLogin = () => {
   useEffect(() => {
     const fetchData = async () => {
       await axios
-        .get('http://localhost:5500/login')
+        .get('http://localhost:5500/login/')
         .then((res) => {
           setData(res.data);
           console.log(data);
@@ -23,8 +23,8 @@ const DisplayLogin = () => {
   return (
     <div>
       {data.map((index) => (
-        <div key={index}>
-          <h4>Nom et mot de passe actuel: </h4>
+        <div key={index} className='show-login'>
+          <h3>Nom et mot de passe actuel/modifié: </h3>
           <p> {index.name} </p>
           <p> {index.password} </p>
         </div>

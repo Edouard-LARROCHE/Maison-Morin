@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
 import DisplayLogin from './DisplayLogin';
 
 const IndexAdmin = () => {
@@ -28,11 +27,8 @@ const IndexAdmin = () => {
   };
 
   return (
-    <div>
-      <Link to='/'>
-        <button>Retour sur le site</button>
-      </Link>
-      <h3>Modifier le nom et mdp</h3>
+    <div className='update-login'>
+      <h3>Modifier le nom et mdp de connexion</h3>
       <div>
         <form>
           <input type='text' id='name' value={name} placeholder='Nom' onChange={(e) => setName(e.target.value)} />

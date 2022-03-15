@@ -1,0 +1,51 @@
+import React from 'react';
+
+const TableTraiteurViande = (props) => {
+  const handleDelete = (id) => {
+    let popUp = window.confirm('Tu es sûr?');
+    if (popUp) {
+      props.deleteCard(id);
+    }
+  };
+
+  return (
+    <div>
+      <table>
+        <thead>
+          <tr>
+            <th>Photo URL</th>
+            <th>Nom</th>
+            <th>Prix</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          {props.data.length > 0 ? (
+            props.data.map((index) => (
+              <tr key={index._id}>
+                <td> {index.pictureUrl} </td>
+                <td> {index.name} </td>
+                <td> {index.price} </td>
+                <td>
+                  <button
+                    onClick={() => {
+                      props.editRow(index);
+                    }}>
+                    MODIFIER
+                  </button>
+                  <button onClick={() => handleDelete(index.id)}>SUPPRIMER</button>
+                </td>
+              </tr>
+            ))
+          ) : (
+            <tr>
+              <td>AUCUNE DONNÉE </td>
+            </tr>
+          )}
+        </tbody>
+      </table>
+    </div>
+  );
+};
+
+export default TableTraiteurViande;
