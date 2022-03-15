@@ -8,34 +8,33 @@ const PostForm = (props) => {
   const [name, setName] = useState('');
   const [price, setPrice] = useState('');
 
-  const handlePost = async (e) => {
-    e.preventDefault();
-    const postData = {
-      pictureUrl: pictureUrl,
-      name: name,
-      price: price,
-    };
-    await axios
-      .post('http://localhost:5500/picture/traiteur/viande', postData)
-      .then((res) => {
-        setCard(res.data);
-        console.log(card);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  };
-
-  // const handleChange = (e) => {
-  //   const { name, value } = e.currentTarget;
-  //   setCard({ ...card, [name]: value });
-  // };
-
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!card.pictureUrl || !card.name || !card.price) return;
     props.addCard(card);
     setCard(initialForm);
+  };
+
+  const handlePost = async (e) => {
+    e.preventDefault();
+
+    const postData = {
+      pictureUrl: pictureUrl,
+      name: name,
+      price: price,
+    };
+
+    await axios
+      .post('http://localhost:5500/picture/traiteur/viande', postData)
+      .then((res) => {
+        setCard(res.data);
+        setPictureUrl('');
+        setName('');
+        setPrice('');
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   };
 
   return (
