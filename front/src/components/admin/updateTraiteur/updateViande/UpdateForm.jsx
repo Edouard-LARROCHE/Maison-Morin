@@ -38,9 +38,10 @@ const UpdateForm = (props) => {
         <input type='text' placeholder='Nom' name='name' value={card.name} onChange={handleChange} />
 
         <input type='text' placeholder='Prix' name='price' value={card.price} onChange={handleChange} />
+
+        <button>MODIFIER</button>
+        <button onClick={() => props.setEditing(false)}>ANNULER</button>
       </form>
-      <button>MODIFIER</button>
-      <button onClick={() => props.setEditing(false)}>ANNULER</button>
     </div>
   );
 };

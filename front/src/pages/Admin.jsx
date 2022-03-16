@@ -7,7 +7,7 @@ const Admin = () => {
   return (
     <div className='admin'>
       <Link to='/'>
-        <button>RETOUR SUR LE SITE</button>
+        <button>DECONNEXION</button>
       </Link>
       <button onClick={() => window.location.reload(false)}>RAFRAICHIR</button>
       <IndexAdmin />
