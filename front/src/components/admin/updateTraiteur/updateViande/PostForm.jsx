@@ -19,19 +19,16 @@ const PostForm = (props) => {
     await axios
       .post('http://localhost:5500/picture/traiteur/viande', postData)
       .then((res) => {
-        console.log(res.data);
+        console.log(card);
         setCard(res.data);
         setPictureUrl('');
         setName('');
         setPrice('');
+        props.addCard(postData);
       })
       .catch((err) => {
         console.log(err);
       });
-  };
-
-  const handleClick = async () => {
-    await props.addCard(card);
   };
 
   return (
@@ -43,7 +40,7 @@ const PostForm = (props) => {
 
         <input type='text' placeholder='Prix' name='price' value={price} onChange={(e) => setPrice(e.target.value)} />
 
-        <button onClick={handleClick}>AJOUTER</button>
+        <button>AJOUTER</button>
       </form>
     </div>
   );

@@ -8,23 +8,9 @@ const IndexTraiteurViande = () => {
   const [data, setData] = useState([]);
   const [editing, setEditing] = useState(false);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      await axios
-        .get('http://localhost:5500/picture/traiteur/viande')
-        .then((res) => {
-          setData(res.data);
-        })
-        .catch((err) => {
-          console.log(err);
-        });
-    };
-    fetchData();
-    // eslint-disable-next-line
-  }, []);
-
   const initialForm = { _id: null, pictureUrl: '', name: '', price: '' };
   const [currentCard, setCurrentCard] = useState(initialForm);
+
   const addCard = (index) => {
     index._id = data.length + 1;
     setData([...data, index]);
@@ -44,6 +30,22 @@ const IndexTraiteurViande = () => {
     setEditing(true);
     setCurrentCard({ _id: index._id, pictureUrl: index.pictureUrl, name: index.name, price: index.price });
   };
+
+  useEffect(() => {
+    const fetchData = async () => {
+      await axios
+        .get('http://localhost:5500/picture/traiteur/viande')
+        .then((res) => {
+          setData(res.data);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    };
+    fetchData();
+    // eslint-disable-next-line
+  }, []);
+  console.log(data);
 
   return (
     <div>

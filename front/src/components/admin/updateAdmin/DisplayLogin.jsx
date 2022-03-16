@@ -10,7 +10,6 @@ const DisplayLogin = () => {
         .get('http://localhost:5500/login/')
         .then((res) => {
           setData(res.data);
-          console.log(data);
         })
         .catch((err) => {
           console.log(err);
