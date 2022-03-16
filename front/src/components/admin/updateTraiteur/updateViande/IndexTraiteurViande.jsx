@@ -48,7 +48,10 @@ const IndexTraiteurViande = () => {
 
   return (
     <div className='update-traiteur-viande'>
-      <h2>MODIFIER / AJOUTER / SUPPRIMER DES CARTES</h2>
+      <div className='inline-flex'>
+        <h2>2. MODIFIER / AJOUTER / SUPPRIMER DES CARTES : </h2>
+        <h3>GALLERY TRAITEUR VIANDE</h3>
+      </div>
       <div>
         {editing ? (
           <div>
@@ -62,8 +65,8 @@ const IndexTraiteurViande = () => {
           </div>
         )}
       </div>
-      <div>
-        <h3>Données actuelles:</h3>
+      <div className='table'>
+        <h3>Données actuelles :</h3>
         <Table data={data} editRow={editRow} deleteCard={deleteCard} />
       </div>
     </div>

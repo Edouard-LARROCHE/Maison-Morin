@@ -1,8 +1,10 @@
 /**************** ADMIN ****************/
 
 .admin {
+  background-image: url('.././../.././public/assets/papier-peint-10.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
   border: 5px solid $color-2;
-  height: 100vh;
   padding: 2rem;
 
   button {
@@ -12,6 +14,11 @@
     cursor: pointer;
     color: $color-2;
     background: $color-3;
+    width: 6.5rem;
+
+    &:hover {
+      opacity: 0.8;
+    }
   }
 }
 
@@ -42,6 +49,10 @@
     color: $color-2;
     background: $color-3;
   }
+
+  h3 {
+    margin-bottom: 1rem;
+  }
 }
 
 /**************** INDEX TRAITEUR VIANDE ****************/
@@ -49,9 +60,17 @@
 .update-traiteur-viande {
   margin: 2rem;
 
+  .inline-flex {
+    display: inline-flex;
+  }
+
   h2 {
-    margin-bottom: 1rem;
+    margin: 0 1rem 1rem 0;
     text-decoration: underline $color-3;
+  }
+
+  h3 {
+    transform: translateY(4px);
   }
 
   form {
@@ -62,5 +81,28 @@
     input {
       margin-bottom: 0.5rem;
     }
+  }
+}
+
+/**************** TABLE ****************/
+
+.table {
+  margin: 1rem;
+
+  h3 {
+    margin-bottom: 1rem;
+  }
+
+  .url-picture {
+    color: $color-2;
+    margin-right: 3rem;
+
+    &:hover {
+      color: $color-3;
+    }
+  }
+
+  p {
+    margin-right: 3rem;
   }
 }
