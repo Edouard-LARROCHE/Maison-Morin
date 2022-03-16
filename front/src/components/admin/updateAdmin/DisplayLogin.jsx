@@ -10,7 +10,6 @@ const DisplayLogin = () => {
         .get('http://localhost:5500/login/')
         .then((res) => {
           setData(res.data);
-          console.log(data);
         })
         .catch((err) => {
           console.log(err);
@@ -24,7 +23,7 @@ const DisplayLogin = () => {
     <div>
       {data.map((index) => (
         <div key={index} className='show-login'>
-          <h3>Nom et mot de passe actuel/modifié: </h3>
+          <h3>Nom et mot de passe actuel / modifié : </h3>
           <p> {index.name} </p>
           <p> {index.password} </p>
         </div>

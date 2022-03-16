@@ -9,6 +9,7 @@ const Admin = () => {
       <Link to='/'>
         <button>RETOUR SUR LE SITE</button>
       </Link>
+      <button onClick={() => window.location.reload(false)}>RAFRAICHIR</button>
       <IndexAdmin />
       <Index />
     </div>

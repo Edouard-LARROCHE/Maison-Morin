@@ -8,6 +8,9 @@ const IndexTraiteurViande = () => {
   const [data, setData] = useState([]);
   const [editing, setEditing] = useState(false);
 
+  const initialForm = { _id: null, pictureUrl: '', name: '', price: '' };
+  const [currentCard, setCurrentCard] = useState(initialForm);
+
   useEffect(() => {
     const fetchData = async () => {
       await axios
@@ -23,8 +26,6 @@ const IndexTraiteurViande = () => {
     // eslint-disable-next-line
   }, []);
 
-  const initialForm = { _id: null, pictureUrl: '', name: '', price: '' };
-  const [currentCard, setCurrentCard] = useState(initialForm);
   const addCard = (index) => {
     index._id = data.length + 1;
     setData([...data, index]);
@@ -42,27 +43,27 @@ const IndexTraiteurViande = () => {
 
   const editRow = (index) => {
     setEditing(true);
-    setCurrentCard({ _id: index._id, pictureUrl: index.pictureUrl, name: index.name, price: index.price });
+    setCurrentCard({ id: index._id, pictureUrl: index.pictureUrl, name: index.name, price: index.price });
   };
 
   return (
-    <div>
-      <h3>Mise à jour des cartes:</h3>
+    <div className='update-traiteur-viande'>
+      <h2>MODIFIER / AJOUTER / SUPPRIMER DES CARTES</h2>
       <div>
         {editing ? (
           <div>
-            <h2>Modifier</h2>
+            <h1>MODIFIER</h1>
             <UpdateForm editing={editing} setEditing={setEditing} currentCard={currentCard} updateCard={updateCard} />
           </div>
         ) : (
           <div>
-            <h2>Ajouter</h2>
+            <h1>AJOUTER</h1>
             <PostForm addCard={addCard} />
           </div>
         )}
       </div>
       <div>
-        <h2>Données actuelles:</h2>
+        <h3>Données actuelles:</h3>
         <Table data={data} editRow={editRow} deleteCard={deleteCard} />
       </div>
     </div>
