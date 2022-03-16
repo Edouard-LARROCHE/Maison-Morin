@@ -46,6 +46,25 @@ const Charcuterie = () => {
 
   return (
     <>
+    <div className='Charcuterie-headBand'>
+        <div className='Infos-enterText'>
+          <h1>CHARCUTERIE</h1>
+          <p className='Presentation-gallery'>
+            Nous vous proposons ce qu'il se fait de mieux en charcuterie, un jambon blanc sans nitrite, sans gluten, cuit au bouillon de légume puis desossé 
+            avec bien évidemment du Porc français. <br></br><br></br> Maison Morin a fait le choix de vous proposer également une sélection de Jambon cru d'exception comme le véritable San Daniel, 
+            Pata negra Jimenez 100% Ibérique de Bellota, Serrano Grand 30 mois Duroc, chorizo ibérique de Bellota, la rosette de Lyon porc français, du saucisson d'Auvergne, de la viande 
+            de grison...de quoi satisfaire les amateurs de charcuterie haut de gamme.
+            </p>
+        </div>
+    </div>
+    <div className="plus-text">
+      <p>
+        Maison Morin vous propose sur commande des planches de charcuterie à votre convenance, pour plus de renseignement, n'hésitez pas à nous contacter.Vous préférez un apéritif
+        sans charcuterie? Maison Morin vous propose des planches de la mer, parfaites pour un apero gourmant et raffiné avec des gambas marinés à l'aneth et sa crème citronné des 
+        tranches de saumon fumés écossais, mini blinis, caviar d'aquitaine Maison Nordique. <br></br><br></br> Vous êtes Végan? Maison Morin vous propose des planches de crudités avec des légumes 
+        frais en Bâtonnets.
+      </p>
+    </div>
       <div className='text-acceuil-fetch'>
         <p>PRODUITS ARTISANAUX ELABORÉS DANS NOS CUISINES, AU QUOTIDIEN.</p>
         <p style={{ fontSize: '10px', marginTop: '0.5rem' }}>NOTRE GAMME TRAITEUR</p>
