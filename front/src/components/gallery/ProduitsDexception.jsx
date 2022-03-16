@@ -49,7 +49,7 @@ const ProduitsDexception = () => {
       <div className='Produits-headBand'>
         <div className='Infos-enterText'>
           <h1>PRODUITS D'EXCEPTION</h1>
-          <p className='Presentation-macarons'>
+          <p className='Presentation-gallery'>
             Maison Morin propose le meilleur pour ses clients, d'une qualitée rare, nos caviars, saumons fumés, foies gras, sauront raviver vos
             papilles pour des moments de pur bonheur et pour accompagner ses mêts, Victorien Morin vous propose en exclusivité le champagne Barons de
             Rothschild Brut, blanc de Blanc, ou Rosé.
