@@ -2,7 +2,6 @@
 
 .admin {
   border: 5px solid $color-2;
-  height: 100vh;
   padding: 2rem;
 
   button {
@@ -42,6 +41,10 @@
     color: $color-2;
     background: $color-3;
   }
+
+  h3 {
+    margin-bottom: 1rem;
+  }
 }
 
 /**************** INDEX TRAITEUR VIANDE ****************/
@@ -62,5 +65,28 @@
     input {
       margin-bottom: 0.5rem;
     }
+  }
+}
+
+/**************** TABLE ****************/
+
+.table {
+  margin: 1rem;
+
+  h3 {
+    margin-bottom: 1rem;
+  }
+
+  .url-picture {
+    color: $color-2;
+    margin-right: 3rem;
+
+    &:hover {
+      color: $color-3;
+    }
+  }
+
+  p {
+    margin-right: 3rem;
   }
 }

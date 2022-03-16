@@ -33,12 +33,16 @@ const Table = (props) => {
             props.data.map((index) => (
               <tr key={index._id}>
                 <td>
-                  <a href={index.pictureUrl} target='_blank' rel='noopener noreferrer'>
+                  <a className='url-picture' href={index.pictureUrl} target='_blank' rel='noopener noreferrer'>
                     {index.pictureUrl}
                   </a>
                 </td>
-                <td> {index.name} </td>
-                <td> {index.price} </td>
+                <td>
+                  <p> {index.name}</p>
+                </td>
+                <td>
+                  <p>{index.price}</p>
+                </td>
                 <td>
                   <button
                     onClick={() => {
