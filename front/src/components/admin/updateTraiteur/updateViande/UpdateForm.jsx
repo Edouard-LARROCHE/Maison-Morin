@@ -3,8 +3,8 @@ import React, { useState, useEffect } from 'react';
 
 const UpdateForm = (props) => {
   const [card, setCard] = useState(props.currentCard);
+  // eslint-disable-next-line
   const [id, setId] = useState(card.id);
-  console.log(card);
 
   useEffect(() => {
     setCard(props.currentCard);
