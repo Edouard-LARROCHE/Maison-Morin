@@ -2,29 +2,21 @@ import React, { useState } from 'react';
 import axios from 'axios';
 
 const PostForm = (props) => {
-  const [card, setCard] = useState([]);
-  const [pictureUrl, setPictureUrl] = useState('');
-  const [name, setName] = useState('');
-  const [price, setPrice] = useState('');
+  const [card, setCard] = useState({ pictureUrl: '', name: '', price: '' });
+
+  const handleChange = (e) => {
+    setCard({ ...card, [e.target.name]: e.target.value });
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const postData = {
-      pictureUrl: pictureUrl,
-      name: name,
-      price: price,
-    };
-
     await axios
-      .post('http://localhost:5500/picture/traiteur/viande', postData)
+      .post('http://localhost:5500/picture/traiteur/viande', card)
       .then((res) => {
-        console.log(card);
-        setCard(res.data);
-        setPictureUrl('');
-        setName('');
-        setPrice('');
-        props.addCard(postData);
+        console.log(res);
+        setCard({ pictureUrl: '', name: '', price: '' });
+        props.addCard(card);
       })
       .catch((err) => {
         console.log(err);
@@ -34,11 +26,11 @@ const PostForm = (props) => {
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <input type='text' placeholder='Photo URL' name='pictureUrl' value={pictureUrl} onChange={(e) => setPictureUrl(e.target.value)} />
+        <input type='text' placeholder='Photo URL' name='pictureUrl' value={card.pictureUrl} onChange={handleChange} />
 
-        <input type='text' placeholder='Nom' name='name' value={name} onChange={(e) => setName(e.target.value)} />
+        <input type='text' placeholder='Nom' name='name' value={card.name} onChange={handleChange} />
 
-        <input type='text' placeholder='Prix' name='price' value={price} onChange={(e) => setPrice(e.target.value)} />
+        <input type='text' placeholder='Prix' name='price' value={card.price} onChange={handleChange} />
 
         <button>AJOUTER</button>
       </form>
