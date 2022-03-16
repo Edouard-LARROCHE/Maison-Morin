@@ -59,9 +59,17 @@
 .update-traiteur-viande {
   margin: 2rem;
 
+  .inline-flex {
+    display: inline-flex;
+  }
+
   h2 {
-    margin-bottom: 1rem;
+    margin: 0 1rem 1rem 0;
     text-decoration: underline $color-3;
+  }
+
+  h3 {
+    transform: translateY(4px);
   }
 
   form {
