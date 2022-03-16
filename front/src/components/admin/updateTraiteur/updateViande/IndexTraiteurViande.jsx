@@ -47,23 +47,23 @@ const IndexTraiteurViande = () => {
   };
 
   return (
-    <div>
-      <h3>Mise à jour des cartes:</h3>
+    <div className='update-traiteur-viande'>
+      <h2>MODIFIER / AJOUTER / SUPPRIMER DES CARTES</h2>
       <div>
         {editing ? (
           <div>
-            <h2>Modifier</h2>
+            <h1>MODIFIER</h1>
             <UpdateForm editing={editing} setEditing={setEditing} currentCard={currentCard} updateCard={updateCard} />
           </div>
         ) : (
           <div>
-            <h2>Ajouter</h2>
+            <h1>AJOUTER</h1>
             <PostForm addCard={addCard} />
           </div>
         )}
       </div>
       <div>
-        <h2>Données actuelles:</h2>
+        <h3>Données actuelles:</h3>
         <Table data={data} editRow={editRow} deleteCard={deleteCard} />
       </div>
     </div>

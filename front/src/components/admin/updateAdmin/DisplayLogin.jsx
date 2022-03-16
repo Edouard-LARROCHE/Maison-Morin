@@ -23,7 +23,7 @@ const DisplayLogin = () => {
     <div>
       {data.map((index) => (
         <div key={index} className='show-login'>
-          <h3>Nom et mot de passe actuel/modifié: </h3>
+          <h3>Nom et mot de passe actuel / modifié : </h3>
           <p> {index.name} </p>
           <p> {index.password} </p>
         </div>

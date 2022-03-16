@@ -31,9 +31,8 @@ const PostForm = (props) => {
         <input type='text' placeholder='Nom' name='name' value={card.name} onChange={handleChange} />
 
         <input type='text' placeholder='Prix' name='price' value={card.price} onChange={handleChange} />
-
-        <button>AJOUTER</button>
       </form>
+      <button>AJOUTER</button>
     </div>
   );
 };

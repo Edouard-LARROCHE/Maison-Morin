@@ -20,8 +20,9 @@
 .update-login {
   margin: 2rem;
 
-  h3 {
+  h2 {
     margin-bottom: 1rem;
+    text-decoration: underline $color-3;
   }
 
   form {
@@ -40,5 +41,26 @@
     cursor: pointer;
     color: $color-2;
     background: $color-3;
+  }
+}
+
+/**************** INDEX TRAITEUR VIANDE ****************/
+
+.update-traiteur-viande {
+  margin: 2rem;
+
+  h2 {
+    margin-bottom: 1rem;
+    text-decoration: underline $color-3;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    width: 15%;
+
+    input {
+      margin-bottom: 0.5rem;
+    }
   }
 }
