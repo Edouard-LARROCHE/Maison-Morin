@@ -32,7 +32,11 @@ const Table = (props) => {
           {props.data.length > 0 ? (
             props.data.map((index) => (
               <tr key={index._id}>
-                <td> {index.pictureUrl} </td>
+                <td>
+                  <a href={index.pictureUrl} target='_blank' rel='noopener noreferrer'>
+                    {index.pictureUrl}
+                  </a>
+                </td>
                 <td> {index.name} </td>
                 <td> {index.price} </td>
                 <td>
