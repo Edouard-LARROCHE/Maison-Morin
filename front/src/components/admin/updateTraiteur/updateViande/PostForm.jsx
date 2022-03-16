@@ -2,20 +2,12 @@ import React, { useState } from 'react';
 import axios from 'axios';
 
 const PostForm = (props) => {
-  const initialForm = { _id: null, pictureUrl: '', name: '', price: '' };
-  const [card, setCard] = useState(initialForm);
+  const [card, setCard] = useState([]);
   const [pictureUrl, setPictureUrl] = useState('');
   const [name, setName] = useState('');
   const [price, setPrice] = useState('');
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (!card.pictureUrl || !card.name || !card.price) return;
-    props.addCard(card);
-    setCard(initialForm);
-  };
-
-  const handlePost = async (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     const postData = {
@@ -27,6 +19,7 @@ const PostForm = (props) => {
     await axios
       .post('http://localhost:5500/picture/traiteur/viande', postData)
       .then((res) => {
+        console.log(res.data);
         setCard(res.data);
         setPictureUrl('');
         setName('');
@@ -35,6 +28,10 @@ const PostForm = (props) => {
       .catch((err) => {
         console.log(err);
       });
+  };
+
+  const handleClick = async () => {
+    await props.addCard(card);
   };
 
   return (
@@ -46,7 +43,7 @@ const PostForm = (props) => {
 
         <input type='text' placeholder='Prix' name='price' value={price} onChange={(e) => setPrice(e.target.value)} />
 
-        <button onClick={handlePost}>AJOUTER</button>
+        <button onClick={handleClick}>AJOUTER</button>
       </form>
     </div>
   );

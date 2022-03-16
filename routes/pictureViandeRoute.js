@@ -21,7 +21,7 @@ pictureViande.post('/', (req, res) => {
   });
   image
     .save()
-    .then(() => res.status(201).json({ message: 'Image enregistrée' }))
+    .then(() => res.status(201).json({ message: 'Objet enregistré' }))
     .catch((error) => res.status(400).json({ error }));
 });
 
