@@ -1,7 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
+import TableViande from './TableViande';
+import TablePoisson from './TablePoisson';
 
 const Table = (props) => {
+  const [show, setShow] = useState(false);
+
   const handleDelete = async (id) => {
     let popUp = window.confirm('Tu es sûr ?');
     if (popUp) {
@@ -18,50 +22,14 @@ const Table = (props) => {
   };
 
   return (
-    <div>
-      <table>
-        <thead>
-          <tr>
-            <th>Photo URL</th>
-            <th>Nom</th>
-            <th>Prix</th>
-            <th>Actions</th>
-          </tr>
-        </thead>
-        <tbody>
-          {props.data.length > 0 ? (
-            props.data.map((index) => (
-              <tr key={index._id}>
-                <td>
-                  <a className='url-picture' href={index.pictureUrl} target='_blank' rel='noopener noreferrer'>
-                    {index.pictureUrl}
-                  </a>
-                </td>
-                <td>
-                  <p> {index.name}</p>
-                </td>
-                <td>
-                  <p>{index.price}</p>
-                </td>
-                <td>
-                  <button
-                    onClick={() => {
-                      props.editRow(index);
-                    }}>
-                    MODIFIER
-                  </button>
-                  <button onClick={() => handleDelete(index._id)}>SUPPRIMER</button>
-                </td>
-              </tr>
-            ))
-          ) : (
-            <tr>
-              <td>AUCUNE DONNÉE </td>
-            </tr>
-          )}
-        </tbody>
-      </table>
-    </div>
+    <>
+      <div>
+        <TableViande viandes={props.viandes} editRow={props.editRow} deleteCard={props.deleteCard} handleDelete={handleDelete} />
+      </div>
+      <div>
+        <TablePoisson poissons={props.poissons} editRow={props.editRow} deleteCard={props.deleteCard} handleDelete={handleDelete} />
+      </div>
+    </>
   );
 };
 

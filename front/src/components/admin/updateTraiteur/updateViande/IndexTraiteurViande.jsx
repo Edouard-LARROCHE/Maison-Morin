@@ -5,9 +5,9 @@ import UpdateForm from './UpdateForm';
 import PostForm from './PostForm';
 
 const IndexTraiteurViande = () => {
-  // const [viandes, setViandes] = useState([]);
-  // const [poissons, setPoissons] = useState([]);
-  // const [charcuteries, setCharcuteries] = useState([]);
+  const [viandes, setViandes] = useState([]);
+  const [poissons, setPoissons] = useState([]);
+  const [charcuteries, setCharcuteries] = useState([]);
 
   const [data, setData] = useState([]);
   const [editing, setEditing] = useState(false);
@@ -24,12 +24,11 @@ const IndexTraiteurViande = () => {
 
     Promise.all(urls.map((url) => axios.get(url)))
       .then(([{ data: viande }, { data: poisson }, { data: charcuterie }]) => {
-        // setViandes(viande);
-        // setPoissons(poisson);
-        // setCharcuteries(charcuterie);
-        const allData = viande.concat(poisson, charcuterie);
-        setData(allData);
-        console.log(data);
+        setViandes(viande);
+        setPoissons(poisson);
+        setCharcuteries(charcuterie);
+        console.log(poissons);
+        console.log(viandes);
       })
       .catch((err) => {
         console.log(err);
@@ -42,8 +41,9 @@ const IndexTraiteurViande = () => {
   }, []);
 
   const addCard = (index) => {
-    index._id = data.length + 1;
-    setData([...data, index]);
+    index._id = viandes.length + 1 && poissons.length + 1;
+    setViandes([...viandes, index]);
+    setPoissons([...poissons, index]);
   };
 
   const deleteCard = (id) => {
@@ -65,7 +65,7 @@ const IndexTraiteurViande = () => {
     <div className='update-traiteur-viande'>
       <div className='inline-flex'>
         <h2>2. MODIFIER / AJOUTER / SUPPRIMER DES CARTES : </h2>
-        <h3>GALLERY TRAITEUR VIANDE</h3>
+        <h3>GALLERIE</h3>
       </div>
       <div>
         {editing ? (
@@ -81,8 +81,7 @@ const IndexTraiteurViande = () => {
         )}
       </div>
       <div className='table'>
-        <h3>Données actuelles :</h3>
-        <Table data={data} editRow={editRow} deleteCard={deleteCard} />
+        <Table viandes={viandes} poissons={poissons} editRow={editRow} deleteCard={deleteCard} />
       </div>
     </div>
   );
