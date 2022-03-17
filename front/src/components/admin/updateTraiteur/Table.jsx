@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import TableViande from './TableViande';
 import TablePoisson from './TablePoisson';
+import TableCharcuterie from './TableCharcuterie';
 
 const Table = (props) => {
   const [show, setShow] = useState('viande');
@@ -26,6 +27,7 @@ const Table = (props) => {
       <ul>
         <li onClick={() => setShow('viande')}>viande</li>
         <li onClick={() => setShow('poisson')}>poisson</li>
+        <li onClick={() => setShow('charcuterie')}>charcuterie</li>
       </ul>
       {(() => {
         switch (show) {
@@ -40,6 +42,18 @@ const Table = (props) => {
             return (
               <div>
                 <TablePoisson poissons={props.poissons} editRow={props.editRow} deleteCard={props.deleteCard} handleDelete={handleDelete} />
+              </div>
+            );
+
+          case 'charcuterie':
+            return (
+              <div>
+                <TableCharcuterie
+                  charcuteries={props.charcuteries}
+                  editRow={props.editRow}
+                  deleteCard={props.deleteCard}
+                  handleDelete={handleDelete}
+                />
               </div>
             );
 

@@ -27,8 +27,6 @@ const IndexTraiteurViande = () => {
         setViandes(viande);
         setPoissons(poisson);
         setCharcuteries(charcuterie);
-        console.log(poissons);
-        console.log(viandes);
       })
       .catch((err) => {
         console.log(err);
@@ -41,9 +39,10 @@ const IndexTraiteurViande = () => {
   }, []);
 
   const addCard = (index) => {
-    index._id = viandes.length + 1 && poissons.length + 1;
+    index._id = viandes.length + 1 && poissons.length + 1 && charcuteries.length + 1;
     setViandes([...viandes, index]);
     setPoissons([...poissons, index]);
+    setCharcuteries([...charcuteries, index]);
   };
 
   const deleteCard = (id) => {
@@ -81,7 +80,7 @@ const IndexTraiteurViande = () => {
         )}
       </div>
       <div className='table'>
-        <Table viandes={viandes} poissons={poissons} editRow={editRow} deleteCard={deleteCard} />
+        <Table viandes={viandes} poissons={poissons} charcuteries={charcuteries} editRow={editRow} deleteCard={deleteCard} />
       </div>
     </div>
   );
