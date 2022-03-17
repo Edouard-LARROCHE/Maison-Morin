@@ -26,11 +26,10 @@ const Rouge = () => {
     <>
       <div className='Vins-headBand'>
         <div className='Infos-enterText'>
-          <h1>ROUGES</h1>
+          <h1>VINS</h1>
           <p className='Presentation-gallery'>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit sequi tenetur nostrum! Nemo quae totam fuga molestiae veniam ipsam ad culpa explicabo perspiciatis temporibus 
-            esse illum aliquam, reprehenderit ut ullam! Ipsum, est maxime fuga ducimus voluptate beatae recusandae delectus tempora quas ipsam voluptas atque tempore aliquam dolorem 
-            odit autem dolorum ullam. Ratione, iusto cumque. Animi incidunt ad distinctio optio rem. Accusantium tempore eos neque porro repellat sed architecto, magni provident.
+            Maison Morin vous propose des vins de qualités, une diversité de vins pour satisfaire les goûts de chacun de nos clients, nos vins accompagneront vos repas, que ce soit
+            pour une grande occasion ou simplement pour vous faire plaisir à travers nos divers exclusivités. 
             </p>
         </div>
       </div>
