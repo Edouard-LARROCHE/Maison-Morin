@@ -8,13 +8,18 @@ const Table = (props) => {
   const [show, setShow] = useState('viande');
 
   const handleDelete = async (id) => {
+    let urls = [
+      `http://localhost:5500/picture/traiteur/viande/${id}`,
+      `http://localhost:5500/picture/traiteur/poisson/${id}`,
+      `http://localhost:5500/picture/traiteur/charcuterie/${id}`,
+    ];
+
     let popUp = window.confirm('Tu es sûr ?');
     if (popUp) {
       props.deleteCard(id);
-      await axios
-        .delete(`http://localhost:5500/picture/traiteur/viande/${id}`)
+      Promise.all(urls.map((url) => axios.delete(url)))
         .then((res) => {
-          console.log(res.data);
+          return res;
         })
         .catch((err) => {
           console.log(err);

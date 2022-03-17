@@ -47,7 +47,9 @@ const IndexTraiteurViande = () => {
 
   const deleteCard = (id) => {
     setEditing(false);
-    setData(data.filter((index) => index._id !== id));
+    setData(viandes.filter((index) => index._id !== id));
+    setData(poissons.filter((index) => index._id !== id));
+    setData(charcuteries.filter((index) => index._id !== id));
   };
 
   const updateCard = (id, updateCard) => {
