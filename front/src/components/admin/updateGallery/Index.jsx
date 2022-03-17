@@ -1,10 +1,10 @@
 import React from 'react';
-import IndexTraiteurViande from './updateViande/IndexTraiteurViande';
+import IndexUpdateGallery from './update/IndexUpdateGallery';
 
 const Index = () => {
   return (
     <div>
-      <IndexTraiteurViande />
+      <IndexUpdateGallery />
     </div>
   );
 };
