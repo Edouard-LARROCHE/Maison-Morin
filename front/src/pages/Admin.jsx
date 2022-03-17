@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import IndexAdmin from '../components/admin/updateAdmin/IndexAdmin';
-import Index from '../components/admin/updateGallery/Index';
+import IndexUpdateGallery from '../components/admin/updateGallery/update/IndexUpdateGallery';
 
 const Admin = () => {
   return (
@@ -11,7 +11,7 @@ const Admin = () => {
       </Link>
       <button onClick={() => window.location.reload(false)}>RAFRAICHIR</button>
       <IndexAdmin />
-      <Index />
+      <IndexUpdateGallery />
     </div>
   );
 };
