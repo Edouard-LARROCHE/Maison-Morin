@@ -5,9 +5,9 @@ import UpdateForm from './UpdateForm';
 import PostForm from './PostForm';
 
 const IndexTraiteurViande = () => {
-  const [viande, setViande] = useState([]);
-  const [poisson, setPoisson] = useState([]);
-  const [charcuterie, setCharcuterie] = useState([]);
+  // const [viandes, setViandes] = useState([]);
+  // const [poissons, setPoissons] = useState([]);
+  // const [charcuteries, setCharcuteries] = useState([]);
 
   const [data, setData] = useState([]);
   const [editing, setEditing] = useState(false);
@@ -24,10 +24,11 @@ const IndexTraiteurViande = () => {
 
     Promise.all(urls.map((url) => axios.get(url)))
       .then(([{ data: viande }, { data: poisson }, { data: charcuterie }]) => {
-        setViande(viande);
-        setPoisson(poisson);
-        setCharcuterie(charcuterie);
-        setData(viande, poisson, charcuterie);
+        // setViandes(viande);
+        // setPoissons(poisson);
+        // setCharcuteries(charcuterie);
+        const allData = viande.concat(poisson, charcuterie);
+        setData(allData);
         console.log(data);
       })
       .catch((err) => {
