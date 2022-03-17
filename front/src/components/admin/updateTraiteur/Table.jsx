@@ -24,7 +24,7 @@ const Table = (props) => {
 
   return (
     <>
-      <ul>
+      <ul className='switch-nav'>
         <li onClick={() => setShow('viande')}>viande</li>
         <li onClick={() => setShow('poisson')}>poisson</li>
         <li onClick={() => setShow('charcuterie')}>charcuterie</li>
@@ -61,19 +61,6 @@ const Table = (props) => {
             return null;
         }
       })()}
-      {/* <ul>
-        <li onClick={() => setShow(true)}>viande</li>
-        <li onClick={() => setShow(false)}>poisson</li>
-      </ul>
-      {show ? (
-        <div>
-          <TableViande viandes={props.viandes} editRow={props.editRow} deleteCard={props.deleteCard} handleDelete={handleDelete} />
-        </div>
-      ) : (
-        <div>
-          <TablePoisson poissons={props.poissons} editRow={props.editRow} deleteCard={props.deleteCard} handleDelete={handleDelete} />
-        </div>
-      )} */}
     </>
   );
 };

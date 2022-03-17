@@ -3,7 +3,7 @@ import React from 'react';
 const TableCharcuterie = (props) => {
   return (
     <div>
-      <h3>Données actuelles : GALLERIE VIANDES</h3>
+      <h3>Données actuelles : GALLERIE CHARCUTERIES</h3>
       <table>
         <thead>
           <tr>
