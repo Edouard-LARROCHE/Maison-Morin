@@ -56,6 +56,13 @@ const ProduitsDexception = () => {
           </p>
         </div>
       </div>
+      <div className="plus-text">
+        <h3 className='t-eT'>Mais aussi</h3>
+      <p>
+        Maison Morin vous propose son Saumon écossais fumé au bois de hêtre, un saumon fondant à chair rosée et ferme avec des notes douces et dorées, un équilibre idéal, disponible
+        en boutique tranchés par nos soins! <br></br><br></br> Craquez pour le caviar d'exception Impérial de Sologne by Maison Nordique
+      </p>
+    </div>
       <div className='text-acceuil-fetch'>
         <p>PRODUITS ARTISANAUX ELABORÉS DANS NOS CUISINES, AU QUOTIDIEN.</p>
         <p style={{ fontSize: '10px', marginTop: '0.5rem' }}>NOTRE GAMME D'EXCEPTION</p>
