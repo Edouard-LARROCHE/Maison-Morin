@@ -106,3 +106,21 @@
     margin-right: 3rem;
   }
 }
+
+.switch-nav {
+  display: flex;
+  justify-content: space-around;
+  margin: 3rem;
+
+  li {
+    cursor: pointer;
+    text-transform: uppercase;
+    color: $color-2;
+    border: 1px solid $color-3;
+    padding: 0.5rem;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}

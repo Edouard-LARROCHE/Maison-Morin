@@ -1,24 +1,9 @@
 import React from 'react';
-import axios from 'axios';
 
-const Table = (props) => {
-  const handleDelete = async (id) => {
-    let popUp = window.confirm('Tu es sûr ?');
-    if (popUp) {
-      props.deleteCard(id);
-      await axios
-        .delete(`http://localhost:5500/picture/traiteur/viande/${id}`)
-        .then((res) => {
-          console.log(res.data);
-        })
-        .catch((err) => {
-          console.log(err);
-        });
-    }
-  };
-
+const TableViande = (props) => {
   return (
     <div>
+      <h3>Données actuelles : GALLERIE VIANDES</h3>
       <table>
         <thead>
           <tr>
@@ -29,8 +14,8 @@ const Table = (props) => {
           </tr>
         </thead>
         <tbody>
-          {props.data.length > 0 ? (
-            props.data.map((index) => (
+          {props.viandes.length > 0 ? (
+            props.viandes.map((index) => (
               <tr key={index._id}>
                 <td>
                   <a className='url-picture' href={index.pictureUrl} target='_blank' rel='noopener noreferrer'>
@@ -50,7 +35,7 @@ const Table = (props) => {
                     }}>
                     MODIFIER
                   </button>
-                  <button onClick={() => handleDelete(index._id)}>SUPPRIMER</button>
+                  <button onClick={() => props.handleDelete(index._id)}>SUPPRIMER</button>
                 </td>
               </tr>
             ))
@@ -65,4 +50,4 @@ const Table = (props) => {
   );
 };
 
-export default Table;
+export default TableViande;

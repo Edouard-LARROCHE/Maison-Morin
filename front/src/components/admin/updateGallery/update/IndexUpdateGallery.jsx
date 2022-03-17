@@ -5,30 +5,44 @@ import UpdateForm from './UpdateForm';
 import PostForm from './PostForm';
 
 const IndexTraiteurViande = () => {
+  const [viandes, setViandes] = useState([]);
+  const [poissons, setPoissons] = useState([]);
+  const [charcuteries, setCharcuteries] = useState([]);
+
   const [data, setData] = useState([]);
   const [editing, setEditing] = useState(false);
 
   const initialForm = { _id: null, pictureUrl: '', name: '', price: '' };
   const [currentCard, setCurrentCard] = useState(initialForm);
 
+  const fetchData = async () => {
+    let urls = [
+      'http://localhost:5500/picture/traiteur/viande',
+      'http://localhost:5500/picture/traiteur/poisson',
+      'http://localhost:5500/picture/traiteur/charcuterie',
+    ];
+
+    Promise.all(urls.map((url) => axios.get(url)))
+      .then(([{ data: viande }, { data: poisson }, { data: charcuterie }]) => {
+        setViandes(viande);
+        setPoissons(poisson);
+        setCharcuteries(charcuterie);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
   useEffect(() => {
-    const fetchData = async () => {
-      await axios
-        .get('http://localhost:5500/picture/traiteur/viande')
-        .then((res) => {
-          setData(res.data);
-        })
-        .catch((err) => {
-          console.log(err);
-        });
-    };
     fetchData();
     // eslint-disable-next-line
   }, []);
 
   const addCard = (index) => {
-    index._id = data.length + 1;
-    setData([...data, index]);
+    index._id = viandes.length + 1 && poissons.length + 1 && charcuteries.length + 1;
+    setViandes([...viandes, index]);
+    setPoissons([...poissons, index]);
+    setCharcuteries([...charcuteries, index]);
   };
 
   const deleteCard = (id) => {
@@ -50,7 +64,7 @@ const IndexTraiteurViande = () => {
     <div className='update-traiteur-viande'>
       <div className='inline-flex'>
         <h2>2. MODIFIER / AJOUTER / SUPPRIMER DES CARTES : </h2>
-        <h3>GALLERY TRAITEUR VIANDE</h3>
+        <h3>GALLERIE</h3>
       </div>
       <div>
         {editing ? (
@@ -66,8 +80,7 @@ const IndexTraiteurViande = () => {
         )}
       </div>
       <div className='table'>
-        <h3>Données actuelles :</h3>
-        <Table data={data} editRow={editRow} deleteCard={deleteCard} />
+        <Table viandes={viandes} poissons={poissons} charcuteries={charcuteries} editRow={editRow} deleteCard={deleteCard} />
       </div>
     </div>
   );
