@@ -4,6 +4,7 @@ import TableViande from './TableViande';
 import TablePoisson from './TablePoisson';
 import TableCharcuterie from './TableCharcuterie';
 import TablePatisserie from './TablePatisserie';
+import TableMacaron from './TableMacaron';
 
 const Table = (props) => {
   const [show, setShow] = useState('viande');
@@ -14,6 +15,7 @@ const Table = (props) => {
       `http://localhost:5500/picture/traiteur/poisson/${id}`,
       `http://localhost:5500/picture/traiteur/charcuterie/${id}`,
       `http://localhost:5500/picture/patisserie/patisseries/${id}`,
+      `http://localhost:5500/picture/patisserie/macaron/${id}`,
     ];
 
     let popUp = window.confirm('Tu es sûr ?');
@@ -36,6 +38,7 @@ const Table = (props) => {
         <li onClick={() => setShow('poisson')}>poisson</li>
         <li onClick={() => setShow('charcuterie')}>charcuterie</li>
         <li onClick={() => setShow('patisserie')}>pâtisserie</li>
+        <li onClick={() => setShow('macaron')}>macaron</li>
       </ul>
       {(() => {
         switch (show) {
@@ -87,6 +90,19 @@ const Table = (props) => {
                   deleteCard={props.deleteCard}
                   handleDelete={handleDelete}
                   addCardPatisserie={props.addCardPatisserie}
+                />
+              </div>
+            );
+
+          case 'macaron':
+            return (
+              <div>
+                <TableMacaron
+                  macarons={props.macarons}
+                  editRow={props.editRow}
+                  deleteCard={props.deleteCard}
+                  handleDelete={handleDelete}
+                  addCardMacaron={props.addCardMacaron}
                 />
               </div>
             );
