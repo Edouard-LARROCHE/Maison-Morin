@@ -58,6 +58,7 @@ const Charcuterie = () => {
         </div>
     </div>
     <div className="plus-text">
+      <h3 className='t-eT'>Mais aussi</h3>
       <p>
         Maison Morin vous propose sur commande des planches de charcuterie à votre convenance, pour plus de renseignement, n'hésitez pas à nous contacter.Vous préférez un apéritif
         sans charcuterie? Maison Morin vous propose des planches de la mer, parfaites pour un apero gourmant et raffiné avec des gambas marinés à l'aneth et sa crème citronné des 

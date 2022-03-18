@@ -49,9 +49,8 @@ const Patisseries = () => {
         <div className='Infos-enterText'>
           <h1>NOS PÂTISSERIES</h1>
           <p className='Presentation-gallery'>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit sequi tenetur nostrum! Nemo quae totam fuga molestiae veniam ipsam ad culpa explicabo perspiciatis temporibus 
-            esse illum aliquam, reprehenderit ut ullam! Ipsum, est maxime fuga ducimus voluptate beatae recusandae delectus tempora quas ipsam voluptas atque tempore aliquam dolorem 
-            odit autem dolorum ullam. Ratione, iusto cumque. Animi incidunt ad distinctio optio rem. Accusantium tempore eos neque porro repellat sed architecto, magni provident.
+            Nos pâtisseries ont chacune leur multitude de saveurs, pour votre propre plaisir, celui de vos amis ou un évènement? Du gâteau au chocolat à la tarte aux fruits, 
+            nos pâtisseries artisanales signées Maison Morin 
             </p>
         </div>
       </div>
