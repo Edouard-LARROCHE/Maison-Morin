@@ -52,7 +52,7 @@ const Macarons = () => {
           <p className='Presentation-gallery'>
             Nos macarons sont fabriqués de manière artisanale avec uniquement des ingrédients et colorants naturels, peu sucrés révèlent la puissance
             et la finesse de chaque saveur, chocolat noir, vanille, pistache, framboise, caramel... Le plus? Toujours dans une démarche végétale afin
-            de mieux respecter l'environnement et vontre santé, la maison morin vous propose des macarons entièrement végétales.
+            de mieux respecter l'environnement et votre santé, la maison morin vous propose des macarons entièrement végétales.
           </p>
         </div>
         <p className='cons-degus'>
