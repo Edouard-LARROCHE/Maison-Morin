@@ -41,7 +41,7 @@ const TableViande = (props) => {
           <tr>
             <th>Photo URL</th>
             <th>Nom</th>
-            <th>Prix</th>
+            <th>Description</th>
             <th>Actions</th>
           </tr>
         </thead>
