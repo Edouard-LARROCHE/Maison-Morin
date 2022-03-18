@@ -145,6 +145,9 @@ const IndexTraiteurViande = () => {
               charcuteries={charcuteries}
               patisseries={patisseries}
               macarons={macarons}
+              vins={vins}
+              cocktails={cocktails}
+              prodexcep={prodexcep}
               editRow={editRow}
               deleteCard={deleteCard}
               addCardViande={addCardViande}

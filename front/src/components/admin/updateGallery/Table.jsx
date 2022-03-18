@@ -5,6 +5,9 @@ import TablePoisson from './TablePoisson';
 import TableCharcuterie from './TableCharcuterie';
 import TablePatisserie from './TablePatisserie';
 import TableMacaron from './TableMacaron';
+import TableCocktails from './TableCocktail';
+import TableProdExcep from './TableProdExcep';
+import TableVin from './TableVin';
 
 const Table = (props) => {
   const [show, setShow] = useState('viande');
@@ -16,6 +19,9 @@ const Table = (props) => {
       `http://localhost:5500/picture/traiteur/charcuterie/${id}`,
       `http://localhost:5500/picture/patisserie/patisseries/${id}`,
       `http://localhost:5500/picture/patisserie/macaron/${id}`,
+      `http://localhost:5500/picture/cocktails/${id}`,
+      `http://localhost:5500/picture/produitsExcep/${id}`,
+      `http://localhost:5500/picture/cave/vins/${id}`,
     ];
 
     let popUp = window.confirm('Tu es sûr ?');
@@ -39,6 +45,9 @@ const Table = (props) => {
         <li onClick={() => setShow('charcuterie')}>charcuterie</li>
         <li onClick={() => setShow('patisserie')}>pâtisserie</li>
         <li onClick={() => setShow('macaron')}>macaron</li>
+        <li onClick={() => setShow('cocktails')}>cocktail</li>
+        <li onClick={() => setShow('prodexcep')}>produit exceptionnel</li>
+        <li onClick={() => setShow('vins')}>vin</li>
       </ul>
       {(() => {
         switch (show) {
@@ -103,6 +112,45 @@ const Table = (props) => {
                   deleteCard={props.deleteCard}
                   handleDelete={handleDelete}
                   addCardMacaron={props.addCardMacaron}
+                />
+              </div>
+            );
+
+          case 'cocktails':
+            return (
+              <div>
+                <TableCocktails
+                  cocktails={props.cocktails}
+                  editRow={props.editRow}
+                  deleteCard={props.deleteCard}
+                  handleDelete={handleDelete}
+                  addCardCocktail={props.addCardCocktail}
+                />
+              </div>
+            );
+
+          case 'prodexcep':
+            return (
+              <div>
+                <TableProdExcep
+                  prodexcep={props.prodexcep}
+                  editRow={props.editRow}
+                  deleteCard={props.deleteCard}
+                  handleDelete={handleDelete}
+                  addCardProduitExcep={props.addCardProduitExcep}
+                />
+              </div>
+            );
+
+          case 'vins':
+            return (
+              <div>
+                <TableVin
+                  vins={props.vins}
+                  editRow={props.editRow}
+                  deleteCard={props.deleteCard}
+                  handleDelete={handleDelete}
+                  addCardVin={props.addCardVin}
                 />
               </div>
             );
