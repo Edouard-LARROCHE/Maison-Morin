@@ -36,22 +36,24 @@ const DisplayScroll = () => {
       <div className='text-first'>
         <div className={headText}>Une Passion au Quotidien </div>
         <div className={title}>
-          <h1>NOS PÂTISSERIE</h1>
+          <h1>NOS PÂTISSERIES</h1>
           <div className='V-position'>
             <div className="V-line"></div>
           </div>
         </div>
         <div className={text}>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos amet corrupti molestias accusamus eligendi praesentium similique architecto,
-            porro, eius perspiciatis libero tempore deleniti ad. Odio placeat rem veritatis totam excepturi!
+            Venez découvrir des douceurs qui vont enjoliver votre journée, Maison Morin vous propose des pâtisseries variées afin que vous trouviez votre bonheur.
           </p>
           <br />
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, dolores accusantium? Nostrum sit quasi labore!</p>
+          <p> Du gâteau au chocolat à la tarte aux fruits, pour vous, votre famille ou un évènement vous trouverez ce qu'il vous faut chez Maison Morin.</p>
+          <br />
+          <br />
+          <p>Venez découvrir nos réalisations qui, nous en sommes sûr, vous donneront envie!</p>
         </div>
       </div>
       <div className={linkTo}>
-        <Link to='/'>
+        <Link to='/patisseries'>
           <p>NOS RÉALISATIONS »</p>
         </Link>
       </div>
