@@ -7,6 +7,8 @@ const IndexTraiteurViande = () => {
   const [viandes, setViandes] = useState([]);
   const [poissons, setPoissons] = useState([]);
   const [charcuteries, setCharcuteries] = useState([]);
+  const [patisseries, setPatisseries] = useState([]);
+  const [macarons, setMacarons] = useState([]);
 
   const [data, setData] = useState([]);
   const [editing, setEditing] = useState(false);
@@ -19,13 +21,17 @@ const IndexTraiteurViande = () => {
       'http://localhost:5500/picture/traiteur/viande',
       'http://localhost:5500/picture/traiteur/poisson',
       'http://localhost:5500/picture/traiteur/charcuterie',
+      'http://localhost:5500/picture/patisserie/macaron',
+      'http://localhost:5500/picture/patisserie/patisseries',
     ];
 
     Promise.all(urls.map((url) => axios.get(url)))
-      .then(([{ data: viande }, { data: poisson }, { data: charcuterie }]) => {
+      .then(([{ data: viande }, { data: poisson }, { data: charcuterie }, { data: macaron }, { data: patisserie }]) => {
         setViandes(viande);
         setPoissons(poisson);
         setCharcuteries(charcuterie);
+        setMacarons(macaron);
+        setPatisseries(patisserie);
       })
       .catch((err) => {
         console.log(err);
@@ -52,11 +58,23 @@ const IndexTraiteurViande = () => {
     setCharcuteries([...charcuteries, index]);
   };
 
+  const addCardMacaron = (index) => {
+    index._id = macarons.length + 1;
+    setMacarons([...macarons, index]);
+  };
+
+  const addCardPatisserie = (index) => {
+    index._id = patisseries.length + 1;
+    setPatisseries([...patisseries, index]);
+  };
+
   const deleteCard = (id) => {
     setEditing(false);
     setViandes(viandes.filter((index) => index._id !== id));
     setPoissons(poissons.filter((index) => index._id !== id));
     setCharcuteries(charcuteries.filter((index) => index._id !== id));
+    setMacarons(macarons.filter((index) => index._id !== id));
+    setPatisseries(patisseries.filter((index) => index._id !== id));
   };
 
   const updateCard = (id, updateCard) => {
@@ -87,11 +105,15 @@ const IndexTraiteurViande = () => {
               viandes={viandes}
               poissons={poissons}
               charcuteries={charcuteries}
+              patisseries={patisseries}
+              macarons={macarons}
               editRow={editRow}
               deleteCard={deleteCard}
               addCardViande={addCardViande}
               addCardPoisson={addCardPoisson}
               addCardCharcuterie={addCardCharcuterie}
+              addCardMacaron={addCardMacaron}
+              addCardPatisserie={addCardPatisserie}
             />
           </div>
         )}
