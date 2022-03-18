@@ -70,6 +70,7 @@ const Table = (props) => {
                   editRow={props.editRow}
                   deleteCard={props.deleteCard}
                   handleDelete={handleDelete}
+                  addCardCharcuterie={props.addCardCharcuterie}
                 />
               </div>
             );
