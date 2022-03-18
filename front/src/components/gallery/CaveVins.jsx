@@ -10,8 +10,7 @@ const CaveVins = () => {
         const fetchData = async () => {
         setLoading(true);
         try {
-            const { data: res } = await axios.get('http://localhost:5500/picture/cave/rouge');
-            console.log(res);
+            const { data: res } = await axios.get('http://localhost:5500/picture/cave/vins');
             setData(res);
         } catch (err) {
             console.log(err);
@@ -29,7 +28,8 @@ const CaveVins = () => {
             <h1>VINS</h1>
             <p className='Presentation-gallery'>
                 Maison Morin vous propose des vins de qualités, une diversité de vins pour satisfaire les goûts de chacun de nos clients, nos vins accompagneront vos repas, que ce soit
-                pour une grande occasion ou simplement pour vous faire plaisir à travers nos divers exclusivités. 
+                pour une grande occasion ou simplement pour vous faire plaisir à travers divers réferences tel que le Condrieu, Chateauneuf Du Pape, Pagodes de Cos, 
+                Chateau Clerc Milion Pauillac,  Sauternes-Barsac ou encore Minuty.
                 </p>
             </div>
         </div>
