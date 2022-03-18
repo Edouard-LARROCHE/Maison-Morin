@@ -43,15 +43,14 @@ const DisplayScrollSecond = () => {
         </div>
         <div className={text}>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus recusandae, error laborum facere laudantium, fugiat sapiente molestiae a
-            in vero consequuntur.
+            Découvrez une variété de vins, du blanc au rouge en passant par le rosé, Maison Morin sélectionne des produits de qualités.
           </p>
           <br />
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus et quas cum natus, nostrum quam.</p>
+          <p>Pour une occasion, un repas, un apéro ou pour votre plaisir personnel, goûtez nos vins qui raviveront vos papilles.</p>
         </div>
       </div>
       <div className={linkTo}>
-        <Link to='/'>
+        <Link to='/cave-a-vins'>
           <p>DECOUVRIR NOTRE GAMME »</p>
         </Link>
       </div>
