@@ -19,6 +19,12 @@ picturePoisson.post('/', (req, res) => {
     .catch((error) => res.status(400).json({ error }));
 });
 
+picturePoisson.put('/:id', (req, res, next) => {
+  Poisson.updateOne({ _id: req.params.id }, { ...req.body, _id: req.params.id })
+    .then(() => res.status(200).json({ message: 'Objet modifié !' }))
+    .catch((error) => res.status(400).json({ error }));
+});
+
 picturePoisson.delete('/:id', (req, res, next) => {
   Poisson.deleteOne({ _id: req.params.id })
     .then(() => res.status(200).json({ message: 'Objet supprimé !' }))

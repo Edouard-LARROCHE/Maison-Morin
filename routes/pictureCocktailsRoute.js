@@ -19,6 +19,12 @@ pictureCocktails.post('/', (req, res) => {
     .catch((error) => res.status(400).json({ error }));
 });
 
+pictureCocktails.put('/:id', (req, res, next) => {
+  Cocktails.updateOne({ _id: req.params.id }, { ...req.body, _id: req.params.id })
+    .then(() => res.status(200).json({ message: 'Objet modifié !' }))
+    .catch((error) => res.status(400).json({ error }));
+});
+
 pictureCocktails.delete('/:id', (req, res, next) => {
   Cocktails.deleteOne({ _id: req.params.id })
     .then(() => res.status(200).json({ message: 'Objet supprimé !' }))

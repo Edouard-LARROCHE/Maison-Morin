@@ -19,6 +19,12 @@ picturePatisserie.post('/', (req, res) => {
     .catch((error) => res.status(400).json({ error }));
 });
 
+picturePatisserie.put('/:id', (req, res, next) => {
+  Patisserie.updateOne({ _id: req.params.id }, { ...req.body, _id: req.params.id })
+    .then(() => res.status(200).json({ message: 'Objet modifié !' }))
+    .catch((error) => res.status(400).json({ error }));
+});
+
 picturePatisserie.delete('/:id', (req, res, next) => {
   Patisserie.deleteOne({ _id: req.params.id })
     .then(() => res.status(200).json({ message: 'Objet supprimé !' }))

@@ -19,6 +19,12 @@ pictureCharcuterie.post('/', (req, res) => {
     .catch((error) => res.status(400).json({ error }));
 });
 
+pictureCharcuterie.put('/:id', (req, res, next) => {
+  Charcuterie.updateOne({ _id: req.params.id }, { ...req.body, _id: req.params.id })
+    .then(() => res.status(200).json({ message: 'Objet modifié !' }))
+    .catch((error) => res.status(400).json({ error }));
+});
+
 pictureCharcuterie.delete('/:id', (req, res, next) => {
   Charcuterie.deleteOne({ _id: req.params.id })
     .then(() => res.status(200).json({ message: 'Objet supprimé !' }))
