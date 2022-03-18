@@ -19,6 +19,12 @@ pictureCaveVins.post('/', (req, res) => {
     .catch((error) => res.status(400).json({ error }));
 });
 
+pictureCaveVins.put('/:id', (req, res, next) => {
+  CaveVins.updateOne({ _id: req.params.id }, { ...req.body, _id: req.params.id })
+    .then(() => res.status(200).json({ message: 'Objet modifié !' }))
+    .catch((error) => res.status(400).json({ error }));
+});
+
 pictureCaveVins.delete('/:id', (req, res, next) => {
   CaveVins.deleteOne({ _id: req.params.id })
     .then(() => res.status(200).json({ message: 'Objet supprimé !' }))
