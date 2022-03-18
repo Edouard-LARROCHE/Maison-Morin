@@ -1,16 +1,16 @@
 const express = require('express');
-const pictureCocktails = express.Router();
+const pictureMacaron = express.Router();
 
-const { Cocktails } = require('../models/pictureModel');
+const { Macaron } = require('../models/pictureModel');
 
-pictureCocktails.get('/', (req, res) => {
-  Cocktails.find()
+pictureMacaron.get('/', (req, res) => {
+  Macaron.find()
     .then((picture) => res.status(200).json(picture))
     .catch((error) => res.status(400).json({ error }));
 });
 
-pictureCocktails.post('/', (req, res) => {
-  const image = new Cocktails({
+pictureMacaron.post('/', (req, res) => {
+  const image = new Macaron({
     ...req.body,
   });
   image
@@ -19,10 +19,10 @@ pictureCocktails.post('/', (req, res) => {
     .catch((error) => res.status(400).json({ error }));
 });
 
-pictureCocktails.delete('/:id', (req, res, next) => {
-  Cocktails.deleteOne({ _id: req.params.id })
+pictureMacaron.delete('/:id', (req, res, next) => {
+  Macaron.deleteOne({ _id: req.params.id })
     .then(() => res.status(200).json({ message: 'Objet supprimé !' }))
     .catch((error) => res.status(400).json({ error }));
 });
 
-module.exports = pictureCocktails;
+module.exports = pictureMacaron;
