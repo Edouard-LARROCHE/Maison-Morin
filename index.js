@@ -12,10 +12,7 @@ const pictureViandeRoutes = require('./routes/pictureViandeRoute');
 const picturePoissonRoutes = require('./routes/picturePoissonRoute');
 const pictureCharcuterieRoutes = require('./routes/pictureCharcuterieRoute');
 const picturePatisserieRoutes = require('./routes/picturePatisserieRoute');
-const pictureVinRougeRoutes = require('./routes/pictureVinRougeRoute');
-const pictureVinBlancRoutes = require('./routes/pictureVinBlancRoute');
-const pictureVinRoseRoutes = require('./routes/pictureVinRoseRoute');
-const pictureBullesRoutes = require('./routes/pictureBullesRoute');
+const pictureCaveVinsRoutes = require('./routes/pictureCaveVinsRoute');
 const pictureCocktailsRoutes = require('./routes/pictureCocktailsRoute');
 const pictureProduitsExcepRoutes = require('./routes/pictureProduitsExcepRoute');
 
@@ -39,10 +36,7 @@ app.use('/picture/traiteur/viande', pictureViandeRoutes);
 app.use('/picture/traiteur/poisson', picturePoissonRoutes);
 app.use('/picture/traiteur/charcuterie', pictureCharcuterieRoutes);
 app.use('/picture/patisserie/patisseries', picturePatisserieRoutes);
-app.use('/picture/cave/rouge', pictureVinRougeRoutes);
-app.use('/picture/cave/blanc', pictureVinBlancRoutes);
-app.use('/picture/cave/rose', pictureVinRoseRoutes);
-app.use('/picture/cave/bulles', pictureBullesRoutes);
+app.use('/picture/cave/vins', pictureCaveVinsRoutes);
 app.use('/picture/cocktails', pictureCocktailsRoutes);
 app.use('/picture/produitsExcep', pictureProduitsExcepRoutes);
 

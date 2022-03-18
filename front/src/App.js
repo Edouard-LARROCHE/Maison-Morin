@@ -16,10 +16,7 @@ import TraiteurViande from './pages/gallery/traiteur/TraiteurViande';
 import TraiteurPoisson from './pages/gallery/traiteur/TraiteurPoisson';
 import NosPatisseries from './pages/gallery/patisserie/NosPatisseries';
 import PatisserieMacaron from './pages/gallery/patisserie/PatisserieMacaron';
-import CaveRouge from './pages/gallery/cave/CaveRouge';
-import CaveBlanc from './pages/gallery/cave/CaveBlanc';
-import CaveRose from './pages/gallery/cave/CaveRose';
-import CaveBulle from './pages/gallery/cave/CaveBulle';
+import PageCaveVins from './pages/gallery/PageCaveVins'
 import PageCocktails from './pages/gallery/PageCocktails';
 import PageProduitsDexception from './pages/gallery/PageProduitsDexception';
 // DARK MODE
@@ -51,10 +48,7 @@ function App() {
               <Route path='/traiteur-charcuterie' element={<TraiteurCharcuterie />} />
               <Route path='/patisseries' element={<NosPatisseries />} />
               <Route path='/patisseries-macarons' element={<PatisserieMacaron />} />
-              <Route path='/cave-rouge' element={<CaveRouge />} />
-              <Route path='/cave-blanc' element={<CaveBlanc />} />
-              <Route path='/cave-rose' element={<CaveRose />} />
-              <Route path='/cave-bulle' element={<CaveBulle />} />
+              <Route path='/cave-a-vins' element={<PageCaveVins />} />
               <Route path='/cocktails' element={<PageCocktails />} />
               <Route path="/produits-d'exception" element={<PageProduitsDexception />} />
             </Routes>
