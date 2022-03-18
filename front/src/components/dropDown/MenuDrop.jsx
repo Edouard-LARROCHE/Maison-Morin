@@ -23,7 +23,7 @@ const data = [
   },
   {
     id: 4,
-    mainTitleWOA1: 'COCKTAILS',
+    mainTitleWOA1: 'COCKTAILS DINATOIRE',
     arrow: <KeyboardArrowDownIcon style={{ opacity: 0 }} />,
     subItem: [{ id: 4 }],
   },
