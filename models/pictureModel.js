@@ -76,6 +76,25 @@ const picturePatisseriesSchema = mongoose.Schema(
   },
 );
 
+const pictureMacaronsSchema = mongoose.Schema(
+  {
+    pictureUrl: {
+      type: String,
+      required: true,
+    },
+    name: {
+      type: String,
+      required: true,
+    },
+    price: {
+      type: String,
+    },
+  },
+  {
+    collection: 'pictureMacarons',
+  },
+);
+
 const pictureCaveVinsSchema = mongoose.Schema(
   {
     pictureUrl: {
@@ -94,7 +113,6 @@ const pictureCaveVinsSchema = mongoose.Schema(
     collection: 'pictureCaveVins',
   },
 );
-
 
 const pictureCocktailsSchema = mongoose.Schema(
   {
@@ -136,10 +154,11 @@ const pictureProduitsExcepSchema = mongoose.Schema(
 
 const Viande = mongoose.model('Viande', pictureViandeSchema);
 const Patisserie = mongoose.model('Cake', picturePatisseriesSchema);
+const Macaron = mongoose.model('Macaron', pictureMacaronsSchema);
 const Charcuterie = mongoose.model('Charcuterie', pictureCharcuterieSchema);
 const Poisson = mongoose.model('Poisson', picturePoissonSchema);
 const CaveVins = mongoose.model('CaveVins', pictureCaveVinsSchema);
 const Cocktails = mongoose.model('Cocktails', pictureCocktailsSchema);
 const ProduitsExcep = mongoose.model('ProduitsExcep', pictureProduitsExcepSchema);
 
-module.exports = { Charcuterie, Viande, Patisserie, Poisson, CaveVins, Cocktails, ProduitsExcep };
+module.exports = { Charcuterie, Viande, Patisserie, Macaron, Poisson, CaveVins, Cocktails, ProduitsExcep };
