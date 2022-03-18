@@ -37,11 +37,14 @@ const IndexTraiteurViande = () => {
     // eslint-disable-next-line
   }, []);
 
-  const addCard = (index) => {
-    index._id = viandes.length + 1 && poissons.length + 1 && charcuteries.length + 1;
+  const addCardViande = (index) => {
+    index._id = viandes.length + 1;
     setViandes([...viandes, index]);
+  };
+
+  const addCardPoisson = (index) => {
+    index._id = poissons.length + 1;
     setPoissons([...poissons, index]);
-    setCharcuteries([...charcuteries, index]);
   };
 
   const deleteCard = (id) => {
@@ -75,7 +78,15 @@ const IndexTraiteurViande = () => {
           </div>
         ) : (
           <div className='table'>
-            <Table viandes={viandes} poissons={poissons} charcuteries={charcuteries} editRow={editRow} deleteCard={deleteCard} addCard={addCard} />
+            <Table
+              viandes={viandes}
+              poissons={poissons}
+              charcuteries={charcuteries}
+              editRow={editRow}
+              deleteCard={deleteCard}
+              addCardViande={addCardViande}
+              addCardPoisson={addCardPoisson}
+            />
           </div>
         )}
       </div>

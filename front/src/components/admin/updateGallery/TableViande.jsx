@@ -16,7 +16,7 @@ const TableViande = (props) => {
       .then((res) => {
         console.log(res);
         setViandePostCard({ pictureUrl: '', name: '', price: '' });
-        props.addCard(viandePostCard);
+        props.addCardViande(viandePostCard);
       })
       .catch((err) => {
         console.log(err);

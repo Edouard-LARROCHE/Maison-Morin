@@ -44,7 +44,7 @@ const Table = (props) => {
                   editRow={props.editRow}
                   deleteCard={props.deleteCard}
                   handleDelete={handleDelete}
-                  addCard={props.addCard}
+                  addCardViande={props.addCardViande}
                 />
               </div>
             );
@@ -52,7 +52,13 @@ const Table = (props) => {
           case 'poisson':
             return (
               <div>
-                <TablePoisson poissons={props.poissons} editRow={props.editRow} deleteCard={props.deleteCard} handleDelete={handleDelete} />
+                <TablePoisson
+                  poissons={props.poissons}
+                  editRow={props.editRow}
+                  deleteCard={props.deleteCard}
+                  handleDelete={handleDelete}
+                  addCardPoisson={props.addCardPoisson}
+                />
               </div>
             );
 
