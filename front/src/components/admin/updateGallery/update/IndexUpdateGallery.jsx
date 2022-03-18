@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Table from '../Table';
 import UpdateForm from './UpdateForm';
-import PostForm from './PostForm';
 
 const IndexTraiteurViande = () => {
   const [viandes, setViandes] = useState([]);
@@ -38,10 +37,18 @@ const IndexTraiteurViande = () => {
     // eslint-disable-next-line
   }, []);
 
-  const addCard = (index) => {
-    index._id = viandes.length + 1 && poissons.length + 1 && charcuteries.length + 1;
+  const addCardViande = (index) => {
+    index._id = viandes.length + 1;
     setViandes([...viandes, index]);
+  };
+
+  const addCardPoisson = (index) => {
+    index._id = poissons.length + 1;
     setPoissons([...poissons, index]);
+  };
+
+  const addCardCharcuterie = (index) => {
+    index._id = charcuteries.length + 1;
     setCharcuteries([...charcuteries, index]);
   };
 
@@ -75,14 +82,19 @@ const IndexTraiteurViande = () => {
             <UpdateForm editing={editing} setEditing={setEditing} currentCard={currentCard} updateCard={updateCard} />
           </div>
         ) : (
-          <div>
-            <h1>AJOUTER</h1>
-            <PostForm addCard={addCard} />
+          <div className='table'>
+            <Table
+              viandes={viandes}
+              poissons={poissons}
+              charcuteries={charcuteries}
+              editRow={editRow}
+              deleteCard={deleteCard}
+              addCardViande={addCardViande}
+              addCardPoisson={addCardPoisson}
+              addCardCharcuterie={addCardCharcuterie}
+            />
           </div>
         )}
-      </div>
-      <div className='table'>
-        <Table viandes={viandes} poissons={poissons} charcuteries={charcuteries} editRow={editRow} deleteCard={deleteCard} />
       </div>
     </div>
   );

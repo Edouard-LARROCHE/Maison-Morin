@@ -1,8 +1,40 @@
-import React from 'react';
+import React, { useState } from 'react';
+import axios from 'axios';
 
 const TableViande = (props) => {
+  const [viandePostCard, setViandePostCard] = useState({ pictureUrl: '', name: '', price: '' });
+
+  const handleChange = (e) => {
+    setViandePostCard({ ...viandePostCard, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    await axios
+      .post('http://localhost:5500/picture/traiteur/viande', viandePostCard)
+      .then((res) => {
+        console.log(res);
+        setViandePostCard({ pictureUrl: '', name: '', price: '' });
+        props.addCardViande(viandePostCard);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
   return (
     <div>
+      <h1>AJOUTER</h1>
+      <div>
+        <form onSubmit={handleSubmit}>
+          <input type='text' placeholder='Photo URL' name='pictureUrl' value={viandePostCard.pictureUrl} onChange={handleChange} />
+
+          <input type='text' placeholder='Nom' name='name' value={viandePostCard.name} onChange={handleChange} />
+
+          <input type='text' placeholder='Prix' name='price' value={viandePostCard.price} onChange={handleChange} />
+          <button>AJOUTER</button>
+        </form>
+      </div>
       <h3>Données actuelles : GALLERIE VIANDES</h3>
       <table>
         <thead>

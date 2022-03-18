@@ -39,14 +39,26 @@ const Table = (props) => {
           case 'viande':
             return (
               <div>
-                <TableViande viandes={props.viandes} editRow={props.editRow} deleteCard={props.deleteCard} handleDelete={handleDelete} />
+                <TableViande
+                  viandes={props.viandes}
+                  editRow={props.editRow}
+                  deleteCard={props.deleteCard}
+                  handleDelete={handleDelete}
+                  addCardViande={props.addCardViande}
+                />
               </div>
             );
 
           case 'poisson':
             return (
               <div>
-                <TablePoisson poissons={props.poissons} editRow={props.editRow} deleteCard={props.deleteCard} handleDelete={handleDelete} />
+                <TablePoisson
+                  poissons={props.poissons}
+                  editRow={props.editRow}
+                  deleteCard={props.deleteCard}
+                  handleDelete={handleDelete}
+                  addCardPoisson={props.addCardPoisson}
+                />
               </div>
             );
 
@@ -58,6 +70,7 @@ const Table = (props) => {
                   editRow={props.editRow}
                   deleteCard={props.deleteCard}
                   handleDelete={handleDelete}
+                  addCardCharcuterie={props.addCardCharcuterie}
                 />
               </div>
             );
