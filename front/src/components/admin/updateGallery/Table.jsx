@@ -39,7 +39,13 @@ const Table = (props) => {
           case 'viande':
             return (
               <div>
-                <TableViande viandes={props.viandes} editRow={props.editRow} deleteCard={props.deleteCard} handleDelete={handleDelete} />
+                <TableViande
+                  viandes={props.viandes}
+                  editRow={props.editRow}
+                  deleteCard={props.deleteCard}
+                  handleDelete={handleDelete}
+                  addCard={props.addCard}
+                />
               </div>
             );
 
