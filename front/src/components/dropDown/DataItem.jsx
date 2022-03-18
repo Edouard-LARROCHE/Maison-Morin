@@ -22,6 +22,9 @@ const DataItem = ({ navData, arrow }) => {
           <Link to="/produits-d'exception">
             <div className='navitem-woa'>{navData.mainTitleWOA2}</div>
           </Link>
+          <Link to="/cave-a-vins">
+            <div className='navitem-woa'>{navData.mainTitleWOA3}</div>
+          </Link>
         </li>
         <li>{arrow}</li>
       </div>
@@ -53,26 +56,6 @@ const DataItem = ({ navData, arrow }) => {
                 <li>
                   <Link to='/patisseries-macarons'>
                     <div className='items'>{item.titlePatisserieMacaron}</div>
-                  </Link>
-                </li>
-                <li>
-                  <Link to='/cave-rouge'>
-                    <div className='items'>{item.titleCaveRouge}</div>
-                  </Link>
-                </li>
-                <li>
-                  <Link to='/cave-blanc'>
-                    <div className='items'>{item.titleCaveBlanc}</div>
-                  </Link>
-                </li>
-                <li>
-                  <Link to='/cave-rose'>
-                    <div className='items'>{item.titleCaveRosé}</div>
-                  </Link>
-                </li>
-                <li>
-                  <Link to='/cave-bulle'>
-                    <div className='items'>{item.titleCaveBulle}</div>
                   </Link>
                 </li>
               </ul>

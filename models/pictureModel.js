@@ -76,7 +76,7 @@ const picturePatisseriesSchema = mongoose.Schema(
   },
 );
 
-const pictureRougeSchema = mongoose.Schema(
+const pictureCaveVinsSchema = mongoose.Schema(
   {
     pictureUrl: {
       type: String,
@@ -91,66 +91,10 @@ const pictureRougeSchema = mongoose.Schema(
     },
   },
   {
-    collection: 'pictureVinRouge',
+    collection: 'pictureCaveVins',
   },
 );
 
-const pictureBlancSchema = mongoose.Schema(
-  {
-    pictureUrl: {
-      type: String,
-      required: true,
-    },
-    name: {
-      type: String,
-      required: true,
-    },
-    price: {
-      type: String,
-    },
-  },
-  {
-    collection: 'pictureVinBlanc',
-  },
-);
-
-const pictureRoseSchema = mongoose.Schema(
-  {
-    pictureUrl: {
-      type: String,
-      required: true,
-    },
-    name: {
-      type: String,
-      required: true,
-    },
-    price: {
-      type: String,
-    },
-  },
-  {
-    collection: 'pictureVinRose',
-  },
-);
-
-const pictureBullesSchema = mongoose.Schema(
-  {
-    pictureUrl: {
-      type: String,
-      required: true,
-    },
-    name: {
-      type: String,
-      required: true,
-    },
-    price: {
-      type: String,
-    },
-  },
-  {
-    collection: 'pictureBulles',
-  },
-);
 
 const pictureCocktailsSchema = mongoose.Schema(
   {
@@ -194,11 +138,8 @@ const Viande = mongoose.model('Viande', pictureViandeSchema);
 const Patisserie = mongoose.model('Cake', picturePatisseriesSchema);
 const Charcuterie = mongoose.model('Charcuterie', pictureCharcuterieSchema);
 const Poisson = mongoose.model('Poisson', picturePoissonSchema);
-const VinRouge = mongoose.model('VinRouge', pictureRougeSchema);
-const VinBlanc = mongoose.model('VinBlanc', pictureBlancSchema);
-const VinRose = mongoose.model('VinRose', pictureRoseSchema);
-const Bulles = mongoose.model('Bulles', pictureBullesSchema);
+const CaveVins = mongoose.model('CaveVins', pictureCaveVinsSchema);
 const Cocktails = mongoose.model('Cocktails', pictureCocktailsSchema);
 const ProduitsExcep = mongoose.model('ProduitsExcep', pictureProduitsExcepSchema);
 
-module.exports = { Charcuterie, Viande, Patisserie, Poisson, VinRouge, VinBlanc, VinRose, Bulles, Cocktails, ProduitsExcep };
+module.exports = { Charcuterie, Viande, Patisserie, Poisson, CaveVins, Cocktails, ProduitsExcep };

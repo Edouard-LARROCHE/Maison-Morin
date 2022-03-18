@@ -17,9 +17,9 @@ const data = [
   },
   {
     id: 3,
-    mainTitle: 'CAVE À VIN',
-    arrow: <KeyboardArrowDownIcon style={{ size: 'small' }} />,
-    subItem: [{ id: 3 }, { titleCaveRouge: 'ROUGE' }, { titleCaveBlanc: 'BLANC' }, { titleCaveRosé: 'ROSÉ' }, { titleCaveBulle: 'BULLES' }],
+    mainTitleWOA3: 'CAVE À VINS',
+    arrow: <KeyboardArrowDownIcon style={{ opacity: 0 }}  />,
+    subItem: [{ id: 3 }],
   },
   {
     id: 4,
