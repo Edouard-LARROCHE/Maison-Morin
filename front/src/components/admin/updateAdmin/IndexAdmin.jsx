@@ -28,7 +28,7 @@ const IndexAdmin = () => {
 
   return (
     <div className='update-login'>
-      <h2>1. MODIFIER LE NOM ET MPD DE CONNEXION</h2>
+      <h2>1. MODIFIER LE NOM ET MDP DE CONNEXION</h2>
       <div>
         <form>
           <input type='text' id='name' value={name} placeholder='Nom' onChange={(e) => setName(e.target.value)} />

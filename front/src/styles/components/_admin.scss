@@ -1,10 +1,12 @@
 /**************** ADMIN ****************/
 
 .admin {
+  background-color: $color-6;
   background-image: url('.././../.././public/assets/papier-peint-10.png');
   background-size: 100%;
   border: 5px solid $color-2;
   padding: 2rem;
+  min-height: 100vh;
 
   button {
     border: none;
@@ -13,7 +15,7 @@
     cursor: pointer;
     color: $color-2;
     background: $color-3;
-    width: 6.5rem;
+    width: 7.5rem;
 
     &:hover {
       opacity: 0.8;
@@ -100,10 +102,6 @@
       color: $color-3;
     }
   }
-
-  p {
-    margin-right: 3rem;
-  }
 }
 
 .switch-nav {
@@ -121,5 +119,17 @@
     &:hover {
       opacity: 0.8;
     }
+  }
+}
+
+table {
+  margin-top: 2em;
+  width: 100%;
+}
+
+td {
+  text-align: center;
+  button {
+    display: inline;
   }
 }
