@@ -5,9 +5,6 @@ const Notice = () => {
   return (
     <>
       <div className='legal-notice'>
-        <div className='V-position'>
-          <img className='V' src='/logo/V.png' alt='V' style={{ width: '3rem' }} />
-        </div>
         <h1>1. Mentions légales</h1>
         <div className='line-all'></div>
         <ul>
