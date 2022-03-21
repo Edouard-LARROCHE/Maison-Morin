@@ -3,12 +3,32 @@ import axios from 'axios';
 
 const TableViande = (props) => {
   const [viandePostCard, setViandePostCard] = useState({ pictureUrl: '', name: '', price: '' });
+  const [editing, setEditing] = useState(false);
+  const [id, setId] = useState(viandePostCard.id);
 
-  const handleChange = (e) => {
+  const initialForm = { _id: null, pictureUrl: '', name: '', price: '' };
+  const [currentCard, setCurrentCard] = useState(initialForm);
+
+  const updateCard = (id, updateCard) => {
+    setEditing(false);
+    setViandePostCard(viandePostCard.map((index) => (index._id === id ? updateCard : index)));
+  };
+
+  const editRow = (index) => {
+    setEditing(true);
+    setCurrentCard({ id: index._id, pictureUrl: index.pictureUrl, name: index.name, price: index.price });
+  };
+
+  const handleChangePost = (e) => {
     setViandePostCard({ ...viandePostCard, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = async (e) => {
+  const handleChangeUpdate = (e) => {
+    const { name, value } = e.target;
+    setCurrentCard({ ...currentCard, [name]: value });
+  };
+
+  const handleSubmitPost = async (e) => {
     e.preventDefault();
 
     await axios
@@ -22,19 +42,52 @@ const TableViande = (props) => {
         console.log(err);
       });
   };
+
+  const handleSubmitUpdate = async (e) => {
+    e.preventDefault();
+    if (!currentCard.pictureUrl || !currentCard.name || !currentCard.price) return;
+    updateCard(viandePostCard.id, viandePostCard);
+
+    await axios
+      .put(`http://localhost:5500/picture/traiteur/viande/${id}`, currentCard)
+      .then((res) => {
+        console.log(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
   return (
     <div>
-      <h1>AJOUTER</h1>
-      <div>
-        <form onSubmit={handleSubmit}>
-          <input type='text' placeholder='Photo URL' name='pictureUrl' value={viandePostCard.pictureUrl} onChange={handleChange} />
+      {editing ? (
+        <div>
+          <h1>MODIFIER</h1>
+          <form onSubmit={handleSubmitUpdate}>
+            <input type='text' placeholder='Photo URL' name='pictureUrl' value={currentCard.pictureUrl} onChange={handleChangeUpdate} />
 
-          <input type='text' placeholder='Nom' name='name' value={viandePostCard.name} onChange={handleChange} />
+            <input type='text' placeholder='Nom' name='name' value={currentCard.name} onChange={handleChangeUpdate} />
 
-          <input type='text' placeholder='Prix' name='price' value={viandePostCard.price} onChange={handleChange} />
-          <button>AJOUTER</button>
-        </form>
-      </div>
+            <input type='text' placeholder='Prix' name='price' value={currentCard.price} onChange={handleChangeUpdate} />
+
+            <button>MODIFIER</button>
+            <button onClick={() => setEditing(false)}>ANNULER</button>
+          </form>
+        </div>
+      ) : (
+        <div>
+          <h1>AJOUTER</h1>
+          <form onSubmit={handleSubmitPost}>
+            <input type='text' placeholder='Photo URL' name='pictureUrl' value={viandePostCard.pictureUrl} onChange={handleChangePost} />
+
+            <input type='text' placeholder='Nom' name='name' value={viandePostCard.name} onChange={handleChangePost} />
+
+            <input type='text' placeholder='Prix' name='price' value={viandePostCard.price} onChange={handleChangePost} />
+            <button>AJOUTER</button>
+          </form>
+        </div>
+      )}
+
       <h3>Données actuelles : GALLERIE VIANDES</h3>
       <table>
         <thead>
@@ -63,7 +116,7 @@ const TableViande = (props) => {
                 <td>
                   <button
                     onClick={() => {
-                      props.editRow(index);
+                      editRow(index);
                     }}>
                     MODIFIER
                   </button>
