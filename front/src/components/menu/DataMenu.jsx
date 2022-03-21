@@ -44,7 +44,7 @@ const DataMenu = () => {
   return (
     <div className='global-card-menu'>
       {dataMenu.map((index) => (
-        <div key={index}>
+        <div key={index.id}>
           <CardMenu img={index.img} desc={index.desc} descHover={index.descHover} />
         </div>
       ))}
