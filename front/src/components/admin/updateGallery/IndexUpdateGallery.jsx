@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import Table from '../Table';
-import UpdateForm from './UpdateForm';
+import Table from './Table';
+// import UpdateForm from './UpdateForm';
 
 const IndexTraiteurViande = () => {
   const [viandes, setViandes] = useState([]);
@@ -13,7 +13,7 @@ const IndexTraiteurViande = () => {
   const [cocktails, setCocktails] = useState([]);
   const [prodexcep, setProdExcep] = useState([]);
 
-  const [data, setData] = useState([]);
+  // const [data, setData] = useState([]);
   const [editing, setEditing] = useState(false);
 
   const initialForm = { _id: null, pictureUrl: '', name: '', price: '' };
@@ -115,10 +115,10 @@ const IndexTraiteurViande = () => {
     setVins(vins.filter((index) => index._id !== id));
   };
 
-  const updateCard = (id, updateCard) => {
-    setEditing(false);
-    setData(data.map((index) => (index._id === id ? updateCard : index)));
-  };
+  // const updateCard = (id, updateCard) => {
+  //   setEditing(false);
+  //   setData(data.map((index) => (index._id === id ? updateCard : index)));
+  // };
 
   const editRow = (index) => {
     setEditing(true);
@@ -132,35 +132,34 @@ const IndexTraiteurViande = () => {
         <h3>GALLERIE</h3>
       </div>
       <div>
-        {editing ? (
+        {/* {editing ? (
           <div>
             <h1>MODIFIER</h1>
             <UpdateForm editing={editing} setEditing={setEditing} currentCard={currentCard} updateCard={updateCard} />
           </div>
-        ) : (
-          <div className='table'>
-            <Table
-              viandes={viandes}
-              poissons={poissons}
-              charcuteries={charcuteries}
-              patisseries={patisseries}
-              macarons={macarons}
-              vins={vins}
-              cocktails={cocktails}
-              prodexcep={prodexcep}
-              editRow={editRow}
-              deleteCard={deleteCard}
-              addCardViande={addCardViande}
-              addCardPoisson={addCardPoisson}
-              addCardCharcuterie={addCardCharcuterie}
-              addCardMacaron={addCardMacaron}
-              addCardPatisserie={addCardPatisserie}
-              addCardCocktail={addCardCocktail}
-              addCardProduitExcep={addCardProduitExcep}
-              addCardVin={addCardVin}
-            />
-          </div>
-        )}
+        ) : ( */}
+        <div className='table'>
+          <Table
+            viandes={viandes}
+            poissons={poissons}
+            charcuteries={charcuteries}
+            patisseries={patisseries}
+            macarons={macarons}
+            vins={vins}
+            cocktails={cocktails}
+            prodexcep={prodexcep}
+            editRow={editRow}
+            deleteCard={deleteCard}
+            addCardViande={addCardViande}
+            addCardPoisson={addCardPoisson}
+            addCardCharcuterie={addCardCharcuterie}
+            addCardMacaron={addCardMacaron}
+            addCardPatisserie={addCardPatisserie}
+            addCardCocktail={addCardCocktail}
+            addCardProduitExcep={addCardProduitExcep}
+            addCardVin={addCardVin}
+          />
+        </div>
       </div>
     </div>
   );

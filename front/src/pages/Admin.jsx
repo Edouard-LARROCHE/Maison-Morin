@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import IndexAdmin from '../components/admin/updateAdmin/IndexAdmin';
-import IndexUpdateGallery from '../components/admin/updateGallery/update/IndexUpdateGallery';
+import IndexUpdateGallery from '../components/admin/updateGallery/IndexUpdateGallery';
 
 const Admin = () => {
   return (
