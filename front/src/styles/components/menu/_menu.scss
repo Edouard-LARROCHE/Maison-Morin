@@ -1,0 +1,52 @@
+.menu {
+  background: $color-6;
+  padding: 2rem;
+  margin: 4rem;
+
+  h1 {
+    text-align: center;
+  }
+}
+
+.global-card-menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  .card-menu {
+    margin: 2rem;
+    cursor: pointer;
+
+    img {
+      width: 28rem;
+      height: 28rem;
+    }
+
+    .desc {
+      text-align: center;
+      transition: 0.5s ease-in-out;
+    }
+
+    .desc-hover {
+      color: #fff;
+      text-align: center;
+      position: relative;
+      top: -250px;
+      opacity: 0;
+      transition: 0.5s ease-in-out;
+    }
+
+    &:hover {
+      .desc {
+        opacity: 0;
+        transition: 0.5s ease-in-out;
+      }
+
+      .desc-hover {
+        top: -290px;
+        opacity: 1;
+        transition: 0.5s ease-in-out;
+      }
+    }
+  }
+}

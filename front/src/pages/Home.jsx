@@ -13,6 +13,7 @@ import Band from '../components/home/Band';
 import Avis from '../components/Avis';
 import TopArrow from '../components/TopArrow';
 import Selection from '../components/Selection';
+import Menu from '../components/menu/Menu';
 
 const Home = () => {
   return (
@@ -23,6 +24,7 @@ const Home = () => {
         <MenuDrop />
         <Band />
         <Selection />
+        <Menu />
         {/* <Header />
         <DisplayScroll />
         <DisplayScrollSecond />
