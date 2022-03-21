@@ -14,6 +14,7 @@ import Avis from '../components/Avis';
 import TopArrow from '../components/TopArrow';
 import Selection from '../components/Selection';
 import Menu from '../components/menu/Menu';
+import BottomCard from '../components/home/BottomCard';
 
 const Home = () => {
   return (
@@ -25,6 +26,7 @@ const Home = () => {
         <Band />
         <Selection />
         <Menu />
+        <BottomCard />
         {/* <Header />
         <DisplayScroll />
         <DisplayScrollSecond />
