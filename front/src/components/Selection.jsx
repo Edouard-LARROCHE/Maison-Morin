@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 import Loader from './Loader';
 
@@ -24,7 +25,7 @@ const Selection = () => {
 
   return (
     <div className='selection'>
-      <h2>SELECTIONNÉ POUR VOUS</h2>
+      <h1>SELECTIONNÉ POUR VOUS</h1>
       <div className='display-selection'>
         {loading ? (
           <div>
@@ -33,10 +34,19 @@ const Selection = () => {
         ) : (
           dataSelection.map((selection) => (
             <div className='selection-card' key={selection._id}>
-              <img src={selection.pictureUrl} alt='MAISON-MORIN' />
-              <div className='info-card'>
-                <h3> {selection.name} </h3>
-                <h3> {selection.price} </h3>
+              <div className='selection-picture'>
+                <img src={selection.pictureUrl} alt='MAISON-MORIN' />
+              </div>
+              <div className='selection-info'>
+                <h2> {selection.name} </h2>
+                <h4> {selection.price} </h4>
+              </div>
+              <div className='selection-button'>
+                <Link to='/contact'>
+                  <div className='btn-selection'>
+                    <p>COMMANDER</p>
+                  </div>
+                </Link>
               </div>
             </div>
           ))
