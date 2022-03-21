@@ -14,7 +14,7 @@ const IndexAdmin = () => {
       password: password,
     };
     await axios
-      .put('http://localhost:5500/login/621f6aa824ffab4ecdeda3d4', updateData)
+      .put('http://localhost:5500/login/' + process.env.REACT_APP_ID, updateData)
       .then((res) => {
         setData(res.data);
         console.log(data);
