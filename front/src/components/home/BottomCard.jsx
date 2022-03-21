@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 const BottomCard = () => {
   return (
     <div className='traiteur-card'>
+      <h1>TRAITEUR INCONTOURNABLE</h1>
       <p>TRAITEUR DEPUIS 1989</p>
       <br />
       <div className='line2' />
