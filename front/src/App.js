@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { Routes, Route } from 'react-router-dom';
 // IMPORT
 import Cookie from './components/Cookie';
@@ -16,7 +16,7 @@ import TraiteurViande from './pages/gallery/traiteur/TraiteurViande';
 import TraiteurPoisson from './pages/gallery/traiteur/TraiteurPoisson';
 import NosPatisseries from './pages/gallery/patisserie/NosPatisseries';
 import PatisserieMacaron from './pages/gallery/patisserie/PatisserieMacaron';
-import PageCaveVins from './pages/gallery/PageCaveVins'
+import PageCaveVins from './pages/gallery/PageCaveVins';
 import PageCocktails from './pages/gallery/PageCocktails';
 import PageProduitsDexception from './pages/gallery/PageProduitsDexception';
 // DARK MODE
@@ -27,34 +27,50 @@ import ScrollToTop from './components/ScrollToTop';
 function App() {
   const theme = useContext(ThemeContext);
   const darkMode = theme.state.darkMode;
+  const [transition, setTransition] = useState(true);
+
+  useEffect(() => {
+    const trans = () => {
+      setTransition(true);
+    };
+    setTimeout(() => {
+      trans();
+      setTransition(false);
+    }, 2500);
+  }, []);
 
   return (
     <>
-      <div className={`bg ${darkMode ? 'bg-dark' : 'bg-light'}`}>
-        <div className={`para ${darkMode ? 'para-dark' : 'para-light'}`}>
-          <Cookie />
-          <ScrollToTop>
-            <Routes>
-              <Route exact path='/' element={<Home />} />
-              <Route path='/mentions-legales' element={<LegalNotice />} />
-              <Route path='/cookie' element={<Cookies />} />
-              <Route path='/contact' element={<FormContact />} />
-              <Route path='/update' element={<Admin />} />
-              <Route path='/boutique' element={<Shop />} />
-              <Route path='/maison-morin' element={<MaisonMorin />} />
-              <Route path='/transition' element={<Transition />} />
-              <Route path='/traiteur-viandes' element={<TraiteurViande />} />
-              <Route path='/traiteur-poissons' element={<TraiteurPoisson />} />
-              <Route path='/traiteur-charcuterie' element={<TraiteurCharcuterie />} />
-              <Route path='/patisseries' element={<NosPatisseries />} />
-              <Route path='/patisseries-macarons' element={<PatisserieMacaron />} />
-              <Route path='/cave-a-vins' element={<PageCaveVins />} />
-              <Route path='/cocktails' element={<PageCocktails />} />
-              <Route path="/produits-d'exception" element={<PageProduitsDexception />} />
-            </Routes>
-          </ScrollToTop>
+      {transition ? (
+        <div>
+          <Transition />
         </div>
-      </div>
+      ) : (
+        <div className={`bg ${darkMode ? 'bg-dark' : 'bg-light'}`}>
+          <div className={`para ${darkMode ? 'para-dark' : 'para-light'}`}>
+            <Cookie />
+            <ScrollToTop>
+              <Routes>
+                <Route exact path='/' element={<Home />} />
+                <Route path='/mentions-legales' element={<LegalNotice />} />
+                <Route path='/cookie' element={<Cookies />} />
+                <Route path='/contact' element={<FormContact />} />
+                <Route path='/update' element={<Admin />} />
+                <Route path='/boutique' element={<Shop />} />
+                <Route path='/maison-morin' element={<MaisonMorin />} />
+                <Route path='/traiteur-viandes' element={<TraiteurViande />} />
+                <Route path='/traiteur-poissons' element={<TraiteurPoisson />} />
+                <Route path='/traiteur-charcuterie' element={<TraiteurCharcuterie />} />
+                <Route path='/patisseries' element={<NosPatisseries />} />
+                <Route path='/patisseries-macarons' element={<PatisserieMacaron />} />
+                <Route path='/cave-a-vins' element={<PageCaveVins />} />
+                <Route path='/cocktails' element={<PageCocktails />} />
+                <Route path="/produits-d'exception" element={<PageProduitsDexception />} />
+              </Routes>
+            </ScrollToTop>
+          </div>
+        </div>
+      )}
     </>
   );
 }
