@@ -3,7 +3,7 @@ import DataMenu from './DataMenu';
 
 const Menu = () => {
   return (
-    <div>
+    <div className='menu'>
       <h1>NOTRE CARTE</h1>
       <DataMenu />
     </div>
