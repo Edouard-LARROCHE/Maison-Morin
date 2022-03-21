@@ -4,7 +4,7 @@ const pictureSelection = express.Router();
 const { Selection } = require('../models/pictureModel');
 
 pictureSelection.get('/', (req, res) => {
-  ProduitsExcep.find()
+  Selection.find()
     .then((picture) => res.status(200).json(picture))
     .catch((error) => res.status(400).json({ error }));
 });
