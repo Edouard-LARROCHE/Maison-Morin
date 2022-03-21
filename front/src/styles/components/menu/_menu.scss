@@ -15,10 +15,15 @@
 
   .card-menu {
     margin: 2rem;
+    cursor: pointer;
 
     img {
       width: 28rem;
       height: 28rem;
+    }
+
+    h2 {
+      text-align: center;
     }
   }
 }
