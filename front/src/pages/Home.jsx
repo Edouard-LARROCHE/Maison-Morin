@@ -13,6 +13,7 @@ import DisplayScrollThird from '../components/home/DisplayScrollThird';
 import Avis from '../components/Avis';
 import Transition from './Transition';
 import TopArrow from '../components/TopArrow';
+import Selection from '../components/Selection';
 
 const Home = () => {
   const [transition, setTransition] = useState(true);
@@ -39,6 +40,7 @@ const Home = () => {
           <HeadBand />
           <MenuDrop />
           <Band />
+          <Selection />
           <Header />
           <DisplayScroll />
           <DisplayScrollSecond />

@@ -152,6 +152,25 @@ const pictureProduitsExcepSchema = mongoose.Schema(
   },
 );
 
+const pictureSelection = mongoose.Schema(
+  {
+    pictureUrl: {
+      type: String,
+      required: true,
+    },
+    name: {
+      type: String,
+      required: true,
+    },
+    price: {
+      type: String,
+    },
+  },
+  {
+    collection: 'pictureSelection',
+  },
+);
+
 const Viande = mongoose.model('Viande', pictureViandeSchema);
 const Patisserie = mongoose.model('Cake', picturePatisseriesSchema);
 const Macaron = mongoose.model('Macaron', pictureMacaronsSchema);
@@ -160,5 +179,6 @@ const Poisson = mongoose.model('Poisson', picturePoissonSchema);
 const CaveVins = mongoose.model('CaveVins', pictureCaveVinsSchema);
 const Cocktails = mongoose.model('Cocktails', pictureCocktailsSchema);
 const ProduitsExcep = mongoose.model('ProduitsExcep', pictureProduitsExcepSchema);
+const Selection = mongoose.model('Selection', pictureSelection);
 
-module.exports = { Charcuterie, Viande, Patisserie, Macaron, Poisson, CaveVins, Cocktails, ProduitsExcep };
+module.exports = { Charcuterie, Viande, Patisserie, Macaron, Poisson, CaveVins, Cocktails, ProduitsExcep, Selection };
