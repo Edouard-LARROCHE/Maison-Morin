@@ -26,7 +26,7 @@ $black: #333;
   /* Firefox */
   * {
     scrollbar-width: 14px;
-    scrollbar-color: #be9a4a #F0F0F0;
+    scrollbar-color: $color-3 #F0F0F0;
   }
 
   /* Chrome, Edge, and Safari */
