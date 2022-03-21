@@ -5,7 +5,12 @@
 
   h1 {
     text-align: center;
+    letter-spacing: 0.1rem;
   }
+}
+
+.text-selection-menu {
+  margin: 2rem 11rem 0 11rem;
 }
 
 .global-card-menu {
@@ -18,8 +23,8 @@
     cursor: pointer;
 
     img {
-      width: 28rem;
-      height: 28rem;
+      width: 26rem;
+      height: 26rem;
     }
 
     .desc {
@@ -37,6 +42,11 @@
     }
 
     &:hover {
+      img {
+        transition: 0.5s ease-in-out;
+        opacity: 0.8;
+      }
+
       .desc {
         opacity: 0;
         transition: 0.5s ease-in-out;
