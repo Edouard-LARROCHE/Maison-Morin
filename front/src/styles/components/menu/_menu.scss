@@ -18,8 +18,8 @@
     cursor: pointer;
 
     img {
-      width: 28rem;
-      height: 28rem;
+      width: 26rem;
+      height: 26rem;
     }
 
     .desc {
@@ -37,6 +37,11 @@
     }
 
     &:hover {
+      img {
+        transition: 0.5s ease-in-out;
+        opacity: 0.8;
+      }
+
       .desc {
         opacity: 0;
         transition: 0.5s ease-in-out;
