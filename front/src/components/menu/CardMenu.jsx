@@ -4,8 +4,8 @@ const CardMenu = (props) => {
   return (
     <div className='card-menu'>
       <img src={props.img} alt='MAISON-MORIN' />
-      <h2> {props.descHover} </h2>
-      <h2> {props.desc} </h2>
+      <h2 className='desc'> {props.descHover} </h2>
+      <h1 className='desc-hover'> {props.desc} </h1>
     </div>
   );
 };

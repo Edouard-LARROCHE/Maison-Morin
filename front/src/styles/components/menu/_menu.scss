@@ -22,8 +22,29 @@
       height: 28rem;
     }
 
-    h2 {
+    .desc {
       text-align: center;
+    }
+
+    .desc-hover {
+      color: #fff;
+      text-align: center;
+      position: relative;
+      top: -250px;
+      opacity: 0;
+    }
+
+    &:hover {
+      .desc {
+        opacity: 0;
+        transition: 0.5s ease-in-out;
+      }
+
+      .desc-hover {
+        top: -290px;
+        opacity: 1;
+        transition: 0.5s ease-in-out;
+      }
     }
   }
 }
