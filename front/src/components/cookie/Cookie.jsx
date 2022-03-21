@@ -4,9 +4,6 @@ const Cookie = () => {
   return (
     <>
       <div className='cook-use'>
-        <div className='V-position'>
-          <img className='V' src='/logo/V.png' alt='V' style={{ width: '3rem' }} />
-        </div>
         <h1>1. Que sont les cookies ? Comment sont-ils utilisés ?</h1>
         <div className='line-all'></div>
         <p>
