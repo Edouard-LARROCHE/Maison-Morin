@@ -5,7 +5,6 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon index.js",
-    "watch": "nodemon index.js",
     "build": "cd front && npm run build",
     "install-front": "cd front && npm install",
     "heroku-postbuild": "npm run install-front && npm run build"
