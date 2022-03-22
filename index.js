@@ -3,6 +3,7 @@ const app = express();
 require('./config/db');
 const bodyParser = require('body-parser');
 const cors = require('cors');
+const path = require('path');
 
 const postsRoutes = require('./routes/postsRoute');
 const loginRoutes = require('./routes/userRoute');
@@ -29,6 +30,7 @@ const corsOption = {
 
 app.use(cors(corsOption));
 app.use(bodyParser.json());
+app.use(express.static('front/build'));
 
 app.use('/posts', postsRoutes);
 app.use('/login', loginRoutes);
@@ -43,5 +45,9 @@ app.use('/picture/cave/vins', pictureCaveVinsRoutes);
 app.use('/picture/cocktails', pictureCocktailsRoutes);
 app.use('/picture/produitsExcep', pictureProduitsExcepRoutes);
 app.use('/picture/selection', pictureSelectionRoutes);
+
+app.get('/*', (_, res) => {
+  res.sendFile(path.join(__dirname, './front/build/index.html'));
+});
 
 app.listen(5500, () => console.log('Server started: 5500'));
