@@ -15,7 +15,7 @@ const Cocktails = () => {
     const fetchData = async () => {
       setLoading(true);
       try {
-        const { data: res } = await axios.get('http://localhost:5500/picture/cocktails');
+        const { data: res } = await axios.get('/picture/cocktails');
         setData(res);
       } catch (err) {
         console.log(err);
