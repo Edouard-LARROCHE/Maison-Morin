@@ -14,22 +14,20 @@ import BottomCard from '../components/home/BottomCard';
 
 const Home = () => {
   return (
-    <>
-      <div>
-        <NavBar />
-        <HeadBand />
-        <MenuDrop />
-        <Band />
-        <Selection />
-        <Menu />
-        <BottomCard />
-        <Infos />
-        <Avis />
-        <NewsLetter />
-        <Footer />
-        <TopArrow />
-      </div>
-    </>
+    <div>
+      <NavBar />
+      <HeadBand />
+      <MenuDrop />
+      <Band />
+      <Selection />
+      <Menu />
+      <BottomCard />
+      <Infos />
+      <Avis />
+      <NewsLetter />
+      <Footer />
+      <TopArrow />
+    </div>
   );
 };
 
