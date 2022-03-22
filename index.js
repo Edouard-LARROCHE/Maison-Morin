@@ -5,6 +5,8 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const path = require('path');
 
+const PORT = process.env.PORT || '8080';
+
 const postsRoutes = require('./routes/postsRoute');
 const loginRoutes = require('./routes/userRoute');
 const uploadRoutes = require('./routes/uploadRoute');
@@ -50,4 +52,4 @@ app.get('/*', (_, res) => {
   res.sendFile(path.join(__dirname, './front/build/index.html'));
 });
 
-app.listen(5500, () => console.log('Server started: 5500'));
+app.listen(PORT, () => console.log(`Server started: ${PORT}`));
