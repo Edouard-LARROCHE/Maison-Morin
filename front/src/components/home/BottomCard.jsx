@@ -9,14 +9,14 @@ const BottomCard = () => {
       <br />
       <div className='line2' />
       <br />
-      <p>
-        Comme tout traiteur qui se respecte, nous proposons des produits « maison » fait à base de productions majoritairement locales. Et surtout, il
+      <p className='traiteur-txt'>
+        Comme tout traiteur qui se respecte, nous proposons des produits « maison » faits à base de productions majoritairement locales. Et surtout, il
         a innové en rajoutant la pâtisserie, une véritable passion pour lui, et se spécialise également sur le poisson. « Faire perdurer en local,
         tout en gardant l’esprit de famille, un commerce de plus de 30 ans, c’est un véritable challenge que je veux gagner ! »
       </p>
       <br />
       <div className='card-traiteur'>
-        <h3>Bien évidement, la Maison Morin peut également organiser vos soirées pour répondre à toutes les attentes de ses clients.</h3>
+        <h3>Bien évidement, la Maison Morin peut également organiser vos soirées pour répondre à toutes vos attentes.</h3>
         <div className='btn-position'>
           <div className='btn-card'>
             <Link to='/contact'>

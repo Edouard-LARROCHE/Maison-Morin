@@ -18,7 +18,7 @@ export default function Avis() {
             spaceBetween={30}
             loop={true}
             autoplay={{
-                delay: 4500,
+                delay: 7000,
                 disableOnInteraction: false,
             }}
             pagination={{
@@ -52,6 +52,16 @@ export default function Avis() {
                 <div className="arrow-sl"></div>
                 <div className="comment-author-sl">
                     <h1>Stéphane Leblanc</h1>
+                </div>
+            </div>
+            </SwiperSlide>
+            <SwiperSlide>
+            <div className="comment-box-actu">
+                <h3> “ C’est un véritable passage de témoins père-fils qui a eu lieu autour de la Maison Morin à Barbizon (Seine-et-Marne), 
+                    très prisée des habitants et des touristes... ” <a href="https://actu.fr/ile-de-france/barbizon_77022/seine-et-marne-a-barbizon-la-maison-morin-change-dans-la-continuite_46487631.html" target='_blank'>lire l'article</a></h3>
+                <div className="arrow-actu"></div>
+                <div className="comment-author-actu">
+                    <h1>Actu.fr</h1>
                 </div>
             </div>
             </SwiperSlide>
