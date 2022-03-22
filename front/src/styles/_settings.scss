@@ -25,13 +25,13 @@ $black: #333;
 /* ===== Scrollbar CSS ===== */
   /* Firefox */
   * {
-    scrollbar-width: 14px;
-    scrollbar-color: $color-3 #F0F0F0;
+    scrollbar-width: 13px;
+    scrollbar-color: $color-2 #F0F0F0;
   }
 
   /* Chrome, Edge, and Safari */
   *::-webkit-scrollbar {
-    width: 14px;
+    width: 13px;
   }
 
   *::-webkit-scrollbar-track {
@@ -39,7 +39,9 @@ $black: #333;
   }
 
   *::-webkit-scrollbar-thumb {
-    background-color: $color-3;
+    background-color: $color-2;
+    border-radius: 10px;
+    border: 1px solid #F0F0F0;
   }
 
 /********* STYLE GLOBAL ************/

@@ -25,7 +25,7 @@ const Selection = () => {
 
   return (
     <div className='selection'>
-      <h1>SELECTIONNÉ POUR VOUS</h1>
+      <h1>SELECTIONNÉS POUR VOUS</h1>
       <div className='text-selection'>
         <p>NOTRE SELECTION DU MOMENT</p>
         <p style={{ fontSize: '10px', marginTop: '0.5rem' }}>POUR EN SAVOIR PLUS SUR LES PRODUITS SÉLECTIONNÉS, RENDEZ-VOUS SUR LA GALLERIE</p>
