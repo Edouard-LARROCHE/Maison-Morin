@@ -33,7 +33,7 @@ const NavBar = () => {
         </div>
         <div className='logo-home'>
           <Link to='/'>
-            <img src='/logo/Maison Morin Or.png' alt='logo-morin' />
+            <img src='/logo/Maison-Morin-Or.png' alt='logo-morin' />
           </Link>
         </div>
         <div className='other-nav'>

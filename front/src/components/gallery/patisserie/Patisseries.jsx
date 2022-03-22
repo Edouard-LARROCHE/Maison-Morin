@@ -15,7 +15,7 @@ const Patisseries = () => {
     const fetchData = async () => {
       setLoading(true);
       try {
-        const { data: res } = await axios.get('http://localhost:5500/picture/patisserie/patisseries');
+        const { data: res } = await axios.get('/picture/patisserie/patisseries');
         setData(res);
       } catch (err) {
         console.log(err);
@@ -49,9 +49,9 @@ const Patisseries = () => {
         <div className='Infos-enterText'>
           <h1>NOS PÂTISSERIES</h1>
           <p className='Presentation-gallery'>
-            Nos pâtisseries ont chacune leur multitude de saveurs, pour votre propre plaisir, celui de vos amis ou un évènement? Du gâteau au chocolat à la tarte aux fruits, 
-            nos pâtisseries artisanales signées Maison Morin. Venez découvrir des douceurs qui vont enjoliver votre journée !
-            </p>
+            Nos pâtisseries ont chacune leur multitude de saveurs, pour votre propre plaisir, celui de vos amis ou un évènement? Du gâteau au chocolat
+            à la tarte aux fruits, nos pâtisseries artisanales signées Maison Morin. Venez découvrir des douceurs qui vont enjoliver votre journée !
+          </p>
         </div>
       </div>
       <div className='text-acceuil-fetch'>
