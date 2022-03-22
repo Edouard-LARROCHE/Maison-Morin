@@ -168,7 +168,7 @@
 }
 
 .comment-author-stp {
-  margin-top: 120px;
+  margin-top: 119px;
   h1 {
     color: black;
     font-style: italic;
@@ -310,6 +310,42 @@
 
 .comment-author-vd {
   margin-top: 100px;
+  margin-left: 12px;
+  h1 {
+    color: black;
+    font-style: italic;
+  }
+}
+
+/******* BOX ACTU *******/
+
+.comment-box-actu {
+  height: 6.5em;
+  width: 30em;
+  margin-bottom: 4.8em;
+  background-color: #fff;
+  position: relative;
+  h3 {
+    position: absolute;
+    z-index: 2;
+    box-sizing: border-box;
+    padding: 0.8em;
+  }
+}
+
+.arrow-actu {
+  position: absolute;
+  height: 2em;
+  width: 2em;
+  background-color: #fff;
+  bottom: -7px;
+  left: 250px;
+  transform: rotate(45deg);
+  z-index: 1;
+}
+
+.comment-author-actu {
+  margin-top: 141px;
   margin-left: 12px;
   h1 {
     color: black;

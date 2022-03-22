@@ -37,7 +37,7 @@
       bottom: 1em;
       background-color: $color-2;
       cursor: pointer;
-      transition: 0.2s background-color ease-in;
+      transition: 0.2s opacity ease-in;
 
       & p {
         font-size: 1.5em;
@@ -50,7 +50,7 @@
     }
 
     .btn-band:hover {
-      background-color: #1c5299;
+      opacity: 0.8;
     }
   }
 }

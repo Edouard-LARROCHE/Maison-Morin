@@ -1,5 +1,5 @@
 .traiteur-card {
-  margin: 50px 400px 50px 400px;
+  margin: 50px 450px 50px 450px;
   padding: 2rem;
   background: $color-6;
 
@@ -7,6 +7,10 @@
     text-align: center;
     letter-spacing: 0.1rem;
     margin-bottom: 2rem;
+  }
+
+  & .traiteur-txt {
+    margin: 0 2em 0 2em;
   }
 }
 
