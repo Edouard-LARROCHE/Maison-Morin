@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js",
+    "start": "nodemon index.js && serve -s build",
     "build": "cd front && npm run build",
     "install-front": "cd front && npm install",
     "heroku-postbuild": "npm run install-front && npm run build"
@@ -24,6 +24,7 @@
     "mongoose": "^6.2.0",
     "multer": "^1.4.4",
     "nodemon": "^2.0.15",
+    "serve": "^13.0.2",
     "uuid": "^8.3.2"
   }
 }
