@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const path = require('path');
 
-const PORT = process.env.PORT || '8080';
+const PORT = process.env.PORT || '5500';
 
 const postsRoutes = require('./routes/postsRoute');
 const loginRoutes = require('./routes/userRoute');
