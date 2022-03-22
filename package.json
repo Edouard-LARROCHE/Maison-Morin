@@ -10,7 +10,7 @@
     "heroku-postbuild": "npm run install-front && npm run build"
   },
   "engines": {
-    "node": "16.x"
+    "node": "16.13.1"
   },
   "keywords": [],
   "author": "",
