@@ -22,7 +22,7 @@ const DataItem = ({ navData, arrow }) => {
           <Link to="/produits-d'exception">
             <div className='navitem-woa'>{navData.mainTitleWOA2}</div>
           </Link>
-          <Link to="/cave-a-vins">
+          <Link to='/cave-a-vins'>
             <div className='navitem-woa'>{navData.mainTitleWOA3}</div>
           </Link>
         </li>
