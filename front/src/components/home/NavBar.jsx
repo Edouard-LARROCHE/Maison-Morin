@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import IndexModal from '../LoginModal/indexModal';
 import ButtonSwitch from '../darkMode/ButtonSwitch';
+import MenuOpenIcon from '@material-ui/icons/MenuOpen';
+import CloseIcon from '@material-ui/icons/Close';
 
 const NavBar = () => {
   const [open, setOpen] = useState(false);
@@ -54,6 +56,9 @@ const NavBar = () => {
             <li>
               <IndexModal />
             </li>
+            <div className='resp-menu' onClick={handleOpen}>
+              {open ? <MenuOpenIcon className='icon-menu' /> : <CloseIcon className='icon-menu' />}
+            </div>
           </ul>
         </div>
       </div>

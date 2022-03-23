@@ -56,8 +56,19 @@
   }
 }
 
+.resp-menu {
+  display: none;
+
+  .icon-menu {
+    color: $color-3;
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+  }
+}
+
 @media screen and (max-width: 1024px) {
-  .nav-bar ul {
-    display: none;
+  .resp-menu {
+    display: block;
   }
 }
