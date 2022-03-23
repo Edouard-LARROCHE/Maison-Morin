@@ -62,7 +62,7 @@
   display: none;
 
   .icon-menu {
-    color: $color-3;
+    color: $color-4;
     cursor: pointer;
     height: 40px;
     width: 40px;
@@ -84,8 +84,13 @@
     right: 20px;
   }
 
-  .other-nav {
-    opacity: 0;
+  .other-nav ul {
+    padding-top: 0;
+    padding-right: 5rem;
+
+    li {
+      margin: 1.8rem;
+    }
   }
 
   .resp-nav {
