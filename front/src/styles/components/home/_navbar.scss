@@ -69,6 +69,10 @@
   }
 }
 
+.menu-drop-open {
+  display: none;
+}
+
 /*********** @MEDIA*************/
 
 @media screen and (max-width: 1024px) {
@@ -125,6 +129,16 @@
   .logo-home {
     img {
       width: 10rem !important;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .menu-drop-open {
+    display: block;
+
+    .gallery {
+      cursor: pointer;
     }
   }
 }

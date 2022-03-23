@@ -16,6 +16,15 @@ const NavBar = () => {
     setOpen(false);
   };
 
+  const gallery = document.querySelector('.gallery');
+  const items = document.querySelector('.items-gallery');
+  items.style.display = 'none';
+  const handleClick = () => {
+    if (gallery) {
+      items.style.display = 'block';
+    }
+  };
+
   return (
     <>
       <div className='all-nav'>
@@ -41,6 +50,17 @@ const NavBar = () => {
                 <p>Nous contacter</p>
               </Link>
             </li>
+            <div className='menu-drop-open'>
+              <li onClick={handleClick}>
+                <p className='gallery'>Gallerie</p>
+              </li>
+              <div className='items-gallery'>
+                <p>test menu drop</p>
+                <p>test menu drop</p>
+                <p>test menu drop</p>
+                <p>test menu drop</p>
+              </div>
+            </div>
           </ul>
         </div>
         <div className='logo-home'>
