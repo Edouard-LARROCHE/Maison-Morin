@@ -145,3 +145,20 @@
     }
   }
 }
+
+@media screen and (min-width: 370px) and (max-width: 766px) {
+  .other-nav ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: -65px;
+    top: 65px;
+
+    li {
+      margin: -2.5rem;
+    }
+    .switch-mode {
+      transform: translateX(3px);
+    }
+  }
+}
