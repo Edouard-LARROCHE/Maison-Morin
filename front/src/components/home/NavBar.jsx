@@ -12,11 +12,12 @@ const NavBar = () => {
 
   const handleOpen = () => {
     setOpen(!open);
+    setItems('items-gallery');
   };
 
   const handleClose = () => {
     setOpen(false);
-    setItems('items-gallery');
+    setGallery();
   };
 
   const handleClick = () => {

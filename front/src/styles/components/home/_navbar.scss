@@ -122,10 +122,6 @@
     align-content: center;
   }
 
-  li {
-    height: 1.5rem;
-  }
-
   .logo-home {
     img {
       width: 10rem !important;
@@ -137,16 +133,15 @@
   .menu-drop-open {
     display: block;
 
-    // .gallery {
-    //   cursor: pointer;
-    // }
-
     .items-gallery {
-      display: none;
+      opacity: 0;
+      transition: 0.5s ease-in-out;
     }
 
     .items-gallery-after {
-      display: block;
+      transition: 0.5s ease-in-out;
+      opacity: 1;
+      cursor: pointer;
     }
   }
 }
