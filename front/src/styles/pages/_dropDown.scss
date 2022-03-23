@@ -72,3 +72,29 @@
   background: $color-2;
   margin-bottom: 5rem;
 }
+
+/*********** @MEDIA*************/
+
+@media screen and (min-width: 870px) and (max-width: 1024px) {
+  .header-nav {
+    li {
+      font-size: 14px;
+    }
+  }
+
+  .navitem {
+    margin: 2rem 1.5rem 0 1.5rem !important;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 870px) {
+  .header-nav {
+    li {
+      font-size: 14px;
+    }
+  }
+
+  .navitem {
+    margin: 2rem 0.8rem 0 0.8rem !important;
+  }
+}

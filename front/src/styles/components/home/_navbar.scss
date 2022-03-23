@@ -38,11 +38,6 @@
       width: 12rem;
       cursor: pointer;
     }
-
-    h2 {
-      letter-spacing: 0.2rem;
-      padding-top: 1rem;
-    }
   }
 }
 
@@ -67,14 +62,24 @@
   display: none;
 
   .icon-menu {
-    color: $color-3;
+    color: $color-4;
     cursor: pointer;
     height: 40px;
     width: 40px;
   }
 }
 
+.menu-drop-open {
+  display: none;
+}
+
+/*********** @MEDIA*************/
+
 @media screen and (max-width: 1024px) {
+  .all-nav {
+    grid-template-rows: 12rem;
+  }
+
   .resp-menu {
     z-index: 1000;
     display: block;
@@ -83,16 +88,22 @@
     right: 20px;
   }
 
-  .other-nav {
-    opacity: 0;
+  .other-nav ul {
+    padding-top: 0;
+    padding-right: 5rem;
+
+    li {
+      margin: 1.8rem;
+    }
   }
 
   .resp-nav {
     display: flex;
     flex-direction: column;
+    align-items: center;
     width: 100vw;
     height: 100vh;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: -100%;
     opacity: 0;
@@ -111,17 +122,31 @@
     align-content: center;
   }
 
-  .nav-bar {
-    li {
+  li {
+    height: 1.5rem;
+  }
+
+  .logo-home {
+    img {
+      width: 10rem !important;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .menu-drop-open {
+    display: block;
+
+    // .gallery {
+    //   cursor: pointer;
+    // }
+
+    .items-gallery {
+      display: none;
     }
 
-    p {
-      display: flex;
-      justify-content: center;
-
-      &:hover {
-        color: $color-3;
-      }
+    .items-gallery-after {
+      display: block;
     }
   }
 }
