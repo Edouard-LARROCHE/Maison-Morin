@@ -16,6 +16,10 @@
   }
 }
 
+.drop-without {
+  display: none;
+}
+
 /**********DATA ITEM ***********/
 .down {
   font-family: $font-1;
@@ -96,5 +100,15 @@
 
   .navitem {
     margin: 2rem 0.8rem 0 0.8rem !important;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .header-nav {
+    display: none;
+  }
+
+  .drop-without {
+    display: block;
   }
 }

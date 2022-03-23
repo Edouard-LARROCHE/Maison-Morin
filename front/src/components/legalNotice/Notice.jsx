@@ -26,7 +26,7 @@ const Notice = () => {
         </ul>
         <div className='hosted'>
           <h2>Hébergement du site www.maison-morin.com : </h2>
-          <p>Firebase (GOOGLE)</p>
+          <p>www.heroku.com</p>
         </div>
       </div>
       <h2>Conception / Design / Développement : </h2>

@@ -122,10 +122,6 @@
     align-content: center;
   }
 
-  li {
-    height: 1.5rem;
-  }
-
   .logo-home {
     img {
       width: 10rem !important;
@@ -137,16 +133,32 @@
   .menu-drop-open {
     display: block;
 
-    // .gallery {
-    //   cursor: pointer;
-    // }
-
     .items-gallery {
-      display: none;
+      opacity: 0;
+      transition: 0.5s ease-in-out;
     }
 
     .items-gallery-after {
-      display: block;
+      transition: 0.5s ease-in-out;
+      opacity: 1;
+      cursor: pointer;
+    }
+  }
+}
+
+@media screen and (min-width: 370px) and (max-width: 766px) {
+  .other-nav ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: -65px;
+    top: 65px;
+
+    li {
+      margin: -2.5rem;
+    }
+    .switch-mode {
+      transform: translateX(3px);
     }
   }
 }

@@ -1,6 +1,7 @@
 import React from 'react';
 import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
 import DataItem from './DataItem';
+import DropWithoutMenu from './DropWithoutMenu';
 
 const data = [
   {
@@ -18,7 +19,7 @@ const data = [
   {
     id: 3,
     mainTitleWOA3: 'CAVE À VINS',
-    arrow: <KeyboardArrowDownIcon style={{ opacity: 0 }}  />,
+    arrow: <KeyboardArrowDownIcon style={{ opacity: 0 }} />,
     subItem: [{ id: 3 }],
   },
   {
@@ -37,13 +38,18 @@ const data = [
 
 const MenuDrop = () => {
   return (
-    <div className='header-nav'>
-      <ul>
-        {data.map((item) => {
-          return <DataItem key={item.id} navData={item} arrow={item.arrow} />;
-        })}
-      </ul>
-    </div>
+    <>
+      <div className='drop-without'>
+        <DropWithoutMenu />
+      </div>
+      <div className='header-nav'>
+        <ul>
+          {data.map((item) => {
+            return <DataItem key={item.id} navData={item} arrow={item.arrow} />;
+          })}
+        </ul>
+      </div>
+    </>
   );
 };
 
