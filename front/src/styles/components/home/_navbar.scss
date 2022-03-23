@@ -93,7 +93,7 @@
     align-items: center;
     width: 100vw;
     height: 100vh;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: -100%;
     opacity: 0;
@@ -114,7 +114,5 @@
 
   li {
     height: 1.5rem;
-    p {
-    }
   }
 }
