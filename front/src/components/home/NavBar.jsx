@@ -20,7 +20,7 @@ const NavBar = () => {
     <>
       <div className='all-nav'>
         <div className='nav-bar'>
-          <ul>
+          <ul className={open ? 'resp-nav active' : 'resp-nav'}>
             <li className='underline' onClick={handleClose}>
               <Link to='/'>
                 <p>Accueil</p>
@@ -56,10 +56,10 @@ const NavBar = () => {
             <li>
               <IndexModal />
             </li>
-            <div className='resp-menu' onClick={handleOpen}>
-              {open ? <MenuOpenIcon className='icon-menu' /> : <CloseIcon className='icon-menu' />}
-            </div>
           </ul>
+        </div>
+        <div className='resp-menu' onClick={handleOpen}>
+          {open ? <CloseIcon className='icon-menu' /> : <MenuOpenIcon className='icon-menu' />}
         </div>
       </div>
     </>

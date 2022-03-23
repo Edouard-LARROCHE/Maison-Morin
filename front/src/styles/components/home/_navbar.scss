@@ -69,6 +69,37 @@
 
 @media screen and (max-width: 1024px) {
   .resp-menu {
+    z-index: 1000;
     display: block;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+  }
+
+  .other-nav {
+    opacity: 0;
+  }
+
+  .resp-nav {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    opacity: 0;
+    transition: all 1s ease;
+    z-index: 1000;
+  }
+
+  .resp-nav.active {
+    position: fixed;
+    background: $black;
+    left: 0;
+    opacity: 0.9;
+    transition: all 0.5s ease;
+    z-index: 1000;
+    align-content: center;
   }
 }
