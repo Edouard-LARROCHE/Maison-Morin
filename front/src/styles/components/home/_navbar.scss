@@ -13,6 +13,13 @@
 
     li {
       margin: 2rem;
+      text-decoration: none;
+      background: linear-gradient(to top, $color-3 0%, $color-3 10%, transparent 10.01%) no-repeat left bottom / 0 100%;
+      transition: background-size 0.5s;
+
+      &:hover {
+        background-size: 100% 100%;
+      }
     }
 
     p {
@@ -95,11 +102,26 @@
 
   .resp-nav.active {
     position: fixed;
+    height: 100vh;
     background: $black;
     left: 0;
     opacity: 0.9;
     transition: all 0.5s ease;
     z-index: 1000;
     align-content: center;
+  }
+
+  .nav-bar {
+    li {
+    }
+
+    p {
+      display: flex;
+      justify-content: center;
+
+      &:hover {
+        color: $color-3;
+      }
+    }
   }
 }
