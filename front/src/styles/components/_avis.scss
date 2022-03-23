@@ -352,3 +352,123 @@
     font-style: italic;
   }
 }
+
+@media screen and (max-width: 1024px) {
+  .container-avis {
+    grid-template-columns: 10% 80% 10%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container-avis {
+    grid-template-columns: 0.5% 99% 0.5%;
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .comment-box-actu {
+    height: 9em;
+    width: 20em;
+    margin-bottom: 5.6em;
+    background-color: #fff;
+    position: relative;
+    h3 {
+      position: absolute;
+      z-index: 2;
+      box-sizing: border-box;
+      padding: 0.8em;
+    }
+  }
+  
+  .arrow-actu {
+    position: absolute;
+    height: 2em;
+    width: 2em;
+    background-color: #fff;
+    bottom: -7px;
+    left: 180px;
+    transform: rotate(45deg);
+    z-index: 1;
+  }
+  
+  .comment-author-actu {
+    margin-top: 171px;
+    margin-left: 12px;
+    h1 {
+      color: black;
+      font-style: italic;
+    }
+  }
+
+  .comment-box-kn {
+    height: 10em;
+    width: 20em;
+    margin-bottom: 6.6em;
+    background-color: #fff;
+    position: relative;
+    h3 {
+      position: absolute;
+      z-index: 2;
+      box-sizing: border-box;
+      padding: 0.8em;
+    }
+  }
+  
+  .arrow-kn {
+    position: absolute;
+    height: 2em;
+    width: 2em;
+    background-color: #fff;
+    bottom: -7px;
+    left: 180px;
+    transform: rotate(45deg);
+    z-index: 1;
+  }
+  
+  .comment-author-kn {
+    margin-top: 189px;
+    margin-left: 12px;
+    h1 {
+      color: black;
+      font-style: italic;
+    }
+  }
+
+  .comment-box-cm {
+    height: 10em;
+    width: 20em;
+    margin-bottom: 6.6em;
+    background-color: #fff;
+    position: relative;
+    h3 {
+      position: absolute;
+      z-index: 2;
+      box-sizing: border-box;
+      padding: 0.8em;
+    }
+  }
+  
+  .arrow-cm {
+    position: absolute;
+    height: 2em;
+    width: 2em;
+    background-color: #fff;
+    bottom: -7px;
+    left: 180px;
+    transform: rotate(45deg);
+    z-index: 1;
+  }
+  
+  .comment-author-cm {
+    margin-top: 189px;
+    margin-left: 12px;
+    h1 {
+      color: black;
+      font-style: italic;
+    }
+  }
+}
