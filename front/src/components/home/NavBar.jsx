@@ -21,22 +21,22 @@ const NavBar = () => {
       <div className='all-nav'>
         <div className='nav-bar'>
           <ul>
-            <li className='underline'>
+            <li className='underline' onClick={handleClose}>
               <Link to='/'>
                 <p>Accueil</p>
               </Link>
             </li>
-            <li className='underline'>
+            <li className='underline' onClick={handleClose}>
               <Link to='/maison-morin'>
                 <p>La Maison Morin</p>
               </Link>
             </li>
-            <li className='underline'>
+            <li className='underline' onClick={handleClose}>
               <Link to='/boutique'>
                 <p>Notre boutique</p>
               </Link>
             </li>
-            <li className='underline'>
+            <li className='underline' onClick={handleClose}>
               <Link to='/contact'>
                 <p>Nous contacter</p>
               </Link>
