@@ -90,6 +90,7 @@
   .resp-nav {
     display: flex;
     flex-direction: column;
+    align-items: center;
     width: 100vw;
     height: 100vh;
     position: absolute;
@@ -111,17 +112,9 @@
     align-content: center;
   }
 
-  .nav-bar {
-    li {
-    }
-
+  li {
+    height: 1.5rem;
     p {
-      display: flex;
-      justify-content: center;
-
-      &:hover {
-        color: $color-3;
-      }
     }
   }
 }
