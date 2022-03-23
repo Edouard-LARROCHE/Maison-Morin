@@ -13,6 +13,13 @@
 
     li {
       margin: 2rem;
+      text-decoration: none;
+      background: linear-gradient(to top, $color-3 0%, $color-3 10%, transparent 10.01%) no-repeat left bottom / 0 100%;
+      transition: background-size 0.5s;
+
+      &:hover {
+        background-size: 100% 100%;
+      }
     }
 
     p {
@@ -53,5 +60,68 @@
 
   .switch-mode {
     transform: translateY(3px);
+  }
+}
+
+.resp-menu {
+  display: none;
+
+  .icon-menu {
+    color: $color-3;
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .resp-menu {
+    z-index: 1000;
+    display: block;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+  }
+
+  .other-nav {
+    opacity: 0;
+  }
+
+  .resp-nav {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    opacity: 0;
+    transition: all 1s ease;
+    z-index: 1000;
+  }
+
+  .resp-nav.active {
+    position: fixed;
+    height: 100vh;
+    background: $black;
+    left: 0;
+    opacity: 0.9;
+    transition: all 0.5s ease;
+    z-index: 1000;
+    align-content: center;
+  }
+
+  .nav-bar {
+    li {
+    }
+
+    p {
+      display: flex;
+      justify-content: center;
+
+      &:hover {
+        color: $color-3;
+      }
+    }
   }
 }
