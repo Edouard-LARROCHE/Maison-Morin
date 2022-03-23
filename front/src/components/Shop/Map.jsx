@@ -4,23 +4,25 @@ import LocationOnIcon from '@material-ui/icons/LocationOn';
 import DirectionsIcon from '@material-ui/icons/Directions';
 import GoogleMapReact from 'google-map-react';
 
-const Logo = () => <LocationOnIcon style={{ color: '#ddb355' }} />;
+const Logo = () => <LocationOnIcon style={{ color: '#ddb355', position: "absolute", top: "70%", left: "50%", transform: "translate(-50%, -70%)" }} />;
+const center = { lat: 48.4455116674167, lng: 2.604843033954841 };
 
 class Map extends Component {
   static defaultProps = {
-    center: {
-      lat: 48.44,
-      lng: 2.6,
-    },
-    zoom: 6,
+    center: { center }
   };
 
   render() {
     return (
       <div className='map'>
         <div className='google-map' style={{ height: '90vh' }}>
-          <GoogleMapReact bootstrapURLKeys={{ key: '' }} defaultCenter={this.props.center} defaultZoom={this.props.zoom}>
-            <Logo lat={48.44551} lng={2.60484} />
+          <GoogleMapReact 
+          bootstrapURLKeys={{ key: 'AIzaSyAurhxyG4RRTkNaouoap3MngT1vijy-CZs' }} 
+          defaultCenter={center} 
+          defaultZoom={18}
+          center={center}
+          >
+            <Logo lat={48.4455116674167} lng={2.604843033954841} />
           </GoogleMapReact>
         </div>
         <div className='location-shop'>

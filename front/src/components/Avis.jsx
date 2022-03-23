@@ -10,8 +10,8 @@ import 'swiper/scss/navigation';
 export default function Avis() {
     return (
         <div className="container-avis">              
-            <div className='avis-btn' href="#">
-                <a href="">Donner un avis Google</a>
+            <div className='avis-btn'>
+                <a href="https://g.page/r/Ca2x0BESGrArEAo/review" target='_blank'>Donner un avis Google</a>
             </div>
         <Swiper
             slidesPerView={1}
