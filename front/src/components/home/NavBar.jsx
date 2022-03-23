@@ -11,7 +11,7 @@ const NavBar = () => {
           <ul>
             <li className='underline'>
               <Link to='/'>
-                <p>Acceuil</p>
+                <p>Accueil</p>
               </Link>
             </li>
             <li className='underline'>
