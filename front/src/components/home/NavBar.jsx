@@ -7,6 +7,8 @@ import CloseIcon from '@material-ui/icons/Close';
 
 const NavBar = () => {
   const [open, setOpen] = useState(false);
+  const [items, setItems] = useState('items-gallery');
+  const [gallery, setGallery] = useState('items-gallery-after');
 
   const handleOpen = () => {
     setOpen(!open);
@@ -14,14 +16,12 @@ const NavBar = () => {
 
   const handleClose = () => {
     setOpen(false);
+    setItems('items-gallery');
   };
 
-  const gallery = document.querySelector('.gallery');
-  const items = document.querySelector('.items-gallery');
-  items.style.display = 'none';
   const handleClick = () => {
     if (gallery) {
-      items.style.display = 'block';
+      setItems();
     }
   };
 
@@ -52,9 +52,9 @@ const NavBar = () => {
             </li>
             <div className='menu-drop-open'>
               <li onClick={handleClick}>
-                <p className='gallery'>Gallerie</p>
+                <p className={gallery}>Gallerie</p>
               </li>
-              <div className='items-gallery'>
+              <div className={items}>
                 <p>test menu drop</p>
                 <p>test menu drop</p>
                 <p>test menu drop</p>

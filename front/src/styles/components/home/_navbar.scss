@@ -137,8 +137,16 @@
   .menu-drop-open {
     display: block;
 
-    .gallery {
-      cursor: pointer;
+    // .gallery {
+    //   cursor: pointer;
+    // }
+
+    .items-gallery {
+      display: none;
+    }
+
+    .items-gallery-after {
+      display: block;
     }
   }
 }
