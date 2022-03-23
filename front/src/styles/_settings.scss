@@ -23,26 +23,26 @@ $white: #ddd;
 $black: #333;
 
 /* ===== Scrollbar CSS ===== */
-  /* Firefox */
-  * {
-    scrollbar-width: 13px;
-    scrollbar-color: $color-2 #F0F0F0;
-  }
+/* Firefox */
+* {
+  scrollbar-width: 13px;
+  scrollbar-color: $color-2 #f0f0f0;
+}
 
-  /* Chrome, Edge, and Safari */
-  *::-webkit-scrollbar {
-    width: 13px;
-  }
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 13px;
+}
 
-  *::-webkit-scrollbar-track {
-    background: #F0F0F0;
-  }
+*::-webkit-scrollbar-track {
+  background: #f0f0f0;
+}
 
-  *::-webkit-scrollbar-thumb {
-    background-color: $color-2;
-    border-radius: 10px;
-    border: 1px solid #F0F0F0;
-  }
+*::-webkit-scrollbar-thumb {
+  background-color: $color-2;
+  border-radius: 10px;
+  border: 1px solid #f0f0f0;
+}
 
 /********* STYLE GLOBAL ************/
 * {
