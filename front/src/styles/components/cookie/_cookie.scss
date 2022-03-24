@@ -1,5 +1,5 @@
 .cookies {
-  margin: -3rem 500px 0 500px;
+  margin: -3rem 400px 0 400px;
 }
 
 /*********** COOKIES **********/
@@ -31,5 +31,20 @@
 
 /*********** @MEDIA*************/
 
-@media scree and (max-width: 0px) {
+@media screen and (max-width: 1440px) {
+  .cookies {
+    margin: -3rem 200px 0 200px;
+  }
+}
+
+@media screen and (min-width: 810px) and (max-width: 1440px) {
+  .cookies {
+    margin: -3rem 100px 0 100px;
+  }
+}
+
+@media screen and (max-width: 809px) {
+  .cookies {
+    margin: -3rem 20px 0 20px;
+  }
 }
