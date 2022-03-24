@@ -68,21 +68,21 @@ const Footer = () => {
           </li>
           <li style={{ color: '#012f6b' }}> {new Date().getFullYear()} </li>
         </ul>
-      </div>
-      <div className='social'>
-        <h2>RETROUVEZ L'UNIVERS MAISON MORIN</h2>
-        <ul>
-          <li>
-            <a href='https://www.facebook.com' target='_blank' rel='noopener noreferrer'>
-              <FacebookIcon />
-            </a>
-          </li>
-          <li>
-            <a href='https://www.instagram.com/maison_morin/?hl=fr' target='_blank' rel='noopener noreferrer'>
-              <InstagramIcon />
-            </a>
-          </li>
-        </ul>
+        <div className='social'>
+          <h2>RETROUVEZ L'UNIVERS MAISON MORIN</h2>
+          <ul>
+            <li>
+              <a href='https://www.facebook.com' target='_blank' rel='noopener noreferrer'>
+                <FacebookIcon />
+              </a>
+            </li>
+            <li>
+              <a href='https://www.instagram.com/maison_morin/?hl=fr' target='_blank' rel='noopener noreferrer'>
+                <InstagramIcon />
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   );
