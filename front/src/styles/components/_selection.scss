@@ -13,6 +13,7 @@
 
   .display-selection {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
   }
 
@@ -100,5 +101,18 @@
   }
   to {
     opacity: 1;
+  }
+}
+
+/*********** @MEDIA*************/
+
+@media screen and (min-width: 370px) and (max-width: 568px) {
+  .text-selection {
+    margin: 2rem 0.5rem 0 0.5rem !important;
+  }
+
+  .selection-picture {
+    width: 23rem !important;
+    margin: 0 0.5rem 0 0.5rem;
   }
 }
