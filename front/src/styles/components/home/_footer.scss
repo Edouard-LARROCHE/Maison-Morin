@@ -79,7 +79,6 @@
 
     li,
     a {
-      transform: translateY(5px);
       color: $color-2;
       margin: 0 0.3rem 0 0.3rem;
       transition: 0.3s ease-in-out;
@@ -88,5 +87,36 @@
         color: $color-3;
       }
     }
+  }
+}
+
+/*********** @MEDIA*************/
+
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+  .bottom-footer {
+    ul {
+      margin: 2rem;
+    }
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .bottom-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    ul {
+      margin: 1rem;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .social {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    position: static;
   }
 }
