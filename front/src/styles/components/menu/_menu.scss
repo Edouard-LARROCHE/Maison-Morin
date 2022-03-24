@@ -60,3 +60,34 @@
     }
   }
 }
+
+/*********** @MEDIA*************/
+
+@media screen and (max-width: 1180px) {
+  .menu {
+    margin: 0.5rem;
+  }
+
+  .text-selection-menu {
+    margin: 2rem 2rem 0 2rem;
+  }
+
+  .global-card-menu {
+    .card-menu {
+      margin: 1.5rem;
+    }
+  }
+}
+
+@media screen and (min-width: 370px) and (max-width: 568px) {
+  .text-selection-menu {
+    margin: 2rem 0rem 0 0rem !important;
+  }
+
+  .card-menu {
+    img {
+      width: 22rem !important;
+      height: 22rem !important;
+    }
+  }
+}

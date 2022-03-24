@@ -2,8 +2,6 @@ import React from 'react';
 import CopyrightIcon from '@material-ui/icons/Copyright';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import InstagramIcon from '@material-ui/icons/Instagram';
-import TwitterIcon from '@material-ui/icons/Twitter';
-import ShareIcon from '@material-ui/icons/Share';
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
@@ -70,29 +68,21 @@ const Footer = () => {
           </li>
           <li style={{ color: '#012f6b' }}> {new Date().getFullYear()} </li>
         </ul>
-      </div>
-      <div className='social'>
-        <h2>RETROUVEZ L'UNIVERS MAISON MORIN</h2>
-        <ul>
-          <li>
-            <a href='https://www.facebook.com' target='_blank' rel='noopener noreferrer'>
-              <FacebookIcon />
-            </a>
-          </li>
-          <li>
-            <a href='https://www.instagram.com/maison_morin/?hl=fr' target='_blank' rel='noopener noreferrer'>
-              <InstagramIcon />
-            </a>
-          </li>
-          <li>
-            <a href='https://www.twitter.com' target='_blank' rel='noopener noreferrer'>
-              <TwitterIcon />
-            </a>
-          </li>
-          <li>
-            <ShareIcon style={{ cursor: 'pointer' }} />
-          </li>
-        </ul>
+        <div className='social'>
+          <h2>RETROUVEZ L'UNIVERS MAISON MORIN</h2>
+          <ul>
+            <li>
+              <a href='https://www.facebook.com' target='_blank' rel='noopener noreferrer'>
+                <FacebookIcon />
+              </a>
+            </li>
+            <li>
+              <a href='https://www.instagram.com/maison_morin/?hl=fr' target='_blank' rel='noopener noreferrer'>
+                <InstagramIcon />
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   );
