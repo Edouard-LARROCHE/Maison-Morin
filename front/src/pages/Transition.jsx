@@ -7,9 +7,9 @@ const Transition = () => {
       <div className='transition-pages'>
         <div className='img-position'>
           <img src='/logo/Maison-Morin-Or.png' alt='logo' style={{ width: '13rem' }} />
-        </div>
-        <div className='transition-position-spinner'>
-          <Loader />
+          <div className='transition-position-spinner'>
+            <Loader />
+          </div>
         </div>
       </div>
     </>

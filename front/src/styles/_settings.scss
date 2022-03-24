@@ -202,10 +202,11 @@ span {
   }
 
   .transition-position-spinner {
-    height: 70%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    position: absolute;
+    top: 110%;
+    left: 0;
+    bottom: 0;
+    right: 0;
   }
 }
 
