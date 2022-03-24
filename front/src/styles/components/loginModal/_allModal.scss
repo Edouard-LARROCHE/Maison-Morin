@@ -64,3 +64,15 @@
   text-transform: uppercase;
   border: none;
 }
+
+/*********** @MEDIA*************/
+
+@media screen and (max-width: 430px) {
+  .textfield {
+    width: 17rem;
+  }
+
+  .modal {
+    padding: 1rem;
+  }
+}
