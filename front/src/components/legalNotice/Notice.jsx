@@ -60,12 +60,12 @@ const Notice = () => {
             </div>
           </div>
           <div className='adress'>
-            <p>Allée RAVEL</p>
-            <p>92320 Châtillon</p>
-            <span>CONTACT : </span>
             <a href='https://portfolio-c12b7.firebaseapp.com/' target='_blank' rel='noopener noreferrer'>
-              <div className='portfolio'>https://portfolio-c12b7.firebaseapp.com/</div>
+              <div className='portfolio'>
+                <i className='fa fa-address-card' style={{ width: '1rem' }} />
+              </div>
             </a>
+            <p>Région Ile De France</p>
           </div>
         </div>
         <div className='dev-al'>
