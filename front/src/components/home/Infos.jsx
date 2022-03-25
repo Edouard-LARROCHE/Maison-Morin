@@ -24,20 +24,22 @@ const Infos = () => {
             <div className="panel-left">
                 <div className="content-container">
                     <div className="global-infos">
-                        <div className="first-half">
+                        <div className="first-half-l">
                             <div className="spacing"></div>
                             <img className="infos-img" src="/assets/proche-colorv1-112.png" alt="" />
                             <p className="first-half-text">Proximité</p>
                             <p className="first-half-text-second">Profitez des saveurs de notre magnifique région</p>
-                            <div className="round">
-                                <img className="svg-button-left" src="/assets/add-svgrepo-com.svg" alt="" onClick={handleClick}/>
-                            </div>
+                        </div> 
+                        <div className="round-l">
+                            <img className="svg-button-left" src="/assets/add-svgrepo-com.svg" alt="" onClick={handleClick}/>
                         </div>
-                        <div className={display}>
-                            <h2>Des produits de qualité</h2>
-                            <p>Chez Maison Morin, nous favorisons les circuits court afin de faire vivre les producteurs proches de chez vous. Venez découvrir les saveurs de notre magnifique région 
-                            et tout ce qu'elle a à vous offrir, nos produits artisanaux de l'entrée au désert, nos plats cuisiniés fait maison élaborés sur place ou encore nos vins, vous trouverez 
-                            de quoi combler vos envies.</p>
+                        <div className="englo-anim-l">
+                            <div className={display}>
+                                <h2>Des produits de qualité</h2>
+                                <p>Chez Maison Morin, nous favorisons les circuits court afin de faire vivre les producteurs proches de chez vous. Venez découvrir les saveurs de notre magnifique région 
+                                et tout ce qu'elle a à vous offrir, nos produits artisanaux de l'entrée au désert, nos plats cuisiniés fait maison élaborés sur place ou encore nos vins, vous trouverez 
+                                de quoi combler vos envies.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -47,20 +49,22 @@ const Infos = () => {
             <div className="panel-center">
                 <div className="content-center-container">
                     <div className="global-infos-center">
-                        <div className="first-half">
+                        <div className="first-half-c">
                             <div className="spacing-center"></div>
                             <img className="infos-img" src="/assets/ecologie-colorv1-112.png" alt="" />
                             <p className="first-half-text">Ecologie</p>
                             <p className="first-half-text-second">Nous faisons attention à l'envirronement</p>
-                            <div className="round-center">
-                                <img className="svg-button-center" src="/assets/add-svgrepo-com.svg" alt="" onClick={handleClick3}/>
-                            </div>
+                        </div>                            
+                        <div className="round-center">
+                            <img className="svg-button-center" src="/assets/add-svgrepo-com.svg" alt="" onClick={handleClick3}/>
                         </div>
-                        <div className={display3}>
-                            <h2>La planète</h2>
-                            <p>L'écologie occupe une part importante chez Maison Morin, nos packaging sont entièrement recyclables, favorisant un circuit court, nous réduisons les distances de transport
-                            afin de limiter l'impact environnemental négatif.                            
-                            </p>
+                        <div className="englo-anim-c">
+                            <div className={display3}>
+                                <h2>La planète</h2>
+                                <p>L'écologie occupe une part importante chez Maison Morin, nos packaging sont entièrement recyclables, favorisant un circuit court, nous réduisons les distances de transport
+                                afin de limiter l'impact environnemental négatif.                            
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -71,20 +75,22 @@ const Infos = () => {
             <div className="panel-right">
                 <div className="content-container">
                     <div className="global-infos">
-                        <div className="first-half">
+                        <div className="first-half-r">
                             <div className="spacing"></div>
                             <img className="infos-img" src="/assets/cupcake-white-112.png" alt="" />
                             <p className="first-half-text">Pâtisserie</p>
                             <p className="first-half-text-second">Découvrez nos nouveaux gâteaux succulents</p>
-                            <div className="round">
-                                <img className="svg-button-right" src="/assets/add-svgrepo-com.svg" alt="" onClick={handleClick2}/>
-                            </div>
+                        </div>                            
+                        <div className="round-r">
+                            <img className="svg-button-right" src="/assets/add-svgrepo-com.svg" alt="" onClick={handleClick2}/>
                         </div>
-                        <div className={display2}>
-                            <h2>De nouvelles gourmandises</h2>
-                            <p>Avis aux becs sucrés ! Venez découvrir nos nouvelles pâtisseries qui vous feront frétiller les papilles. Chez Maison Morin, venez découvrir sans cesse de nouvelles pâtisseries,
-                            nous nous efforçons de retranscrir le maximum de saveur dans nos gâteaux, de quoi égayer votre journée, n'hésitez pas à venir prendre des viénoisseries pour le plaisir des enfants
-                            comme des plus grands.</p>
+                        <div className="englo-anim-r">
+                            <div className={display2}>
+                                <h2>De nouvelles gourmandises</h2>
+                                <p>Avis aux becs sucrés ! Venez découvrir nos nouvelles pâtisseries qui vous feront frétiller les papilles. Chez Maison Morin, venez découvrir sans cesse de nouvelles pâtisseries,
+                                nous nous efforçons de retranscrir le maximum de saveur dans nos gâteaux, de quoi égayer votre journée, n'hésitez pas à venir prendre des viénoisseries pour le plaisir des enfants
+                                comme des plus grands.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
