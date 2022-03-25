@@ -146,11 +146,11 @@
   }
 }
 
-@media screen and (min-width: 370px) and (max-width: 766px) {
+@media screen and (min-width: 370px) and (max-width: 768px) {
   .other-nav ul {
     display: flex;
     flex-direction: column;
-    position: absolute;
+    position: fixed;
     right: -65px;
     top: 65px;
 
