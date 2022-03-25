@@ -82,3 +82,22 @@
   opacity: 1;
   z-index: -1;
 }
+
+/*********** @MEDIA*************/
+
+@media screen and (min-width: 1366px) and (max-width: 1440px) {
+  .traiteur-card {
+    margin: 50px 250px 50px 250px;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1365px) {
+  .traiteur-card {
+    margin: 50px 80px 50px 80px;
+  }
+
+  .card-traiteur {
+    margin: 50px 60px 50px 60px;
+    height: 35rem;
+  }
+}
