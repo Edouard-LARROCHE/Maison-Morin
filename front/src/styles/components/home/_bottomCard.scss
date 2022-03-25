@@ -8,15 +8,11 @@
     letter-spacing: 0.1rem;
     margin-bottom: 2rem;
   }
-
-  & .traiteur-txt {
-    margin: 0 2em 0 2em;
-  }
 }
 
 .card-traiteur {
-  margin: 50px 130px 50px 130px;
-  height: 60vh;
+  margin: 50px 0 50px 0;
+  height: 65vh;
   background-image: url('https://i.ibb.co/br6BRdZ/traiteur1.jpg');
   background-repeat: no-repeat;
   background-position: center;
@@ -85,4 +81,51 @@
   right: 0;
   opacity: 1;
   z-index: -1;
+}
+
+/*********** @MEDIA*************/
+
+@media screen and (min-width: 1366px) and (max-width: 1440px) {
+  .traiteur-card {
+    margin: 50px 250px 50px 250px;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1365px) {
+  .traiteur-card {
+    margin: 50px 80px 50px 80px;
+  }
+
+  .card-traiteur {
+    margin: 50px 60px 50px 60px;
+    height: 35rem;
+  }
+}
+
+@media screen and (min-width: 568px) and (max-width: 1024px) {
+  .traiteur-card {
+    margin: 50px 20px 50px 20px;
+  }
+
+  .card-traiteur {
+    margin: 50px 50px 50px 50px;
+    height: 25rem;
+    min-width: 25rem;
+  }
+
+  h3 {
+    width: 90% !important;
+  }
+}
+
+@media screen and (min-width: 370px) and (max-width: 568px) {
+  .traiteur-card {
+    margin: 50px 5px 50px 5px;
+  }
+
+  .card-traiteur {
+    margin: 50px 0px 50px 0px;
+    height: 25rem;
+    min-width: 20rem;
+  }
 }
