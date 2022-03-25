@@ -4,31 +4,30 @@ import LocationOnIcon from '@material-ui/icons/LocationOn';
 import DirectionsIcon from '@material-ui/icons/Directions';
 import GoogleMapReact from 'google-map-react';
 
-const Logo = () => <LocationOnIcon style={{ color: '#ddb355', position: "absolute", top: "70%", left: "50%", transform: "translate(-50%, -70%)" }} />;
+const Logo = () => <LocationOnIcon style={{ color: '#ddb355', position: 'absolute', top: '70%', left: '50%', transform: 'translate(-50%, -70%)' }} />;
 const center = { lat: 48.4455116674167, lng: 2.604843033954841 };
 
 class Map extends Component {
   static defaultProps = {
-    center: { center }
+    center: { center },
   };
 
   render() {
     return (
       <div className='map'>
         <div className='google-map' style={{ height: '90vh' }}>
-          <GoogleMapReact 
-          bootstrapURLKeys={{ key: 'AIzaSyAurhxyG4RRTkNaouoap3MngT1vijy-CZs' }} 
-          defaultCenter={center} 
-          defaultZoom={18}
-          center={center}
-          >
+          <GoogleMapReact
+            bootstrapURLKeys={{ key: 'AIzaSyAurhxyG4RRTkNaouoap3MngT1vijy-CZs' }}
+            defaultCenter={center}
+            defaultZoom={18}
+            center={center}>
             <Logo lat={48.4455116674167} lng={2.604843033954841} />
           </GoogleMapReact>
         </div>
         <div className='location-shop'>
           <div className='top-shop'>
             <div className='location-adress'>
-              <img src='/logo/Or.png' alt='V'/>
+              <img src='/logo/Or.png' alt='V' />
               <div className='adress'>
                 <h2>Barbizon - Grande rue</h2>
                 <p>La boutique Maison Morin</p>
