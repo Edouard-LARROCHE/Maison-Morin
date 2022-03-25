@@ -33,11 +33,13 @@ const Infos = () => {
                         <div className="round-l">
                             <img className="svg-button-left" src="/assets/add-svgrepo-com.svg" alt="" onClick={handleClick}/>
                         </div>
-                        <div className={display}>
-                            <h2>Des produits de qualité</h2>
-                            <p>Chez Maison Morin, nous favorisons les circuits court afin de faire vivre les producteurs proches de chez vous. Venez découvrir les saveurs de notre magnifique région 
-                            et tout ce qu'elle a à vous offrir, nos produits artisanaux de l'entrée au désert, nos plats cuisiniés fait maison élaborés sur place ou encore nos vins, vous trouverez 
-                            de quoi combler vos envies.</p>
+                        <div className="englo-anim-l">
+                            <div className={display}>
+                                <h2>Des produits de qualité</h2>
+                                <p>Chez Maison Morin, nous favorisons les circuits court afin de faire vivre les producteurs proches de chez vous. Venez découvrir les saveurs de notre magnifique région 
+                                et tout ce qu'elle a à vous offrir, nos produits artisanaux de l'entrée au désert, nos plats cuisiniés fait maison élaborés sur place ou encore nos vins, vous trouverez 
+                                de quoi combler vos envies.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -82,11 +84,13 @@ const Infos = () => {
                         <div className="round-r">
                             <img className="svg-button-right" src="/assets/add-svgrepo-com.svg" alt="" onClick={handleClick2}/>
                         </div>
-                        <div className={display2}>
-                            <h2>De nouvelles gourmandises</h2>
-                            <p>Avis aux becs sucrés ! Venez découvrir nos nouvelles pâtisseries qui vous feront frétiller les papilles. Chez Maison Morin, venez découvrir sans cesse de nouvelles pâtisseries,
-                            nous nous efforçons de retranscrir le maximum de saveur dans nos gâteaux, de quoi égayer votre journée, n'hésitez pas à venir prendre des viénoisseries pour le plaisir des enfants
-                            comme des plus grands.</p>
+                        <div className="englo-anim-r">
+                            <div className={display2}>
+                                <h2>De nouvelles gourmandises</h2>
+                                <p>Avis aux becs sucrés ! Venez découvrir nos nouvelles pâtisseries qui vous feront frétiller les papilles. Chez Maison Morin, venez découvrir sans cesse de nouvelles pâtisseries,
+                                nous nous efforçons de retranscrir le maximum de saveur dans nos gâteaux, de quoi égayer votre journée, n'hésitez pas à venir prendre des viénoisseries pour le plaisir des enfants
+                                comme des plus grands.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
