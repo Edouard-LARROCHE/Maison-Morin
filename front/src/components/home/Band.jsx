@@ -5,10 +5,12 @@ const Band = () => {
     <div className='Band-enter'>
       <div className='band-txt'>
         <h1>MAISON MORIN</h1>
-        <p className='txt-in'>Notre boutique traîteur en Seine et Marne est spécialisée en cuisine traditionnelle française.</p>
-        <br />
+        <p className='txt-in'>Nous sélectionnons avec soin nos fournisseurs et privilégions 
+        dans la mesure du possible des productions locales.</p>
         <p className='txt-in'>
-          Nous vous proposons de nombreux plats régionaux et plats du terroir variés. Nous utilisons des produits frais et de saison.
+        Nous favorisons quotidiennement 
+        des produits frais pour valoriser une offre de saison. Fraicheur et naturalité sont 
+        conjuguées pour exhaler davantage la qualité gustative de nos recettes.
         </p>
         <div className='btn-band'>
           <p>Découvrir</p>

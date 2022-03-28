@@ -50,10 +50,8 @@ const Poissons = () => {
         <div className='Infos-enterText'>
           <h1>POISSON</h1>
           <p className='Presentation-gallery'>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit sequi tenetur nostrum! Nemo quae totam fuga molestiae veniam ipsam ad
-            culpa explicabo perspiciatis temporibus esse illum aliquam, reprehenderit ut ullam! Ipsum, est maxime fuga ducimus voluptate beatae
-            recusandae delectus tempora quas ipsam voluptas atque tempore aliquam dolorem odit autem dolorum ullam. Ratione, iusto cumque. Animi
-            incidunt ad distinctio optio rem. Accusantium tempore eos neque porro repellat sed architecto, magni provident.
+          Nos plats cuisinés à base de poissons et fruits de mer sont élaborés exclusivement avec des produits frais. Un arrivage journalier de poisson 
+          frais nous permet de vous concocté n’importes quel met en fonctions des arrivages et des saisons.
           </p>
         </div>
       </div>
