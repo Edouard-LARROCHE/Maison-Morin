@@ -20,7 +20,7 @@ const CustomForm = ({ status, message, onValidated }) => {
       EMAIL: email.value,
     });
 
-  const handle = (e) => {
+  const handle = () => {
     submit();
     timeOut();
   };
@@ -41,8 +41,10 @@ const CustomForm = ({ status, message, onValidated }) => {
           placeholder='Votre adresse mail'
         />
       </div>
-      <div className='btn-nl' onClick={handle}>
-        <p>Je m'inscris</p>
+      <div className='media-mobile'>
+        <div className='btn-nl' onClick={handle}>
+          <p>Je m'inscris</p>
+        </div>
       </div>
     </>
   );
