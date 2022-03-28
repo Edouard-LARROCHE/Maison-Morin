@@ -169,19 +169,6 @@
   display: flex;
 }
 
-.plus-text {
-  margin: 0 25% 0 25%;
-  background-color: $color-6;
-
-  & h3 {
-    margin: 0.5em;
-  }
-
-  & p {
-    padding: 0.8em;
-  }
-}
-
 /* ===== PHOTOS ENTER VIANDE ===== */
 
 .Viande-headBand {
@@ -258,6 +245,19 @@
   }
 }
 
+.plus-text {
+  margin: 0 25% 0 25%;
+  background-color: $color-6;
+
+  & h3 {
+    margin: 0.5em;
+  }
+
+  & p {
+    padding: 0.8em;
+  }
+}
+
 .t-eT {
   color: $color-2;
   font-family: $font-2;
@@ -281,12 +281,24 @@
     height: 30em;
     background-position-y: 0px;
   }
+
+  .plus-text {
+    margin: 0 15% 0 15%;
+  }
 }
 
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 428px) {
   .Macarons-headBand,
   .Cocktails-headBand {
     height: 17em;
+  }
+
+  .plus-text {
+    margin: -200px 10% 0 10%;
+  }
+
+  .cons-degus {
+    display: none;
   }
 
   .Infos-enterText {
@@ -300,13 +312,4 @@
   .Presentation-gallery {
     font-size: 0.9em !important;
   }
-
-  // .t-eT {
-  //   color: $color-2;
-  //   font-family: $font-2;
-  //   letter-spacing: 0.06em;
-  //   font-size: 1.3em;
-  //   margin-bottom: 0.5em;
-  //   margin-left: 0.5em;
-  // }
 }
