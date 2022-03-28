@@ -130,36 +130,6 @@
   }
 }
 
-.Infos-enterText {
-  align-self: center;
-  margin: 0 auto;
-  width: 50em;
-  height: auto;
-
-  & h1 {
-    text-align: center;
-    color: #fff;
-    font-size: 2.7em;
-    letter-spacing: 0.05em;
-  }
-
-  & .Presentation-gallery {
-    color: #fff;
-    font-size: 1.2em;
-    text-align: center;
-    margin: 0.9em 2.1em 0.9em 2.1em;
-  }
-}
-
-.t-eT {
-  color: $color-2;
-  font-family: $font-2;
-  letter-spacing: 0.06em;
-  font-size: 1.3em;
-  margin-bottom: 0.5em;
-  margin-left: 0.5em;
-}
-
 /* ===== PHOTOS ENTER COCKTAILS ===== */
 
 .Cocktails-headBand {
@@ -262,4 +232,81 @@
   background-position-y: -300px;
   margin: -6em 0 2em 0;
   display: flex;
+}
+
+/*******************************/
+
+.Infos-enterText {
+  align-self: center;
+  margin: 0 auto;
+  width: 50em;
+  height: auto;
+
+  & h1 {
+    text-align: center;
+    margin: 1rem;
+    color: #fff;
+    font-size: 2.7em;
+    letter-spacing: 0.05em;
+  }
+
+  & .Presentation-gallery {
+    color: #fff;
+    font-size: 1.2em;
+    text-align: center;
+    margin: 0em 2.1em 0em 2.1em;
+  }
+}
+
+.t-eT {
+  color: $color-2;
+  font-family: $font-2;
+  letter-spacing: 0.06em;
+  font-size: 1.3em;
+  margin-bottom: 0.5em;
+  margin-left: 0.5em;
+}
+
+/*********** @MEDIA*************/
+
+@media screen and (max-width: 1180px) {
+  .Vins-headBand,
+  .Cocktails-headBand,
+  .Produits-headBand,
+  .Patisserie-headBand,
+  .Macarons-headBand,
+  .Poisson-headBand,
+  .Viande-headBand,
+  .Charcuterie-headBand {
+    height: 30em;
+    background-position-y: 0px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .Macarons-headBand,
+  .Cocktails-headBand {
+    height: 17em;
+  }
+
+  .Infos-enterText {
+    align-self: flex-start !important;
+  }
+
+  h1 {
+    font-size: 1.8em !important;
+  }
+
+  .Presentation-gallery {
+    font-size: 0.9em !important;
+  }
+
+  // .t-eT {
+  //   color: $color-2;
+  //   font-family: $font-2;
+  //   letter-spacing: 0.06em;
+  //   font-size: 1.3em;
+  //   margin-bottom: 0.5em;
+  //   margin-left: 0.5em;
+  // }
 }
