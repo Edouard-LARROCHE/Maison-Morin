@@ -331,9 +331,17 @@
 }
 
 @media screen and (max-width: 428px) {
+  .Vins-headBand,
+  .Patisserie-headBand,
+  .Poisson-headBand,
   .Macarons-headBand,
   .Cocktails-headBand {
     height: 17em;
+  }
+
+  .Viande-headBand {
+    background-size: 110%;
+    height: 18em;
   }
 
   .Charcuterie-headBand {
@@ -359,5 +367,26 @@
 
   .Presentation-gallery {
     font-size: 0.9em !important;
+  }
+
+  .option-gallery {
+    display: block;
+
+    .filter-display {
+      width: 70%;
+      margin-bottom: 2rem;
+    }
+
+    .search-bar {
+      left: 0;
+    }
+  }
+
+  .fetch-card {
+    width: 95%;
+  }
+
+  .text-order {
+    width: 90%;
   }
 }
