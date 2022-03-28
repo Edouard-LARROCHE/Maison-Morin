@@ -143,15 +143,33 @@
   .menu-drop-open {
     display: block;
 
-    .items-gallery {
-      opacity: 0;
-      transition: 0.5s ease-in-out;
-    }
-
-    .items-gallery-after {
-      transition: 0.5s ease-in-out;
-      opacity: 1;
+    li {
       cursor: pointer;
     }
+  }
+
+  .resp-nav-gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    opacity: 0;
+    transition: all 0.6s ease;
+    z-index: 2000;
+  }
+
+  .resp-nav-gallery.active-gallery {
+    position: fixed;
+    height: 100vh;
+    background: $black;
+    right: 0;
+    opacity: 0.9;
+    transition: all 0.5s ease;
+    z-index: 2000;
+    align-content: center;
   }
 }

@@ -142,6 +142,13 @@ span {
   color: $color-1;
 }
 
+/*  Mode Styles Mobile */
+
+.btn-mobile-light,
+.btn-mobile-dark {
+  color: $color-2;
+}
+
 /********* LOADER ************/
 
 .spinner {
