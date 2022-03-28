@@ -269,6 +269,33 @@
 
 /*********** @MEDIA*************/
 
+@media screen and (min-width: 1181px) and (max-width: 1440px) {
+  .text-acceuil-fetch {
+    width: 90%;
+  }
+
+  .option-gallery {
+    display: block;
+
+    .filter-display {
+      width: 20%;
+      margin-bottom: 2rem;
+    }
+
+    .search-bar {
+      left: 0;
+    }
+  }
+
+  .fetch-card {
+    width: 100%;
+  }
+
+  .text-order {
+    width: 90%;
+  }
+}
+
 @media screen and (max-width: 1180px) {
   .Vins-headBand,
   .Cocktails-headBand,
