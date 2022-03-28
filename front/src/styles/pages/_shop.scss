@@ -117,14 +117,28 @@
 
   .content-shop {
     display: flex;
+    align-items: center !important;
 
     img {
-      width: 50% !important;
-      height: 20rem !important;
+      width: 50vw !important;
     }
 
     .horaires {
       padding: 1rem;
+      margin-left: 2rem;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
+
+@media screen and (max-width: 428px) {
+  .content-shop {
+    display: flex;
+    flex-direction: column;
+
+    img {
+      width: 100% !important;
     }
   }
 }
