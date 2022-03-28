@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import ButtonSwitch from '../darkMode/ButtonSwitch';
+import ButtonSwitchMobile from '../darkMode/ButtonSwitchMobile';
 import IndexModal from '../LoginModal/indexModal';
 import CopyrightIcon from '@material-ui/icons/Copyright';
 import FacebookIcon from '@material-ui/icons/Facebook';
@@ -65,7 +65,7 @@ const Footer = () => {
               <h2>LES PLUS</h2>
             </li>
             <li className='switch-mode-mobile'>
-              <ButtonSwitch />
+              <ButtonSwitchMobile />
             </li>
             <li>
               <IndexModal />

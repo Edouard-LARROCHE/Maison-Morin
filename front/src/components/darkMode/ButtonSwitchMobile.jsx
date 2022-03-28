@@ -17,9 +17,15 @@ const ButtonSwitchMobile = () => {
   return (
     <div className={`btn ${darkMode ? 'btn-mobile-dark' : 'btn-mobile-light'}`} onClick={onClick}>
       {darkMode ? (
-        <Brightness4Icon style={{ cursor: 'pointer', fontSize: '1.2rem' }}>version contrastée</Brightness4Icon>
+        <>
+          <Brightness4Icon style={{ cursor: 'pointer', fontSize: '1.2rem' }} />
+          <span>version contrastée</span>
+        </>
       ) : (
-        <Brightness5Icon style={{ cursor: 'pointer', fontSize: '1.2rem' }}>version standard</Brightness5Icon>
+        <>
+          <Brightness5Icon style={{ cursor: 'pointer', fontSize: '1.2rem' }} />
+          <span>version standard</span>
+        </>
       )}
     </div>
   );
