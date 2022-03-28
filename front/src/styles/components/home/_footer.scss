@@ -59,6 +59,10 @@
   }
 }
 
+.other-nav-mobile {
+  display: none;
+}
+
 /*********** SOCIAL FOOTER *************/
 
 .social {
@@ -109,6 +113,12 @@
     ul {
       margin: 1rem;
     }
+  }
+
+  .other-nav-mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
 

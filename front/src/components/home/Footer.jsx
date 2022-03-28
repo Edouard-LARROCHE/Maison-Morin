@@ -1,8 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import ButtonSwitch from '../darkMode/ButtonSwitch';
+import IndexModal from '../LoginModal/indexModal';
 import CopyrightIcon from '@material-ui/icons/Copyright';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import InstagramIcon from '@material-ui/icons/Instagram';
-import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -57,6 +59,19 @@ const Footer = () => {
             </Link>
           </li>
         </ul>
+        <div className='other-nav-mobile'>
+          <ul>
+            <li>
+              <h2>LES PLUS</h2>
+            </li>
+            <li className='switch-mode-mobile'>
+              <ButtonSwitch />
+            </li>
+            <li>
+              <IndexModal />
+            </li>
+          </ul>
+        </div>
         <ul className='copy'>
           <li>
             <h3>MAISON MORIN</h3>
