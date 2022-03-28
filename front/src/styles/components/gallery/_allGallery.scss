@@ -121,13 +121,13 @@
   background-size: cover;
   margin: -6em 0 2em 0;
   display: flex;
+}
 
-  & .cons-degus {
-    color: #fff;
-    position: absolute;
-    margin-left: 15em;
-    bottom: 2em;
-  }
+.cons-degus {
+  text-align: center;
+  position: relative;
+  top: -100px;
+  color: #fff;
 }
 
 /* ===== PHOTOS ENTER COCKTAILS ===== */

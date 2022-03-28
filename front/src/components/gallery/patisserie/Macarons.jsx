@@ -55,11 +55,11 @@ const Macarons = () => {
             de mieux respecter l'environnement et votre santé, la maison morin vous propose des macarons entièrement végétales.
           </p>
         </div>
-        <p className='cons-degus'>
-          Conservation & dégustation: Nos macarons se dégustent frais. Nous vous conseillons une conservation de 6 jours au réfrigérateur, ne pas
-          congeler afin de garantir toutes les qualités organoleptiques optimales.
-        </p>
       </div>
+      <p className='cons-degus'>
+        Conservation & dégustation: Nos macarons se dégustent frais. Nous vous conseillons une conservation de 6 jours au réfrigérateur, ne pas
+        congeler afin de garantir toutes les qualités organoleptiques optimales.
+      </p>
       <div className='text-acceuil-fetch'>
         <p>PRODUITS ARTISANAUX ELABORÉS DANS NOS CUISINES, AU QUOTIDIEN.</p>
         <p style={{ fontSize: '10px', marginTop: '0.5rem' }}>NOTRE GAMME MACARONS</p>
