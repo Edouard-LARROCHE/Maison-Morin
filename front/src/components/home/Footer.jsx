@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import ButtonSwitchMobile from '../darkMode/ButtonSwitchMobile';
-import IndexModal from '../LoginModal/indexModal';
 import CopyrightIcon from '@material-ui/icons/Copyright';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import InstagramIcon from '@material-ui/icons/Instagram';
@@ -64,11 +63,11 @@ const Footer = () => {
             <li>
               <h2>LES PLUS</h2>
             </li>
-            <li className='switch-mode-mobile'>
+            <li>
               <ButtonSwitchMobile />
             </li>
-            <li>
-              <IndexModal />
+            <li className='modal-footer'>
+              <p>Administration</p>
             </li>
           </ul>
         </div>
