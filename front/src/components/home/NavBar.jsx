@@ -80,7 +80,7 @@ const NavBar = () => {
           </ul>
         </div>
         <div className='resp-menu' onClick={handleOpen}>
-          {open ? <CloseIcon className='icon-menu' /> : <MenuOpenIcon className='icon-menu' />}
+          {open ? <CloseIcon className='icon-menu' /> : <MenuOpenIcon style={{ color: 'black' }} className='icon-menu' />}
         </div>
       </div>
     </>
