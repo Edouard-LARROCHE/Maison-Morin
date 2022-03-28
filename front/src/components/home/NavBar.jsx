@@ -7,13 +7,22 @@ import CloseIcon from '@material-ui/icons/Close';
 
 const NavBar = () => {
   const [open, setOpen] = useState(false);
+  const [openGallery, setOpenGallery] = useState(false);
 
   const handleOpen = () => {
     setOpen(!open);
   };
 
+  const handleOpenGallery = () => {
+    setOpenGallery(!openGallery);
+  };
+
   const handleClose = () => {
     setOpen(false);
+  };
+
+  const handleCloseGallery = () => {
+    setOpenGallery(false);
   };
 
   return (
@@ -42,15 +51,36 @@ const NavBar = () => {
               </Link>
             </li>
             <div className='menu-drop-open'>
-              <li onClick=''>
-                <p className=''>Gallerie</p>
+              <li>
+                <p onClick={handleOpenGallery}>Gallerie</p>
               </li>
-              <div className=''>
-                <p>test menu drop</p>
-                <p>test menu drop</p>
-                <p>test menu drop</p>
-                <p>test menu drop</p>
-              </div>
+            </div>
+            <div>
+              <ul className={openGallery ? 'resp-nav-gallery active-gallery' : 'resp-nav-gallery'}>
+                <li>
+                  <p onClick={handleCloseGallery}>RETOUR</p>
+                </li>
+                <Link to='/traiteur-charcuterie'>
+                  <li onClick={handleClose}>
+                    <p>test menu drop 1</p>
+                  </li>
+                </Link>
+                <Link to='/traiteur-viandes'>
+                  <li onClick={handleClose}>
+                    <p>test menu drop 2</p>
+                  </li>
+                </Link>
+                <Link to='/traiteur-poissons'>
+                  <li onClick={handleClose}>
+                    <p>test menu drop 3</p>
+                  </li>
+                </Link>
+                <Link to='/patisseries'>
+                  <li onClick={handleClose}>
+                    <p>test menu drop 4</p>
+                  </li>
+                </Link>
+              </ul>
             </div>
           </ul>
         </div>
