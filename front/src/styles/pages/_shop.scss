@@ -100,3 +100,31 @@
     }
   }
 }
+
+/*********** @MEDIA*************/
+
+@media screen and (max-width: 1366px) {
+  .map {
+    grid-template-columns: 65% 1fr;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .map {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .content-shop {
+    display: flex;
+
+    img {
+      width: 50% !important;
+      height: 20rem !important;
+    }
+
+    .horaires {
+      padding: 1rem;
+    }
+  }
+}
