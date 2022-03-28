@@ -121,44 +121,17 @@
   background-size: cover;
   margin: -6em 0 2em 0;
   display: flex;
-  & .cons-degus {
-    color: #fff;
-    position: absolute;
-    margin-left: 15em;
-    bottom: 2em;
-  }
 }
 
-.Infos-enterText {
-  align-self: center;
-  margin: 0 auto;
-  width: 50em;
-  height: auto;
-
-  & h1 {
-    text-align: center;
-    color: #fff;
-    font-size: 2.7em;
-    letter-spacing: 0.05em;
-  }
-  & .Presentation-gallery {
-    color: #fff;
-    font-size: 1.2em;
-    text-align: center;
-    margin: 0.9em 2.1em 0.9em 2.1em;
-  }
-}
-
-.t-eT {
-  color: $color-2;
-  font-family: $font-2;
-  letter-spacing: 0.06em;
-  font-size: 1.3em;
-  margin-bottom: 0.5em;
-  margin-left: 0.5em;
+.cons-degus {
+  text-align: center;
+  position: relative;
+  top: -100px;
+  color: #fff;
 }
 
 /* ===== PHOTOS ENTER COCKTAILS ===== */
+
 .Cocktails-headBand {
   width: 100%;
   height: 40em;
@@ -171,6 +144,7 @@
 }
 
 /* ===== PHOTOS ENTER PRODUITS ===== */
+
 .Produits-headBand {
   width: 100%;
   height: 40em;
@@ -183,6 +157,7 @@
 }
 
 /* ===== PHOTOS ENTER CHARCUTERIE ===== */
+
 .Charcuterie-headBand {
   width: 100%;
   height: 40em;
@@ -194,17 +169,8 @@
   display: flex;
 }
 
-.plus-text {
-  margin: 0 25% 0 25%;
-  background-color: $color-6;
-  & h3 {
-    margin: 0.5em;
-  }
-  & p {
-    padding: 0.8em;
-  }
-}
 /* ===== PHOTOS ENTER VIANDE ===== */
+
 .Viande-headBand {
   width: 100%;
   height: 40em;
@@ -217,6 +183,7 @@
 }
 
 /* ===== PHOTOS ENTER POISSON ===== */
+
 .Poisson-headBand {
   width: 100%;
   height: 40em;
@@ -229,6 +196,7 @@
 }
 
 /* ===== PHOTOS ENTER PÂTISSERIE ===== */
+
 .Patisserie-headBand {
   width: 100%;
   height: 40em;
@@ -241,6 +209,7 @@
 }
 
 /* ===== PHOTOS ENTER VINS ===== */
+
 .Vins-headBand {
   width: 100%;
   height: 40em;
@@ -250,4 +219,97 @@
   background-position-y: -300px;
   margin: -6em 0 2em 0;
   display: flex;
+}
+
+/*******************************/
+
+.Infos-enterText {
+  align-self: center;
+  margin: 0 auto;
+  width: 50em;
+  height: auto;
+
+  & h1 {
+    text-align: center;
+    margin: 1rem;
+    color: #fff;
+    font-size: 2.7em;
+    letter-spacing: 0.05em;
+  }
+
+  & .Presentation-gallery {
+    color: #fff;
+    font-size: 1.2em;
+    text-align: center;
+    margin: 0em 2.1em 0em 2.1em;
+  }
+}
+
+.plus-text {
+  margin: 0 25% 0 25%;
+  background-color: $color-6;
+
+  & h3 {
+    margin: 0.5em;
+  }
+
+  & p {
+    padding: 0.8em;
+  }
+}
+
+.t-eT {
+  color: $color-2;
+  font-family: $font-2;
+  letter-spacing: 0.06em;
+  font-size: 1.3em;
+  margin-bottom: 0.5em;
+  margin-left: 0.5em;
+}
+
+/*********** @MEDIA*************/
+
+@media screen and (max-width: 1180px) {
+  .Vins-headBand,
+  .Cocktails-headBand,
+  .Produits-headBand,
+  .Patisserie-headBand,
+  .Macarons-headBand,
+  .Poisson-headBand,
+  .Viande-headBand,
+  .Charcuterie-headBand {
+    height: 30em;
+    background-position-y: 0px;
+  }
+
+  .plus-text {
+    margin: 0 15% 0 15%;
+  }
+}
+
+@media screen and (max-width: 428px) {
+  .Macarons-headBand,
+  .Cocktails-headBand {
+    height: 17em;
+  }
+
+  .plus-text {
+    margin: -200px 10% 0 10%;
+  }
+
+  .cons-degus {
+    display: none;
+  }
+
+  .Infos-enterText {
+    align-self: flex-start !important;
+  }
+
+  h1 {
+    font-size: 1.8em !important;
+  }
+
+  .Presentation-gallery {
+    font-size: 0.9em !important;
+  }
 }
