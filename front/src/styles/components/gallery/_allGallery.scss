@@ -121,6 +121,7 @@
   background-size: cover;
   margin: -6em 0 2em 0;
   display: flex;
+
   & .cons-degus {
     color: #fff;
     position: absolute;
@@ -141,6 +142,7 @@
     font-size: 2.7em;
     letter-spacing: 0.05em;
   }
+
   & .Presentation-gallery {
     color: #fff;
     font-size: 1.2em;
@@ -159,6 +161,7 @@
 }
 
 /* ===== PHOTOS ENTER COCKTAILS ===== */
+
 .Cocktails-headBand {
   width: 100%;
   height: 40em;
@@ -171,6 +174,7 @@
 }
 
 /* ===== PHOTOS ENTER PRODUITS ===== */
+
 .Produits-headBand {
   width: 100%;
   height: 40em;
@@ -183,6 +187,7 @@
 }
 
 /* ===== PHOTOS ENTER CHARCUTERIE ===== */
+
 .Charcuterie-headBand {
   width: 100%;
   height: 40em;
@@ -197,14 +202,18 @@
 .plus-text {
   margin: 0 25% 0 25%;
   background-color: $color-6;
+
   & h3 {
     margin: 0.5em;
   }
+
   & p {
     padding: 0.8em;
   }
 }
+
 /* ===== PHOTOS ENTER VIANDE ===== */
+
 .Viande-headBand {
   width: 100%;
   height: 40em;
@@ -217,6 +226,7 @@
 }
 
 /* ===== PHOTOS ENTER POISSON ===== */
+
 .Poisson-headBand {
   width: 100%;
   height: 40em;
@@ -229,6 +239,7 @@
 }
 
 /* ===== PHOTOS ENTER PÂTISSERIE ===== */
+
 .Patisserie-headBand {
   width: 100%;
   height: 40em;
@@ -241,6 +252,7 @@
 }
 
 /* ===== PHOTOS ENTER VINS ===== */
+
 .Vins-headBand {
   width: 100%;
   height: 40em;
