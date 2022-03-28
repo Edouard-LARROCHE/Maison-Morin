@@ -142,16 +142,5 @@
 @media screen and (max-width: 767px) {
   .menu-drop-open {
     display: block;
-
-    .items-gallery {
-      opacity: 0;
-      transition: 0.5s ease-in-out;
-    }
-
-    .items-gallery-after {
-      transition: 0.5s ease-in-out;
-      opacity: 1;
-      cursor: pointer;
-    }
   }
 }
