@@ -285,12 +285,33 @@
   .plus-text {
     margin: 0 15% 0 15%;
   }
+
+  .text-acceuil-fetch {
+    width: 90%;
+
+    .search-bar {
+      left: 10rem;
+    }
+  }
+
+  .fetch-card {
+    width: 100%;
+  }
+
+  .text-order {
+    width: 90%;
+  }
 }
 
 @media screen and (max-width: 428px) {
   .Macarons-headBand,
   .Cocktails-headBand {
     height: 17em;
+  }
+
+  .Charcuterie-headBand {
+    background-size: 140%;
+    height: 36em;
   }
 
   .plus-text {
