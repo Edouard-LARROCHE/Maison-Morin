@@ -50,10 +50,10 @@ const Viandes = () => {
         <div className='Infos-enterText'>
           <h1>VIANDE</h1>
           <p className='Presentation-gallery'>
-          Quintessence de la gastronomie, la France est reconnue mondialement pour la qualité de sa cuisine et la diversité de ses plats traditionnels et
-          régionaux. Les produits comme la viande occupent une place d'exception dans la cuisine française et la réussite d'un plat dépend bien 
-          souvent de la qualité de ses produits. Maison vous propose un large choix de viandes de race noble, 100% française: viande limousine, parthenaise 
-          et notre préféré la blonde d'Aquitaine.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit sequi tenetur nostrum! Nemo quae totam fuga molestiae veniam ipsam ad
+            culpa explicabo perspiciatis temporibus esse illum aliquam, reprehenderit ut ullam! Ipsum, est maxime fuga ducimus voluptate beatae
+            recusandae delectus tempora quas ipsam voluptas atque tempore aliquam dolorem odit autem dolorum ullam. Ratione, iusto cumque. Animi
+            incidunt ad distinctio optio rem. Accusantium tempore eos neque porro repellat sed architecto, magni provident.
           </p>
         </div>
       </div>
