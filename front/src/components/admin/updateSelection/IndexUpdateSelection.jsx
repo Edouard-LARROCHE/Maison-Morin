@@ -25,18 +25,10 @@ const IndexUpdateSelection = () => {
         <h2>3. MODIFIER / AJOUTER (! MAXIMUM 4) / SUPPRIMER DES CARTES : </h2>
         <h3>SELECTIONNÉ POUR VOUS</h3>
       </div>
-      <div>
-        {/* {editing ? (
-            <div>
-              <h1>MODIFIER</h1>
-              <UpdateForm editing={editing} setEditing={setEditing} currentCard={currentCard} updateCard={updateCard} />
-            </div>
-          ) : ( */}
-        <div className='table'>
-          {/* <Table
+      <div className='table'>
+        {/* <Table
            
             /> */}
-        </div>
       </div>
     </div>
   );
