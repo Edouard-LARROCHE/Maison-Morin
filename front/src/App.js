@@ -36,7 +36,7 @@ function App() {
     setTimeout(() => {
       trans();
       setTransition(false);
-    }, 2500);
+    }, 3000);
   }, []);
 
   return (

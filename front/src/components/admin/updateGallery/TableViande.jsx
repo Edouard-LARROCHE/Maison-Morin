@@ -4,15 +4,8 @@ import axios from 'axios';
 const TableViande = (props) => {
   const [viandePostCard, setViandePostCard] = useState({ pictureUrl: '', name: '', price: '' });
   const [editing, setEditing] = useState(false);
-  const [id, setId] = useState(viandePostCard.id);
-
   const initialForm = { _id: null, pictureUrl: '', name: '', price: '' };
   const [currentCard, setCurrentCard] = useState(initialForm);
-
-  const updateCard = (id, updateCard) => {
-    setEditing(false);
-    setViandePostCard(viandePostCard.map((index) => (index._id === id ? updateCard : index)));
-  };
 
   const editRow = (index) => {
     setEditing(true);
@@ -30,7 +23,6 @@ const TableViande = (props) => {
 
   const handleSubmitPost = async (e) => {
     e.preventDefault();
-
     await axios
       .post('http://localhost:5500/picture/traiteur/viande', viandePostCard)
       .then((res) => {
@@ -43,10 +35,10 @@ const TableViande = (props) => {
       });
   };
 
+  const id = currentCard.id;
+
   const handleSubmitUpdate = async (e) => {
     e.preventDefault();
-    if (!currentCard.pictureUrl || !currentCard.name || !currentCard.price) return;
-    updateCard(viandePostCard.id, viandePostCard);
 
     await axios
       .put(`http://localhost:5500/picture/traiteur/viande/${id}`, currentCard)
