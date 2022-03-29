@@ -62,22 +62,42 @@ const NavBar = () => {
                 </li>
                 <Link to='/traiteur-charcuterie'>
                   <li onClick={handleClose}>
-                    <p>test menu drop 1</p>
+                    <p>CHARCUTERIES</p>
                   </li>
                 </Link>
                 <Link to='/traiteur-viandes'>
                   <li onClick={handleClose}>
-                    <p>test menu drop 2</p>
+                    <p>VIANDES</p>
                   </li>
                 </Link>
                 <Link to='/traiteur-poissons'>
                   <li onClick={handleClose}>
-                    <p>test menu drop 3</p>
+                    <p>POISSONS</p>
                   </li>
                 </Link>
                 <Link to='/patisseries'>
                   <li onClick={handleClose}>
-                    <p>test menu drop 4</p>
+                    <p>PÂTISSERIES</p>
+                  </li>
+                </Link>
+                <Link to='/patisseries-macarons'>
+                  <li onClick={handleClose}>
+                    <p>MACARONS</p>
+                  </li>
+                </Link>
+                <Link to='/cave-a-vins'>
+                  <li onClick={handleClose}>
+                    <p>CAVE À VINS</p>
+                  </li>
+                </Link>
+                <Link to='/cocktails'>
+                  <li onClick={handleClose}>
+                    <p>COCKTAILS</p>
+                  </li>
+                </Link>
+                <Link to="/produits-d'exception">
+                  <li onClick={handleClose}>
+                    <p>PRODUITS D'EXCEPTION</p>
                   </li>
                 </Link>
               </ul>
