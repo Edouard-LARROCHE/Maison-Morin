@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Table from './Table';
-// import UpdateForm from './UpdateForm';
 
 const IndexTraiteurViande = () => {
   const [viandes, setViandes] = useState([]);
@@ -12,11 +11,10 @@ const IndexTraiteurViande = () => {
   const [vins, setVins] = useState([]);
   const [cocktails, setCocktails] = useState([]);
   const [prodexcep, setProdExcep] = useState([]);
-
-  // const [data, setData] = useState([]);
+  // eslint-disable-next-line
   const [editing, setEditing] = useState(false);
-
   const initialForm = { _id: null, pictureUrl: '', name: '', price: '' };
+  // eslint-disable-next-line
   const [currentCard, setCurrentCard] = useState(initialForm);
 
   const fetchData = async () => {
@@ -115,11 +113,6 @@ const IndexTraiteurViande = () => {
     setVins(vins.filter((index) => index._id !== id));
   };
 
-  // const updateCard = (id, updateCard) => {
-  //   setEditing(false);
-  //   setData(data.map((index) => (index._id === id ? updateCard : index)));
-  // };
-
   const editRow = (index) => {
     setEditing(true);
     setCurrentCard({ id: index._id, pictureUrl: index.pictureUrl, name: index.name, price: index.price });
@@ -132,12 +125,6 @@ const IndexTraiteurViande = () => {
         <h3>GALLERIE</h3>
       </div>
       <div>
-        {/* {editing ? (
-          <div>
-            <h1>MODIFIER</h1>
-            <UpdateForm editing={editing} setEditing={setEditing} currentCard={currentCard} updateCard={updateCard} />
-          </div>
-        ) : ( */}
         <div className='table'>
           <Table
             viandes={viandes}

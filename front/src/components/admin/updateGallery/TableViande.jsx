@@ -4,7 +4,6 @@ import axios from 'axios';
 const TableViande = (props) => {
   const [viandePostCard, setViandePostCard] = useState({ pictureUrl: '', name: '', price: '' });
   const [editing, setEditing] = useState(false);
-  const [id, setId] = useState(viandePostCard.id);
 
   const initialForm = { _id: null, pictureUrl: '', name: '', price: '' };
   const [currentCard, setCurrentCard] = useState(initialForm);
@@ -43,10 +42,8 @@ const TableViande = (props) => {
       });
   };
 
-  const handleSubmitUpdate = async (e) => {
+  const handleSubmitUpdate = async (e, id) => {
     e.preventDefault();
-    if (!currentCard.pictureUrl || !currentCard.name || !currentCard.price) return;
-    updateCard(viandePostCard.id, viandePostCard);
 
     await axios
       .put(`http://localhost:5500/picture/traiteur/viande/${id}`, currentCard)
@@ -71,7 +68,7 @@ const TableViande = (props) => {
             <input type='text' placeholder='Prix' name='price' value={currentCard.price} onChange={handleChangeUpdate} />
 
             <button>MODIFIER</button>
-            <button onClick={() => setEditing(false)}>ANNULER</button>
+            <button onClick={() => setEditing(false) && updateCard}>ANNULER</button>
           </form>
         </div>
       ) : (

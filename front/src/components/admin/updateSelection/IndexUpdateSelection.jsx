@@ -14,7 +14,6 @@ const IndexUpdateSelection = () => {
     axios
       .get('http://localhost:5500/picture/selection')
       .then((res) => {
-        console.log(res.data);
         setSelection(res.data);
       })
       .catch((err) => console.log(err));
