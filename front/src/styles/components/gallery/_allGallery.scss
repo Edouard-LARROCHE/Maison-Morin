@@ -5,19 +5,16 @@
 
 .option-gallery {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 1fr;
   margin-bottom: 0.5rem;
 
   .search-bar {
-    grid-area: 1 / 2 / 2 / 3;
-    position: relative;
-    left: 18rem;
+    grid-column: 4;
   }
 
   .filter-display {
-    grid-area: 1 / 1 / 2 / 2;
-    width: 50%;
+    grid-column: 1;
     display: flex;
     justify-content: space-between;
 
@@ -269,21 +266,15 @@
 
 /*********** @MEDIA*************/
 
-@media screen and (min-width: 1181px) and (max-width: 1440px) {
+@media screen and (max-width: 1440px) {
   .text-acceuil-fetch {
     width: 90%;
   }
 
   .option-gallery {
-    display: block;
 
     .filter-display {
-      width: 20%;
       margin-bottom: 2rem;
-    }
-
-    .search-bar {
-      left: 0;
     }
   }
 
@@ -316,9 +307,6 @@
   .text-acceuil-fetch {
     width: 90%;
 
-    .search-bar {
-      left: 10rem;
-    }
   }
 
   .fetch-card {
@@ -327,6 +315,30 @@
 
   .text-order {
     width: 90%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .option-gallery {
+    .search-bar {
+      grid-column: 3 / 4;
+      position: relative;
+      left: 76%;
+      width: 13.8rem;
+    }
+    .filter-display {
+      width: 12rem;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .option-gallery {
+    .search-bar {
+      grid-column: 4;
+      position: inherit;
+      left: 0;
+    }
   }
 }
 
