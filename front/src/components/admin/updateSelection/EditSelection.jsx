@@ -1,18 +1,18 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+// import axios from 'axios';
 
 const EditSelection = (props) => {
   const initialForm = { _id: null, pictureUrl: '', name: '', price: '' };
   const [data, setData] = useState(props.editing ? props.currentCard : initialForm);
 
-  axios
-    .put('http://localhost:5500/picture/selection', data)
-    .then((res) => {
-      setData(res.data);
-    })
-    .catch((err) => {
-      console.log(err);
-    });
+  //   axios
+  //     .put('http://localhost:5500/picture/selection', data)
+  //     .then((res) => {
+  //       setData(res.data);
+  //     })
+  //     .catch((err) => {
+  //       console.log(err);
+  //     });
 
   const handleChange = (e) => {
     const { name, value } = e.target;

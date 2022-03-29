@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Table from './Table';
+import EditSelection from './EditSelection';
 
 const IndexUpdateSelection = () => {
   const initialForm = { _id: null, pictureUrl: '', name: '', price: '' };
@@ -50,6 +51,15 @@ const IndexUpdateSelection = () => {
         <h2>3. MODIFIER / AJOUTER (! MAXIMUM 4) / SUPPRIMER DES CARTES : </h2>
         <h3>SELECTIONNÉ POUR VOUS</h3>
       </div>
+      <h1> {editing ? 'MODIFIER' : 'AJOUTER'} </h1>
+      <EditSelection
+        editing={editing}
+        setEditing={setEditing}
+        currentCard={currentCard}
+        setCurrentCard={setCurrentCard}
+        updateCardSelection={updateCardSelection}
+        addCardSelection={addCardSelection}
+      />
       <div className='table'>
         <Table selection={selection} editRow={editRow} deleteCardSelection={deleteCardSelection} />
       </div>

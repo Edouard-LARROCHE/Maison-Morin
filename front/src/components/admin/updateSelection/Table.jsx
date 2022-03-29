@@ -35,7 +35,7 @@ const Table = (props) => {
                     }}>
                     MODIFIER
                   </button>
-                  <button onClick={() => props.handleDelete(index._id)}>SUPPRIMER</button>
+                  <button onClick={() => props.deleteCardSelection(index._id)}>SUPPRIMER</button>
                 </td>
               </tr>
             ))
