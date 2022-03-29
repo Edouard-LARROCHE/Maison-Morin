@@ -61,7 +61,7 @@ const Footer = () => {
         <div className='other-nav-mobile'>
           <ul>
             <li>
-              <h2>LES PLUS</h2>
+              <h2>OPTIONS</h2>
             </li>
             <li>
               <ButtonSwitchMobile />
