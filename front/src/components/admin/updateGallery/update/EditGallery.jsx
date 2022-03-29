@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 
-const UpdateForm = (props) => {
+const EditGallery = (props) => {
   const [card, setCard] = useState(props.currentCard);
   // eslint-disable-next-line
   const [id, setId] = useState(card.id);
@@ -46,4 +46,4 @@ const UpdateForm = (props) => {
   );
 };
 
-export default UpdateForm;
+export default EditGallery;
