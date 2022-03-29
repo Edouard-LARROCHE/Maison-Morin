@@ -33,22 +33,22 @@ const NavBar = () => {
           <ul className={open ? 'resp-nav active' : 'resp-nav'}>
             <li onClick={handleClose}>
               <Link to='/'>
-                <p>ACCUEIL</p>
+                <p>Accueil</p>
               </Link>
             </li>
             <li onClick={handleClose}>
               <Link to='/maison-morin'>
-                <p>LA MAISON MORIN</p>
+                <p>La Maison Morin</p>
               </Link>
             </li>
             <li onClick={handleClose}>
               <Link to='/boutique'>
-                <p>NOTRE BOUTIQUE</p>
+                <p>Notre boutique</p>
               </Link>
             </li>
             <li onClick={handleClose}>
               <Link to='/contact'>
-                <p>NOUS CONTACTER</p>
+                <p>Nous contacter</p>
               </Link>
             </li>
             <div className='menu-drop-open'>
