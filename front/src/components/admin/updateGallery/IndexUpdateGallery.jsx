@@ -126,7 +126,7 @@ const IndexTraiteurViande = () => {
   };
 
   return (
-    <div className='update-traiteur-viande'>
+    <div className='update'>
       <div className='inline-flex'>
         <h2>2. MODIFIER / AJOUTER / SUPPRIMER DES CARTES : </h2>
         <h3>GALLERIE</h3>
