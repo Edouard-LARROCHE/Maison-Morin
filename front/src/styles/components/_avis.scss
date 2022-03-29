@@ -357,6 +357,11 @@
   .container-avis {
     grid-template-columns: 10% 80% 10%;
   }
+  .comment-box-cm {
+    h3 {
+      padding: 0.7em;
+    }
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -374,101 +379,66 @@
     height: 9em;
     width: 20em;
     margin-bottom: 5.6em;
-    background-color: #fff;
-    position: relative;
     h3 {
-      position: absolute;
-      z-index: 2;
-      box-sizing: border-box;
-      padding: 0.8em;
+      padding: 0.4em;
     }
   }
   
   .arrow-actu {
-    position: absolute;
-    height: 2em;
-    width: 2em;
-    background-color: #fff;
-    bottom: -7px;
     left: 180px;
-    transform: rotate(45deg);
-    z-index: 1;
   }
   
   .comment-author-actu {
     margin-top: 171px;
-    margin-left: 12px;
-    h1 {
-      color: black;
-      font-style: italic;
-    }
   }
 
   .comment-box-kn {
     height: 10em;
     width: 20em;
     margin-bottom: 6.6em;
-    background-color: #fff;
-    position: relative;
     h3 {
-      position: absolute;
-      z-index: 2;
-      box-sizing: border-box;
-      padding: 0.8em;
+      padding: 0.7em;
     }
   }
   
   .arrow-kn {
-    position: absolute;
-    height: 2em;
-    width: 2em;
-    background-color: #fff;
-    bottom: -7px;
     left: 180px;
-    transform: rotate(45deg);
-    z-index: 1;
   }
   
   .comment-author-kn {
     margin-top: 189px;
-    margin-left: 12px;
-    h1 {
-      color: black;
-      font-style: italic;
-    }
   }
 
   .comment-box-cm {
     height: 10em;
     width: 20em;
     margin-bottom: 6.6em;
-    background-color: #fff;
-    position: relative;
     h3 {
-      position: absolute;
-      z-index: 2;
-      box-sizing: border-box;
-      padding: 0.8em;
+      padding: 0.25em;
     }
   }
   
   .arrow-cm {
-    position: absolute;
-    height: 2em;
-    width: 2em;
-    background-color: #fff;
-    bottom: -7px;
     left: 180px;
-    transform: rotate(45deg);
-    z-index: 1;
   }
   
   .comment-author-cm {
     margin-top: 189px;
-    margin-left: 12px;
-    h1 {
-      color: black;
-      font-style: italic;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .comment-box-kn {
+    height: 10em;
+    width: 20em;
+    margin-bottom: 6.6em;
+    h3 {
+      padding: 0.55em;
+    }
+  }
+  .comment-box-sp {
+    h3 {
+      padding: 0.6em;
     }
   }
 }

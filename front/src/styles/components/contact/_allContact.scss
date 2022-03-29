@@ -86,21 +86,12 @@
 
 @media screen and (max-width: 568px) {
   .content-form {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: 1fr;
 
     .content1 {
       grid-column: 2 / 5;
-
-      p {
-        font-family: $font-1;
-        letter-spacing: 0.1rem;
-      }
     }
 
     .content2 {
-      margin: 1.5rem 0 3rem 0;
       grid-column: 2 / 6;
     }
   }
