@@ -1,8 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import Table from './Table';
 
 const IndexUpdateSelection = () => {
+  const initialForm = { _id: null, pictureUrl: '', name: '', price: '' };
+
   const [selection, setSelection] = useState([]);
+  const [editing, setEditing] = useState(false);
+  const [currentCard, setCurrentCard] = useState(initialForm);
 
   const fetchData = () => {
     axios
@@ -19,6 +24,26 @@ const IndexUpdateSelection = () => {
     // eslint-disable-next-line
   }, []);
 
+  const addCardSelection = (index) => {
+    index._id = selection.length + 1;
+    setSelection([...selection, index]);
+  };
+
+  const deleteCardSelection = (id) => {
+    setEditing(false);
+    setSelection(selection.filter((index) => index._id !== id));
+  };
+
+  const editRow = (index) => {
+    setEditing(true);
+    setSelection(index);
+  };
+
+  const updateCardSelection = (id, updateCardSelection) => {
+    setEditing(false);
+    setSelection(selection.map((index) => (index._id === id ? updateCardSelection : index)));
+  };
+
   return (
     <div className='update'>
       <div className='inline-flex'>
@@ -26,9 +51,7 @@ const IndexUpdateSelection = () => {
         <h3>SELECTIONNÉ POUR VOUS</h3>
       </div>
       <div className='table'>
-        {/* <Table
-           
-            /> */}
+        <Table selection={selection} editRow={editRow} deleteCardSelection={deleteCardSelection} />
       </div>
     </div>
   );
