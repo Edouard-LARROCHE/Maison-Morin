@@ -55,7 +55,7 @@ const NavBar = () => {
                 <p onClick={handleOpenGallery}>Gallerie</p>
               </li>
             </div>
-            <div>
+            <div className='menu-gallery-open'>
               <ul className={openGallery ? 'resp-nav-gallery active-gallery' : 'resp-nav-gallery'}>
                 <li>
                   <p onClick={handleCloseGallery}>RETOUR</p>

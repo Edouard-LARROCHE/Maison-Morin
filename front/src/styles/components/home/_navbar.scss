@@ -69,7 +69,8 @@
   }
 }
 
-.menu-drop-open {
+.menu-drop-open,
+.menu-gallery-open {
   display: none;
 }
 
@@ -140,7 +141,8 @@
 }
 
 @media screen and (max-width: 767px) {
-  .menu-drop-open {
+  .menu-drop-open,
+  .menu-gallery-open {
     display: block;
 
     li {
