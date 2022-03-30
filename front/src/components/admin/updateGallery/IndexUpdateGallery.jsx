@@ -108,10 +108,6 @@ const IndexTraiteurViande = () => {
     setVins(vins.filter((index) => index._id !== id));
   };
 
-  const editRow = (index) => {
-    setEditing(true);
-  };
-
   return (
     <div className='update'>
       <div className='inline-flex'>
@@ -130,7 +126,6 @@ const IndexTraiteurViande = () => {
             vins={vins}
             cocktails={cocktails}
             prodexcep={prodexcep}
-            editRow={editRow}
             deleteCard={deleteCard}
             addCardViande={addCardViande}
             addCardPoisson={addCardPoisson}
