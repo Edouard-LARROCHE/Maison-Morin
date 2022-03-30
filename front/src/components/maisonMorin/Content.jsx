@@ -2,7 +2,7 @@ import React from 'react';
 
 const Content = () => {
   return (
-    <div className='Band-enter'>
+    <div className='Band-enter-maison-morin'>
       <div className='band-txt'>
         <h1>NOTRE BOUTIQUE À BARBIZON</h1>
         <p className='txt-in'>
