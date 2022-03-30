@@ -13,9 +13,6 @@ const IndexTraiteurViande = () => {
   const [prodexcep, setProdExcep] = useState([]);
   // eslint-disable-next-line
   const [editing, setEditing] = useState(false);
-  const initialForm = { _id: null, pictureUrl: '', name: '', price: '' };
-  // eslint-disable-next-line
-  const [currentCard, setCurrentCard] = useState(initialForm);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -113,7 +110,6 @@ const IndexTraiteurViande = () => {
 
   const editRow = (index) => {
     setEditing(true);
-    setCurrentCard({ id: index._id, pictureUrl: index.pictureUrl, name: index.name, price: index.price });
   };
 
   return (
