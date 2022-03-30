@@ -340,6 +340,63 @@
       left: 0;
     }
   }
+  .Charcuterie-headBand {
+    .Infos-enterText {
+      margin-bottom: 7em;
+      & h1 {
+        margin: .2em;
+        font-size: 2.5em;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .Charcuterie-headBand,
+  .Viande-headBand {
+    .Infos-enterText {
+      margin-bottom: 12em;
+      & h1 {
+        font-size: 2em;
+        margin: 0;
+      }
+      & p {
+        font-size: .9em;
+      }
+      .Presentation-gallery {
+        margin: 0 2em 0 1em;
+      }
+    }
+  }
+
+  .Charcuterie-headBand {
+    .Infos-enterText {
+      & h1 {
+        margin: .5em;
+      }
+    }
+  }
+
+  .Produits-headBand {
+    .Infos-enterText {
+      & h1 {
+        font-size: 2.5em;
+        margin: .25em;
+      }
+      .Presentation-gallery {
+        margin: 0;
+      }
+    }
+  }
+
+  .Poisson-headBand,
+  .Patisserie-headBand,
+  .Produits-headBand {
+    .Infos-enterText {
+      margin-bottom: 12em;
+    }
+  }
+
 }
 
 @media screen and (max-width: 428px) {
@@ -351,14 +408,36 @@
     height: 17em;
   }
 
-  .Viande-headBand {
-    background-size: 110%;
-    height: 18em;
+  .Charcuterie-headBand {
+    .Infos-enterText {
+      .Presentation-gallery {
+        margin: 0 1.5em 0 .5em;
+      }
+    }
   }
 
-  .Charcuterie-headBand {
-    background-size: 140%;
-    height: 36em;
+  .Viande-headBand {
+    height: 18em;
+      .Infos-enterText {
+        margin-bottom: 0;
+        & h1 {
+          margin: 0;
+        }
+        & p {
+          margin: .25em;
+        }
+      }
+  }
+
+  .Produits-headBand {
+    .Infos-enterText {
+      & h1 {
+        margin: .3em;
+      }
+      .Presentation-gallery {
+        margin: 0 1em 0 1em;
+      }
+    }
   }
 
   .plus-text {
@@ -378,7 +457,7 @@
   }
 
   .Presentation-gallery {
-    font-size: 0.9em !important;
+    font-size: .9em !important;
   }
 
   .option-gallery {
@@ -400,5 +479,19 @@
 
   .text-order {
     width: 90%;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .Charcuterie-headBand {
+    margin-bottom: 0;
+      .Infos-enterText {
+        & h1 {
+          margin: 0;
+        }
+        & p {
+          margin: 0;
+        }
+      }
   }
 }
