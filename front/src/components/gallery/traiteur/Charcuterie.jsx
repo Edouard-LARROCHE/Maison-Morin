@@ -51,7 +51,7 @@ const Charcuterie = () => {
           <h1>CHARCUTERIE</h1>
           <p className='Presentation-gallery'>
             Nous vous proposons ce qu'il se fait de mieux en charcuterie, un jambon blanc sans nitrite, sans gluten, cuit au bouillon de légume puis
-            desossé avec bien évidemment du Porc français. <br></br>
+            desossé avec bien évidemment du Porc français.
             <br></br> Maison Morin a fait le choix de vous proposer également une sélection de Jambon cru d'exception comme le véritable San Daniel,
             Pata negra Jimenez 100% Ibérique de Bellota, Serrano Grand 30 mois Duroc, chorizo ibérique de Bellota, la rosette de Lyon porc français,
             du saucisson d'Auvergne, de la viande de grison...de quoi satisfaire les amateurs de charcuterie haut de gamme.
