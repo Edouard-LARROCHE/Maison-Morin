@@ -16,8 +16,7 @@ const DisplayLogin = () => {
         });
     };
     fetchData();
-    // eslint-disable-next-line
-  }, []);
+  }, [data]);
 
   return (
     <div>
