@@ -17,7 +17,6 @@ const IndexAdmin = () => {
       .put('http://localhost:5500/login/' + process.env.REACT_APP_ID, updateData)
       .then((res) => {
         setData(res.data);
-        console.log(data);
         setName('');
         setPassword('');
       })
@@ -38,7 +37,7 @@ const IndexAdmin = () => {
           MODIFIER
         </button>
       </div>
-      <DisplayLogin />
+      <DisplayLogin data={data} />
     </div>
   );
 };
