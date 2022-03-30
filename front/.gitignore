@@ -18,6 +18,9 @@
 .env.test.local
 .env.production.local
 /.env
+/assets
+/logo
+/upload
 
 npm-debug.log*
 yarn-debug.log*
