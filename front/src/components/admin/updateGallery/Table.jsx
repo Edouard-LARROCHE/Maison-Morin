@@ -29,7 +29,7 @@ const Table = (props) => {
       props.deleteCard(id);
       Promise.all(urls.map((url) => axios.delete(url)))
         .then((res) => {
-          return res;
+          console.log(res.data);
         })
         .catch((err) => {
           console.log(err);
