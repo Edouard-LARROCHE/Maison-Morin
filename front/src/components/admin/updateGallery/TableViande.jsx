@@ -6,6 +6,7 @@ const TableViande = (props) => {
   const [editing, setEditing] = useState(false);
   const initialForm = { _id: null, pictureUrl: '', name: '', price: '' };
   const [currentCard, setCurrentCard] = useState(initialForm);
+  const id = currentCard.id;
 
   const editRow = (index) => {
     setEditing(true);
@@ -23,6 +24,7 @@ const TableViande = (props) => {
 
   const handleSubmitPost = async (e) => {
     e.preventDefault();
+
     await axios
       .post('http://localhost:5500/picture/traiteur/viande', viandePostCard)
       .then((res) => {
@@ -34,8 +36,6 @@ const TableViande = (props) => {
         console.log(err);
       });
   };
-
-  const id = currentCard.id;
 
   const handleSubmitUpdate = async (e) => {
     e.preventDefault();
