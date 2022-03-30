@@ -27,7 +27,7 @@ const Table = (props) => {
     let popUp = window.confirm('Tu es sûr ?');
     if (popUp) {
       props.deleteCard(id);
-      Promise.all(urls.map((url) => axios.delete(url)))
+      await Promise.all(urls.map((url) => axios.delete(url)))
         .then((res) => {
           return res;
         })
