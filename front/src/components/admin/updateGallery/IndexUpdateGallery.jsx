@@ -13,52 +13,47 @@ const IndexTraiteurViande = () => {
   const [prodexcep, setProdExcep] = useState([]);
   // eslint-disable-next-line
   const [editing, setEditing] = useState(false);
-  const initialForm = { _id: null, pictureUrl: '', name: '', price: '' };
-  // eslint-disable-next-line
-  const [currentCard, setCurrentCard] = useState(initialForm);
-
-  const fetchData = async () => {
-    let urls = [
-      'http://localhost:5500/picture/traiteur/viande',
-      'http://localhost:5500/picture/traiteur/poisson',
-      'http://localhost:5500/picture/traiteur/charcuterie',
-      'http://localhost:5500/picture/patisserie/macaron',
-      'http://localhost:5500/picture/patisserie/patisseries',
-      'http://localhost:5500/picture/cocktails',
-      'http://localhost:5500/picture/produitsExcep',
-      'http://localhost:5500/picture/cave/vins',
-    ];
-
-    Promise.all(urls.map((url) => axios.get(url)))
-      .then(
-        ([
-          { data: viande },
-          { data: poisson },
-          { data: charcuterie },
-          { data: macaron },
-          { data: patisserie },
-          { data: cocktails },
-          { data: produitsexcep },
-          { data: vins },
-        ]) => {
-          setViandes(viande);
-          setPoissons(poisson);
-          setCharcuteries(charcuterie);
-          setMacarons(macaron);
-          setPatisseries(patisserie);
-          setCocktails(cocktails);
-          setProdExcep(produitsexcep);
-          setVins(vins);
-        },
-      )
-      .catch((err) => {
-        console.log(err);
-      });
-  };
 
   useEffect(() => {
+    const fetchData = async () => {
+      let urls = [
+        'http://localhost:5500/picture/traiteur/viande',
+        'http://localhost:5500/picture/traiteur/poisson',
+        'http://localhost:5500/picture/traiteur/charcuterie',
+        'http://localhost:5500/picture/patisserie/macaron',
+        'http://localhost:5500/picture/patisserie/patisseries',
+        'http://localhost:5500/picture/cocktails',
+        'http://localhost:5500/picture/produitsExcep',
+        'http://localhost:5500/picture/cave/vins',
+      ];
+
+      Promise.all(urls.map((url) => axios.get(url)))
+        .then(
+          ([
+            { data: viande },
+            { data: poisson },
+            { data: charcuterie },
+            { data: macaron },
+            { data: patisserie },
+            { data: cocktails },
+            { data: produitsexcep },
+            { data: vins },
+          ]) => {
+            setViandes(viande);
+            setPoissons(poisson);
+            setCharcuteries(charcuterie);
+            setMacarons(macaron);
+            setPatisseries(patisserie);
+            setCocktails(cocktails);
+            setProdExcep(produitsexcep);
+            setVins(vins);
+          },
+        )
+        .catch((err) => {
+          console.log(err);
+        });
+    };
     fetchData();
-    // eslint-disable-next-line
   }, []);
 
   const addCardViande = (index) => {
@@ -113,11 +108,6 @@ const IndexTraiteurViande = () => {
     setVins(vins.filter((index) => index._id !== id));
   };
 
-  const editRow = (index) => {
-    setEditing(true);
-    setCurrentCard({ id: index._id, pictureUrl: index.pictureUrl, name: index.name, price: index.price });
-  };
-
   return (
     <div className='update'>
       <div className='inline-flex'>
@@ -128,6 +118,7 @@ const IndexTraiteurViande = () => {
         <div className='table'>
           <Table
             viandes={viandes}
+            setViandes={setViandes}
             poissons={poissons}
             charcuteries={charcuteries}
             patisseries={patisseries}
@@ -135,7 +126,6 @@ const IndexTraiteurViande = () => {
             vins={vins}
             cocktails={cocktails}
             prodexcep={prodexcep}
-            editRow={editRow}
             deleteCard={deleteCard}
             addCardViande={addCardViande}
             addCardPoisson={addCardPoisson}

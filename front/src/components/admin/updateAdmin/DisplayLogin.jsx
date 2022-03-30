@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
-const DisplayLogin = () => {
+const DisplayLogin = (props) => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -16,8 +16,7 @@ const DisplayLogin = () => {
         });
     };
     fetchData();
-    // eslint-disable-next-line
-  }, []);
+  }, [props.data]);
 
   return (
     <div>

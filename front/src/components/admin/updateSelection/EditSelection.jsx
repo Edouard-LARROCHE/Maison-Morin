@@ -42,7 +42,7 @@ const EditSelection = (props) => {
 
         <input type='text' placeholder='Nom' name='name' value={data.name} onChange={handleChange} />
 
-        <input type='text' placeholder='Prix' name='price' value={data.price} onChange={handleChange} />
+        <input type='text' placeholder='Description' name='price' value={data.price} onChange={handleChange} />
 
         <button> {props.editing ? 'MODIFIER' : 'AJOUTER'} </button>
         {props.editing && <button onClick={resetCardSelection}>ANNULER</button>}

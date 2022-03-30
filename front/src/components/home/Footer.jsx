@@ -43,7 +43,7 @@ const Footer = () => {
             <p>Nos valeurs</p>
           </li>
         </ul>
-        <ul>
+        <ul className='condition-mobile'>
           <li>
             <h2>NOS CONDITIONS</h2>
           </li>

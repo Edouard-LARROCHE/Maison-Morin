@@ -6,6 +6,7 @@ const TableViande = (props) => {
   const [editing, setEditing] = useState(false);
   const initialForm = { _id: null, pictureUrl: '', name: '', price: '' };
   const [currentCard, setCurrentCard] = useState(initialForm);
+  const id = currentCard.id;
 
   const editRow = (index) => {
     setEditing(true);
@@ -23,10 +24,11 @@ const TableViande = (props) => {
 
   const handleSubmitPost = async (e) => {
     e.preventDefault();
+
     await axios
       .post('http://localhost:5500/picture/traiteur/viande', viandePostCard)
       .then((res) => {
-        console.log(res);
+        console.log(res.data);
         setViandePostCard({ pictureUrl: '', name: '', price: '' });
         props.addCardViande(viandePostCard);
       })
@@ -35,8 +37,6 @@ const TableViande = (props) => {
       });
   };
 
-  const id = currentCard.id;
-
   const handleSubmitUpdate = async (e) => {
     e.preventDefault();
 
@@ -44,6 +44,7 @@ const TableViande = (props) => {
       .put(`http://localhost:5500/picture/traiteur/viande/${id}`, currentCard)
       .then((res) => {
         console.log(res.data);
+        setEditing(false);
       })
       .catch((err) => {
         console.log(err);
@@ -60,7 +61,7 @@ const TableViande = (props) => {
 
             <input type='text' placeholder='Nom' name='name' value={currentCard.name} onChange={handleChangeUpdate} />
 
-            <input type='text' placeholder='Prix' name='price' value={currentCard.price} onChange={handleChangeUpdate} />
+            <input type='text' placeholder='Description' name='price' value={currentCard.price} onChange={handleChangeUpdate} />
 
             <button>MODIFIER</button>
             <button onClick={() => setEditing(false)}>ANNULER</button>
@@ -74,7 +75,7 @@ const TableViande = (props) => {
 
             <input type='text' placeholder='Nom' name='name' value={viandePostCard.name} onChange={handleChangePost} />
 
-            <input type='text' placeholder='Prix' name='price' value={viandePostCard.price} onChange={handleChangePost} />
+            <input type='text' placeholder='Description' name='price' value={viandePostCard.price} onChange={handleChangePost} />
             <button>AJOUTER</button>
           </form>
         </div>
