@@ -61,7 +61,7 @@ const TableVin = (props) => {
 
             <input type='text' placeholder='Nom' name='name' value={currentCard.name} onChange={handleChangeUpdate} />
 
-            <input type='text' placeholder='Description' name='price' value={currentCard.price} onChange={handleChangeUpdate} />
+            <textarea type='text' placeholder='Description' name='price' value={currentCard.price} onChange={handleChangeUpdate} />
 
             <button>MODIFIER</button>
             <button onClick={() => setEditing(false)}>ANNULER</button>
@@ -75,7 +75,7 @@ const TableVin = (props) => {
 
             <input type='text' placeholder='Nom' name='name' value={vinPostCard.name} onChange={handleChangePost} />
 
-            <input type='text' placeholder='Description' name='price' value={vinPostCard.price} onChange={handleChangePost} />
+            <textarea type='text' placeholder='Description' name='price' value={vinPostCard.price} onChange={handleChangePost} />
             <button>AJOUTER</button>
           </form>
         </div>

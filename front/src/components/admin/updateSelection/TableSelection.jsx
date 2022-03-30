@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-const TableMacaron = (props) => {
-  const [macaronPostCard, setMacaronPostCard] = useState({ pictureUrl: '', name: '', price: '' });
+const TableSelection = (props) => {
+  const [selectionPostCard, setSelectionPostCard] = useState({ pictureUrl: '', name: '', price: '' });
   const [editing, setEditing] = useState(false);
   const initialForm = { _id: null, pictureUrl: '', name: '', price: '' };
   const [currentCard, setCurrentCard] = useState(initialForm);
@@ -14,7 +14,7 @@ const TableMacaron = (props) => {
   };
 
   const handleChangePost = (e) => {
-    setMacaronPostCard({ ...macaronPostCard, [e.target.name]: e.target.value });
+    setSelectionPostCard({ ...selectionPostCard, [e.target.name]: e.target.value });
   };
 
   const handleChangeUpdate = (e) => {
@@ -26,11 +26,11 @@ const TableMacaron = (props) => {
     e.preventDefault();
 
     await axios
-      .post('http://localhost:5500/picture/patisserie/macaron', macaronPostCard)
+      .post('http://localhost:5500/picture/selection', selectionPostCard)
       .then((res) => {
         console.log(res.data);
-        setMacaronPostCard({ pictureUrl: '', name: '', price: '' });
-        props.addCardMacaron(macaronPostCard);
+        setSelectionPostCard({ pictureUrl: '', name: '', price: '' });
+        props.addCardSelection(selectionPostCard);
       })
       .catch((err) => {
         console.log(err);
@@ -41,7 +41,7 @@ const TableMacaron = (props) => {
     e.preventDefault();
 
     await axios
-      .put(`http://localhost:5500/picture/patisserie/macaron/${id}`, currentCard)
+      .put(`http://localhost:5500/picture/selection/${id}`, currentCard)
       .then((res) => {
         console.log(res.data);
         setEditing(false);
@@ -71,11 +71,11 @@ const TableMacaron = (props) => {
         <div>
           <h1>AJOUTER</h1>
           <form onSubmit={handleSubmitPost}>
-            <input type='text' placeholder='Photo URL' name='pictureUrl' value={macaronPostCard.pictureUrl} onChange={handleChangePost} />
+            <input type='text' placeholder='Photo URL' name='pictureUrl' value={selectionPostCard.pictureUrl} onChange={handleChangePost} />
 
-            <input type='text' placeholder='Nom' name='name' value={macaronPostCard.name} onChange={handleChangePost} />
+            <input type='text' placeholder='Nom' name='name' value={selectionPostCard.name} onChange={handleChangePost} />
 
-            <textarea type='text' placeholder='Description' name='price' value={macaronPostCard.price} onChange={handleChangePost} />
+            <textarea type='text' placeholder='Description' name='price' value={selectionPostCard.price} onChange={handleChangePost} />
             <button>AJOUTER</button>
           </form>
         </div>
@@ -92,8 +92,8 @@ const TableMacaron = (props) => {
           </tr>
         </thead>
         <tbody>
-          {props.macarons.length > 0 ? (
-            props.macarons.map((index) => (
+          {props.selection.length > 0 ? (
+            props.selection.map((index) => (
               <tr key={index._id}>
                 <td>
                   <a className='url-picture' href={index.pictureUrl} target='_blank' rel='noopener noreferrer'>
@@ -128,4 +128,4 @@ const TableMacaron = (props) => {
   );
 };
 
-export default TableMacaron;
+export default TableSelection;

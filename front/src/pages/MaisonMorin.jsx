@@ -10,6 +10,7 @@ import Content4 from '../components/maisonMorin/Content4';
 import Content5 from '../components/maisonMorin/Content5';
 import NewsLetter from '../components/newsletter/NewsLetter';
 import DropWithoutMenu from '../components/dropDown/DropWithoutMenu';
+import Content from '../components/maisonMorin/Content';
 
 const MaisonMorin = () => {
   return (
@@ -17,6 +18,7 @@ const MaisonMorin = () => {
       <NavBar />
       <HeadBand />
       <DropWithoutMenu />
+      <Content />
       <Content1 />
       <Content2 />
       <Content3 />
