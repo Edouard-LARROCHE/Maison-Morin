@@ -5,6 +5,7 @@ import ButtonSwitch from '../darkMode/ButtonSwitch';
 import MenuIcon from '@material-ui/icons/Menu';
 import CloseIcon from '@material-ui/icons/Close';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
+import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 
 const NavBar = () => {
   const [open, setOpen] = useState(false);
@@ -112,11 +113,22 @@ const NavBar = () => {
           <div className='auth-nav'>
             <ul>
               <Link to='/login'>
-                <li> Se connecter </li>
+                <li>
+                  <p>Se connecter </p>
+                </li>
               </Link>
+              <span style={{ color: '#fff', fontSize: '1.5rem' }}>&#124;</span>
               <Link to='/signup'>
-                <li> Créer un compte </li>
+                <li>
+                  <p>Créer un compte</p>
+                </li>
               </Link>
+              <li style={{ cursor: 'pointer' }}>
+                <p>
+                  MON PANIER
+                  <ShoppingCartIcon />
+                </p>
+              </li>
             </ul>
           </div>
           <ul>

@@ -3,7 +3,7 @@ import React from 'react';
 const Purchase = () => {
   const handleLogout = () => {
     localStorage.removeItem('token');
-    window.location.reload();
+    window.location = '/';
   };
 
   return (

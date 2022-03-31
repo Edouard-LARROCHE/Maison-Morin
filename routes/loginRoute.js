@@ -6,9 +6,6 @@ const { User } = require('../models/loginModel');
 
 router.post('/', async (req, res) => {
   try {
-    const { error } = validate(req.body);
-    if (error) return res.status(400).send({ message: error.details[0].message });
-
     const user = await User.findOne({ email: req.body.email });
     if (!user) return res.status(401).send({ message: 'Invalid Email or Password' });
 
@@ -21,13 +18,5 @@ router.post('/', async (req, res) => {
     res.status(500).send({ message: 'Internal Server Error' });
   }
 });
-
-const validate = (data) => {
-  const schema = object({
-    email: string().email().required().label('Email'),
-    password: string().required().label('Password'),
-  });
-  return schema.validate(data);
-};
 
 module.exports = router;
