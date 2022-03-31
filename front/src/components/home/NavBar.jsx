@@ -108,17 +108,17 @@ const NavBar = () => {
             <img src='/logo/Maison-Morin-Or.png' alt='logo-morin' />
           </Link>
         </div>
-        <div className='auth-nav'>
-          <ul>
-            <Link to='/login'>
-              <li> Se connecter </li>
-            </Link>
-            <Link to='/signup'>
-              <li> Créer un compte </li>
-            </Link>
-          </ul>
-        </div>
         <div className='other-nav'>
+          <div className='auth-nav'>
+            <ul>
+              <Link to='/login'>
+                <li> Se connecter </li>
+              </Link>
+              <Link to='/signup'>
+                <li> Créer un compte </li>
+              </Link>
+            </ul>
+          </div>
           <ul>
             <li className='switch-mode'>
               <ButtonSwitch />
