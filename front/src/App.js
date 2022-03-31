@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 // IMPORT
 import Cookie from './components/Cookie';
 import Home from './pages/Home';
@@ -23,11 +23,16 @@ import PageProduitsDexception from './pages/gallery/PageProduitsDexception';
 import { ThemeContext } from './components/darkMode/ThemeContext';
 // SCROLL TO TOP
 import ScrollToTop from './components/ScrollToTop';
+// AUTH
+import Login from './components/log/Login';
+import Purchase from './components/log/Purchase';
+import Register from './components/log/Register';
 
 function App() {
   const theme = useContext(ThemeContext);
   const darkMode = theme.state.darkMode;
   const [transition, setTransition] = useState(true);
+  const user = localStorage.getItem('token');
 
   useEffect(() => {
     const trans = () => {
@@ -66,6 +71,10 @@ function App() {
                 <Route path='/cave-a-vins' element={<PageCaveVins />} />
                 <Route path='/cocktails' element={<PageCocktails />} />
                 <Route path="/produits-d'exception" element={<PageProduitsDexception />} />
+                {user && <Route path='/' exact element={<Purchase />} />}
+                <Route path='/signup' exact element={<Register />} />
+                <Route path='/login' exact element={<Login />} />
+                <Route path='/' element={<Navigate replace to='/login' />} />
               </Routes>
             </ScrollToTop>
           </div>
