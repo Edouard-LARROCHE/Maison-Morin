@@ -71,7 +71,11 @@ function App() {
                 <Route path='/cave-a-vins' element={<PageCaveVins />} />
                 <Route path='/cocktails' element={<PageCocktails />} />
                 <Route path="/produits-d'exception" element={<PageProduitsDexception />} />
-                {user && <Route path='/mon-panier' exact element={<Purchase />} />}
+                {user ? (
+                  <Route path='/mon-panier' exact element={<Purchase />} />
+                ) : (
+                  <Route path='/mon-panier' element={<Navigate replace to='/login' />} />
+                )}
                 <Route path='/signup' exact element={<Register />} />
                 <Route path='/login' exact element={<Login />} />
                 <Route path='/' element={<Navigate replace to='/login' />} />

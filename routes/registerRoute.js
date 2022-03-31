@@ -7,7 +7,7 @@ const { User } = require('../models/loginModel');
 router.post('/', async (req, res) => {
   try {
     const user = await User.findOne({ email: req.body.email });
-    if (user) return res.status(409).send({ message: 'User with given email already Exist!' });
+    if (user) return res.status(409).send({ message: 'Adresse mail déjà existante. Veuillez en saisir une nouvelle.' });
 
     const salt = await bcrypt.genSalt(Number(process.env.SALT));
     const hashPassword = await bcrypt.hash(req.body.password, salt);

@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { Link, useNavigate } from 'react-router-dom';
+import { TextField } from '@material-ui/core';
+import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 
 const Register = () => {
   const [data, setData] = useState({
@@ -30,25 +32,70 @@ const Register = () => {
   };
 
   return (
-    <div className=''>
-      <div className=''>
-        <div className=''>
-          <h1>S'enregistrer</h1>
+    <div className='signup-container'>
+      <div className='signup-form-container'>
+        <div className='left-register'>
+          <img src='/logo/logo-morin.png' alt='logo' />
           <Link to='/login'>
-            <button type='button' className=''>
-              Se connecter
+            <button type='button' className='log-button'>
+              <p>SE CONNECTER</p>
             </button>
           </Link>
         </div>
-        <div className=''>
-          <form onSubmit={handleSubmit}>
-            <h1>Créer un compte</h1>
-            <input type='text' placeholder='Prénom' name='firstName' onChange={handleChange} value={data.firstName} required />
-            <input type='text' placeholder='Nom' name='lastName' onChange={handleChange} value={data.lastName} required />
-            <input type='email' placeholder='Adresse mail' name='email' onChange={handleChange} value={data.email} required />
-            <input type='password' placeholder='Mot de passe' name='password' onChange={handleChange} value={data.password} required />
-            {error && <div>{error}</div>}
-            <button type='submit'>S'enregistrer</button>
+        <div className='right-register'>
+          <div className='back-register'>
+            <Link to='/'>
+              <p>
+                MAISON-MORIN <ArrowBackIcon />
+              </p>
+            </Link>
+          </div>
+          <form className='form-container-register' onSubmit={handleSubmit}>
+            <h1>CRÉER UN COMPTE</h1>
+            <TextField
+              style={{ margin: '0 0 1rem 0' }}
+              className='input-login'
+              type='text'
+              placeholder='Prénom'
+              name='firstName'
+              onChange={handleChange}
+              value={data.firstName}
+              required
+            />
+            <TextField
+              style={{ margin: '0 0 1rem 0' }}
+              className='input-login'
+              type='text'
+              placeholder='Nom'
+              name='lastName'
+              onChange={handleChange}
+              value={data.lastName}
+              required
+            />
+            <TextField
+              style={{ margin: '0 0 1rem 0' }}
+              className='input-login'
+              type='email'
+              placeholder='Adresse mail'
+              name='email'
+              onChange={handleChange}
+              value={data.email}
+              required
+            />
+            <TextField
+              style={{ margin: ' 0 0 2rem 0' }}
+              className='input-login'
+              type='password'
+              placeholder='Mot de passe'
+              name='password'
+              onChange={handleChange}
+              value={data.password}
+              required
+            />
+            {error && <p>{error}</p>}
+            <button style={{ marginTop: '2rem' }} className='log-button' type='submit'>
+              <p>S'ENREGISTRER</p>
+            </button>
           </form>
         </div>
       </div>

@@ -3,7 +3,7 @@
 .login-container {
   width: 100%;
   min-height: 100vh;
-  background-color: $color-2;
+  background-color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -16,15 +16,21 @@
   border-radius: 10px;
 }
 
-.left {
+.left-login {
   flex: 2;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: white;
+  background-color: $color-6;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
+
+  .back {
+    position: relative;
+    top: -90px;
+    left: -200px;
+  }
 }
 
 .form-container {
@@ -33,23 +39,16 @@
   align-items: center;
 
   h1 {
-    font-size: 40px;
-    margin-top: 0;
+    font-size: 30px;
+    margin-bottom: 3rem;
   }
 }
 
 .input-login {
-  outline: none;
-  border: none;
-  width: 370px;
-  padding: 15px;
-  border-radius: 10px;
-  background-color: #edf5f3;
-  margin: 5px 0;
-  font-size: 14px;
+  width: 300px;
 }
 
-.right {
+.right-login {
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -64,14 +63,16 @@
   }
 }
 
-.right-button {
+.log-button {
   border: none;
   outline: none;
-  padding: 12px 0;
-  background-color: white;
-  border-radius: 20px;
+  padding: 8px 0;
+  background-color: $color-2;
   width: 180px;
   font-size: 16px;
   cursor: pointer;
-  margin-top: 2rem;
+
+  p {
+    color: $color-3;
+  }
 }

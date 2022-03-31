@@ -123,12 +123,14 @@ const NavBar = () => {
                   <p>Créer un compte</p>
                 </li>
               </Link>
-              <li style={{ cursor: 'pointer' }}>
-                <p>
-                  MON PANIER
-                  <ShoppingCartIcon />
-                </p>
-              </li>
+              <Link to='mon-panier'>
+                <li>
+                  <p>
+                    MON PANIER
+                    <ShoppingCartIcon />
+                  </p>
+                </li>
+              </Link>
             </ul>
           </div>
           <ul>
