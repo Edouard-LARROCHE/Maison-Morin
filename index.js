@@ -8,7 +8,7 @@ const path = require('path');
 const PORT = process.env.PORT || '5500';
 
 const postsRoutes = require('./routes/postsRoute');
-const loginRoutes = require('./routes/userRoute');
+const userRoutes = require('./routes/userRoute');
 const uploadRoutes = require('./routes/uploadRoute');
 
 const pictureViandeRoutes = require('./routes/pictureViandeRoute');
@@ -35,7 +35,7 @@ app.use(bodyParser.json());
 app.use(express.static('front/build'));
 
 app.use('/posts', postsRoutes);
-app.use('/login', loginRoutes);
+app.use('/user', userRoutes);
 app.use('/upload', uploadRoutes);
 
 app.use('/picture/traiteur/viande', pictureViandeRoutes);
