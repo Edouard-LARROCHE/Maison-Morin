@@ -19,7 +19,7 @@
 
     & h1 {
       text-align: center;
-      margin: .5em 1em 1em 1em;
+      margin: 0.5em 1em 1em 1em;
       font-size: 2.8em;
     }
 
@@ -59,7 +59,7 @@
   .Band-enter {
     .band-txt {
       & h1 {
-        margin: .4em .2em .4em .2em;
+        margin: 0.4em 0.2em 0.4em 0.2em;
         font-size: 2.8em;
       }
       .txt-in {
@@ -85,9 +85,9 @@
   .Band-enter {
     .band-txt {
       width: 75%;
-  
+
       & h1 {
-        margin: .25em .2em .25em .2em;
+        margin: 0.25em 0.2em 0.25em 0.2em;
       }
     }
   }
@@ -98,9 +98,9 @@
     .band-txt {
       width: 90%;
       & h1 {
-        margin: .25em 0 .25em 0;
+        margin: 0.25em 0 0.25em 0;
       }
-  
+
       .txt-in {
         margin: 0 1rem 0 1rem;
       }
@@ -112,9 +112,9 @@
   .Band-enter {
     .band-txt {
       & h1 {
-        margin: .1em 0 .1em 0;
+        margin: 0.1em 0 0.1em 0;
       }
-  
+
       .txt-in {
         margin: 0 0 0 0;
       }
