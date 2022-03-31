@@ -65,11 +65,32 @@ const Notice = () => {
                 <i className='fa fa-address-card' style={{ width: '1rem' }} />
               </div>
             </a>
-            <p>Région Ile De France</p>
+            <p>Région Île De France</p>
           </div>
         </div>
         <div className='dev-al'>
-          <p>Alan DUBOSQ</p>
+        <img src='/upload/avatar-al.webp' alt='avatar' />
+          <div className='name'>
+            <p>Alan DUBOSQ</p>
+            <p>Developer web Front-end</p>
+            <div className='social-contact'>
+              <ul>
+                <li>
+                  <a href='https://github.com/AlanDbq' target='_blank' rel='noopener noreferrer'>
+                    <i className='fab fa-github' />
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className='adress'>
+            <a href='http://dubosqalan.fr' target='_blank' rel='noopener noreferrer'>
+              <div className='portfolio'>
+                <i className='fa fa-address-card' style={{ width: '1rem' }} />
+              </div>
+            </a>
+            <p>Région Île De France</p>
+          </div>
         </div>
       </div>
     </>
