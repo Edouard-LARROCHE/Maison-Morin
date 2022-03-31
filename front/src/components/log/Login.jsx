@@ -53,7 +53,7 @@ const Login = () => {
           </form>
         </div>
         <div className='right'>
-          <h1>Créer un compte ?</h1>
+          <img src='/logo/logo-morin.png' alt='logo' />
           <Link to='/signup'>
             <button type='button'>S'enregistrer</button>
           </Link>
