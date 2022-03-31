@@ -28,7 +28,7 @@ const Login = () => {
   return (
     <div className='login-container'>
       <div className='login-form-container'>
-        <div className='left'>
+        <div className='left-login'>
           <div className='back'>
             <Link to='/'>
               <p>
@@ -64,7 +64,7 @@ const Login = () => {
             </button>
           </form>
         </div>
-        <div className='right'>
+        <div className='right-login'>
           <img src='/logo/logo-morin.png' alt='logo' />
           <Link to='/signup'>
             <button className='log-button' type='button'>

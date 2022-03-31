@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { Link, useNavigate } from 'react-router-dom';
+import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 
 const Register = () => {
   const [data, setData] = useState({
@@ -30,9 +31,16 @@ const Register = () => {
   };
 
   return (
-    <div className=''>
-      <div className=''>
-        <div className=''>
+    <div className='signup-container'>
+      <div className='signup-form-container'>
+        <div className='left'>
+          <div className='back'>
+            <Link to='/'>
+              <p>
+                MAISON-MORIN <ArrowBackIcon />
+              </p>
+            </Link>
+          </div>
           <h1>S'enregistrer</h1>
           <Link to='/login'>
             <button type='button' className=''>
@@ -40,16 +48,42 @@ const Register = () => {
             </button>
           </Link>
         </div>
-        <div className=''>
-          <form onSubmit={handleSubmit}>
-            <h1>Créer un compte</h1>
-            <input type='text' placeholder='Prénom' name='firstName' onChange={handleChange} value={data.firstName} required />
-            <input type='text' placeholder='Nom' name='lastName' onChange={handleChange} value={data.lastName} required />
-            <input type='email' placeholder='Adresse mail' name='email' onChange={handleChange} value={data.email} required />
-            <input type='password' placeholder='Mot de passe' name='password' onChange={handleChange} value={data.password} required />
-            {error && <div>{error}</div>}
-            <button type='submit'>S'enregistrer</button>
-          </form>
+        <div className='right'>
+          <div className='form-container'>
+            <form onSubmit={handleSubmit}>
+              <h1>Créer un compte</h1>
+              <input
+                className='input-login'
+                type='text'
+                placeholder='Prénom'
+                name='firstName'
+                onChange={handleChange}
+                value={data.firstName}
+                required
+              />
+              <input className='input-login' type='text' placeholder='Nom' name='lastName' onChange={handleChange} value={data.lastName} required />
+              <input
+                className='input-login'
+                type='email'
+                placeholder='Adresse mail'
+                name='email'
+                onChange={handleChange}
+                value={data.email}
+                required
+              />
+              <input
+                className='input-login'
+                type='password'
+                placeholder='Mot de passe'
+                name='password'
+                onChange={handleChange}
+                value={data.password}
+                required
+              />
+              {error && <p>{error}</p>}
+              <button type='submit'>S'enregistrer</button>
+            </form>
+          </div>
         </div>
       </div>
     </div>

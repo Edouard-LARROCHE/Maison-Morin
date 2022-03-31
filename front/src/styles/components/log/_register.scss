@@ -1,0 +1,44 @@
+/************ LOGIN ***********/
+.signup-container {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.signup-form-container {
+  width: 900px;
+  height: 500px;
+  display: flex;
+  border-radius: 10px;
+}
+
+.left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #3bb19b;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+
+  .back {
+    position: relative;
+    top: -90px;
+    left: -200px;
+  }
+}
+
+.right {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
