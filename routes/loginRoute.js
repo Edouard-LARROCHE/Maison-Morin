@@ -4,6 +4,12 @@ const router = express.Router();
 
 const { User } = require('../models/loginModel');
 
+router.get('/:id', (req, res, next) => {
+  User.findOne({ _id: req.params.id })
+    .then((user) => res.status(200).json(user))
+    .catch((error) => res.status(404).json({ error }));
+});
+
 router.post('/', async (req, res) => {
   try {
     const user = await User.findOne({ email: req.body.email });
