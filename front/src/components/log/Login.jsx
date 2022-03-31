@@ -56,7 +56,7 @@ const Login = () => {
           <img src='/logo/logo-morin.png' alt='logo' />
           <Link to='/signup'>
             <button className='right-button' type='button'>
-              CREER UN COMPTE
+              <p> CRÉER UN COMPTE</p>
             </button>
           </Link>
         </div>
