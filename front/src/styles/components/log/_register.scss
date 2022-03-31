@@ -15,30 +15,49 @@
   border-radius: 10px;
 }
 
-.left {
+.left-register {
   flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #3bb19b;
+  background-color: $color-3;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
 
-  .back {
-    position: relative;
-    top: -90px;
-    left: -200px;
+  img {
+    width: 8rem;
   }
 }
 
-.right {
+.right-register {
   flex: 2;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: white;
+  background-color: $color-6;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
+
+  .back-register {
+    position: relative;
+    top: -40px;
+    left: 200px;
+  }
+}
+
+.form-container-register {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h1 {
+    font-size: 30px;
+    margin-bottom: 3rem;
+  }
+}
+
+.input-login {
+  width: 300px;
 }
