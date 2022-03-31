@@ -28,7 +28,7 @@ const Content4 = () => {
         </div>
       </div>
       <div className='left-content2'>
-        <img src='/assets/vic-baron.png' alt='victorien' style={{ height: '35rem' }} />
+        <img src='/assets/vic-baron.webp' alt='victorien' style={{ height: '35rem' }} />
       </div>
     </div>
   );

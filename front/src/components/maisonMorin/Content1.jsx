@@ -26,7 +26,7 @@ const Content1 = () => {
         </div>
       </div>
       <div className='right-content'>
-        <img src='/assets/welcome.jpeg' alt='comptoir' />
+        <img src='/assets/welcome.webp' alt='comptoir' />
       </div>
     </div>
   );

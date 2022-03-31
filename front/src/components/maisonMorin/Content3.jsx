@@ -15,7 +15,7 @@ const Content3 = () => {
         </div>
       </div>
       <div className='right-content'>
-        <img src='/assets/vic-bg.png' alt='victorien' />
+        <img src='/assets/vic-bg.webp' alt='victorien' />
       </div>
     </div>
   );

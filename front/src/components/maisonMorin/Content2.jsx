@@ -15,7 +15,7 @@ const Content2 = () => {
         </div>
       </div>
       <div className='left-content2'>
-        <img src='/assets/vic-baby.png' alt='victorien' />
+        <img src='/assets/vic-baby.webp' alt='victorien' />
       </div>
     </div>
   );
