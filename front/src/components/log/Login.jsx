@@ -40,7 +40,7 @@ const Login = () => {
           <div className=''>
             <h1>Créer un compte ?</h1>
             <Link to='/signup'>
-              <button type='button'>Sing Up</button>
+              <button type='button'>S'enregistrer</button>
             </Link>
           </div>
         </div>
