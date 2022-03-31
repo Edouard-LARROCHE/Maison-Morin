@@ -1,21 +1,33 @@
 const express = require('express');
+const bcrypt = require('bcrypt');
 const router = express.Router();
 
-const Login = require('../models/loginModel');
+const { User } = require('../models/loginModel');
 
-router.post('/', (req, res) => {
-  const { email, password } = req.body;
-  Login.findone({ email: email }, (err, user) => {
-    if (user) {
-      if (password === user.password) {
-        res.send({ message: 'login sucess', user: user });
-      } else {
-        res.send({ message: 'wrong credentials' });
-      }
-    } else {
-      res.send('not register');
-    }
-  });
+router.post('/', async (req, res) => {
+  try {
+    const { error } = validate(req.body);
+    if (error) return res.status(400).send({ message: error.details[0].message });
+
+    const user = await User.findOne({ email: req.body.email });
+    if (!user) return res.status(401).send({ message: 'Invalid Email or Password' });
+
+    const validPassword = await bcrypt.compare(req.body.password, user.password);
+    if (!validPassword) return res.status(401).send({ message: 'Invalid Email or Password' });
+
+    const token = user.generateAuthToken();
+    res.status(200).send({ data: token, message: 'logged in successfully' });
+  } catch (error) {
+    res.status(500).send({ message: 'Internal Server Error' });
+  }
 });
+
+const validate = (data) => {
+  const schema = object({
+    email: string().email().required().label('Email'),
+    password: string().required().label('Password'),
+  });
+  return schema.validate(data);
+};
 
 module.exports = router;
