@@ -55,7 +55,9 @@ const Login = () => {
         <div className='right'>
           <img src='/logo/logo-morin.png' alt='logo' />
           <Link to='/signup'>
-            <button type='button'>S'enregistrer</button>
+            <button className='right-button' type='button'>
+              CREER UN COMPTE
+            </button>
           </Link>
         </div>
       </div>
