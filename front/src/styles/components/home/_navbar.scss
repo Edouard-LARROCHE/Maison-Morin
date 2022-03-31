@@ -43,9 +43,34 @@
 
 /*********** OTHER NAV *************/
 
+.other-nav {
+  display: flex;
+  justify-content: space-around;
+
+  .auth-nav ul {
+    display: flex;
+    align-items: center;
+
+    span {
+      transform: translateY(20px);
+    }
+
+    li,
+    p {
+      display: flex;
+      align-items: center;
+      margin: 1rem 0.4rem 0 0.4rem;
+      color: #fff;
+
+      &:hover {
+        color: $color-3;
+      }
+    }
+  }
+}
+
 .other-nav ul {
   display: flex;
-  justify-content: flex-end;
   padding-top: 2rem;
   padding-right: 2rem;
 
