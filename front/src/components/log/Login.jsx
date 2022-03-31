@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import { TextField } from '@material-ui/core';
+import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 
 const Login = () => {
   const [data, setData] = useState({ email: '', password: '' });
@@ -28,9 +29,17 @@ const Login = () => {
     <div className='login-container'>
       <div className='login-form-container'>
         <div className='left'>
+          <div className='back'>
+            <Link to='/'>
+              <p>
+                MAISON-MORIN <ArrowBackIcon />
+              </p>
+            </Link>
+          </div>
           <form className='form-container' onSubmit={handleSubmit}>
-            <h1>CONNEXION</h1>
+            <h1>SE CONNECTER</h1>
             <TextField
+              style={{ margin: '0 0 1rem 0' }}
               className='input-login'
               type='email'
               placeholder='Adresse mail'
@@ -40,6 +49,7 @@ const Login = () => {
               required
             />
             <TextField
+              style={{ margin: ' 0 0 2rem 0' }}
               className='input-login'
               type='password'
               placeholder='Mot de passe'
@@ -48,14 +58,16 @@ const Login = () => {
               value={data.password}
               required
             />
-            {error && <div>{error}</div>}
-            <button type='submit'>Se connecter</button>
+            {error && <p>{error}</p>}
+            <button style={{ marginTop: '2rem' }} className='log-button' type='submit'>
+              <p>CONNEXION</p>
+            </button>
           </form>
         </div>
         <div className='right'>
           <img src='/logo/logo-morin.png' alt='logo' />
           <Link to='/signup'>
-            <button className='right-button' type='button'>
+            <button className='log-button' type='button'>
               <p> CRÉER UN COMPTE</p>
             </button>
           </Link>
