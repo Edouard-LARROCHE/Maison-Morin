@@ -32,16 +32,6 @@ loginSchema.methods.generateAuthToken = function () {
   return token;
 };
 
-const validate = (data) => {
-  const schema = object({
-    firstName: string().required().label('First Name'),
-    lastName: string().required().label('Last Name'),
-    email: string().email().required().label('Email'),
-    password: required().label('Password'),
-  });
-  return schema.validate(data);
-};
-
 const User = mongoose.model('Login-user', loginSchema);
 
-module.exports = { User, validate };
+module.exports = { User };
