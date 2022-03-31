@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Band = () => {
   return (
@@ -11,7 +12,9 @@ const Band = () => {
           davantage la qualité gustative de nos recettes.
         </p>
         <div className='btn-band'>
-          <p>Découvrir</p>
+          <Link to='/maison-morin'>
+            <p>Découvrir</p>
+          </Link>
         </div>
       </div>
     </div>
