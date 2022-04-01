@@ -3,8 +3,8 @@ import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 
 const Card = ({ gallery }) => {
   const [confirm, setConfirm] = useState('confirm-before');
-  const [add, setAdd] = useState('');
-  const [connect, setConnect] = useState('');
+  const [add, setAdd] = useState('add-before');
+  const [connect, setConnect] = useState('connect-before');
 
   const addStorage = () => {
     if (localStorage.getItem('token')) {
@@ -17,10 +17,16 @@ const Card = ({ gallery }) => {
           setConfirm('confirm-before');
         }, 1500);
       } else {
-        alert('Déjà ajouter');
+        setAdd('add');
+        setTimeout(() => {
+          setAdd('add-before');
+        }, 1500);
       }
     } else {
-      alert('connexion requise');
+      setConnect('connect');
+      setTimeout(() => {
+        setAdd('connect-before');
+      }, 1500);
     }
   };
 
@@ -44,8 +50,12 @@ const Card = ({ gallery }) => {
         <div className={confirm}>
           <p>BIEN AJOUTER</p>
         </div>
-        <div className={add} />
-        <div className={connect} />
+        <div className={add}>
+          <p>DÉJÀ AJOUTER</p>
+        </div>
+        <div className={connect}>
+          <p>MERCI DE VOUS CONNECTER</p>
+        </div>
       </div>
     </div>
   );

@@ -1,18 +1,15 @@
 /********** MODAL CONFIRM ************/
 .confirm {
-  width: 6rem;
-  background-color: red;
   transition: 0.3s ease-in-out;
   p {
     font-size: 10px;
+    color: $color-3;
   }
 }
 
 .confirm-before {
-  //   opacity: 0;
-  width: 6rem;
+  opacity: 0;
   transform: translateY(-2rem);
-  background-color: green;
   transition: 0.3s ease-in-out;
 
   p {
@@ -21,13 +18,40 @@
 }
 /********** MODAL ADD ************/
 .add {
-  width: 2rem;
-  height: 2rem;
-  background-color: red;
+  transition: 0.3s ease-in-out;
+  transform: translateY(-2rem);
+  p {
+    font-size: 10px;
+    color: $color-3;
+  }
+}
+
+.add-before {
+  opacity: 0;
+  transform: translateY(-4rem);
+  transition: 0.3s ease-in-out;
+
+  p {
+    font-size: 10px;
+  }
 }
 /********** MODAL CONNECT ************/
 .connect {
-  width: 2rem;
-  height: 2rem;
-  background-color: red;
+  transition: 0.3s ease-in-out;
+  transform: translateY(-4rem);
+
+  p {
+    font-size: 10px;
+    color: $color-3;
+  }
+}
+
+.connect-before {
+  opacity: 0;
+  transform: translateY(-6rem);
+  transition: 0.3s ease-in-out;
+
+  p {
+    font-size: 10px;
+  }
 }
