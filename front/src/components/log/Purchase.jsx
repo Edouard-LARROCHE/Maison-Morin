@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import ShoppingCartData from './ShoppingCartData';
 
 const Purchase = () => {
   const [userData, setUserData] = useState([]);
@@ -34,6 +35,7 @@ const Purchase = () => {
       ))}
       <h1>Votre panier</h1>
       <button onClick={handleLogout}> DECONNEXION </button>
+      <ShoppingCartData />
     </div>
   );
 };
