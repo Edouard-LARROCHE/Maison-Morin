@@ -13,6 +13,9 @@ const Card = ({ gallery }) => {
         storeData.push(gallery._id);
         window.localStorage.card = storeData;
         setConfirm('confirm');
+        setTimeout(() => {
+          setConfirm('confirm-before');
+        }, 1500);
       } else {
         alert('Déjà ajouter');
       }
