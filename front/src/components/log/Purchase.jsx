@@ -10,7 +10,6 @@ const Purchase = () => {
       await axios
         .get('http://localhost:5500/login')
         .then((res) => {
-          console.log(res.data);
           setUserData(res.data);
         })
         .catch((err) => {
