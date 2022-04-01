@@ -11,9 +11,12 @@ const Card = ({ gallery }) => {
       if (!storeData.includes(gallery._id.toString())) {
         storeData.push(gallery._id);
         window.localStorage.card = storeData;
+      } else if (storeData) {
+        const popErr = document.querySelector('.pop-err');
+        alert('déjà ajouter');
+      } else {
+        alert('connexion requise');
       }
-    } else {
-      alert('connexion requise');
     }
   };
 
@@ -34,6 +37,7 @@ const Card = ({ gallery }) => {
           <p style={{ marginRight: '0.5rem' }}>AJOUTER AU PANIER</p>
           <ShoppingCartIcon style={{ transform: 'translateY(15px)' }} />
         </div>
+        <div className='pop-err' />
       </div>
     </div>
   );
