@@ -25,7 +25,7 @@ const Card = ({ gallery }) => {
     } else {
       setConnect('connect');
       setTimeout(() => {
-        setAdd('connect-before');
+        setConnect('connect-before');
       }, 1500);
     }
   };
