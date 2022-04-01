@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import Card from '../gallery/Card';
+import ShoppingCartCard from './ShoppingCartCard';
 
 const ShoppingCartData = () => {
   const [listData, setListData] = useState([]);
@@ -18,7 +18,11 @@ const ShoppingCartData = () => {
   return (
     <div>
       <h1>Shopping cart</h1>
-      {listData.length > 0 ? listData.map((gallery) => <Card gallery={gallery} key={gallery._id} />) : <h2>PANIER VIDE POUR LE MOMENT</h2>}
+      {listData.length > 0 ? (
+        listData.map((gallery) => <ShoppingCartCard gallery={gallery} key={gallery._id} />)
+      ) : (
+        <h2>PANIER VIDE POUR LE MOMENT</h2>
+      )}
     </div>
   );
 };

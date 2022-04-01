@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 import ShoppingCartData from './ShoppingCartData';
 
@@ -34,6 +35,11 @@ const Purchase = () => {
       ))}
       <h1>Votre panier</h1>
       <button onClick={handleLogout}> DECONNEXION </button>
+      <Link to='/'>
+        <button>
+          <p>RETOUR MAISON MORIN</p>
+        </button>
+      </Link>
       <ShoppingCartData />
     </div>
   );
