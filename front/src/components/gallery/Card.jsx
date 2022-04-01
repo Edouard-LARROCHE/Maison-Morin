@@ -7,8 +7,6 @@ const Card = ({ gallery }) => {
     if (!storeData.includes(gallery._id.toString())) {
       storeData.push(gallery._id);
       window.localStorage.card = storeData;
-    } else {
-      console.log('deja fait');
     }
   };
 
