@@ -2,11 +2,15 @@ import React from 'react';
 
 const Card = ({ gallery }) => {
   const addStorage = () => {
-    let storeData = window.localStorage.card ? window.localStorage.card.split(',') : [];
+    if (localStorage.getItem('token')) {
+      let storeData = window.localStorage.card ? window.localStorage.card.split(',') : [];
 
-    if (!storeData.includes(gallery._id.toString())) {
-      storeData.push(gallery._id);
-      window.localStorage.card = storeData;
+      if (!storeData.includes(gallery._id.toString())) {
+        storeData.push(gallery._id);
+        window.localStorage.card = storeData;
+      }
+    } else {
+      alert('connexion requise');
     }
   };
 
