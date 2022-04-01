@@ -81,7 +81,7 @@ const TableSelection = (props) => {
         </div>
       )}
 
-      <h3>Données actuelles : GALLERIE VIANDES</h3>
+      <h3>Données actuelles : SELECTION</h3>
       <table>
         <thead>
           <tr>
