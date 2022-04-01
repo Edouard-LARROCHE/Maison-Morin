@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
+import ShoppingCartData from './ShoppingCartData';
 
 const Purchase = () => {
   const [userData, setUserData] = useState([]);
@@ -9,7 +11,6 @@ const Purchase = () => {
       await axios
         .get('http://localhost:5500/login')
         .then((res) => {
-          console.log(res.data);
           setUserData(res.data);
         })
         .catch((err) => {
@@ -34,6 +35,12 @@ const Purchase = () => {
       ))}
       <h1>Votre panier</h1>
       <button onClick={handleLogout}> DECONNEXION </button>
+      <Link to='/'>
+        <button>
+          <p>RETOUR MAISON MORIN</p>
+        </button>
+      </Link>
+      <ShoppingCartData />
     </div>
   );
 };

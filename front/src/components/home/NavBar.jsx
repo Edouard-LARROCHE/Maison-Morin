@@ -123,7 +123,7 @@ const NavBar = () => {
                   <p>Créer un compte</p>
                 </li>
               </Link>
-              <Link to='mon-panier'>
+              <Link to='/mon-panier'>
                 <li>
                   <p>
                     MON PANIER
