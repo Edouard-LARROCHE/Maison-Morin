@@ -1,14 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 
 const Card = ({ gallery }) => {
+  const [confirm, setConfirm] = useState('confirm-before');
+  const [add, setAdd] = useState('');
+  const [connect, setConnect] = useState('');
+
   const addStorage = () => {
     if (localStorage.getItem('token')) {
       let storeData = window.localStorage.card ? window.localStorage.card.split(',') : [];
       if (!storeData.includes(gallery._id.toString())) {
         storeData.push(gallery._id);
         window.localStorage.card = storeData;
-        alert('Ajouter au panier !');
+        setConfirm('confirm');
       } else {
         alert('Déjà ajouter');
       }
@@ -34,6 +38,11 @@ const Card = ({ gallery }) => {
           <p style={{ marginRight: '0.5rem' }}>AJOUTER AU PANIER</p>
           <ShoppingCartIcon style={{ transform: 'translateY(15px)' }} />
         </div>
+        <div className={confirm}>
+          <p>BIEN AJOUTER</p>
+        </div>
+        <div className={add} />
+        <div className={connect} />
       </div>
     </div>
   );

@@ -1,0 +1,32 @@
+/********** MODAL CONFIRM ************/
+.confirm {
+  width: 6rem;
+  background-color: red;
+  transition: 0.3s ease-in-out;
+  p {
+    font-size: 10px;
+  }
+}
+
+.confirm-before {
+  width: 6rem;
+  transform: translateY(-2rem);
+  background-color: green;
+  transition: 0.3s ease-in-out;
+
+  p {
+    font-size: 10px;
+  }
+}
+/********** MODAL ADD ************/
+.add {
+  width: 2rem;
+  height: 2rem;
+  background-color: red;
+}
+/********** MODAL CONNECT ************/
+.connect {
+  width: 2rem;
+  height: 2rem;
+  background-color: red;
+}
