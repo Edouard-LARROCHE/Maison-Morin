@@ -105,6 +105,10 @@
   .add-shopping-cart {
     cursor: pointer;
     display: flex;
+
+    &:active {
+      color: $color-3;
+    }
   }
 }
 
