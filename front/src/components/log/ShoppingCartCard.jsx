@@ -1,4 +1,5 @@
 import React from 'react';
+import DeleteIcon from '@material-ui/icons/Delete';
 
 const ShoppingCartCard = ({ gallery }) => {
   const deleteStorage = () => {
@@ -14,13 +15,16 @@ const ShoppingCartCard = ({ gallery }) => {
       <div className='info-card'>
         <p> {gallery.name} </p>
         <p> {gallery.price} </p>
-        <button
+
+        <div
+          className='add-shopping-cart'
           onClick={() => {
             deleteStorage();
             window.location.reload();
           }}>
-          <p>SUPPRIMER DU PANIER</p>
-        </button>
+          <p style={{ marginRight: '0.5rem' }}>SUPPRIMER AU PANIER</p>
+          <DeleteIcon style={{ transform: 'translateY(15px)' }} />
+        </div>
       </div>
     </div>
   );
