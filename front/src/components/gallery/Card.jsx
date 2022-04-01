@@ -1,6 +1,17 @@
 import React from 'react';
 
 const Card = ({ gallery }) => {
+  const addStorage = () => {
+    let storeData = window.localStorage.card ? window.localStorage.card.split(',') : [];
+
+    if (!storeData.includes(gallery._id.toString())) {
+      storeData.push(gallery._id);
+      window.localStorage.card = storeData;
+    } else {
+      console.log('deja fait');
+    }
+  };
+
   return (
     <div className='photos'>
       <img className='img-gallerie' src={gallery.pictureUrl} alt='MAISON-MORIN' />
@@ -14,6 +25,9 @@ const Card = ({ gallery }) => {
       <div className='info-card'>
         <p> {gallery.name} </p>
         <p> {gallery.price} </p>
+        <button onClick={() => addStorage()}>
+          <p>AJOUTER AU PANIER</p>
+        </button>
       </div>
     </div>
   );
