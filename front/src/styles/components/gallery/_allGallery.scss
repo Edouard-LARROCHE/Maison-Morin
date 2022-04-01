@@ -101,6 +101,11 @@
   p {
     margin-top: 1rem;
   }
+
+  .add-shopping-cart {
+    cursor: pointer;
+    display: flex;
+  }
 }
 
 .text-order {
@@ -272,7 +277,6 @@
   }
 
   .option-gallery {
-
     .filter-display {
       margin-bottom: 2rem;
     }
@@ -306,7 +310,6 @@
 
   .text-acceuil-fetch {
     width: 90%;
-
   }
 
   .fetch-card {
@@ -344,7 +347,7 @@
     .Infos-enterText {
       margin-bottom: 7em;
       & h1 {
-        margin: .2em;
+        margin: 0.2em;
         font-size: 2.5em;
       }
     }
@@ -361,7 +364,7 @@
         margin: 0;
       }
       & p {
-        font-size: .9em;
+        font-size: 0.9em;
       }
       .Presentation-gallery {
         margin: 0 2em 0 1em;
@@ -372,7 +375,7 @@
   .Charcuterie-headBand {
     .Infos-enterText {
       & h1 {
-        margin: .5em;
+        margin: 0.5em;
       }
     }
   }
@@ -381,7 +384,7 @@
     .Infos-enterText {
       & h1 {
         font-size: 2.5em;
-        margin: .25em;
+        margin: 0.25em;
       }
       .Presentation-gallery {
         margin: 0;
@@ -396,7 +399,6 @@
       margin-bottom: 12em;
     }
   }
-
 }
 
 @media screen and (max-width: 428px) {
@@ -411,28 +413,28 @@
   .Charcuterie-headBand {
     .Infos-enterText {
       .Presentation-gallery {
-        margin: 0 1.5em 0 .5em;
+        margin: 0 1.5em 0 0.5em;
       }
     }
   }
 
   .Viande-headBand {
     height: 18em;
-      .Infos-enterText {
-        margin-bottom: 0;
-        & h1 {
-          margin: 0;
-        }
-        & p {
-          margin: .25em;
-        }
+    .Infos-enterText {
+      margin-bottom: 0;
+      & h1 {
+        margin: 0;
       }
+      & p {
+        margin: 0.25em;
+      }
+    }
   }
 
   .Produits-headBand {
     .Infos-enterText {
       & h1 {
-        margin: .3em;
+        margin: 0.3em;
       }
       .Presentation-gallery {
         margin: 0 1em 0 1em;
@@ -457,7 +459,7 @@
   }
 
   .Presentation-gallery {
-    font-size: .9em !important;
+    font-size: 0.9em !important;
   }
 
   .option-gallery {
@@ -485,13 +487,13 @@
 @media screen and (max-width: 375px) {
   .Charcuterie-headBand {
     margin-bottom: 0;
-      .Infos-enterText {
-        & h1 {
-          margin: 0;
-        }
-        & p {
-          margin: 0;
-        }
+    .Infos-enterText {
+      & h1 {
+        margin: 0;
       }
+      & p {
+        margin: 0;
+      }
+    }
   }
 }

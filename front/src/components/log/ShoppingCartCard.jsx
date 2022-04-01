@@ -19,7 +19,7 @@ const ShoppingCartCard = ({ gallery }) => {
             deleteStorage();
             window.location.reload();
           }}>
-          <p>SUPPRIMER AU PANIER</p>
+          <p>SUPPRIMER DU PANIER</p>
         </button>
       </div>
     </div>

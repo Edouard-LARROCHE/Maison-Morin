@@ -1,8 +1,11 @@
 import React from 'react';
+import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 
 const Card = ({ gallery }) => {
   const addStorage = () => {
     if (localStorage.getItem('token')) {
+      const effect = document.querySelector('.add-shopping-cart');
+      effect.style.color = ' #ddb355';
       let storeData = window.localStorage.card ? window.localStorage.card.split(',') : [];
 
       if (!storeData.includes(gallery._id.toString())) {
@@ -27,9 +30,10 @@ const Card = ({ gallery }) => {
       <div className='info-card'>
         <p> {gallery.name} </p>
         <p> {gallery.price} </p>
-        <button onClick={() => addStorage()}>
-          <p>AJOUTER AU PANIER</p>
-        </button>
+        <div className='add-shopping-cart' onClick={() => addStorage()}>
+          <p style={{ marginRight: '0.5rem' }}>AJOUTER AU PANIER</p>
+          <ShoppingCartIcon style={{ transform: 'translateY(15px)' }} />
+        </div>
       </div>
     </div>
   );
