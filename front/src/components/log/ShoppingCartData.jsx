@@ -7,10 +7,11 @@ const ShoppingCartData = () => {
 
   useEffect(() => {
     let cardDataId = window.localStorage.card ? window.localStorage.card.split(',') : [];
+    let urls = ['http://localhost:5500/picture/cave/vins/', 'http://localhost:5500/picture/traiteur/viande/'];
 
     for (let i = 0; i < cardDataId.length; i++) {
-      axios.get(`/picture/cave/vins/${cardDataId[i]}`).then((res) => {
-        setListData((listData) => [...listData, res.data]);
+      Promise.all(urls.map((url) => axios.get(url + cardDataId[i]))).then(([{ data: vins }, { data: viandes }]) => {
+        setListData((listData) => [...listData, vins || viandes]);
       });
     }
   }, []);
