@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import NavBar from '../home/NavBar';
 import ShoppingCartData from './ShoppingCartData';
 
 const Purchase = () => {
@@ -27,6 +28,7 @@ const Purchase = () => {
 
   return (
     <div>
+      <NavBar />
       {userData.map((index) => (
         <div key={index._id}>
           <h3>Bonjour {index.firstName} </h3>
