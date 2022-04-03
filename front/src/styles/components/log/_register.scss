@@ -61,3 +61,48 @@
 .input-login {
   width: 300px;
 }
+
+/*********** @MEDIA *************/
+
+@media screen and(max-width: 1024px) {
+  .signup-form-container {
+    width: 700px;
+  }
+
+  .right-register {
+    .back-register {
+      left: 120px;
+    }
+  }
+}
+
+@media screen and(max-width: 428px) {
+  .signup-container {
+    .signup-form-container {
+      flex-direction: column-reverse !important;
+      width: 350px;
+      height: 630px;
+    }
+
+    .right-register {
+      border-top-right-radius: 10px;
+      border-top-left-radius: 10px;
+
+      .back-register {
+        position: relative;
+        top: -10px;
+        left: 0px;
+      }
+    }
+
+    .left-register {
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      border-top-left-radius: 0px;
+
+      img {
+        width: 6rem;
+      }
+    }
+  }
+}
