@@ -36,7 +36,7 @@ const Infos = () => {
                         <div className="englo-anim-l">
                             <div className={display}>
                                 <h2>Des produits de qualité</h2>
-                                <p>Chez Maison Morin, nous favorisons les circuits court afin de faire vivre les producteurs proches de chez vous. Venez découvrir les saveurs de notre magnifique région 
+                                <p>Chez Maison Morin, nous favorisons les circuits courts afin de faire vivre les producteurs proches de chez vous. Venez découvrir les saveurs de notre magnifique région 
                                 et tout ce qu'elle a à vous offrir, nos produits artisanaux de l'entrée au désert, nos plats cuisiniés fait maison élaborés sur place ou encore nos vins, vous trouverez 
                                 de quoi combler vos envies.</p>
                             </div>
