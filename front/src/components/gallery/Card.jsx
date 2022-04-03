@@ -54,7 +54,7 @@ const Card = ({ gallery }) => {
           <p>DÉJÀ AJOUTER</p>
         </div>
         <div className={connect}>
-          <p>MERCI DE VOUS CONNECTER</p>
+          <p>CONNEXION REQUISE</p>
         </div>
       </div>
     </div>

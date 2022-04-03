@@ -57,6 +57,31 @@ const NavBar = () => {
                 <p onClick={handleOpenGallery}>GALLERIE</p>
               </li>
             </div>
+            <div className='auth-nav-mobile'>
+              <ul>
+                <div className='connect-mobile'>
+                  <Link to='/login'>
+                    <li>
+                      <p>Se connecter </p>
+                    </li>
+                  </Link>
+                  <span style={{ color: '#fff', fontSize: '1.5rem' }}>&#124;</span>
+                  <Link to='/signup'>
+                    <li>
+                      <p>Créer un compte</p>
+                    </li>
+                  </Link>
+                </div>
+                <Link to='/mon-panier'>
+                  <li>
+                    <p>
+                      MON PANIER
+                      <ShoppingCartIcon />
+                    </p>
+                  </li>
+                </Link>
+              </ul>
+            </div>
             <div className='menu-gallery-open'>
               <ul className={openGallery ? 'resp-nav-gallery active-gallery' : 'resp-nav-gallery'}>
                 <ArrowBackIcon style={{ cursor: 'pointer', color: '#fff', marginBottom: '1rem', fontSize: '2rem' }} onClick={handleCloseGallery} />
