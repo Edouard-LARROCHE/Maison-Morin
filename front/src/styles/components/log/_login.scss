@@ -79,5 +79,44 @@
 
 /*********** @MEDIA *************/
 
-@media screen and (max-width: 1024px) {
+@media screen and(max-width: 1024px) {
+  .login-form-container {
+    width: 700px;
+  }
+
+  .left-login {
+    .back {
+      left: -120px;
+    }
+  }
+}
+
+@media screen and(max-width: 428px) {
+  .login-container {
+    .login-form-container {
+      flex-direction: column !important;
+      width: 350px;
+      height: 550px;
+    }
+
+    .left-login {
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+
+      .back {
+        position: relative;
+        top: -10px;
+        left: 0px;
+      }
+    }
+
+    .right-login {
+      border-bottom-right-radius: 10px;
+      border-bottom-left-radius: 10px;
+
+      img {
+        width: 6rem;
+      }
+    }
+  }
 }
