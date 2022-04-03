@@ -95,7 +95,8 @@
 }
 
 .menu-drop-open,
-.menu-gallery-open {
+.menu-gallery-open,
+.auth-nav-mobile {
   display: none;
 }
 
@@ -135,6 +136,10 @@
 
   .auth-nav {
     display: none;
+  }
+
+  .auth-nav-mobile {
+    display: block;
   }
 
   .auth-nav-mobile ul {
