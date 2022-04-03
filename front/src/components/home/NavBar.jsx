@@ -82,7 +82,6 @@ const NavBar = () => {
                 </Link>
               </ul>
             </div>
-
             <div className='menu-gallery-open'>
               <ul className={openGallery ? 'resp-nav-gallery active-gallery' : 'resp-nav-gallery'}>
                 <ArrowBackIcon style={{ cursor: 'pointer', color: '#fff', marginBottom: '1rem', fontSize: '2rem' }} onClick={handleCloseGallery} />
