@@ -137,6 +137,26 @@
     display: none;
   }
 
+  .auth-nav-mobile ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    span {
+      transform: translateY(30px);
+    }
+
+    .connect-mobile {
+      display: flex;
+    }
+
+    li,
+    p {
+      display: flex;
+      align-items: center;
+    }
+  }
+
   .resp-nav {
     display: flex;
     flex-direction: column;
