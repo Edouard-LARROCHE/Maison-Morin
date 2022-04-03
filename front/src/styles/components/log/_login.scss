@@ -24,12 +24,6 @@
   background-color: $color-6;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
-
-  .back {
-    position: relative;
-    top: -90px;
-    left: -200px;
-  }
 }
 
 .form-container {
@@ -82,12 +76,6 @@
   .login-form-container {
     width: 700px;
   }
-
-  .left-login {
-    .back {
-      left: -120px;
-    }
-  }
 }
 
 @media screen and(max-width: 428px) {
@@ -101,12 +89,6 @@
     .left-login {
       border-top-left-radius: 10px;
       border-top-right-radius: 10px;
-
-      .back {
-        position: relative;
-        top: -10px;
-        left: 0px;
-      }
     }
 
     .right-login {

@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { Link, useNavigate } from 'react-router-dom';
 import { TextField } from '@material-ui/core';
-import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import NavBar from '../home/NavBar';
 
 const Register = () => {
@@ -46,13 +45,6 @@ const Register = () => {
             </Link>
           </div>
           <div className='right-register'>
-            <div className='back-register'>
-              <Link to='/'>
-                <p>
-                  MAISON-MORIN <ArrowBackIcon />
-                </p>
-              </Link>
-            </div>
             <form className='form-container-register' onSubmit={handleSubmit}>
               <h1>CRÉER UN COMPTE</h1>
               <TextField

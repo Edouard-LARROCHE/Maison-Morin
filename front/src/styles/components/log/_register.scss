@@ -38,12 +38,6 @@
   background-color: $color-6;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
-
-  .back-register {
-    position: relative;
-    top: -40px;
-    left: 200px;
-  }
 }
 
 .form-container-register {
@@ -67,12 +61,6 @@
   .signup-form-container {
     width: 700px;
   }
-
-  .right-register {
-    .back-register {
-      left: 120px;
-    }
-  }
 }
 
 @media screen and(max-width: 428px) {
@@ -86,12 +74,6 @@
     .right-register {
       border-top-right-radius: 10px;
       border-top-left-radius: 10px;
-
-      .back-register {
-        position: relative;
-        top: -10px;
-        left: 0px;
-      }
     }
 
     .left-register {

@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import { TextField } from '@material-ui/core';
-import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import NavBar from '../home/NavBar';
 
 const Login = () => {
@@ -32,13 +31,6 @@ const Login = () => {
       <div className='login-container'>
         <div className='login-form-container'>
           <div className='left-login'>
-            <div className='back'>
-              <Link to='/'>
-                <p>
-                  MAISON-MORIN <ArrowBackIcon />
-                </p>
-              </Link>
-            </div>
             <form className='form-container' onSubmit={handleSubmit}>
               <h1>SE CONNECTER</h1>
               <TextField
