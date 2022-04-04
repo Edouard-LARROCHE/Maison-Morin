@@ -341,26 +341,28 @@
 }
 
 @media screen and (max-width: 768px) {
-  .page-contact .button {
-    margin-right: 20%;
-    margin-left: 20%;
+  .page-contact {
+    display: block;
+    height: 40rem;
+    margin-bottom: 5rem;
   }
 
-  .page-contact .social-media {
-    margin-left: 5.2em;
-  }
-}
-
-@media screen and (max-width: 568px) {
-  .page-contact .button {
-    margin-right: 10%;
-    margin-left: 10%;
+  .button {
+    position: relative;
+    top: -350px;
   }
 
-  .page-contact .social-media {
-    grid-row: 3 / 4;
-    margin-left: 2.5em;
-    margin-bottom: 0.1em;
+  .form-err {
+    position: relative;
+    bottom: -250px;
+  }
+
+  .email-err {
+    font-size: 12px;
+  }
+
+  .social-media {
+    display: none;
   }
 
   .texte {
