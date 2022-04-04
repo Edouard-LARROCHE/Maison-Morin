@@ -25,7 +25,7 @@ const pictureSelectionRoutes = require('./routes/pictureSelectionRoute');
 
 const corsOption = {
   origin: 'http://maison-morin.herokuapp.com/',
-  credentials: true,
+  credentials: false,
   allowedHeaders: ['sessionId', 'Content-Type'],
   exposeHeaders: ['sessionId'],
   methods: 'GET, HEAD, PUT, PATCH, POST, DELETE',
