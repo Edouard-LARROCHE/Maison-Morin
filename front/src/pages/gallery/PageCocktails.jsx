@@ -7,16 +7,16 @@ import Cocktails from '../../components/gallery/Cocktails';
 import TopArrow from '../../components/TopArrow';
 
 const PageCocktails = () => {
-    return (
-        <div>
-        <NavBar />
-        <HeadBand />
-        <MenuDrop />
-        <Cocktails />
-        <Footer />
-        <TopArrow />
-        </div>
-    );
+  return (
+    <div>
+      <NavBar />
+      <HeadBand />
+      <MenuDrop />
+      <Cocktails />
+      <Footer />
+      <TopArrow />
+    </div>
+  );
 };
 
 export default PageCocktails;

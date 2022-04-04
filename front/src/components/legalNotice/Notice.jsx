@@ -69,7 +69,7 @@ const Notice = () => {
           </div>
         </div>
         <div className='dev-al'>
-        <img src='/upload/avatar-al.webp' alt='avatar' />
+          <img src='/upload/avatar-al.webp' alt='avatar' />
           <div className='name'>
             <p>Alan DUBOSQ</p>
             <p>Developer web Front-end</p>

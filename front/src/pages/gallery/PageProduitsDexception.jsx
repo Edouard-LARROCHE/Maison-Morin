@@ -7,16 +7,16 @@ import ProduitsDexception from '../../components/gallery/ProduitsDexception';
 import TopArrow from '../../components/TopArrow';
 
 const PageProduitsDexception = () => {
-    return (
-        <div>
-        <NavBar />
-        <HeadBand />
-        <MenuDrop />
-        <ProduitsDexception />
-        <Footer />
-        <TopArrow />
-        </div>
-    );
+  return (
+    <div>
+      <NavBar />
+      <HeadBand />
+      <MenuDrop />
+      <ProduitsDexception />
+      <Footer />
+      <TopArrow />
+    </div>
+  );
 };
 
 export default PageProduitsDexception;

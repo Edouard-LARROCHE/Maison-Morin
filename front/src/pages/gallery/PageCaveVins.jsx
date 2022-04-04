@@ -7,16 +7,16 @@ import CaveVins from '../../components/gallery/CaveVins';
 import TopArrow from '../../components/TopArrow';
 
 const PageCaveVins = () => {
-    return (
-        <div>
-        <NavBar />
-        <HeadBand />
-        <MenuDrop />
-        <CaveVins />
-        <Footer />
-        <TopArrow />
-        </div>
-    );
+  return (
+    <div>
+      <NavBar />
+      <HeadBand />
+      <MenuDrop />
+      <CaveVins />
+      <Footer />
+      <TopArrow />
+    </div>
+  );
 };
 
 export default PageCaveVins;
