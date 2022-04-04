@@ -11,7 +11,7 @@ const postsRoutes = require('./routes/loginRoute');
 const loginRoutes = require('./routes/loginRoute');
 const registerRoutes = require('./routes/registerRoute');
 const userRoutes = require('./routes/userRoute');
-const uploadRoutes = require('./routes/uploadRoute');
+// const uploadRoutes = require('./routes/uploadRoute');
 
 const pictureViandeRoutes = require('./routes/pictureViandeRoute');
 const picturePoissonRoutes = require('./routes/picturePoissonRoute');
@@ -40,7 +40,7 @@ app.use('/posts', postsRoutes);
 app.use('/login', loginRoutes);
 app.use('/register', registerRoutes);
 app.use('/user', userRoutes);
-app.use('/upload', uploadRoutes);
+// app.use('/upload', uploadRoutes);
 
 app.use('/picture/traiteur/viande', pictureViandeRoutes);
 app.use('/picture/traiteur/poisson', picturePoissonRoutes);
