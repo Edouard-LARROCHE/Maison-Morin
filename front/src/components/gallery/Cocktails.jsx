@@ -51,7 +51,7 @@ const Cocktails = () => {
           <p className='Presentation-gallery'>
             Vous recevez des amis à manger chez vous? Vous organisez un anniversaire surprise? Un baptême? Ou simplement envie de vous faire plaisir?
             Maison Maurin vous propose un large choix de canapés traiteur, petits fours de l'entrée au dessert pour vos apérititfs signés Victorien
-            Morin et partager un moment de convivialité en toute tranquilité.
+            Morin et partager un moment de convivialité en toute tranquillité.
           </p>
         </div>
       </div>

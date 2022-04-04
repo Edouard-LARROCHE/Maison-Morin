@@ -50,7 +50,8 @@ const Patisseries = () => {
           <h1>NOS PÂTISSERIES</h1>
           <p className='Presentation-gallery'>
             Nos pâtisseries ont chacune leur multitude de saveurs, pour votre propre plaisir, celui de vos amis ou un évènement? Du gâteau au chocolat
-            à la tarte aux fruits, nos pâtisseries artisanales signées Maison Morin. Venez découvrir des douceurs qui vont enjoliver votre journée !
+            à la tarte aux fruits, nos pâtisseries artisanales sont signées Maison Morin. Venez découvrir des douceurs qui vont enjoliver votre
+            journée !
           </p>
         </div>
       </div>
