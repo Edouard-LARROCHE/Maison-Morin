@@ -23,7 +23,7 @@ const FormContact = () => {
           <br />
           <p>
             Si vous rencontrez le moindre problème, ou si vous avez une suggestion, n'hésitez pas à remplir le formulaire ci-dessous. Nos équipes sont
-            à votre écoute, et feront le maximum pour répondre à vos attentes.
+            à votre écoute et feront le maximum pour répondre à vos attentes.
           </p>
         </div>
       </div>

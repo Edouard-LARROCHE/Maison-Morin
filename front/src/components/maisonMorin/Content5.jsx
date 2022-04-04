@@ -16,7 +16,7 @@ const Content5 = () => {
           <br />
           <p> « J’ai voulu montrer qu’il y avait un changement pour affirmer ma patte, mais cela reste la Maison Morin.</p>
           <br />
-          <p>J’ai gardé quelques grands noms de la salaisons et bien sûr des terrines maisons ».</p>
+          <p>J’ai gardé quelques grands noms de la salaison et bien sûr, des terrines maisons ».</p>
         </div>
       </div>
       <div className='right-content5'>
