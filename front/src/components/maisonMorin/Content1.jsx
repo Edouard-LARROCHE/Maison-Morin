@@ -20,7 +20,7 @@ const Content1 = () => {
           </p>
           <br />
           <p>
-            Et c’est donc son fils Victorien qui a pris le relais. Un choix étonnant pour celui dont les études ne le destinait pas à un métier de
+            Et c’est donc son fils Victorien qui a pris le relais. Un choix étonnant pour celui dont les études ne le destinaient pas à un métier de
             bouche.
           </p>
         </div>

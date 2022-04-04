@@ -66,7 +66,7 @@ class Map extends Component {
                 <p>Jeudi : 8h30/13h00 - 15h00/19h30</p>
                 <p>Vendredi : 8h30/13h00 - 15h00/19h30</p>
                 <p>Samedi : 8h30/13h00 - 15h00/19h30</p>
-                <p>Diamnche : 8h30/13h00 - 15h00/19h30</p>
+                <p>Dimanche : 8h30/13h00 - 15h00/19h30</p>
               </ul>
             </div>
           </div>

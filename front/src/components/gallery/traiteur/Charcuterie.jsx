@@ -62,10 +62,10 @@ const Charcuterie = () => {
         <h3 className='t-eT'>Mais aussi</h3>
         <p>
           Maison Morin vous propose sur commande des planches de charcuterie à votre convenance, pour plus de renseignement, n'hésitez pas à nous
-          contacter.Vous préférez un apéritif sans charcuterie? Maison Morin vous propose des planches de la mer, parfaites pour un apero gourmant et
-          raffiné avec des gambas marinés à l'aneth et sa crème citronné des tranches de saumon fumés écossais, mini blinis, caviar d'aquitaine Maison
-          Nordique. <br></br>
-          <br></br> Vous êtes Végan? Maison Morin vous propose des planches de crudités avec des légumes frais en Bâtonnets.
+          contacter.Vous préférez un apéritif sans charcuterie? Maison Morin vous propose des planches de la mer parfaites pour un apero gourmant et
+          raffiné avec des gambas marinées à l'aneth et sa crème citronnée, des tranches de saumon fumé écossais, mini blinis, caviar d'aquitaine
+          Maison Nordique. <br></br>
+          <br></br> Vous êtes vegan? Maison Morin vous propose des planches de crudités avec des légumes frais en bâtonnets.
         </p>
       </div>
       <div className='text-acceuil-fetch'>

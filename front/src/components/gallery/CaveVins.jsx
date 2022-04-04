@@ -50,9 +50,9 @@ const CaveVins = () => {
         <div className='Infos-enterText'>
           <h1>VINS</h1>
           <p className='Presentation-gallery'>
-            Maison Morin vous propose des vins de qualités, une diversité de vins pour satisfaire les goûts de chacun de nos clients, nos vins
-            accompagneront vos repas, que ce soit pour une grande occasion ou simplement pour vous faire plaisir à travers divers réferences tel que
-            le Condrieu, Chateauneuf Du Pape, Pagodes de Cos, Chateau Clerc Milion Pauillac, Sauternes-Barsac ou encore Minuty.
+            Maison Morin vous propose des vins de qualité, une diversité de vins pour satisfaire les goûts de chacun de nos clients, nos vins
+            accompagneront vos repas, que ce soit pour une grande occasion ou simplement pour vous faire plaisir à travers diverses réferences telles
+            que le Condrieu, Chateauneuf Du Pape, Pagodes de Cos, Chateau Clerc Milion Pauillac, Sauternes-Barsac ou encore Minuty.
           </p>
         </div>
       </div>

@@ -1,0 +1,15 @@
+.purchase {
+  h1 {
+    text-align: center;
+  }
+}
+
+.shopping-cart {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+  width: 70%;
+  margin: auto;
+  padding: 5rem 0 5rem 0;
+}
