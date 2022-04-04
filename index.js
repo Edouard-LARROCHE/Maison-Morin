@@ -24,13 +24,17 @@ const pictureProduitsExcepRoutes = require('./routes/pictureProduitsExcepRoute')
 const pictureSelectionRoutes = require('./routes/pictureSelectionRoute');
 
 const corsOption = {
-  origin: 'http://maison-morin.herokuapp.com/',
-  credentials: false,
+  origin: process.env.CLIENT_URL,
+  credentials: true,
   allowedHeaders: ['sessionId', 'Content-Type'],
   exposeHeaders: ['sessionId'],
   methods: 'GET, HEAD, PUT, PATCH, POST, DELETE',
   prefFlightContinue: false,
 };
+
+app.use((req, res) => {
+  res.setHeader('Access-Control-Allow-Origin', process.env.MAISON_MORIN_APP);
+});
 
 app.use(cors(corsOption));
 app.use(bodyParser.json());
@@ -40,7 +44,7 @@ app.use('/posts', postsRoutes);
 app.use('/login', loginRoutes);
 app.use('/register', registerRoutes);
 app.use('/user', userRoutes);
-// app.use('/upload', uploadRoutes);
+//app.use('/upload', uploadRoutes);
 
 app.use('/picture/traiteur/viande', pictureViandeRoutes);
 app.use('/picture/traiteur/poisson', picturePoissonRoutes);
