@@ -27,4 +27,3 @@ const loginSchema = mongoose.Schema(
 const User = mongoose.model('Login-user', loginSchema);
 
 module.exports = { User };
-//maison-morin
