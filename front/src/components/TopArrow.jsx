@@ -1,4 +1,4 @@
-import React, { useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import KeyboardArrowIcon from '@material-ui/icons/KeyboardArrowUp';
 
 const TopArrow = () => {
@@ -16,16 +16,17 @@ const TopArrow = () => {
         setIsVisible(false);
       }
     };
-    window.addEventListener("scroll", toggleVisibility);
-    return () => window.removeEventListener("scroll", toggleVisibility);
+    window.addEventListener('scroll', toggleVisibility);
+    return () => window.removeEventListener('scroll', toggleVisibility);
   }, []);
 
-  return (<>
-  {isVisible && (
-    <div className='scroll-top-resp'>
-      <KeyboardArrowIcon style={{ fontSize: '2.5rem', color: '#ddb355' }} onClick={scrollTop} />
-    </div>
-    )}
+  return (
+    <>
+      {isVisible && (
+        <div className='scroll-top-resp'>
+          <KeyboardArrowIcon style={{ fontSize: '2.5rem', color: '#ddb355' }} onClick={scrollTop} />
+        </div>
+      )}
     </>
   );
 };
