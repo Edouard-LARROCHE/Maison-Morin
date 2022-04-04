@@ -37,8 +37,7 @@ const ShoppingCartData = () => {
   }, []);
 
   return (
-    <div>
-      <h1>Shopping cart</h1>
+    <div className='shopping-cart'>
       {listData.length > 0 ? (
         listData.map((gallery) => <ShoppingCartCard gallery={gallery} key={gallery._id} />)
       ) : (
