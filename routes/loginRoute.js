@@ -1,8 +1,17 @@
 const express = require('express');
 const bcrypt = require('bcrypt');
+const jwt = require('jsonwebtoken');
 const router = express.Router();
 
 const { User } = require('../models/loginModel');
+
+const maxAge = 3 * 24 * 60 * 60 * 1000;
+
+const createToken = (id) => {
+  return jwt.sign({ id }, process.env.JWTPRIVATEKEY, {
+    expiresIn: maxAge,
+  });
+};
 
 router.get('/', (req, res) => {
   User.find()
@@ -24,8 +33,9 @@ router.post('/', async (req, res) => {
     const validPassword = await bcrypt.compare(req.body.password, user.password);
     if (!validPassword) return res.status(401).send({ message: 'Adresse mail ou mot de passe invalide' });
 
-    const token = user.generateAuthToken();
-    res.status(200).send({ data: token, message: 'Connexion réussi' });
+    const token = createToken(user._id);
+    res.cookie('jwt', token, { httpOnly: true, maxAge });
+    res.status(200).send({ data: token, user: user._id, message: 'Connexion réussi' });
   } catch (error) {
     res.status(500).send({ message: 'Problème de connexion' });
   }
