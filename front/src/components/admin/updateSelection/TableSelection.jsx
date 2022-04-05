@@ -26,7 +26,7 @@ const TableSelection = (props) => {
     e.preventDefault();
 
     await axios
-      .post('http://localhost:5500/picture/selection', selectionPostCard)
+      .post('/picture/selection', selectionPostCard)
       .then((res) => {
         console.log(res.data);
         setSelectionPostCard({ pictureUrl: '', name: '', price: '' });
@@ -41,7 +41,7 @@ const TableSelection = (props) => {
     e.preventDefault();
 
     await axios
-      .put(`http://localhost:5500/picture/selection/${id}`, currentCard)
+      .put(`/picture/selection/${id}`, currentCard)
       .then((res) => {
         console.log(res.data);
         setEditing(false);

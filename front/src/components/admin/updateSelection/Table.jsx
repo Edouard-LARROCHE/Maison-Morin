@@ -8,7 +8,7 @@ const Table = (props) => {
     if (popUp) {
       props.deleteCard(id);
       await axios
-        .delete(`http://localhost:5500/picture/selection/${id}`)
+        .delete(`/picture/selection/${id}`)
         .then((res) => {
           return res;
         })
