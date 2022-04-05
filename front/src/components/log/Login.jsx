@@ -14,8 +14,9 @@ const Login = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
     try {
-      const { data: res } = await axios.post('http://localhost:5500/login', data);
+      const { data: res } = await axios.post('/login', data);
       localStorage.setItem('token', res.data);
       window.location = '/mon-panier';
     } catch (err) {
