@@ -15,7 +15,7 @@ const Poissons = () => {
     const fetchData = async () => {
       setLoading(true);
       try {
-        const { data: res } = await axios.get('/picture/traiteur/poisson');
+        const { data: res } = await axios.get('http://localhost:5500/picture/traiteur/poisson');
         setData(res);
       } catch (err) {
         console.log(err);
@@ -50,8 +50,8 @@ const Poissons = () => {
         <div className='Infos-enterText'>
           <h1>POISSON</h1>
           <p className='Presentation-gallery'>
-          Nos plats cuisinés à base de poissons et fruits de mer sont élaborés exclusivement avec des produits frais. Un arrivage journalier de poisson 
-          frais nous permet de vous concocté n’importes quel met en fonctions des arrivages et des saisons.
+            Nos plats cuisinés à base de poissons et fruits de mer sont élaborés exclusivement avec des produits frais. Un arrivage journalier de
+            poisson frais nous permet de vous concocté n’importes quel met en fonctions des arrivages et des saisons.
           </p>
         </div>
       </div>

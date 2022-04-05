@@ -15,7 +15,7 @@ const ProduitsDexception = () => {
     const fetchData = async () => {
       setLoading(true);
       try {
-        const { data: res } = await axios.get('/picture/produitsExcep');
+        const { data: res } = await axios.get('http://localhost:5500/picture/produitsExcep');
         setData(res);
       } catch (err) {
         console.log(err);

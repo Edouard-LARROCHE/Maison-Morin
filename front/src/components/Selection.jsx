@@ -11,7 +11,7 @@ const Selection = () => {
     const fetchData = async () => {
       setLoading(true);
       try {
-        const { data: res } = await axios.get('/picture/selection');
+        const { data: res } = await axios.get('http://localhost:5500/picture/selection');
         setDataSelection(res);
       } catch (err) {
         console.log(err);

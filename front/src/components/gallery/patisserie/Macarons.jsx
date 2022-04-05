@@ -15,7 +15,7 @@ const Macarons = () => {
     const fetchData = async () => {
       setLoading(true);
       try {
-        const { data: res } = await axios.get('/picture/patisserie/macaron');
+        const { data: res } = await axios.get('http://localhost:5500/picture/patisserie/macaron');
         setData(res);
       } catch (err) {
         console.log(err);

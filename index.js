@@ -24,19 +24,13 @@ const pictureProduitsExcepRoutes = require('./routes/pictureProduitsExcepRoute')
 const pictureSelectionRoutes = require('./routes/pictureSelectionRoute');
 
 const corsOption = {
-  origin: process.env.CLIENT_URL && process.env.MAISON_MORIN_APP,
+  origin: process.env.MAISON_MORIN_APP,
   credentials: true,
   allowedHeaders: ['sessionId', 'Content-Type'],
   exposeHeaders: ['sessionId'],
   methods: 'GET, HEAD, PUT, PATCH, POST, DELETE',
   prefFlightContinue: false,
 };
-
-app.use((req, res, next) => {
-  res.setHeader('Access-Control-Allow-Origin', 'http://maison-morin.herokuapp.com/');
-  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
-  next();
-});
 
 app.use(cors(corsOption));
 app.use(bodyParser.json());
