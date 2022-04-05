@@ -24,7 +24,7 @@ const pictureProduitsExcepRoutes = require('./routes/pictureProduitsExcepRoute')
 const pictureSelectionRoutes = require('./routes/pictureSelectionRoute');
 
 const corsOption = {
-  origin: process.env.CLIENT_URL,
+  origin: 'http://localhost:5500/' && 'http://maison-morin.herokuapp.com/' && 'http://localhost:3000/',
   credentials: true,
   allowedHeaders: ['sessionId', 'Content-Type'],
   exposeHeaders: ['sessionId'],
