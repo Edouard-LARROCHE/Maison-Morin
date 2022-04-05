@@ -26,13 +26,12 @@ const IndexModal = () => {
       },
     })
       .then((res) => {
-        console.log(res.data);
-        // if (res.data[0].name === name && res.data[0].password === password) {
-        //   window.location = '/update';
-        //   err.style.display = 'none';
-        // } else {
-        //   err.style.display = 'block';
-        // }
+        if (res.data[0].name === name && res.data[0].password === password) {
+          window.location = '/update';
+          err.style.display = 'none';
+        } else {
+          err.style.display = 'block';
+        }
       })
       .catch((err) => {
         console.log(err);
