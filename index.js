@@ -32,10 +32,6 @@ const corsOption = {
   prefFlightContinue: false,
 };
 
-app.use((req, res) => {
-  res.setHeader('Access-Control-Allow-Origin', process.env.MAISON_MORIN_APP);
-});
-
 app.use(cors(corsOption));
 app.use(bodyParser.json());
 app.use(express.static('front/build'));
