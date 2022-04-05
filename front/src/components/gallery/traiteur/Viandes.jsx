@@ -15,7 +15,7 @@ const Viandes = () => {
     const fetchData = async () => {
       setLoading(true);
       try {
-        const { data: res } = await axios.get('http://localhost:5500/picture/traiteur/viande');
+        const { data: res } = await axios.get('/picture/traiteur/viande');
         setData(res);
       } catch (err) {
         console.log(err);

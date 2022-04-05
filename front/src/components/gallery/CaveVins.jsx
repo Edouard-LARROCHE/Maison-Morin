@@ -15,7 +15,7 @@ const CaveVins = () => {
     const fetchData = async () => {
       setLoading(true);
       try {
-        const { data: res } = await axios.get('http://localhost:5500/picture/cave/vins');
+        const { data: res } = await axios.get('/picture/cave/vins');
         setData(res);
       } catch (err) {
         console.log(err);
