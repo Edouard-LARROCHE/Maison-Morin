@@ -10,7 +10,7 @@ const IndexUpdateSelection = () => {
   useEffect(() => {
     const fetchData = () => {
       axios
-        .get('http://localhost:5500/picture/selection')
+        .get('/picture/selection')
         .then((res) => {
           setSelection(res.data);
         })
