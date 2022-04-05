@@ -15,13 +15,13 @@ const Table = (props) => {
   const handleDelete = async (id) => {
     let urls = [
       `/picture/traiteur/viande/${id}`,
-      `http://localhost:5500/picture/traiteur/poisson/${id}`,
-      `http://localhost:5500/picture/traiteur/charcuterie/${id}`,
-      `http://localhost:5500/picture/patisserie/patisseries/${id}`,
-      `http://localhost:5500/picture/patisserie/macaron/${id}`,
-      `http://localhost:5500/picture/cocktails/${id}`,
-      `http://localhost:5500/picture/produitsExcep/${id}`,
-      `http://localhost:5500/picture/cave/vins/${id}`,
+      `/picture/traiteur/poisson/${id}`,
+      `/picture/traiteur/charcuterie/${id}`,
+      `/picture/patisserie/patisseries/${id}`,
+      `/picture/patisserie/macaron/${id}`,
+      `/picture/cocktails/${id}`,
+      `/picture/produitsExcep/${id}`,
+      `/picture/cave/vins/${id}`,
     ];
 
     let popUp = window.confirm('Tu es sûr ?');

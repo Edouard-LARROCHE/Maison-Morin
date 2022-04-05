@@ -26,7 +26,7 @@ const TableMacaron = (props) => {
     e.preventDefault();
 
     await axios
-      .post('http://localhost:5500/picture/patisserie/macaron', macaronPostCard)
+      .post('/picture/patisserie/macaron', macaronPostCard)
       .then((res) => {
         console.log(res.data);
         setMacaronPostCard({ pictureUrl: '', name: '', price: '' });
@@ -41,7 +41,7 @@ const TableMacaron = (props) => {
     e.preventDefault();
 
     await axios
-      .put(`http://localhost:5500/picture/patisserie/macaron/${id}`, currentCard)
+      .put(`/picture/patisserie/macaron/${id}`, currentCard)
       .then((res) => {
         console.log(res.data);
         setEditing(false);
@@ -81,7 +81,7 @@ const TableMacaron = (props) => {
         </div>
       )}
 
-      <h3>Données actuelles : GALLERIE VIANDES</h3>
+      <h3>Données actuelles : GALLERIE MACARONS</h3>
       <table>
         <thead>
           <tr>

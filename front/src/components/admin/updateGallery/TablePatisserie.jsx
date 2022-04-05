@@ -26,7 +26,7 @@ const TablePatisserie = (props) => {
     e.preventDefault();
 
     await axios
-      .post('http://localhost:5500/picture/patisserie/patisseries', patisseriePostCard)
+      .post('/picture/patisserie/patisseries', patisseriePostCard)
       .then((res) => {
         console.log(res.data);
         setPatisseriePostCard({ pictureUrl: '', name: '', price: '' });
@@ -41,7 +41,7 @@ const TablePatisserie = (props) => {
     e.preventDefault();
 
     await axios
-      .put(`http://localhost:5500/picture/patisserie/patisseries/${id}`, currentCard)
+      .put(`/picture/patisserie/patisseries/${id}`, currentCard)
       .then((res) => {
         console.log(res.data);
         setEditing(false);
@@ -81,7 +81,7 @@ const TablePatisserie = (props) => {
         </div>
       )}
 
-      <h3>Données actuelles : GALLERIE VIANDES</h3>
+      <h3>Données actuelles : GALLERIE PÂTISSERIES</h3>
       <table>
         <thead>
           <tr>

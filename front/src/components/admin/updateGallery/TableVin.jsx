@@ -26,7 +26,7 @@ const TableVin = (props) => {
     e.preventDefault();
 
     await axios
-      .post('http://localhost:5500/picture/cave/vins', vinPostCard)
+      .post('/picture/cave/vins', vinPostCard)
       .then((res) => {
         console.log(res.data);
         setVinPostCard({ pictureUrl: '', name: '', price: '' });
@@ -41,7 +41,7 @@ const TableVin = (props) => {
     e.preventDefault();
 
     await axios
-      .put(`http://localhost:5500/picture/cave/vins/${id}`, currentCard)
+      .put(`/picture/cave/vins/${id}`, currentCard)
       .then((res) => {
         console.log(res.data);
         setEditing(false);
@@ -81,7 +81,7 @@ const TableVin = (props) => {
         </div>
       )}
 
-      <h3>Données actuelles : GALLERIE VIANDES</h3>
+      <h3>Données actuelles : GALLERIE VINS</h3>
       <table>
         <thead>
           <tr>

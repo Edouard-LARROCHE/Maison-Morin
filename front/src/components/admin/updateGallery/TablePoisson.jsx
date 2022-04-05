@@ -26,7 +26,7 @@ const TablePoisson = (props) => {
     e.preventDefault();
 
     await axios
-      .post('http://localhost:5500/picture/traiteur/poisson', poissonPostCard)
+      .post('/picture/traiteur/poisson', poissonPostCard)
       .then((res) => {
         console.log(res.data);
         setPoissonPostCard({ pictureUrl: '', name: '', price: '' });
@@ -41,7 +41,7 @@ const TablePoisson = (props) => {
     e.preventDefault();
 
     await axios
-      .put(`http://localhost:5500/picture/traiteur/poisson/${id}`, currentCard)
+      .put(`/picture/traiteur/poisson/${id}`, currentCard)
       .then((res) => {
         console.log(res.data);
         setEditing(false);
@@ -81,7 +81,7 @@ const TablePoisson = (props) => {
         </div>
       )}
 
-      <h3>Données actuelles : GALLERIE VIANDES</h3>
+      <h3>Données actuelles : GALLERIE POISSONS</h3>
       <table>
         <thead>
           <tr>
