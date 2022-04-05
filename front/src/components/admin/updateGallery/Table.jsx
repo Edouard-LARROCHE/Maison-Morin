@@ -14,7 +14,7 @@ const Table = (props) => {
 
   const handleDelete = async (id) => {
     let urls = [
-      `http://localhost:5500/picture/traiteur/viande/${id}`,
+      `/picture/traiteur/viande/${id}`,
       `http://localhost:5500/picture/traiteur/poisson/${id}`,
       `http://localhost:5500/picture/traiteur/charcuterie/${id}`,
       `http://localhost:5500/picture/patisserie/patisseries/${id}`,

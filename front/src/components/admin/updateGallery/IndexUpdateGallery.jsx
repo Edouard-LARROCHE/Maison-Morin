@@ -17,7 +17,7 @@ const IndexTraiteurViande = () => {
   useEffect(() => {
     const fetchData = async () => {
       let urls = [
-        'http://localhost:5500/picture/traiteur/viande',
+        '/picture/traiteur/viande',
         'http://localhost:5500/picture/traiteur/poisson',
         'http://localhost:5500/picture/traiteur/charcuterie',
         'http://localhost:5500/picture/patisserie/macaron',

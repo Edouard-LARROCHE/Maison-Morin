@@ -26,7 +26,7 @@ const TableViande = (props) => {
     e.preventDefault();
 
     await axios
-      .post('http://localhost:5500/picture/traiteur/viande', viandePostCard)
+      .post('/picture/traiteur/viande', viandePostCard)
       .then((res) => {
         console.log(res.data);
         setViandePostCard({ pictureUrl: '', name: '', price: '' });
@@ -41,7 +41,7 @@ const TableViande = (props) => {
     e.preventDefault();
 
     await axios
-      .put(`http://localhost:5500/picture/traiteur/viande/${id}`, currentCard)
+      .put(`/picture/traiteur/viande/${id}`, currentCard)
       .then((res) => {
         console.log(res.data);
         setEditing(false);
