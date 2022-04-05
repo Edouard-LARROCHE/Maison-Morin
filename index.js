@@ -24,7 +24,7 @@ const pictureProduitsExcepRoutes = require('./routes/pictureProduitsExcepRoute')
 const pictureSelectionRoutes = require('./routes/pictureSelectionRoute');
 
 const corsOption = {
-  origin: process.env.CLIENT_URL,
+  origin: process.env.CLIENT_URL && process.env.MAISON_MORIN_APP,
   credentials: true,
   allowedHeaders: ['sessionId', 'Content-Type'],
   exposeHeaders: ['sessionId'],
@@ -32,7 +32,7 @@ const corsOption = {
   prefFlightContinue: false,
 };
 
-app.use(cors());
+app.use(cors(corsOption));
 app.use(bodyParser.json());
 app.use(express.static('front/build'));
 
