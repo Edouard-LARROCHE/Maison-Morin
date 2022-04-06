@@ -34,7 +34,7 @@ router.post('/', async (req, res) => {
     if (!validPassword) return res.status(401).send({ message: 'Adresse mail ou mot de passe invalide' });
 
     const token = createToken(user._id);
-    res.cookie('jwt', token, { httpOnly: true, maxAge });
+    res.cookie('jwt', token, { httpOnly: true, secure: true, sameSite: 'lax', maxAge });
     res.status(200).send({ data: token, user: user._id, message: 'Connexion réussi' });
   } catch (error) {
     res.status(500).send({ message: 'Problème de connexion' });

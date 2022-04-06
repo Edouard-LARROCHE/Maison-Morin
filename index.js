@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 require('./config/db');
 const bodyParser = require('body-parser');
+const cookieParser = require('cookie-parser');
 const cors = require('cors');
 const path = require('path');
 
@@ -34,6 +35,7 @@ const corsOption = {
 
 app.use(cors(corsOption));
 app.use(bodyParser.json());
+app.use(cookieParser());
 app.use(express.static('front/build'));
 
 app.use('/posts', postsRoutes);
