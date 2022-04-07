@@ -7,7 +7,7 @@ const DisplayLogin = (props) => {
   useEffect(() => {
     const fetchData = async () => {
       await axios
-        .get('http://localhost:5500/user')
+        .get('/user')
         .then((res) => {
           setData(res.data);
         })
