@@ -21,9 +21,9 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const { data: res } = await axios.post('/register', data);
+      const { data: res } = await axios.post('api/user/register', data);
       navigate('/login');
-      console.log(res.message);
+      console.log(res);
     } catch (error) {
       if (error.response && error.response.status >= 400 && error.response.status <= 500) {
         setError(error.response.data.message);

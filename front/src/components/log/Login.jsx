@@ -16,7 +16,7 @@ const Login = () => {
     e.preventDefault();
 
     try {
-      const { data: res } = await axios.post('/login', data);
+      const { data: res } = await axios.post('api/user/login', data);
       localStorage.setItem('token', res.data);
       window.location = '/mon-panier';
     } catch (err) {

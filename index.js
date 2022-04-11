@@ -2,16 +2,16 @@ const express = require('express');
 const app = express();
 require('./config/db');
 const bodyParser = require('body-parser');
+const cookieParser = require('cookie-parser');
 const cors = require('cors');
 const path = require('path');
 
 const PORT = process.env.PORT || '5500';
 
-const postsRoutes = require('./routes/loginRoute');
-const loginRoutes = require('./routes/loginRoute');
-const registerRoutes = require('./routes/registerRoute');
 const adminRoutes = require('./routes/adminRoute');
 // const uploadRoutes = require('./routes/uploadRoute');
+const { checkUser, requireAuth } = require('./middleware/auth.middleware');
+const userRoutes = require('./routes/user.routes');
 
 const pictureViandeRoutes = require('./routes/pictureViandeRoute');
 const picturePoissonRoutes = require('./routes/picturePoissonRoute');
@@ -34,14 +34,19 @@ const corsOption = {
 
 app.use(cors(corsOption));
 app.use(bodyParser.json());
+app.use(cookieParser());
 app.use(express.static('front/build'));
 
-app.use('/posts', postsRoutes);
-app.use('/login', loginRoutes);
-app.use('/register', registerRoutes);
+// jwt
+app.get('*', checkUser);
+app.get('/jwtid', requireAuth, (req, res) => {
+  res.status(200).send(res.locals.user._id);
+});
+
+// routes
+app.use('/api/user', userRoutes);
 app.use('/admin', adminRoutes);
 //app.use('/upload', uploadRoutes);
-
 app.use('/picture/traiteur/viande', pictureViandeRoutes);
 app.use('/picture/traiteur/poisson', picturePoissonRoutes);
 app.use('/picture/traiteur/charcuterie', pictureCharcuterieRoutes);
