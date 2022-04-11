@@ -12,5 +12,5 @@ module.exports.userInfo = (req, res) => {
   UserModel.findOne({ _id: req.params.id }, (err, docs) => {
     if (!err) res.send(docs);
     else console.log('ID unknown : ' + err);
-  }).select('password');
+  });
 };
