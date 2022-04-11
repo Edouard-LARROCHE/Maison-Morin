@@ -1,11 +1,23 @@
 import React from 'react';
+import axios from 'axios';
+import cookie from 'js-cookie';
 import NavBar from '../home/NavBar';
 import ShoppingCartData from './ShoppingCartData';
 
 const Purchase = () => {
-  const handleLogout = () => {
-    localStorage.removeItem('token');
-    window.location = '/';
+  const removeCookie = (key) => {
+    if (window !== 'undefined') {
+      cookie.remove(key, { expires: 1 });
+    }
+  };
+
+  const handleLogout = async () => {
+    await axios('/api/user/logout')
+      .then(() => {
+        removeCookie('jwt');
+        window.location = '/';
+      })
+      .catch((err) => console.log(err));
   };
 
   return (

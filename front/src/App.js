@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
+import { UidContext } from './AppContext';
 // IMPORT
 import Cookie from './components/Cookie';
 import Home from './pages/Home';
@@ -27,12 +28,13 @@ import ScrollToTop from './components/ScrollToTop';
 import Login from './components/log/Login';
 import Purchase from './components/log/Purchase';
 import Register from './components/log/Register';
+import axios from 'axios';
 
 function App() {
   const theme = useContext(ThemeContext);
   const darkMode = theme.state.darkMode;
   const [transition, setTransition] = useState(true);
-  const user = localStorage.getItem('token');
+  const [uid, setUid] = useState(null);
 
   useEffect(() => {
     const trans = () => {
@@ -42,48 +44,61 @@ function App() {
       trans();
       setTransition(false);
     }, 3000);
+
+    const fetchToken = async () => {
+      await axios
+        .get('/jwtid')
+        .then((res) => {
+          setUid(res.data);
+        })
+        .catch((err) => console.log('No token ' + err));
+    };
+
+    fetchToken();
   }, []);
 
   return (
     <>
-      {transition ? (
-        <div>
-          <Transition />
-        </div>
-      ) : (
-        <div className={`bg ${darkMode ? 'bg-dark' : 'bg-light'}`}>
-          <div className={`para ${darkMode ? 'para-dark' : 'para-light'}`}>
-            <Cookie />
-            <ScrollToTop>
-              <Routes>
-                <Route exact path='/' element={<Home />} />
-                <Route path='/mentions-legales' element={<LegalNotice />} />
-                <Route path='/cookie' element={<Cookies />} />
-                <Route path='/contact' element={<FormContact />} />
-                <Route path='/update' element={<Admin />} />
-                <Route path='/boutique' element={<Shop />} />
-                <Route path='/maison-morin' element={<MaisonMorin />} />
-                <Route path='/traiteur-viandes' element={<TraiteurViande />} />
-                <Route path='/traiteur-poissons' element={<TraiteurPoisson />} />
-                <Route path='/traiteur-charcuterie' element={<TraiteurCharcuterie />} />
-                <Route path='/patisseries' element={<NosPatisseries />} />
-                <Route path='/patisseries-macarons' element={<PatisserieMacaron />} />
-                <Route path='/cave-a-vins' element={<PageCaveVins />} />
-                <Route path='/cocktails' element={<PageCocktails />} />
-                <Route path="/produits-d'exception" element={<PageProduitsDexception />} />
-                {user ? (
-                  <Route path='/mon-panier' exact element={<Purchase />} />
-                ) : (
-                  <Route path='/mon-panier' element={<Navigate replace to='/login' />} />
-                )}
-                <Route path='/signup' exact element={<Register />} />
-                <Route path='/login' exact element={<Login />} />
-                <Route path='/' element={<Navigate replace to='/login' />} />
-              </Routes>
-            </ScrollToTop>
+      <UidContext.Provider value={uid}>
+        {transition ? (
+          <div>
+            <Transition />
           </div>
-        </div>
-      )}
+        ) : (
+          <div className={`bg ${darkMode ? 'bg-dark' : 'bg-light'}`}>
+            <div className={`para ${darkMode ? 'para-dark' : 'para-light'}`}>
+              <Cookie />
+              <ScrollToTop>
+                <Routes>
+                  <Route exact path='/' element={<Home />} />
+                  <Route path='/mentions-legales' element={<LegalNotice />} />
+                  <Route path='/cookie' element={<Cookies />} />
+                  <Route path='/contact' element={<FormContact />} />
+                  <Route path='/update' element={<Admin />} />
+                  <Route path='/boutique' element={<Shop />} />
+                  <Route path='/maison-morin' element={<MaisonMorin />} />
+                  <Route path='/traiteur-viandes' element={<TraiteurViande />} />
+                  <Route path='/traiteur-poissons' element={<TraiteurPoisson />} />
+                  <Route path='/traiteur-charcuterie' element={<TraiteurCharcuterie />} />
+                  <Route path='/patisseries' element={<NosPatisseries />} />
+                  <Route path='/patisseries-macarons' element={<PatisserieMacaron />} />
+                  <Route path='/cave-a-vins' element={<PageCaveVins />} />
+                  <Route path='/cocktails' element={<PageCocktails />} />
+                  <Route path="/produits-d'exception" element={<PageProduitsDexception />} />
+                  {uid ? (
+                    <Route path='/mon-panier' exact element={<Purchase />} />
+                  ) : (
+                    <Route path='/mon-panier' element={<Navigate replace to='/login' />} />
+                  )}
+                  <Route path='/signup' exact element={<Register />} />
+                  <Route path='/login' exact element={<Login />} />
+                  <Route path='/' element={<Navigate replace to='/login' />} />
+                </Routes>
+              </ScrollToTop>
+            </div>
+          </div>
+        )}
+      </UidContext.Provider>
     </>
   );
 }
