@@ -7,7 +7,7 @@ const DisplayLogin = (props) => {
   useEffect(() => {
     const fetchData = async () => {
       await axios
-        .get('/user')
+        .get('/admin')
         .then((res) => {
           setData(res.data);
         })

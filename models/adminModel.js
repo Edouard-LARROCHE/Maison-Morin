@@ -12,8 +12,8 @@ const userSchema = mongoose.Schema(
     },
   },
   {
-    collection: 'login',
+    collection: 'admin',
   },
 );
 
-module.exports = mongoose.model('Login', userSchema);
+module.exports = mongoose.model('Admin', userSchema);
