@@ -6,10 +6,14 @@ const userSchema = mongoose.Schema(
     firstName: {
       type: String,
       required: true,
+      minLength: 3,
+      maxLength: 55,
     },
     lastName: {
       type: String,
       required: true,
+      minLength: 3,
+      maxLength: 55,
     },
     email: {
       type: String,
@@ -18,7 +22,12 @@ const userSchema = mongoose.Schema(
     password: {
       type: String,
       required: true,
+      max: 500,
+      minlength: 6,
     },
+  },
+  {
+    timestamps: true,
   },
   {
     collection: 'login-user',
