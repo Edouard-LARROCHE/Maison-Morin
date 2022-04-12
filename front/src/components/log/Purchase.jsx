@@ -1,28 +1,12 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React from 'react';
 import axios from 'axios';
 import cookie from 'js-cookie';
 import NavBar from '../home/NavBar';
 import ShoppingCartData from './ShoppingCartData';
-import { UidContext } from '../../AppContext';
+import { useSelector } from 'react-redux';
 
 const Purchase = () => {
-  const [userConnect, setUserConnect] = useState([]);
-  const id = useContext(UidContext);
-
-  useEffect(() => {
-    const fetchUserConnect = async () => {
-      await axios
-        .get(`/api/user/${id}`)
-        .then((res) => {
-          console.log(res.data);
-          setUserConnect(res.data);
-        })
-        .catch((err) => {
-          console.log(err);
-        });
-    };
-    fetchUserConnect();
-  }, []);
+  const userData = useSelector((state) => state.userReducer);
 
   const removeCookie = (key) => {
     if (window !== 'undefined') {
@@ -43,7 +27,7 @@ const Purchase = () => {
     <div className='purchase'>
       <NavBar />
       <p>
-        Bonjour {userConnect.firstName} {userConnect.lastName}
+        Bienvenue {userData.firstName} {userData.lastName}
       </p>
       <button style={{ margin: '1rem' }} className='log-button ' onClick={handleLogout}>
         <p>DECONNEXION </p>

@@ -29,12 +29,16 @@ import Login from './components/log/Login';
 import Purchase from './components/log/Purchase';
 import Register from './components/log/Register';
 import axios from 'axios';
+// REDUX
+import { useDispatch } from 'react-redux';
+import { getUser } from './actions/user.actions';
 
 function App() {
   const theme = useContext(ThemeContext);
   const darkMode = theme.state.darkMode;
   const [transition, setTransition] = useState(true);
   const [uid, setUid] = useState(null);
+  const dispatch = useDispatch();
 
   useEffect(() => {
     const trans = () => {
@@ -55,7 +59,8 @@ function App() {
     };
 
     fetchToken();
-  }, []);
+    if (uid) dispatch(getUser(uid));
+  }, [uid]);
 
   return (
     <>
