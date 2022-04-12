@@ -27,9 +27,9 @@ const Purchase = () => {
   return (
     <div className='purchase'>
       <NavBar />
-      <p>
+      <h2>
         Bienvenue {userData.firstName} {userData.lastName}
-      </p>
+      </h2>
       <button style={{ margin: '1rem' }} className='log-button ' onClick={handleLogout}>
         <p>DECONNEXION </p>
       </button>
