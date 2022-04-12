@@ -72,7 +72,7 @@ const NavBar = () => {
                     </li>
                   </Link>
                 </div>
-                <Link to='/mon-panier'>
+                <Link to='/mon-compte'>
                   <li>
                     <p>
                       MON PANIER
@@ -148,7 +148,7 @@ const NavBar = () => {
                   <p>Créer un compte</p>
                 </li>
               </Link>
-              <Link to='/mon-panier'>
+              <Link to='/mon-compte'>
                 <li>
                   <p>
                     MON PANIER

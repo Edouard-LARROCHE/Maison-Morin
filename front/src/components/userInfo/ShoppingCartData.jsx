@@ -37,12 +37,15 @@ const ShoppingCartData = () => {
   }, []);
 
   return (
-    <div className='shopping-cart'>
-      {listData.length > 0 ? (
-        listData.map((gallery) => <ShoppingCartCard gallery={gallery} key={gallery._id} />)
-      ) : (
-        <h2>PANIER VIDE POUR LE MOMENT</h2>
-      )}
+    <div className='shopping'>
+      <h1>Mon panier</h1>
+      <div className='shopping-cart'>
+        {listData.length > 0 ? (
+          listData.map((gallery) => <ShoppingCartCard gallery={gallery} key={gallery._id} />)
+        ) : (
+          <h2>PANIER VIDE POUR LE MOMENT</h2>
+        )}
+      </div>
     </div>
   );
 };

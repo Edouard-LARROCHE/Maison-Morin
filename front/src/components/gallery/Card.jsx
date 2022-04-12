@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
+import { useSelector } from 'react-redux';
 
 const Card = ({ gallery }) => {
   const [confirm, setConfirm] = useState('confirm-before');
   const [add, setAdd] = useState('add-before');
   const [connect, setConnect] = useState('connect-before');
+  const userData = useSelector((state) => state.userReducer);
 
   const addStorage = () => {
-    if (localStorage.getItem('token')) {
+    if (userData) {
       let storeData = window.localStorage.card ? window.localStorage.card.split(',') : [];
       if (!storeData.includes(gallery._id.toString())) {
         storeData.push(gallery._id);
