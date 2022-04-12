@@ -15,15 +15,19 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    try {
-      const { data: res } = await axios.post('api/user/login', data);
-      localStorage.setItem('token', res.data);
-      window.location = '/mon-compte';
-    } catch (err) {
-      if (err.response && err.response.status >= 400 && err.response.status <= 500) {
-        setError(err.response.data.message);
-      }
-    }
+    axios
+      .post('/api/user/login', data)
+      .then((res) => {
+        console.log(res);
+        if (res.data.errors) {
+          setError(res.data.errors.password || res.data.errors.email);
+        } else {
+          window.location = '/mon-compte';
+        }
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   };
 
   return (
