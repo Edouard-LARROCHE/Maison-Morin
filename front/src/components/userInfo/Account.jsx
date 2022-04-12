@@ -14,7 +14,7 @@ const Account = () => {
         <h3>Prénom : {userData.firstName}</h3>
         <h3>Nom : {userData.lastName}</h3>
         <h3>Adresse e-mail : {userData.email}</h3>
-        <h3>Inscrit depuis le : {dateParser(userData.createdAt)}</h3>
+        <h3>Compte créé le : {dateParser(userData.createdAt)}</h3>
       </div>
     </>
   );
