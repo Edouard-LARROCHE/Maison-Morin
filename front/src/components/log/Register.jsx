@@ -5,14 +5,14 @@ import { TextField } from '@material-ui/core';
 import NavBar from '../home/NavBar';
 
 const Register = () => {
+  const [error, setError] = useState('');
+  const navigate = useNavigate();
   const [data, setData] = useState({
     firstName: '',
     lastName: '',
     email: '',
     password: '',
   });
-  const [error, setError] = useState('');
-  const navigate = useNavigate();
 
   const handleChange = ({ currentTarget: input }) => {
     setData({ ...data, [input.name]: input.value });
