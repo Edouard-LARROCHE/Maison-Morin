@@ -60,6 +60,7 @@ function App() {
 
     fetchToken();
     if (uid) dispatch(getUser(uid));
+    // eslint-disable-next-line
   }, [uid]);
 
   return (
