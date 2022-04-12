@@ -18,7 +18,6 @@ const Login = () => {
     axios
       .post('/api/user/login', data)
       .then((res) => {
-        console.log(res);
         if (res.data.errors) {
           setError(res.data.errors.password || res.data.errors.email);
         } else {
