@@ -3,6 +3,7 @@ import axios from 'axios';
 import cookie from 'js-cookie';
 import NavBar from '../home/NavBar';
 import ShoppingCartData from './ShoppingCartData';
+import Account from './Account';
 import { useSelector } from 'react-redux';
 
 const Purchase = () => {
@@ -32,8 +33,9 @@ const Purchase = () => {
       <button style={{ margin: '1rem' }} className='log-button ' onClick={handleLogout}>
         <p>DECONNEXION </p>
       </button>
-      <h1>Votre panier</h1>
+      <h1>Mon panier</h1>
       <ShoppingCartData />
+      <Account />
     </div>
   );
 };

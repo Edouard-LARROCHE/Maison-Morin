@@ -26,7 +26,7 @@ import { ThemeContext } from './components/darkMode/ThemeContext';
 import ScrollToTop from './components/ScrollToTop';
 // AUTH
 import Login from './components/log/Login';
-import Purchase from './components/log/Purchase';
+import Purchase from './components/userInfo/Purchase';
 import Register from './components/log/Register';
 import axios from 'axios';
 // REDUX
