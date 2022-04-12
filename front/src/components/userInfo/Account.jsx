@@ -6,7 +6,7 @@ const Account = () => {
 
   return (
     <div className='account'>
-      <h1>Info compte</h1>
+      <h1>Information du compte</h1>
       <p>Prénom : {userData.firstName}</p>
       <p>Nom : {userData.lastName}</p>
       <p>Adresse e-mail : {userData.email}</p>

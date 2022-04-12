@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
 import cookie from 'js-cookie';
 import NavBar from '../home/NavBar';
@@ -8,6 +8,18 @@ import { useSelector } from 'react-redux';
 
 const Purchase = () => {
   const userData = useSelector((state) => state.userReducer);
+  const [account, setAccount] = useState(false);
+  const [shop, setShop] = useState(false);
+
+  const handleChange = (e) => {
+    if (e.target.id === 'account') {
+      setAccount(true);
+      setShop(false);
+    } else if (e.target.id === 'shop') {
+      setShop(true);
+      setAccount(false);
+    }
+  };
 
   const removeCookie = (key) => {
     if (window !== 'undefined') {
@@ -32,13 +44,19 @@ const Purchase = () => {
           <h2>
             Bienvenue {userData.firstName} {userData.lastName}
           </h2>
+          <button onClick={handleChange} id='account'>
+            Mon compte
+          </button>
+          <button onClick={handleChange} id='shop'>
+            Mon panier
+          </button>
           <button style={{ margin: '1rem' }} className='log-button ' onClick={handleLogout}>
             <p>DECONNEXION </p>
           </button>
         </div>
         <div className='conditionnal-display'>
-          <ShoppingCartData />
-          <Account />
+          {account && <Account />}
+          {shop && <ShoppingCartData />}
         </div>
       </div>
     </>
