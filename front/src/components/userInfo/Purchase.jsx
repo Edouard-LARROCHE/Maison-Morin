@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import cookie from 'js-cookie';
 import NavBar from '../home/NavBar';
+import Footer from '../home/Footer';
 import ShoppingCartData from './ShoppingCartData';
 import Account from './Account';
 import { useSelector } from 'react-redux';
@@ -9,7 +10,7 @@ import { useSelector } from 'react-redux';
 const Purchase = () => {
   const userData = useSelector((state) => state.userReducer);
   const [account, setAccount] = useState(false);
-  const [shop, setShop] = useState(false);
+  const [shop, setShop] = useState(true);
 
   const handleChange = (e) => {
     if (e.target.id === 'account') {
@@ -44,12 +45,14 @@ const Purchase = () => {
           <h2>
             Bienvenue {userData.firstName} {userData.lastName}
           </h2>
-          <button onClick={handleChange} id='account'>
-            Mon compte
-          </button>
-          <button onClick={handleChange} id='shop'>
-            Mon panier
-          </button>
+          <div className='toggle-button'>
+            <p onClick={handleChange} id='account'>
+              MON COMPTE
+            </p>
+            <p onClick={handleChange} id='shop'>
+              MON PANIER
+            </p>
+          </div>
           <button style={{ margin: '1rem' }} className='log-button ' onClick={handleLogout}>
             <p>DECONNEXION </p>
           </button>
@@ -59,6 +62,7 @@ const Purchase = () => {
           {shop && <ShoppingCartData />}
         </div>
       </div>
+      <Footer />
     </>
   );
 };

@@ -18,7 +18,7 @@ const Login = () => {
     try {
       const { data: res } = await axios.post('api/user/login', data);
       localStorage.setItem('token', res.data);
-      window.location = '/mon-panier';
+      window.location = '/mon-compte';
     } catch (err) {
       if (err.response && err.response.status >= 400 && err.response.status <= 500) {
         setError(err.response.data.message);
