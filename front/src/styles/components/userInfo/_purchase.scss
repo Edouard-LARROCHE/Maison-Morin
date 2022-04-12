@@ -1,5 +1,15 @@
+.purchase-page {
+  display: grid;
+  grid-template-columns: 30% 1fr;
+  grid-template-rows: 1fr;
+  height: 100vh;
+}
+
 .purchase {
-  h1 {
+  padding: 2rem;
+  border-right: 1px solid $color-3;
+
+  h2 {
     text-align: center;
   }
 }

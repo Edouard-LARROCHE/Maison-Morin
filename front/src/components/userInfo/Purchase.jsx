@@ -25,18 +25,23 @@ const Purchase = () => {
   };
 
   return (
-    <div className='purchase'>
+    <>
       <NavBar />
-      <h2>
-        Bienvenue {userData.firstName} {userData.lastName}
-      </h2>
-      <button style={{ margin: '1rem' }} className='log-button ' onClick={handleLogout}>
-        <p>DECONNEXION </p>
-      </button>
-      <h1>Mon panier</h1>
-      <ShoppingCartData />
-      <Account />
-    </div>
+      <div className='purchase-page'>
+        <div className='purchase'>
+          <h2>
+            Bienvenue {userData.firstName} {userData.lastName}
+          </h2>
+          <button style={{ margin: '1rem' }} className='log-button ' onClick={handleLogout}>
+            <p>DECONNEXION </p>
+          </button>
+        </div>
+        <div className='conditionnal-display'>
+          <ShoppingCartData />
+          <Account />
+        </div>
+      </div>
+    </>
   );
 };
 
