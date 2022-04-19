@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import { UidContext } from './AppContext';
+import axios from 'axios';
 // IMPORT
 import Cookie from './components/Cookie';
 import Home from './pages/Home';
@@ -28,7 +29,6 @@ import ScrollToTop from './components/ScrollToTop';
 import Login from './components/log/Login';
 import Purchase from './components/userInfo/Purchase';
 import Register from './components/log/Register';
-import axios from 'axios';
 // REDUX
 import { useDispatch } from 'react-redux';
 import { getUser } from './actions/user.actions';
