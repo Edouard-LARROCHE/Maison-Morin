@@ -11,7 +11,7 @@ const Card = ({ gallery }) => {
   const card = useSelector((state) => state.cardReducer);
   const dispatch = useDispatch();
 
-  const addStorage = () => {
+  const addStore = () => {
     if (userData._id) {
       if (!card.includes(gallery._id.toString())) {
         card.push(gallery._id);
@@ -47,7 +47,7 @@ const Card = ({ gallery }) => {
       <div className='info-card'>
         <p> {gallery.name} </p>
         <p> {gallery.price} </p>
-        <div className='add-shopping-cart' onClick={() => addStorage()}>
+        <div className='add-shopping-cart' onClick={() => addStore()}>
           <p style={{ marginRight: '0.5rem' }}>AJOUTER AU PANIER</p>
           <ShoppingCartIcon style={{ transform: 'translateY(15px)' }} />
         </div>
