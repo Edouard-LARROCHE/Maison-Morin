@@ -60,7 +60,10 @@ function App() {
     };
 
     fetchToken();
-    if (uid) dispatch(getUser(uid), getCard());
+    if (uid) {
+      dispatch(getUser(uid));
+      dispatch(getCard());
+    }
     // eslint-disable-next-line
   }, [uid]);
 
