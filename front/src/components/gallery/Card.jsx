@@ -7,15 +7,15 @@ const Card = ({ gallery }) => {
   const [confirm, setConfirm] = useState('confirm-before');
   const [add, setAdd] = useState('add-before');
   const [connect, setConnect] = useState('connect-before');
+  const dispatch = useDispatch();
   const userData = useSelector((state) => state.userReducer);
   const card = useSelector((state) => state.cardReducer);
-  const dispatch = useDispatch();
 
   const addStore = () => {
     if (userData._id) {
       if (!card.includes(gallery._id.toString())) {
         card.push(gallery._id);
-        dispatch(getCard);
+        dispatch(getCard(gallery._id));
         setConfirm('confirm');
         setTimeout(() => {
           setConfirm('confirm-before');
