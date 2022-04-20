@@ -32,6 +32,7 @@ import Register from './components/log/Register';
 // REDUX
 import { useDispatch } from 'react-redux';
 import { getUser } from './actions/user.actions';
+import { getCard } from './actions/card.actions';
 
 function App() {
   const theme = useContext(ThemeContext);
@@ -59,7 +60,7 @@ function App() {
     };
 
     fetchToken();
-    if (uid) dispatch(getUser(uid));
+    if (uid) dispatch(getUser(uid), getCard());
     // eslint-disable-next-line
   }, [uid]);
 
