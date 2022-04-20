@@ -59,7 +59,10 @@ function App() {
     };
 
     fetchToken();
-    if (uid) dispatch(getUser(uid));
+    if (uid) {
+      dispatch(getUser(uid));
+    }
+
     // eslint-disable-next-line
   }, [uid]);
 

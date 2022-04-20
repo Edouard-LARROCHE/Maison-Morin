@@ -1,19 +1,21 @@
 import React, { useState } from 'react';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { getCard } from '../../actions/card.actions';
 
 const Card = ({ gallery }) => {
   const [confirm, setConfirm] = useState('confirm-before');
   const [add, setAdd] = useState('add-before');
   const [connect, setConnect] = useState('connect-before');
+  const dispatch = useDispatch();
   const userData = useSelector((state) => state.userReducer);
+  const card = useSelector((state) => state.cardReducer);
 
-  const addStorage = () => {
-    if (userData) {
-      let storeData = window.localStorage.card ? window.localStorage.card.split(',') : [];
-      if (!storeData.includes(gallery._id.toString())) {
-        storeData.push(gallery._id);
-        window.localStorage.card = storeData;
+  const addStore = () => {
+    if (userData._id) {
+      if (!card.includes(gallery._id.toString())) {
+        card.push(gallery._id);
+        dispatch(getCard(gallery._id));
         setConfirm('confirm');
         setTimeout(() => {
           setConfirm('confirm-before');
@@ -45,7 +47,7 @@ const Card = ({ gallery }) => {
       <div className='info-card'>
         <p> {gallery.name} </p>
         <p> {gallery.price} </p>
-        <div className='add-shopping-cart' onClick={() => addStorage()}>
+        <div className='add-shopping-cart' onClick={() => addStore()}>
           <p style={{ marginRight: '0.5rem' }}>AJOUTER AU PANIER</p>
           <ShoppingCartIcon style={{ transform: 'translateY(15px)' }} />
         </div>

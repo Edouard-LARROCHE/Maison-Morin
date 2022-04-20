@@ -1,25 +1,26 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import ShoppingCartCard from './ShoppingCartCard';
+import { useSelector } from 'react-redux';
 
 const ShoppingCartData = () => {
   const [listData, setListData] = useState([]);
+  const cardId = useSelector((state) => state.cardReducer);
 
   useEffect(() => {
-    let cardDataId = window.localStorage.card ? window.localStorage.card.split(',') : [];
     let urls = [
       '/picture/cave/vins/',
       '/picture/traiteur/viande/',
-      '/picture/traiteur/poisson',
-      '/picture/traiteur/charcuterie',
-      '/picture/patisserie/macaron',
-      '/picture/patisserie/patisseries',
-      '/picture/cocktails',
-      '/picture/produitsExcep',
+      '/picture/traiteur/poisson/',
+      '/picture/traiteur/charcuterie/',
+      '/picture/patisserie/macaron/',
+      '/picture/patisserie/patisseries/',
+      '/picture/cocktails/',
+      '/picture/produitsExcep/',
     ];
 
-    for (let i = 0; i < cardDataId.length; i++) {
-      Promise.all(urls.map((url) => axios.get(url + cardDataId[i]))).then(
+    for (let i = 0; i < cardId.length; i++) {
+      Promise.all(urls.map((url) => axios.get(url + cardId[i]))).then(
         ([
           { data: vins },
           { data: viandes },
