@@ -14,7 +14,6 @@ const Card = ({ gallery }) => {
   const addStore = () => {
     if (userData._id) {
       if (!card.includes(gallery._id.toString())) {
-        card.push(gallery._id);
         dispatch(getCard(gallery._id));
         setConfirm('confirm');
         setTimeout(() => {
