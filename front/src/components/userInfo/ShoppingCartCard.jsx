@@ -1,18 +1,19 @@
 import React, { useEffect, useState } from 'react';
 import Loader from '../Loader';
 import DeleteIcon from '@material-ui/icons/Delete';
+import { deleteCard } from '../../actions/card.actions';
+import { useDispatch } from 'react-redux';
 
 const ShoppingCartCard = ({ gallery }) => {
   const [loading, setLoading] = useState(true);
+  const dispatch = useDispatch();
 
   useEffect(() => {
     setLoading(false);
   }, []);
 
-  const deleteStorage = () => {
-    let storedData = window.localStorage.card.split(',');
-    let newData = storedData.filter((id) => id !== gallery._id);
-    window.localStorage.card = newData;
+  const deleteStore = () => {
+    dispatch(deleteCard(gallery._id));
   };
 
   return (
@@ -28,12 +29,7 @@ const ShoppingCartCard = ({ gallery }) => {
           <div className='info-card'>
             <p> {gallery.name} </p>
             <p> {gallery.price} </p>
-            <div
-              className='add-shopping-cart'
-              onClick={() => {
-                deleteStorage();
-                window.location.reload();
-              }}>
+            <div className='add-shopping-cart' onClick={() => deleteStore()}>
               <p style={{ marginRight: '0.5rem' }}>SUPPRIMER AU PANIER</p>
               <DeleteIcon style={{ transform: 'translateY(15px)' }} />
             </div>

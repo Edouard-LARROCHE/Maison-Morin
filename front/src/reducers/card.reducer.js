@@ -9,7 +9,7 @@ export default function cardReducer(state = initialState, action) {
       return [...state, action.payload];
 
     case DELETE_CARD:
-      return [...state, state.filter((id) => id !== action.payload)];
+      return (state = [...state.filter((id) => id !== action.payload)]);
 
     default:
       return state;
