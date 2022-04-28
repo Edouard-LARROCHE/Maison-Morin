@@ -19,18 +19,16 @@ module.exports.updateUser = async (req, res) => {
   if (!ObjectID.isValid(req.params.id)) return res.status(400).send('ID unknown : ' + req.params.id);
 
   try {
-    await UserModel.findOneAndUpdate(
+    await UserModel.findByIdAndUpdate(
       { _id: req.params.id },
       {
-        $set: {
-          shopCart: req.body.shopCart,
-        },
+        $addToSet: { shopCart: req.body.shopCart },
       },
-      { new: true, upsert: true, setDefaultsOnInsert: true },
+      { new: true },
     )
       .then((data) => res.send(data))
       .catch((err) => res.status(500).send({ message: err }));
   } catch (err) {
-    return res.status(500).json({ message: err });
+    return res.status(400).send(err);
   }
 };
