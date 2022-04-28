@@ -25,6 +25,9 @@ const userSchema = mongoose.Schema(
       max: 500,
       minlength: 6,
     },
+    shopCart: {
+      type: [String],
+    },
   },
   {
     timestamps: true,
