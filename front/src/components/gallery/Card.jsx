@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import { useDispatch, useSelector } from 'react-redux';
-import { getCard } from '../../actions/card.actions';
+import { addCard } from '../../actions/user.actions';
 
 const Card = ({ gallery }) => {
   const [confirm, setConfirm] = useState('confirm-before');
@@ -9,12 +9,11 @@ const Card = ({ gallery }) => {
   const [connect, setConnect] = useState('connect-before');
   const dispatch = useDispatch();
   const userData = useSelector((state) => state.userReducer);
-  const card = useSelector((state) => state.cardReducer);
 
   const addStore = () => {
     if (userData._id) {
-      if (!card.includes(gallery._id.toString())) {
-        dispatch(getCard(gallery._id));
+      if (!userData.shopCart.includes(gallery._id.toString())) {
+        dispatch(addCard(gallery._id));
         setConfirm('confirm');
         setTimeout(() => {
           setConfirm('confirm-before');
