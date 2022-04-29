@@ -10,6 +10,6 @@ router.get('/logout', authController.logout);
 // user DB
 router.get('/', userController.getAllUsers);
 router.get('/:id', userController.userInfo);
-router.patch('/:id', userController.updateUser);
+router.patch('/addCard/:id', userController.updateUser);
 
 module.exports = router;
