@@ -11,6 +11,6 @@ router.get('/logout', authController.logout);
 router.get('/', userController.getAllUsers);
 router.get('/:id', userController.userInfo);
 router.delete('/:id', userController.deleteUser);
-router.patch('/addCard/:id', userController.updateUser);
+router.patch('/addCard/:id', userController.addCard);
 
 module.exports = router;

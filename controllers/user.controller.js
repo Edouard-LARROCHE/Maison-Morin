@@ -26,7 +26,7 @@ module.exports.deleteUser = async (req, res) => {
   }
 };
 
-module.exports.updateUser = async (req, res) => {
+module.exports.addCard = async (req, res) => {
   if (!ObjectID.isValid(req.params.id)) return res.status(400).send('ID unknown : ' + req.params.id);
 
   try {
