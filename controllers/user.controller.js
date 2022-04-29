@@ -33,9 +33,9 @@ module.exports.updateUser = async (req, res) => {
     await UserModel.findByIdAndUpdate(
       { _id: req.params.id },
       {
-        $addToSet: { shopCart: req.body.shopCart },
+        $addToSet: { shopCart: req.body.idCard },
       },
-      { new: true },
+      { new: true, upsert: true },
     )
       .then((data) => res.send(data))
       .catch((err) => res.status(500).send({ message: err }));
