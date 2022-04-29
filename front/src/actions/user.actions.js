@@ -18,7 +18,7 @@ export const addCard = (uid, shopCart) => {
   return async (dispatch) => {
     return await axios({
       method: 'patch',
-      url: `api/user/${uid}`,
+      url: `api/user/addCard/${uid}`,
       data: { shopCart },
     })
       .then((res) => {

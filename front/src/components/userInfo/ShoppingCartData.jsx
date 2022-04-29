@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux';
 
 const ShoppingCartData = () => {
   const [listData, setListData] = useState([]);
-  const cardId = useSelector((state) => state.cardReducer);
+  const cardId = useSelector((state) => state.userReducer.shopCart);
 
   useEffect(() => {
     let urls = [
