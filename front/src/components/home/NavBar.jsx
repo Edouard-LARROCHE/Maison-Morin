@@ -5,7 +5,6 @@ import ButtonSwitch from '../darkMode/ButtonSwitch';
 import MenuIcon from '@material-ui/icons/Menu';
 import CloseIcon from '@material-ui/icons/Close';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
-import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 
 const NavBar = () => {
   const [open, setOpen] = useState(false);
@@ -75,8 +74,8 @@ const NavBar = () => {
                 <Link to='/mon-compte'>
                   <li>
                     <p>
-                      MON PANIER
-                      <ShoppingCartIcon />
+                      MON COMPTE
+                      {/* <ShoppingCartIcon /> */}
                     </p>
                   </li>
                 </Link>
@@ -151,8 +150,8 @@ const NavBar = () => {
               <Link to='/mon-compte'>
                 <li>
                   <p>
-                    MON PANIER
-                    <ShoppingCartIcon />
+                    MON COMPTE
+                    {/* <ShoppingCartIcon /> */}
                   </p>
                 </li>
               </Link>
