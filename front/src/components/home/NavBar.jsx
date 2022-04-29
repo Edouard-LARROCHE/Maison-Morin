@@ -76,9 +76,7 @@ const NavBar = () => {
                 </div>
                 <Link to='/mon-compte'>
                   <li>
-                    <p>
-                      MON COMPTE <span style={{ transform: 'translateX(15px)' }}> {uid ? <UserConnect /> : null}</span>
-                    </p>
+                    <p>MON COMPTE</p>
                   </li>
                 </Link>
               </ul>
