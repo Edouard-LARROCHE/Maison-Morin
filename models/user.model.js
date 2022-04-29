@@ -26,7 +26,7 @@ const userSchema = mongoose.Schema(
       minlength: 6,
     },
     shopCart: {
-      type: String,
+      type: [String],
     },
   },
   {

@@ -3,6 +3,7 @@ import axios from 'axios';
 import cookie from 'js-cookie';
 import NavBar from '../home/NavBar';
 import Footer from '../home/Footer';
+import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import ShoppingCartData from './ShoppingCartData';
 import Account from './Account';
 import { useSelector } from 'react-redux';
@@ -51,6 +52,7 @@ const Purchase = () => {
             </p>
             <p onClick={handleChange} id='shop'>
               MON PANIER
+              <ShoppingCartIcon style={{ transform: 'translate(5px, 5px)' }} />
             </p>
           </div>
           <button style={{ margin: '1rem' }} className='log-button ' onClick={handleLogout}>

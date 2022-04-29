@@ -1,15 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import IndexModal from '../LoginModal/indexModal';
 import ButtonSwitch from '../darkMode/ButtonSwitch';
 import MenuIcon from '@material-ui/icons/Menu';
 import CloseIcon from '@material-ui/icons/Close';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
-import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
+import UserConnect from '../UserConnect';
+import { UidContext } from '../../AppContext';
 
 const NavBar = () => {
   const [open, setOpen] = useState(false);
   const [openGallery, setOpenGallery] = useState(false);
+  const uid = useContext(UidContext);
 
   const handleOpen = () => {
     setOpen(!open);
@@ -74,10 +76,7 @@ const NavBar = () => {
                 </div>
                 <Link to='/mon-compte'>
                   <li>
-                    <p>
-                      MON PANIER
-                      <ShoppingCartIcon />
-                    </p>
+                    <p>MON COMPTE</p>
                   </li>
                 </Link>
               </ul>
@@ -150,12 +149,10 @@ const NavBar = () => {
               </Link>
               <Link to='/mon-compte'>
                 <li>
-                  <p>
-                    MON PANIER
-                    <ShoppingCartIcon />
-                  </p>
+                  <p>MON COMPTE</p>
                 </li>
               </Link>
+              {uid ? <UserConnect /> : null}
             </ul>
           </div>
           <ul>
