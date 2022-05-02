@@ -1,4 +1,6 @@
 import React, { useState, useContext } from 'react';
+import CheckIcon from '@material-ui/icons/Check';
+import CloseIcon from '@material-ui/icons/Close';
 import axios from 'axios';
 import { useSelector } from 'react-redux';
 import { UidContext } from '../../AppContext';
@@ -34,12 +36,21 @@ const Account = ({ handleLogout }) => {
         <h3>Compte créé le : {dateParser(userData.createdAt)}</h3>
         <div className='delete-account'>
           <button style={{ margin: '2rem' }} className='log-button ' onClick={() => setValid('valid')}>
-            <p>SUPRIMER MON COMPTE</p>
+            <p>SUPPRIMER MON COMPTE</p>
           </button>
-          <div className={valid}>
-            <p>confirmation de supréssion</p>
-            <p onClick={close}>non</p>
-            <p onClick={deleteAccount}>oui</p>
+        </div>
+        <div className={valid}>
+          <div className='modal-valid'>
+            <p>Confirmez-vous la suppression ?</p>
+            <br />
+            <p>
+              Vous vous appretez à supprimer votre compte Maison-Morin. Toutes les données relative à votre compte utilisateur seront définitivement
+              supprimé.{' '}
+            </p>
+            <div className='button-choisse'>
+              <CheckIcon onClick={deleteAccount} className='check' />
+              <CloseIcon onClick={close} className='close' />
+            </div>
           </div>
         </div>
       </div>

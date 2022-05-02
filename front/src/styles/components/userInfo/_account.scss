@@ -25,3 +25,39 @@
 .valid {
   transition: 0.3s ease-in-out;
 }
+
+.modal-valid {
+  border-radius: 10px;
+  margin: 1rem;
+  padding: 1rem;
+  background: $color-2;
+
+  p {
+    color: $color-3;
+    font-size: 20px;
+  }
+
+  .button-choisse {
+    margin: 0.5rem;
+
+    .check {
+      color: $color-6;
+      cursor: pointer;
+      margin: 0.5rem;
+
+      &:hover {
+        color: $color-3;
+      }
+    }
+
+    .close {
+      color: $color-6;
+      cursor: pointer;
+      margin: 0.5rem;
+
+      &:hover {
+        color: $color-3;
+      }
+    }
+  }
+}
