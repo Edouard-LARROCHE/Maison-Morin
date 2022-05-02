@@ -1,5 +1,5 @@
 import React, { useState, useContext } from 'react';
-import CheckIcon from '@material-ui/icons/Check';
+import DeleteIcon from '@material-ui/icons/Delete';
 import CloseIcon from '@material-ui/icons/Close';
 import axios from 'axios';
 import { useSelector } from 'react-redux';
@@ -41,15 +41,28 @@ const Account = ({ handleLogout }) => {
         </div>
         <div className={valid}>
           <div className='modal-valid'>
-            <p>Confirmez-vous la suppression ?</p>
-            <br />
+            <h3>Confirmez-vous la suppression ?</h3>
             <p>
-              Vous vous appretez à supprimer votre compte Maison-Morin. Toutes les données relative à votre compte utilisateur seront définitivement
-              supprimé.{' '}
+              Vous vous apprêtez à supprimer votre compte Maison-Morin. Toutes les données relatives à votre compte utilisateur seront définitivement
+              supprimées.
             </p>
             <div className='button-choisse'>
-              <CheckIcon onClick={deleteAccount} className='check' />
-              <CloseIcon onClick={close} className='close' />
+              <div className='button-close' onClick={close}>
+                <p>
+                  ANNULER
+                  <span>
+                    <CloseIcon className='close' />
+                  </span>
+                </p>
+              </div>
+              <div className='button-delete' onClick={deleteAccount}>
+                <p>
+                  CONFIRMER
+                  <span>
+                    <DeleteIcon className='trash' />
+                  </span>
+                </p>
+              </div>
             </div>
           </div>
         </div>
