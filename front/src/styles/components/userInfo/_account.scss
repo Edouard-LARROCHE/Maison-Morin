@@ -10,3 +10,77 @@
     margin: 0.5rem;
   }
 }
+
+.delete-account {
+  display: flex;
+  margin: 1rem;
+}
+
+.valid-before {
+  opacity: 0;
+  transform: translateX(2rem);
+  transition: 0.3s ease-in-out;
+}
+
+.valid {
+  transition: 0.3s ease-in-out;
+}
+
+.modal-valid {
+  border-radius: 10px;
+  margin: 1rem;
+  padding: 1rem;
+  width: 30rem;
+  background: $color-2;
+
+  h3 {
+    color: $color-3;
+    font-size: 25px;
+    text-align: center;
+  }
+
+  p {
+    color: $color-3;
+    text-align: center;
+  }
+
+  .button-choisse {
+    margin: 1rem;
+    display: flex;
+    justify-content: space-around;
+
+    .button-delete {
+      display: flex;
+      justify-content: center;
+      background: $color-6;
+      width: 10rem;
+      height: 2.1rem;
+      cursor: pointer;
+
+      p {
+        color: $color-2;
+      }
+
+      .trash {
+        color: $color-2;
+        transform: translateY(5px);
+      }
+    }
+
+    .button-close {
+      display: flex;
+      justify-content: center;
+      background: $color-6;
+      width: 10rem;
+      cursor: pointer;
+
+      p {
+        color: $color-2;
+      }
+      .close {
+        color: $color-2;
+        transform: translateY(5px);
+      }
+    }
+  }
+}

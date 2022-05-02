@@ -10,8 +10,8 @@ import { useSelector } from 'react-redux';
 
 const Purchase = () => {
   const userData = useSelector((state) => state.userReducer);
-  const [account, setAccount] = useState(false);
-  const [shop, setShop] = useState(true);
+  const [account, setAccount] = useState(true);
+  const [shop, setShop] = useState(false);
 
   const handleChange = (e) => {
     if (e.target.id === 'account') {
@@ -60,7 +60,7 @@ const Purchase = () => {
           </button>
         </div>
         <div className='conditionnal-display'>
-          {account && <Account />}
+          {account && <Account handleLogout={handleLogout} />}
           {shop && <ShoppingCartData />}
         </div>
       </div>
