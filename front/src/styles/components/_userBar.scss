@@ -1,0 +1,21 @@
+.user-bar-before {
+  display: none;
+  // transition: 0.3s ease-in-out;
+}
+
+.user-bar {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 10000;
+  background: $color-2;
+  width: 100%;
+  height: 2rem;
+  // transition: 0.3s ease-in-out;
+
+  p {
+    color: #fff;
+    margin-left: 2rem;
+  }
+}
