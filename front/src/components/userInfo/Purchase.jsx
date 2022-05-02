@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
 import cookie from 'js-cookie';
 import NavBar from '../home/NavBar';
@@ -7,13 +7,11 @@ import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import ShoppingCartData from './ShoppingCartData';
 import Account from './Account';
 import { useSelector } from 'react-redux';
-import { UidContext } from '../../AppContext';
 
 const Purchase = () => {
   const userData = useSelector((state) => state.userReducer);
-  const [account, setAccount] = useState(false);
-  const [shop, setShop] = useState(true);
-  const uid = useContext(UidContext);
+  const [account, setAccount] = useState(true);
+  const [shop, setShop] = useState(false);
 
   const handleChange = (e) => {
     if (e.target.id === 'account') {
@@ -40,15 +38,6 @@ const Purchase = () => {
       .catch((err) => console.log(err));
   };
 
-  const deleteAccount = async () => {
-    await axios
-      .delete(`/api/user/${uid}`)
-      .then(() => {
-        handleLogout();
-      })
-      .catch((err) => console.log(err));
-  };
-
   return (
     <>
       <NavBar />
@@ -69,10 +58,9 @@ const Purchase = () => {
           <button style={{ margin: '1rem' }} className='log-button ' onClick={handleLogout}>
             <p>DECONNEXION </p>
           </button>
-          <button onClick={deleteAccount}>delete account</button>
         </div>
         <div className='conditionnal-display'>
-          {account && <Account />}
+          {account && <Account handleLogout={handleLogout} />}
           {shop && <ShoppingCartData />}
         </div>
       </div>
