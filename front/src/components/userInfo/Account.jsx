@@ -33,7 +33,7 @@ const Account = ({ handleLogout }) => {
         <h3>Adresse e-mail : {userData.email}</h3>
         <h3>Compte créé le : {dateParser(userData.createdAt)}</h3>
         <div className='delete-account'>
-          <button style={{ margin: '2rem' }} className='log-button ' onClick={() => setValid()}>
+          <button style={{ margin: '2rem' }} className='log-button ' onClick={() => setValid('valid')}>
             <p>SUPRIMER MON COMPTE</p>
           </button>
           <div className={valid}>

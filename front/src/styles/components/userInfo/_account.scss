@@ -18,8 +18,10 @@
 
 .valid-before {
   opacity: 0;
+  transform: translateX(2rem);
+  transition: 0.3s ease-in-out;
 }
 
 .valid {
-  opacity: 1;
+  transition: 0.3s ease-in-out;
 }
