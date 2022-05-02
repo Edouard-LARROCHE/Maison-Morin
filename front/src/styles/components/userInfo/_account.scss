@@ -10,3 +10,16 @@
     margin: 0.5rem;
   }
 }
+
+.delete-account {
+  display: flex;
+  margin: 1rem;
+}
+
+.valid-before {
+  opacity: 0;
+}
+
+.valid {
+  opacity: 1;
+}
