@@ -17,9 +17,15 @@ const ButtonSwitch = () => {
   return (
     <div className={`btn ${darkMode ? 'btn-dark' : 'btn-light'}`} onClick={onClick}>
       {darkMode ? (
-        <Brightness4Icon style={{ cursor: 'pointer', fontSize: '1.2rem' }} />
+        <div style={{ width: '170px' }}>
+          <Brightness4Icon style={{ cursor: 'pointer', fontSize: '1.2rem', marginRight: '1rem' }} />
+          <span style={{ color: '#fff' }}>Version contrastée</span>
+        </div>
       ) : (
-        <Brightness5Icon style={{ cursor: 'pointer', fontSize: '1.2rem' }} />
+        <div style={{ width: '170px' }}>
+          <Brightness5Icon style={{ cursor: 'pointer', fontSize: '1.2rem', marginRight: '1rem' }} />
+          <span style={{ color: '#fff' }}>Version standard</span>
+        </div>
       )}
     </div>
   );
