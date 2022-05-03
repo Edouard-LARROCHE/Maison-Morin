@@ -159,9 +159,6 @@ const NavBar = () => {
             <li className='switch-mode'>
               <ButtonSwitch />
             </li>
-            <li>
-              <IndexModal />
-            </li>
           </ul>
         </div>
         <div className='resp-menu' onClick={handleOpen}>
