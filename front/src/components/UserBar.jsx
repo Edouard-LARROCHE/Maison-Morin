@@ -36,7 +36,7 @@ const UserBar = () => {
       </div>
       <div className='lenght-article'>
         <h3>{lengthArticle.length}</h3>
-        <p>articles</p>
+        {lengthArticle.length > 1 ? <p>ARTICLES</p> : <p>ARTICLE</p>}
       </div>
       <div className='user-connect-bar'>
         <p> {user} </p>
