@@ -24,6 +24,11 @@
   background-color: $color-6;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
+
+  .true-connect {
+    position: relative;
+    top: -40px;
+  }
 }
 
 .form-container {
@@ -89,6 +94,11 @@
     .left-login {
       border-top-left-radius: 10px;
       border-top-right-radius: 10px;
+
+      .true-connect {
+        top: -10px;
+        text-align: center;
+      }
     }
 
     .right-login {

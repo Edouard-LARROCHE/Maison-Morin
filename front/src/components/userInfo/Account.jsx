@@ -35,33 +35,35 @@ const Account = ({ handleLogout }) => {
         <h3>Adresse e-mail : {userData.email}</h3>
         <h3>Compte créé le : {dateParser(userData.createdAt)}</h3>
         <div className='delete-account'>
-          <button style={{ margin: '2rem' }} className='log-button ' onClick={() => setValid('valid')}>
-            <p>SUPPRIMER MON COMPTE</p>
-          </button>
-        </div>
-        <div className={valid}>
-          <div className='modal-valid'>
-            <h3>Confirmez-vous la suppression ?</h3>
-            <p>
-              Vous vous apprêtez à supprimer votre compte Maison-Morin. Toutes les données relatives à votre compte utilisateur seront définitivement
-              supprimées.
-            </p>
-            <div className='button-choisse'>
-              <div className='button-close' onClick={close}>
-                <p>
-                  ANNULER
-                  <span>
-                    <CloseIcon className='close' />
-                  </span>
-                </p>
-              </div>
-              <div className='button-delete' onClick={deleteAccount}>
-                <p>
-                  CONFIRMER
-                  <span>
-                    <DeleteIcon className='trash' />
-                  </span>
-                </p>
+          <div>
+            <button style={{ margin: '2rem' }} className='log-button ' onClick={() => setValid('valid')}>
+              <p>SUPPRIMER MON COMPTE</p>
+            </button>
+          </div>
+          <div className={valid}>
+            <div className='modal-valid'>
+              <h3>Confirmez-vous la suppression ?</h3>
+              <p>
+                Vous vous apprêtez à supprimer votre compte Maison-Morin. Toutes les données relatives à votre compte utilisateur seront
+                définitivement supprimées.
+              </p>
+              <div className='button-choisse'>
+                <div className='button-close' onClick={close}>
+                  <p>
+                    ANNULER
+                    <span>
+                      <CloseIcon className='close' />
+                    </span>
+                  </p>
+                </div>
+                <div className='button-delete' onClick={deleteAccount}>
+                  <p>
+                    CONFIRMER
+                    <span>
+                      <DeleteIcon className='trash' />
+                    </span>
+                  </p>
+                </div>
               </div>
             </div>
           </div>

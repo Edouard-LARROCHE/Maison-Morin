@@ -4,6 +4,7 @@ import ButtonSwitchMobile from '../darkMode/ButtonSwitchMobile';
 import CopyrightIcon from '@material-ui/icons/Copyright';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import InstagramIcon from '@material-ui/icons/Instagram';
+import IndexModal from '../LoginModal/indexModal';
 
 const Footer = () => {
   return (
@@ -74,6 +75,9 @@ const Footer = () => {
         <ul className='copy'>
           <li>
             <h3>MAISON MORIN</h3>
+            <div className='modal-resp'>
+              <IndexModal />
+            </div>
           </li>
           <li>
             <span>

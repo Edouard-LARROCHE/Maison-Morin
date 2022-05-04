@@ -1,7 +1,9 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
+import axios from 'axios';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import { useDispatch, useSelector } from 'react-redux';
 import { addCard } from '../../actions/user.actions';
+import { UidContext } from '../../AppContext';
 
 const Card = ({ gallery }) => {
   const [confirm, setConfirm] = useState('confirm-before');
@@ -9,15 +11,25 @@ const Card = ({ gallery }) => {
   const [connect, setConnect] = useState('connect-before');
   const dispatch = useDispatch();
   const userData = useSelector((state) => state.userReducer);
+  const uid = useContext(UidContext);
 
   const addStore = () => {
-    if (userData._id) {
+    const data = {
+      shopCart: gallery._id,
+    };
+
+    if (uid) {
       if (!userData.shopCart.includes(gallery._id.toString())) {
         dispatch(addCard(gallery._id));
-        setConfirm('confirm');
-        setTimeout(() => {
-          setConfirm('confirm-before');
-        }, 1500);
+        axios
+          .patch(`/api/user/addCard/${uid}`, data)
+          .then((res) => {
+            setConfirm('confirm');
+            setTimeout(() => {
+              setConfirm('confirm-before');
+            }, 1500);
+          })
+          .catch((err) => console.log(err));
       } else {
         setAdd('add');
         setTimeout(() => {

@@ -72,14 +72,9 @@
 .other-nav ul {
   display: flex;
   padding-top: 2rem;
-  padding-right: 2rem;
 
   li {
-    margin: 2rem;
-  }
-
-  .switch-mode {
-    transform: translateY(3px);
+    margin-top: 1.8rem;
   }
 }
 
@@ -115,6 +110,12 @@
       margin: 2rem 0 0 0 !important;
     }
   }
+
+  .switch-button-resp {
+    position: absolute;
+    right: 5px;
+    top: -50px;
+  }
 }
 
 @media screen and (max-width: 1024px) {
@@ -126,7 +127,7 @@
     z-index: 1000;
     display: block;
     position: fixed;
-    top: 20px;
+    top: 25px;
     right: 20px;
   }
 

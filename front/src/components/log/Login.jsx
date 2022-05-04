@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { TextField } from '@material-ui/core';
 import NavBar from '../home/NavBar';
 
-const Login = () => {
+const Login = ({ trueConnect }) => {
   const [data, setData] = useState({ email: '', password: '' });
   const [error, setError] = useState('');
 
@@ -35,6 +35,9 @@ const Login = () => {
       <div className='login-container'>
         <div className='login-form-container'>
           <div className='left-login'>
+            <div className='true-connect'>
+              <p> {trueConnect} </p>
+            </div>
             <form className='form-container' onSubmit={handleSubmit}>
               <h1>SE CONNECTER</h1>
               <TextField

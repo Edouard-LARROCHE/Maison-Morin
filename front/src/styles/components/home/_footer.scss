@@ -134,6 +134,10 @@
     display: flex;
     flex-direction: column;
     margin-left: 0 !important;
+
+    .modal-resp {
+      display: none;
+    }
   }
 }
 

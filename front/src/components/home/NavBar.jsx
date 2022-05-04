@@ -1,6 +1,5 @@
 import React, { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
-import IndexModal from '../LoginModal/indexModal';
 import ButtonSwitch from '../darkMode/ButtonSwitch';
 import MenuIcon from '@material-ui/icons/Menu';
 import CloseIcon from '@material-ui/icons/Close';
@@ -155,12 +154,9 @@ const NavBar = () => {
               {uid ? <UserConnect /> : null}
             </ul>
           </div>
-          <ul>
-            <li className='switch-mode'>
-              <ButtonSwitch />
-            </li>
+          <ul className='switch-button-resp'>
             <li>
-              <IndexModal />
+              <ButtonSwitch />
             </li>
           </ul>
         </div>

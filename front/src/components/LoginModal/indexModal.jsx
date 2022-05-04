@@ -40,7 +40,7 @@ const IndexModal = () => {
 
   return (
     <>
-      <PersonIcon className='modal-toggle' onClick={toggleLoginForm} style={{ cursor: 'pointer', color: '#f6fbf8' }} />
+      <PersonIcon className='modal-toggle' onClick={toggleLoginForm} style={{ cursor: 'pointer', color: '#012f6b' }} />
 
       <Modal isShowing={isLoginFormShowed} hide={toggleLoginForm}>
         <form onSubmit={handleSubmit}>
