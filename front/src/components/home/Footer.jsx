@@ -75,7 +75,9 @@ const Footer = () => {
         <ul className='copy'>
           <li>
             <h3>MAISON MORIN</h3>
-            <IndexModal />
+            <div className='modal-resp'>
+              <IndexModal />
+            </div>
           </li>
           <li>
             <span>
