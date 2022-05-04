@@ -154,7 +154,7 @@ const NavBar = () => {
               {uid ? <UserConnect /> : null}
             </ul>
           </div>
-          <ul>
+          <ul className='switch-button-resp'>
             <li>
               <ButtonSwitch />
             </li>

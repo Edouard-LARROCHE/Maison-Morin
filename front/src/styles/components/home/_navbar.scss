@@ -110,6 +110,12 @@
       margin: 2rem 0 0 0 !important;
     }
   }
+
+  .switch-button-resp {
+    position: absolute;
+    right: 5px;
+    top: -50px;
+  }
 }
 
 @media screen and (max-width: 1024px) {
