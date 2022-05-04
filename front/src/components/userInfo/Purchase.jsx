@@ -10,6 +10,7 @@ import { useSelector } from 'react-redux';
 
 const Purchase = () => {
   const userData = useSelector((state) => state.userReducer);
+  const lengthArticle = useSelector((state) => state.userReducer.shopCart);
   const [account, setAccount] = useState(true);
   const [shop, setShop] = useState(false);
 
@@ -50,10 +51,13 @@ const Purchase = () => {
             <p onClick={handleChange} id='account'>
               MON COMPTE
             </p>
-            <p onClick={handleChange} id='shop'>
-              MON PANIER
-              <ShoppingCartIcon style={{ transform: 'translate(5px, 5px)' }} />
-            </p>
+            <div className='article-length'>
+              <p onClick={handleChange} id='shop'>
+                MON PANIER
+                <ShoppingCartIcon style={{ transform: 'translate(5px, 5px)' }} />
+              </p>
+              <h3>{lengthArticle.length}</h3>
+            </div>
           </div>
           <button style={{ margin: '1rem' }} className='log-button ' onClick={handleLogout}>
             <p>DECONNEXION </p>
