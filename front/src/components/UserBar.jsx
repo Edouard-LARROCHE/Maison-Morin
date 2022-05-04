@@ -6,6 +6,8 @@ import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 const UserBar = () => {
   const userFirstName = useSelector((state) => state.userReducer.firstName[0].toUpperCase());
   const userLastName = useSelector((state) => state.userReducer.lastName[0].toUpperCase());
+  const lengthArticle = useSelector((state) => state.userReducer.shopCart);
+
   const [bar, setBar] = useState('user-bar-before');
 
   const user = userFirstName + '.' + userLastName;
@@ -31,6 +33,10 @@ const UserBar = () => {
             </span>
           </p>
         </Link>
+      </div>
+      <div className='lenght-article'>
+        <h3>{lengthArticle.length}</h3>
+        <p>articles</p>
       </div>
       <div className='user-connect-bar'>
         <p> {user} </p>

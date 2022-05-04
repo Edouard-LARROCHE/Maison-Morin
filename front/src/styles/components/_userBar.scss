@@ -22,9 +22,24 @@
   .shopCart-bar {
     cursor: pointer;
   }
+
   p {
     color: #fff;
     margin-left: 2rem;
+  }
+
+  .lenght-article {
+    display: flex;
+
+    h3 {
+      color: #fff;
+      margin-left: 0.5rem;
+      transform: translateY(-8px);
+    }
+
+    p {
+      margin-left: 0.2rem;
+    }
   }
 
   .user-connect-bar {
