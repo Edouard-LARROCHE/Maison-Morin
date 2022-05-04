@@ -7,6 +7,7 @@ import NavBar from '../home/NavBar';
 const Register = () => {
   const [error, setError] = useState('');
   const navigate = useNavigate();
+  const [controlPassword, setControlPassword] = useState('');
   const [data, setData] = useState({
     firstName: '',
     lastName: '',
@@ -20,19 +21,25 @@ const Register = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    const controlPasswordError = document.querySelector('.password-error');
+    controlPasswordError.innerHTML = '';
 
-    await axios
-      .post('api/user/register', data)
-      .then((res) => {
-        if (res.data.errors) {
-          setError(res.data.errors.password || res.data.errors.email);
-        } else {
-          navigate('/login');
-        }
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+    if (data.password !== controlPassword) {
+      controlPasswordError.innerHTML = 'Les mots de passe ne correspondent pas.';
+    } else {
+      await axios
+        .post('api/user/register', data)
+        .then((res) => {
+          if (res.data.errors) {
+            setError(res.data.errors.password || res.data.errors.email);
+          } else {
+            navigate('/login');
+          }
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    }
   };
 
   return (
@@ -82,7 +89,7 @@ const Register = () => {
                 required
               />
               <TextField
-                style={{ margin: ' 0 0 2rem 0' }}
+                style={{ margin: ' 0 0 1rem 0' }}
                 className='input-login'
                 type='password'
                 placeholder='Mot de passe'
@@ -91,7 +98,18 @@ const Register = () => {
                 value={data.password}
                 required
               />
+              <TextField
+                style={{ margin: ' 0 0 2rem 0' }}
+                className='input-login'
+                type='password'
+                placeholder='Confirmer le mot de passe'
+                name='password'
+                onChange={(e) => setControlPassword(e.target.value)}
+                value={controlPassword}
+                required
+              />
               {error && <p>{error}</p>}
+              <p className='password-error' />
               <button style={{ marginTop: '2rem' }} className='log-button' type='submit'>
                 <p>S'ENREGISTRER</p>
               </button>
