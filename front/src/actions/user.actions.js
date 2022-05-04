@@ -14,12 +14,12 @@ export const getUser = (uid) => {
   };
 };
 
-export const addCard = (uid, shopCart) => {
+export const addCard = (uid) => {
   return async (dispatch) => {
     return await axios({
       method: 'patch',
       url: `api/user/addCard/${uid}`,
-      data: { shopCart },
+      data: uid,
     })
       .then((res) => {
         dispatch({ type: ADD_CARD, payload: uid });

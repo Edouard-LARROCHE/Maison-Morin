@@ -18,9 +18,9 @@ const Card = ({ gallery }) => {
       shopCart: gallery._id,
     };
 
-    if (userData._id) {
+    if (uid) {
       if (!userData.shopCart.includes(gallery._id.toString())) {
-        // dispatch(addCard(gallery._id));
+        dispatch(addCard(gallery._id));
         axios
           .patch(`/api/user/addCard/${uid}`, data)
           .then((res) => {
