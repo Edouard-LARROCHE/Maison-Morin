@@ -155,7 +155,7 @@ const NavBar = () => {
             </ul>
           </div>
           <ul>
-            <li className='switch-mode'>
+            <li>
               <ButtonSwitch />
             </li>
           </ul>
