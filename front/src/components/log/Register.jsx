@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { TextField } from '@material-ui/core';
 import NavBar from '../home/NavBar';
+import Login from './Login';
 
 const Register = () => {
+  const [formConnect, setFormConnect] = useState(false);
   const [error, setError] = useState('');
-  const navigate = useNavigate();
   const [controlPassword, setControlPassword] = useState('');
   const [data, setData] = useState({
     firstName: '',
@@ -33,7 +34,7 @@ const Register = () => {
           if (res.data.errors) {
             setError(res.data.errors.password || res.data.errors.email);
           } else {
-            navigate('/login');
+            setFormConnect(true);
           }
         })
         .catch((err) => {
@@ -44,79 +45,87 @@ const Register = () => {
 
   return (
     <>
-      <NavBar />
-      <div className='signup-container'>
-        <div className='signup-form-container'>
-          <div className='left-register'>
-            <img src='/logo/logo-morin.png' alt='logo' />
-            <Link to='/login'>
-              <button type='button' className='log-button'>
-                <p>SE CONNECTER</p>
-              </button>
-            </Link>
+      {formConnect ? (
+        <>
+          <Login trueConnect='Votre compte est bien enregistré, veuillez vous connecter.' />
+        </>
+      ) : (
+        <>
+          <NavBar />
+          <div className='signup-container'>
+            <div className='signup-form-container'>
+              <div className='left-register'>
+                <img src='/logo/logo-morin.png' alt='logo' />
+                <Link to='/login'>
+                  <button type='button' className='log-button'>
+                    <p>SE CONNECTER</p>
+                  </button>
+                </Link>
+              </div>
+              <div className='right-register'>
+                <form className='form-container-register' onSubmit={handleSubmit}>
+                  <h1>CRÉER UN COMPTE</h1>
+                  <TextField
+                    style={{ margin: '0 0 1rem 0' }}
+                    className='input-login'
+                    type='text'
+                    placeholder='Prénom'
+                    name='firstName'
+                    onChange={handleChange}
+                    value={data.firstName}
+                    required
+                  />
+                  <TextField
+                    style={{ margin: '0 0 1rem 0' }}
+                    className='input-login'
+                    type='text'
+                    placeholder='Nom'
+                    name='lastName'
+                    onChange={handleChange}
+                    value={data.lastName}
+                    required
+                  />
+                  <TextField
+                    style={{ margin: '0 0 1rem 0' }}
+                    className='input-login'
+                    type='email'
+                    placeholder='Adresse mail'
+                    name='email'
+                    onChange={handleChange}
+                    value={data.email}
+                    required
+                  />
+                  <TextField
+                    style={{ margin: ' 0 0 1rem 0' }}
+                    className='input-login'
+                    type='password'
+                    placeholder='Mot de passe'
+                    name='password'
+                    onChange={handleChange}
+                    value={data.password}
+                    required
+                  />
+                  <TextField
+                    style={{ margin: ' 0 0 2rem 0' }}
+                    className='input-login'
+                    type='password'
+                    placeholder='Confirmer le mot de passe'
+                    name='password'
+                    onChange={(e) => setControlPassword(e.target.value)}
+                    value={controlPassword}
+                    required
+                  />
+                  {error && <p>{error}</p>}
+                  <p className='password-error' />
+                  <button style={{ marginTop: '2rem' }} className='log-button' type='submit'>
+                    <p>S'ENREGISTRER</p>
+                  </button>
+                </form>
+              </div>
+            </div>
           </div>
-          <div className='right-register'>
-            <form className='form-container-register' onSubmit={handleSubmit}>
-              <h1>CRÉER UN COMPTE</h1>
-              <TextField
-                style={{ margin: '0 0 1rem 0' }}
-                className='input-login'
-                type='text'
-                placeholder='Prénom'
-                name='firstName'
-                onChange={handleChange}
-                value={data.firstName}
-                required
-              />
-              <TextField
-                style={{ margin: '0 0 1rem 0' }}
-                className='input-login'
-                type='text'
-                placeholder='Nom'
-                name='lastName'
-                onChange={handleChange}
-                value={data.lastName}
-                required
-              />
-              <TextField
-                style={{ margin: '0 0 1rem 0' }}
-                className='input-login'
-                type='email'
-                placeholder='Adresse mail'
-                name='email'
-                onChange={handleChange}
-                value={data.email}
-                required
-              />
-              <TextField
-                style={{ margin: ' 0 0 1rem 0' }}
-                className='input-login'
-                type='password'
-                placeholder='Mot de passe'
-                name='password'
-                onChange={handleChange}
-                value={data.password}
-                required
-              />
-              <TextField
-                style={{ margin: ' 0 0 2rem 0' }}
-                className='input-login'
-                type='password'
-                placeholder='Confirmer le mot de passe'
-                name='password'
-                onChange={(e) => setControlPassword(e.target.value)}
-                value={controlPassword}
-                required
-              />
-              {error && <p>{error}</p>}
-              <p className='password-error' />
-              <button style={{ marginTop: '2rem' }} className='log-button' type='submit'>
-                <p>S'ENREGISTRER</p>
-              </button>
-            </form>
-          </div>
-        </div>
-      </div>
+        </>
+      )}
     </>
   );
 };
