@@ -2,6 +2,7 @@ import axios from 'axios';
 
 export const GET_USER = 'GET_USER';
 export const ADD_CARD = 'ADD_CARD';
+export const DELETE_CARD = 'DELETE_CARD';
 
 export const getUser = (uid) => {
   return async (dispatch) => {
