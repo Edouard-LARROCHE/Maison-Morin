@@ -11,6 +11,9 @@ router.get('/logout', authController.logout);
 router.get('/', userController.getAllUsers);
 router.get('/:id', userController.userInfo);
 router.delete('/:id', userController.deleteUser);
+
+// user shop cart
 router.patch('/addCard/:id', userController.addCard);
+router.delete('/deleteCard/:id', userController.deleteCard);
 
 module.exports = router;

@@ -2,6 +2,7 @@ import axios from 'axios';
 
 export const GET_USER = 'GET_USER';
 export const ADD_CARD = 'ADD_CARD';
+export const DELETE_CARD = 'DELETE_CARD';
 
 export const getUser = (uid) => {
   return async (dispatch) => {
@@ -23,6 +24,20 @@ export const addCard = (uid) => {
     })
       .then((res) => {
         dispatch({ type: ADD_CARD, payload: uid });
+      })
+      .catch((err) => console.log(err));
+  };
+};
+
+export const deleteCard = (uid) => {
+  return async (dispatch) => {
+    return await axios({
+      method: 'delete',
+      url: `api/user/deleteCard/${uid}`,
+      data: uid,
+    })
+      .then((res) => {
+        dispatch({ type: DELETE_CARD, payload: uid });
       })
       .catch((err) => console.log(err));
   };

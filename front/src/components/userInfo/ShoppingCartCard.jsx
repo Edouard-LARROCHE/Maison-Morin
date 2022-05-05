@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Loader from '../Loader';
 import DeleteIcon from '@material-ui/icons/Delete';
-import { deleteCard } from '../../actions/card.actions';
+import { deleteCard } from '../../actions/user.actions';
 import { useDispatch } from 'react-redux';
 
 const ShoppingCartCard = ({ gallery }) => {

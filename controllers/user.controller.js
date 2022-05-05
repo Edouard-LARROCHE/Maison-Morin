@@ -43,3 +43,21 @@ module.exports.addCard = async (req, res) => {
     return res.status(400).send(err);
   }
 };
+
+module.exports.deleteCard = (req, res) => {
+  if (!ObjectID.isValid(req.params.id)) return res.status(400).send('ID unknown : ' + req.params.id);
+
+  try {
+    return UserModel.findByIdAndUpdate(
+      { _id: req.params.id },
+      {
+        $pull: { shopCart: req.body.shopCart },
+      },
+      { new: true },
+    )
+      .then((data) => res.send(data))
+      .catch((err) => res.status(500).send({ message: err }));
+  } catch (err) {
+    return res.status(400).send(err);
+  }
+};
