@@ -1,4 +1,4 @@
-import { ADD_CARD, GET_USER } from '../actions/user.actions';
+import { ADD_CARD, GET_USER, DELETE_CARD } from '../actions/user.actions';
 
 const initialState = {};
 
@@ -11,6 +11,12 @@ export default function userReducer(state = initialState, action) {
       return {
         ...state,
         shopCart: [action.payload, ...state.shopCart],
+      };
+
+    case DELETE_CARD:
+      return {
+        ...state,
+        shopCart: state.shopCart.filter((id) => id !== action.payload),
       };
 
     default:
