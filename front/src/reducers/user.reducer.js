@@ -16,7 +16,7 @@ export default function userReducer(state = initialState, action) {
     case DELETE_CARD:
       return {
         ...state,
-        shopCart: state.shopCart.filter((id) => id !== action.payload),
+        shopCart: state.shopCart.filter((id) => id !== action.payload.cardId),
       };
 
     default:
