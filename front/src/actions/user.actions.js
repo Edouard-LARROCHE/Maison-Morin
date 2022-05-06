@@ -31,6 +31,6 @@ export const addCard = (uid) => {
 
 export const deleteCard = (cardId) => {
   return async (dispatch) => {
-    dispatch({ type: DELETE_CARD, payload: cardId });
+    dispatch({ type: DELETE_CARD, payload: { cardId } });
   };
 };
