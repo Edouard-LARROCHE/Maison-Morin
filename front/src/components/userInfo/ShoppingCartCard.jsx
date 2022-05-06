@@ -23,7 +23,7 @@ const ShoppingCartCard = ({ gallery }) => {
     })
       .then((res) => {
         dispatch(deleteCard(gallery._id));
-        console.log(res);
+        return res;
       })
       .catch((err) => console.log(err));
   };
