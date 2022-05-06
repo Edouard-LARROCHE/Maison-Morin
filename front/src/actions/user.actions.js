@@ -31,14 +31,6 @@ export const addCard = (uid) => {
 
 export const deleteCard = (uid) => {
   return async (dispatch) => {
-    return await axios({
-      method: 'delete',
-      url: `api/user/deleteCard/${uid}`,
-      data: uid,
-    })
-      .then((res) => {
-        dispatch({ type: DELETE_CARD, payload: uid });
-      })
-      .catch((err) => console.log(err));
+    dispatch({ type: DELETE_CARD, payload: uid });
   };
 };
