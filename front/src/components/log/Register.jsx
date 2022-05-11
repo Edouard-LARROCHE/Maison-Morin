@@ -22,11 +22,16 @@ const Register = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    const terms = document.getElementById('terms');
+    const termsError = document.querySelector('.terms-error');
     const controlPasswordError = document.querySelector('.password-error');
     controlPasswordError.innerHTML = '';
+    termsError.innerHTML = '';
 
     if (data.password !== controlPassword) {
       controlPasswordError.innerHTML = 'Les mots de passe ne correspondent pas.';
+    } else if (!terms.checked) {
+      termsError.innerHTML = 'Veuillez valider les conditions générales';
     } else {
       await axios
         .post('api/user/register', data)
@@ -115,8 +120,11 @@ const Register = () => {
                     value={controlPassword}
                     required
                   />
-                  {error && <p>{error}</p>}
-                  <p className='password-error' />
+                  <div className='error-register'>
+                    {error && <p>{error}</p>}
+                    <p className='password-error' />
+                    <p className='terms-error' />
+                  </div>
                   <div style={{ display: 'flex', marginTop: '2rem' }}>
                     <input style={{ marginRight: '0.5rem' }} type='checkbox' id='terms' />
                     <p style={{ marginRight: '0.4rem' }}>J'accepte les</p>
