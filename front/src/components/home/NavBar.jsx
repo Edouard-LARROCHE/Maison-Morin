@@ -148,11 +148,19 @@ const NavBar = () => {
               )}
 
               <span style={{ color: '#fff', fontSize: '1.5rem' }}>&#124;</span>
-              <Link to='/signup'>
+
+              {!uid ? (
+                <Link to='/signup'>
+                  <li>
+                    <p>Créer un compte</p>
+                  </li>
+                </Link>
+              ) : (
                 <li>
-                  <p>Créer un compte</p>
+                  <p style={{ opacity: '0.7', cursor: 'pointer', color: '#fff' }}>Créer un compte</p>
                 </li>
-              </Link>
+              )}
+
               <Link to='/mon-compte'>
                 <li>
                   <p>MON COMPTE</p>
