@@ -135,11 +135,18 @@ const NavBar = () => {
         <div className='other-nav'>
           <div className='auth-nav'>
             <ul>
-              <Link to='/login'>
+              {!uid ? (
+                <Link to='/login'>
+                  <li>
+                    <p>Se connecter </p>
+                  </li>
+                </Link>
+              ) : (
                 <li>
-                  <p>Se connecter </p>
+                  <p style={{ opacity: '0.7', cursor: 'pointer', color: '#fff' }}>Se connecter </p>
                 </li>
-              </Link>
+              )}
+
               <span style={{ color: '#fff', fontSize: '1.5rem' }}>&#124;</span>
               <Link to='/signup'>
                 <li>
