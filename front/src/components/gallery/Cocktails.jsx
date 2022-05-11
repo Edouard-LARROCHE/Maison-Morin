@@ -23,7 +23,6 @@ const Cocktails = () => {
       setLoading(false);
     };
     fetchData();
-    // eslint-disable-next-line
   }, []);
 
   const handleSearch = (e) => {
