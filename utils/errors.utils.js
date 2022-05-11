@@ -1,7 +1,7 @@
 module.exports.signUpErrors = (err) => {
   let errors = { name: '', email: '', password: '' };
 
-  if (err.message.includes('lastName' && 'firstName')) errors.name = 'Le nom et prénom doivent faire 3 caractères minimum';
+  if (err.message.includes('lastName' || 'firstName')) errors.name = 'Le nom et prénom doivent faire 3 caractères minimum';
 
   if (err.message.includes('email')) errors.email = 'Format email incorrect';
 
@@ -15,7 +15,7 @@ module.exports.signUpErrors = (err) => {
 module.exports.signInErrors = (err) => {
   let errors = { email: '', password: '' };
 
-  if (err.message.includes('email')) errors.email = 'Email inconnu';
+  if (err.message.includes('email')) errors.email = 'Adresse email inconnue';
 
   if (err.message.includes('password')) errors.password = 'Erreur de mot de passe';
 
