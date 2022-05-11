@@ -43,53 +43,12 @@
   width: 23em;
   height: 21em;
   margin: 1rem 1rem 14rem 1rem;
-  position: relative;
 }
 
 .img-gallerie {
-  position: absolute;
+  cursor: pointer;
   width: 23em;
   height: 21em;
-  filter: blur(0);
-  transition: filter 0.3s linear;
-}
-
-.icones {
-  height: 100%;
-  width: 100%;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.instagram {
-  width: 3em;
-  height: 3em;
-  background-color: #fff;
-  border-radius: 50%;
-  opacity: 0;
-  transition: visibility 0s, opacity 0.3s linear;
-}
-
-.fab {
-  font-size: 28px;
-  color: $black;
-  display: flex;
-  justify-content: center;
-  margin: 0.4em;
-}
-
-/* ===== PHOTOS HOVER ===== */
-
-.photos:hover {
-  .instagram {
-    opacity: 1;
-  }
-
-  .img-gallerie {
-    filter: blur(1.5px);
-  }
 }
 
 .info-card {
@@ -101,14 +60,16 @@
   p {
     margin-top: 1rem;
   }
+}
 
-  .add-shopping-cart {
-    cursor: pointer;
-    display: flex;
+.add-shopping-cart {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
 
-    &:active {
-      color: $color-3;
-    }
+  p:active {
+    color: $color-3;
   }
 }
 

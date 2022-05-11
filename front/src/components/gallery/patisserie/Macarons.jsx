@@ -24,7 +24,6 @@ const Macarons = () => {
     };
 
     fetchData();
-    // eslint-disable-next-line
   }, []);
 
   const handleSearch = (e) => {

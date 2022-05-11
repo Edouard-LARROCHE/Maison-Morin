@@ -24,7 +24,6 @@ const ProduitsDexception = () => {
     };
 
     fetchData();
-    // eslint-disable-next-line
   }, []);
 
   const handleSearch = (e) => {

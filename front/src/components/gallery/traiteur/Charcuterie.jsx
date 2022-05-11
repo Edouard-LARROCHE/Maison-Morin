@@ -24,7 +24,6 @@ const Charcuterie = () => {
     };
 
     fetchData();
-    // eslint-disable-next-line
   }, []);
 
   const handleSearch = (e) => {

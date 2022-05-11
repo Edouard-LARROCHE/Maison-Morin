@@ -61,6 +61,10 @@
   .signup-form-container {
     width: 700px;
   }
+
+  .error-register {
+    text-align: center;
+  }
 }
 
 @media screen and(max-width: 428px) {
@@ -68,7 +72,7 @@
     .signup-form-container {
       flex-direction: column-reverse !important;
       width: 350px;
-      height: 630px;
+      height: 750px;
     }
 
     .right-register {

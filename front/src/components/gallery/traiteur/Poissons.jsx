@@ -24,7 +24,6 @@ const Poissons = () => {
     };
 
     fetchData();
-    // eslint-disable-next-line
   }, []);
 
   const handleSearch = (e) => {
