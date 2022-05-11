@@ -1,5 +1,7 @@
 module.exports.signUpErrors = (err) => {
-  let errors = { email: '', password: '' };
+  let errors = { name: '', email: '', password: '' };
+
+  if (err.message.includes('lastName' && 'firstName')) errors.name = 'Le nom et prénom doivent faire 3 caractères minimum';
 
   if (err.message.includes('email')) errors.email = 'Format email incorrect';
 
