@@ -117,7 +117,14 @@ const Register = () => {
                   />
                   {error && <p>{error}</p>}
                   <p className='password-error' />
-                  <button style={{ marginTop: '2rem' }} className='log-button' type='submit'>
+                  <div style={{ display: 'flex', marginTop: '2rem' }}>
+                    <input style={{ marginRight: '0.5rem' }} type='checkbox' id='terms' />
+                    <p style={{ marginRight: '0.4rem' }}>J'accepte les</p>
+                    <Link to='/mentions-legales'>
+                      <p style={{ textDecoration: 'underline' }}>conditions générales</p>
+                    </Link>
+                  </div>
+                  <button style={{ marginTop: '0.5rem' }} className='log-button' type='submit'>
                     <p>S'ENREGISTRER</p>
                   </button>
                 </form>
