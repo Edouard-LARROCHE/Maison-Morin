@@ -32,7 +32,7 @@ const Register = () => {
         .post('api/user/register', data)
         .then((res) => {
           if (res.data.errors) {
-            setError(res.data.errors.password || res.data.errors.email);
+            setError(res.data.errors.password || res.data.errors.email || res.data.errors.name);
           } else {
             setFormConnect(true);
           }
