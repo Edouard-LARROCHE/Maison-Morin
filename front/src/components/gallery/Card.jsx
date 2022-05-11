@@ -56,15 +56,15 @@ const Card = ({ gallery }) => {
           <p style={{ marginRight: '0.5rem' }}>AJOUTER AU PANIER</p>
           <ShoppingCartIcon />
         </div>
-      </div>
-      <div className={confirm}>
-        <p>BIEN AJOUTER</p>
-      </div>
-      <div className={add}>
-        <p>DÉJÀ AJOUTER</p>
-      </div>
-      <div className={connect}>
-        <p>CONNEXION REQUISE</p>
+        <div className={confirm}>
+          <p>BIEN AJOUTER</p>
+        </div>
+        <div className={add}>
+          <p>DÉJÀ AJOUTER</p>
+        </div>
+        <div className={connect}>
+          <p>CONNEXION REQUISE</p>
+        </div>
       </div>
     </div>
   );
