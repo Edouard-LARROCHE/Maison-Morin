@@ -45,31 +45,26 @@ const Card = ({ gallery }) => {
   };
 
   return (
-    <div className='photos'>
-      <img className='img-gallerie' src={gallery.pictureUrl} alt='MAISON-MORIN' />
-      {/* <div className='icones'>
-        <div className='instagram'>
-          <a className='fab fa-instagram' target='_blank' rel='noreferrer' href='https://www.instagram.com/maison_morin/?hl=fr'>
-            {''}
-          </a>
+    <div>
+      <div className='photos'>
+        <img className='img-gallerie' src={gallery.pictureUrl} alt='MAISON-MORIN' />
+        <div className='info-card'>
+          <p> {gallery.name} </p>
+          <p> {gallery.price} </p>
         </div>
-      </div> */}
-      <div className='info-card'>
-        <p> {gallery.name} </p>
-        <p> {gallery.price} </p>
         <div className='add-shopping-cart' onClick={() => addStore()}>
           <p style={{ marginRight: '0.5rem' }}>AJOUTER AU PANIER</p>
-          <ShoppingCartIcon style={{ transform: 'translateY(15px)' }} />
+          <ShoppingCartIcon />
         </div>
-        <div className={confirm}>
-          <p>BIEN AJOUTER</p>
-        </div>
-        <div className={add}>
-          <p>DÉJÀ AJOUTER</p>
-        </div>
-        <div className={connect}>
-          <p>CONNEXION REQUISE</p>
-        </div>
+      </div>
+      <div className={confirm}>
+        <p>BIEN AJOUTER</p>
+      </div>
+      <div className={add}>
+        <p>DÉJÀ AJOUTER</p>
+      </div>
+      <div className={connect}>
+        <p>CONNEXION REQUISE</p>
       </div>
     </div>
   );
