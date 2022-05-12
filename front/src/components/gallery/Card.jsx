@@ -4,6 +4,7 @@ import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import { useDispatch, useSelector } from 'react-redux';
 import { addCard } from '../../actions/user.actions';
 import { UidContext } from '../../AppContext';
+import IndexModal from '../CardModal/IndexModal';
 
 const Card = ({ gallery }) => {
   const [confirm, setConfirm] = useState('confirm-before');
@@ -48,6 +49,7 @@ const Card = ({ gallery }) => {
     <div>
       <div className='photos'>
         <img className='img-gallerie' src={gallery.pictureUrl} alt='MAISON-MORIN' />
+        <IndexModal />
         <div className='info-card'>
           <p> {gallery.name} </p>
           <p> {gallery.price} </p>

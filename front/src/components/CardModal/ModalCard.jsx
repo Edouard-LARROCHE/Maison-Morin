@@ -9,6 +9,7 @@ const ModalCard = ({ isShowing, hide, ...props }) => {
             <div className='modal'>
               <div className='modal-header'>
                 <h3>Card</h3>
+                <h3 onClick={hide}>X</h3>
               </div>
               <div>{props.children}</div>
             </div>
