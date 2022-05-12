@@ -50,7 +50,7 @@ const Card = ({ gallery }) => {
   };
 
   const showCard = () => {
-    if (!cardData.includes(gallery._id.toString())) dispatch(getCard(gallery._id));
+    dispatch(getCard(gallery._id));
   };
 
   return (

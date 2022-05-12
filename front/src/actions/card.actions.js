@@ -9,6 +9,6 @@ export const getCard = (card) => {
 
 export const removeCard = (card) => {
   return async (dispatch) => {
-    dispatch({ type: REMOVE_CARD, payload: card });
+    dispatch({ type: REMOVE_CARD, payload: { card } });
   };
 };
