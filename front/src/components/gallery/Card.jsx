@@ -4,7 +4,6 @@ import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import { useDispatch, useSelector } from 'react-redux';
 import { addCard } from '../../actions/user.actions';
 import { UidContext } from '../../AppContext';
-import { getCard } from '../../actions/card.actions';
 
 const Card = ({ gallery }) => {
   const [confirm, setConfirm] = useState('confirm-before');
@@ -15,35 +14,34 @@ const Card = ({ gallery }) => {
   const uid = useContext(UidContext);
 
   const addStore = () => {
-    dispatch(getCard(gallery._id));
-    // const data = {
-    //   shopCart: gallery._id,
-    // };
+    const data = {
+      shopCart: gallery._id,
+    };
 
-    // if (uid) {
-    //   if (!userData.shopCart.includes(gallery._id.toString())) {
-    //     dispatch(addCard(gallery._id));
-    //     axios
-    //       .patch(`/api/user/addCard/${uid}`, data)
-    //       .then((res) => {
-    //         setConfirm('confirm');
-    //         setTimeout(() => {
-    //           setConfirm('confirm-before');
-    //         }, 1500);
-    //       })
-    //       .catch((err) => console.log(err));
-    //   } else {
-    //     setAdd('add');
-    //     setTimeout(() => {
-    //       setAdd('add-before');
-    //     }, 1500);
-    //   }
-    // } else {
-    //   setConnect('connect');
-    //   setTimeout(() => {
-    //     setConnect('connect-before');
-    //   }, 1500);
-    // }
+    if (uid) {
+      if (!userData.shopCart.includes(gallery._id.toString())) {
+        dispatch(addCard(gallery._id));
+        axios
+          .patch(`/api/user/addCard/${uid}`, data)
+          .then((res) => {
+            setConfirm('confirm');
+            setTimeout(() => {
+              setConfirm('confirm-before');
+            }, 1500);
+          })
+          .catch((err) => console.log(err));
+      } else {
+        setAdd('add');
+        setTimeout(() => {
+          setAdd('add-before');
+        }, 1500);
+      }
+    } else {
+      setConnect('connect');
+      setTimeout(() => {
+        setConnect('connect-before');
+      }, 1500);
+    }
   };
 
   return (
