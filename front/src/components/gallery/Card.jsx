@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import axios from 'axios';
 import UseModalCard from '../CardModal/UseModalCard';
 import ModalCard from '../CardModal/ModalCard';
@@ -15,6 +15,7 @@ const Card = ({ gallery }) => {
   const [connect, setConnect] = useState('connect-before');
   const dispatch = useDispatch();
   const userData = useSelector((state) => state.userReducer);
+  const cardData = useSelector((state) => state.cardReducer);
   const uid = useContext(UidContext);
 
   const addStore = () => {
@@ -48,22 +49,14 @@ const Card = ({ gallery }) => {
     }
   };
 
-  const showCard = () => {
-    dispatch(getCard(gallery._id));
-  };
+  useEffect(() => {
+    if (!cardData.includes(gallery._id.toString())) dispatch(getCard(gallery._id));
+  }, [gallery._id, dispatch, cardData]);
 
   return (
     <div>
       <div className='photos'>
-        <img
-          className='img-gallerie'
-          src={gallery.pictureUrl}
-          alt='MAISON-MORIN'
-          onClick={() => {
-            showCard();
-            toggleCard();
-          }}
-        />
+        <img className='img-gallerie' src={gallery.pictureUrl} alt='MAISON-MORIN' onClick={toggleCard} />
         <div className='info-card'>
           <p> {gallery.name} </p>
           <p> {gallery.price} </p>
