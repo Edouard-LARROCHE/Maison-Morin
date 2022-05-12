@@ -5,6 +5,7 @@ import ModalCard from '../CardModal/ModalCard';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import { useDispatch, useSelector } from 'react-redux';
 import { addCard } from '../../actions/user.actions';
+import { getCard } from '../../actions/card.actions';
 import { UidContext } from '../../AppContext';
 
 const Card = ({ gallery }) => {
@@ -47,10 +48,22 @@ const Card = ({ gallery }) => {
     }
   };
 
+  const showCard = () => {
+    dispatch(getCard(gallery._id));
+  };
+
   return (
     <div>
       <div className='photos'>
-        <img className='img-gallerie' src={gallery.pictureUrl} alt='MAISON-MORIN' onClick={toggleCard} />
+        <img
+          className='img-gallerie'
+          src={gallery.pictureUrl}
+          alt='MAISON-MORIN'
+          onClick={() => {
+            showCard();
+            toggleCard();
+          }}
+        />
         <div className='info-card'>
           <p> {gallery.name} </p>
           <p> {gallery.price} </p>
