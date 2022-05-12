@@ -39,7 +39,7 @@ const ModalCard = ({ isShowing, hide }) => {
 
   return (
     <div>
-      <div>{isShowing ? listData.map((gallery) => <Card key={gallery._id} gallery={gallery} hide={hide} />) : null}</div>
+      <div>{isShowing ? listData.map((gallery) => <Card gallery={gallery} hide={hide} />) : null}</div>
     </div>
   );
 };

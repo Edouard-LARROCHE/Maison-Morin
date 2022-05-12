@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect } from 'react';
+import React, { useContext, useState } from 'react';
 import axios from 'axios';
 import UseModalCard from '../CardModal/UseModalCard';
 import ModalCard from '../CardModal/ModalCard';
