@@ -8,7 +8,7 @@ export default function cardReducer(state = initialState, action) {
       return [...state, action.payload];
 
     case REMOVE_CARD:
-      return [...state.filter((id) => id !== action.payload.card)];
+      return [...state.filter((id) => id !== action.payload)];
 
     default:
       return state;

@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import axios from 'axios';
 import UseModalCard from '../CardModal/UseModalCard';
 import ModalCard from '../CardModal/ModalCard';
@@ -10,6 +10,7 @@ import { UidContext } from '../../AppContext';
 
 const Card = ({ gallery }) => {
   const { isShowing: isShowed, toggle: toggleCard } = UseModalCard();
+  const [loading, setLoading] = useState(true);
   const [confirm, setConfirm] = useState('confirm-before');
   const [add, setAdd] = useState('add-before');
   const [connect, setConnect] = useState('connect-before');
@@ -50,6 +51,7 @@ const Card = ({ gallery }) => {
 
   const showCard = () => {
     dispatch(getCard(gallery._id));
+    setLoading(false);
   };
 
   return (
@@ -82,7 +84,7 @@ const Card = ({ gallery }) => {
           <p>CONNEXION REQUISE</p>
         </div>
       </div>
-      <ModalCard isShowing={isShowed} hide={toggleCard} />
+      {loading ? null : <ModalCard isShowing={isShowed} hide={toggleCard} />}
     </div>
   );
 };
