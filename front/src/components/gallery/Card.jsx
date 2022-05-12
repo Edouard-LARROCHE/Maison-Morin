@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext, useState } from 'react';
 import axios from 'axios';
 import UseModalCard from '../CardModal/UseModalCard';
 import ModalCard from '../CardModal/ModalCard';
@@ -49,11 +49,9 @@ const Card = ({ gallery }) => {
     }
   };
 
-  // useEffect(() => {
   const showCard = () => {
     if (!cardData.includes(gallery._id.toString())) dispatch(getCard(gallery._id));
   };
-  // }, [gallery._id, dispatch, cardData]);
 
   return (
     <div>
