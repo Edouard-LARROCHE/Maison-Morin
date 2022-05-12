@@ -15,7 +15,6 @@ const Card = ({ gallery }) => {
   const [connect, setConnect] = useState('connect-before');
   const dispatch = useDispatch();
   const userData = useSelector((state) => state.userReducer);
-  const cardData = useSelector((state) => state.cardReducer);
   const uid = useContext(UidContext);
 
   const addStore = () => {
