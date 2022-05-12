@@ -49,14 +49,24 @@ const Card = ({ gallery }) => {
     }
   };
 
-  useEffect(() => {
+  // useEffect(() => {
+  const showCard = () => {
     if (!cardData.includes(gallery._id.toString())) dispatch(getCard(gallery._id));
-  }, [gallery._id, dispatch, cardData]);
+  };
+  // }, [gallery._id, dispatch, cardData]);
 
   return (
     <div>
       <div className='photos'>
-        <img className='img-gallerie' src={gallery.pictureUrl} alt='MAISON-MORIN' onClick={toggleCard} />
+        <img
+          className='img-gallerie'
+          src={gallery.pictureUrl}
+          alt='MAISON-MORIN'
+          onClick={() => {
+            toggleCard();
+            showCard();
+          }}
+        />
         <div className='info-card'>
           <p> {gallery.name} </p>
           <p> {gallery.price} </p>
