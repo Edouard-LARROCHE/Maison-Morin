@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react';
 import axios from 'axios';
-import UseModalCard from '../CardModal/UseModalCard';
-import ModalCard from '../CardModal/ModalCard';
+import UseModalCard from '../cardModal/UseModalCard';
+import ModalCard from '../cardModal/ModalCard';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import { useDispatch, useSelector } from 'react-redux';
 import { addCard } from '../../actions/user.actions';
