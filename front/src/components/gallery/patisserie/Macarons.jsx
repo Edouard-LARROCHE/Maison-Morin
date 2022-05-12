@@ -92,14 +92,16 @@ const Macarons = () => {
         </div>
       ) : (
         <div className='fetch-card'>
-          {data
-            .slice(0, itemsMore)
-            .filter((gallery) => {
-              return gallery.name.toLowerCase().includes(search.toLowerCase());
-            })
-            .map((gallery) => (
-              <Card key={gallery._id} gallery={gallery} />
-            ))}
+          {data.length > 0 ? (
+            data
+              .slice(0, itemsMore)
+              .filter((gallery) => {
+                return gallery.name.toLowerCase().includes(search.toLowerCase());
+              })
+              .map((gallery) => <Card key={gallery._id} gallery={gallery} />)
+          ) : (
+            <p>AUCUN ARTICLE POUR LE MOMENT</p>
+          )}
         </div>
       )}
 
