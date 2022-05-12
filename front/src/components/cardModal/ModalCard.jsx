@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useSelector } from 'react-redux';
+import Card from './Card';
 
-const ModalCard = ({ isShowing, hide, ...props }) => {
+const ModalCard = ({ isShowing, hide }) => {
   const [listData, setListData] = useState([]);
   const cardId = useSelector((state) => state.cardReducer);
 
@@ -38,24 +39,7 @@ const ModalCard = ({ isShowing, hide, ...props }) => {
 
   return (
     <div>
-      <div>
-        {isShowing
-          ? listData.map((gallery) => (
-              <div className='modal-overlay'>
-                <div className='modal-wrapper'>
-                  <div className='modal'>
-                    <div className='modal-header'>
-                      <h3>Card</h3>
-                      <p> {gallery.name} </p>
-                      <h3 onClick={hide}>X</h3>
-                    </div>
-                    <div>{props.children}</div>
-                  </div>
-                </div>
-              </div>
-            ))
-          : null}
-      </div>
+      <div>{isShowing ? listData.map((gallery, index) => <Card key={index} gallery={gallery} hide={hide} />) : null}</div>
     </div>
   );
 };
