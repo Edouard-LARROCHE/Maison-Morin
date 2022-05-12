@@ -1,12 +1,14 @@
 import React, { useContext, useState } from 'react';
 import axios from 'axios';
+import UseModalCard from '../CardModal/UseModalCard';
+import ModalCard from '../CardModal/ModalCard';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import { useDispatch, useSelector } from 'react-redux';
 import { addCard } from '../../actions/user.actions';
 import { UidContext } from '../../AppContext';
-import IndexModal from '../CardModal/IndexModal';
 
 const Card = ({ gallery }) => {
+  const { isShowing: isShowed, toggle: toggleCard } = UseModalCard();
   const [confirm, setConfirm] = useState('confirm-before');
   const [add, setAdd] = useState('add-before');
   const [connect, setConnect] = useState('connect-before');
@@ -48,8 +50,7 @@ const Card = ({ gallery }) => {
   return (
     <div>
       <div className='photos'>
-        <img className='img-gallerie' src={gallery.pictureUrl} alt='MAISON-MORIN' />
-        <IndexModal />
+        <img className='img-gallerie' src={gallery.pictureUrl} alt='MAISON-MORIN' onClick={toggleCard} />
         <div className='info-card'>
           <p> {gallery.name} </p>
           <p> {gallery.price} </p>
@@ -68,6 +69,7 @@ const Card = ({ gallery }) => {
           <p>CONNEXION REQUISE</p>
         </div>
       </div>
+      <ModalCard isShowing={isShowed} hide={toggleCard} />
     </div>
   );
 };
