@@ -33,9 +33,8 @@ const ModalCard = ({ isShowing, hide }) => {
         setListData((listData) => [...listData, vins || viandes || poisson || charcuterie || macaron || patisserie || cocktails || produitsexcep]);
       },
     );
-
-    console.log(cardId);
-  }, [cardId]);
+    // eslint-disable-next-line
+  }, []);
 
   return (
     <div>
