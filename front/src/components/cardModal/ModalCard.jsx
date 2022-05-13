@@ -19,27 +19,27 @@ const ModalCard = ({ isShowing, hide }) => {
       '/picture/produitsExcep/',
     ];
 
-    for (let i = 0; i < cardId.length; i++) {
-      Promise.all(urls.map((url) => axios.get(url + cardId[i]))).then(
-        ([
-          { data: vins },
-          { data: viandes },
-          { data: poisson },
-          { data: charcuterie },
-          { data: macaron },
-          { data: patisserie },
-          { data: cocktails },
-          { data: produitsexcep },
-        ]) => {
-          setListData((listData) => [...listData, vins || viandes || poisson || charcuterie || macaron || patisserie || cocktails || produitsexcep]);
-        },
-      );
-    }
+    Promise.all(urls.map((url) => axios.get(url + cardId))).then(
+      ([
+        { data: vins },
+        { data: viandes },
+        { data: poisson },
+        { data: charcuterie },
+        { data: macaron },
+        { data: patisserie },
+        { data: cocktails },
+        { data: produitsexcep },
+      ]) => {
+        setListData((listData) => [...listData, vins || viandes || poisson || charcuterie || macaron || patisserie || cocktails || produitsexcep]);
+      },
+    );
+
+    console.log(cardId);
   }, [cardId]);
 
   return (
     <div>
-      <div>{isShowing ? listData.map((gallery, index) => <Card key={index} gallery={gallery} hide={hide} />) : null}</div>
+      <div>{isShowing && listData.map((gallery, index) => <Card key={index} gallery={gallery} hide={hide} />)}</div>
     </div>
   );
 };
