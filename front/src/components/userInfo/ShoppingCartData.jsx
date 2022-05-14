@@ -35,6 +35,7 @@ const ShoppingCartData = () => {
         },
       );
     }
+    // eslint-disable-next-line
   }, []);
 
   return (
