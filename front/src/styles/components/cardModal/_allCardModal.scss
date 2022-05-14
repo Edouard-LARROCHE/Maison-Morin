@@ -49,4 +49,13 @@
 
 .card-modal-right {
   grid-area: 1 / 2 / 2 / 3;
+
+  .card-right-header {
+    display: flex;
+    justify-content: space-between;
+    height: 6rem;
+  }
+
+  .card-right-content {
+  }
 }

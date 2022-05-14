@@ -1,4 +1,5 @@
 import React from 'react';
+import CloseIcon from '@material-ui/icons/Close';
 import { useDispatch } from 'react-redux';
 import { removeCard } from '../../actions/card.actions';
 
@@ -17,13 +18,19 @@ const Card = ({ hide, gallery }) => {
             <img src={gallery.pictureUrl} alt='Maison-Morin' />
           </div>
           <div className='card-modal-right'>
-            <h3
-              onClick={() => {
-                hide();
-                remove();
-              }}>
-              X
-            </h3>
+            <div className='card-right-header'>
+              <h1> {gallery.name} </h1>
+              <CloseIcon
+                onClick={() => {
+                  hide();
+                  remove();
+                }}
+                style={{ cursor: 'pointer', color: '#012f6b' }}
+              />
+            </div>
+            <div className='card-right-content'>
+              <h3> {gallery.price} </h3>
+            </div>
           </div>
         </div>
       </div>
