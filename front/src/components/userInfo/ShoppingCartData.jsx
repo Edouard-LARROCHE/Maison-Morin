@@ -35,7 +35,7 @@ const ShoppingCartData = () => {
         },
       );
     }
-  }, [cardId]);
+  }, []);
 
   return (
     <div className='shopping'>
