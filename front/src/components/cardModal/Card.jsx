@@ -13,7 +13,9 @@ const Card = ({ hide, gallery }) => {
     <div className='card-modal-overlay'>
       <div className='card-modal-wrapper'>
         <div className='card-modal'>
-          <div className='card-modal-left'></div>
+          <div className='card-modal-left'>
+            <img src={gallery.pictureUrl} alt='Maison-Morin' />
+          </div>
           <div className='card-modal-right'>
             <h3
               onClick={() => {

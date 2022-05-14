@@ -40,6 +40,11 @@
 
 .card-modal-left {
   grid-area: 1 / 1 / 2 / 2;
+  height: 25rem;
+
+  img {
+    height: 100%;
+  }
 }
 
 .card-modal-right {
