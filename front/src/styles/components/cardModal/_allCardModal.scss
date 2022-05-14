@@ -24,6 +24,9 @@
 }
 
 .card-modal {
+  display: grid;
+  grid-template-columns: 40% 1fr;
+  grid-template-rows: 1fr;
   z-index: 100;
   background: #fff;
   position: relative;
@@ -35,8 +38,10 @@
   padding: 2rem;
 }
 
-.card-modal-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.card-modal-left {
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+.card-modal-right {
+  grid-area: 1 / 2 / 2 / 3;
 }
