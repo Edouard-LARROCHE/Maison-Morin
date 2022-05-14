@@ -35,7 +35,8 @@ const ShoppingCartData = () => {
         },
       );
     }
-  }, [cardId]);
+    // eslint-disable-next-line
+  }, []);
 
   return (
     <div className='shopping'>
