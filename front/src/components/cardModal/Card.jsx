@@ -10,10 +10,10 @@ const Card = ({ hide, gallery }) => {
   };
 
   return (
-    <div className='modal-overlay'>
-      <div className='modal-wrapper'>
-        <div className='modal'>
-          <div className='modal-header'>
+    <div className='card-modal-overlay'>
+      <div className='card-modal-wrapper'>
+        <div className='card-modal'>
+          <div className='card-modal-header'>
             <p> {gallery.name} </p>
             <h3
               onClick={() => {
