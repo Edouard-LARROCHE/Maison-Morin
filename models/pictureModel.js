@@ -10,7 +10,7 @@ const pictureViandeSchema = mongoose.Schema(
       type: String,
       required: true,
     },
-    price: {
+    desc: {
       type: String,
     },
   },
@@ -29,7 +29,7 @@ const picturePoissonSchema = mongoose.Schema(
       type: String,
       required: true,
     },
-    price: {
+    desc: {
       type: String,
     },
   },
@@ -48,7 +48,7 @@ const pictureCharcuterieSchema = mongoose.Schema(
       type: String,
       required: true,
     },
-    price: {
+    desc: {
       type: String,
     },
   },
@@ -67,7 +67,7 @@ const picturePatisseriesSchema = mongoose.Schema(
       type: String,
       required: true,
     },
-    price: {
+    desc: {
       type: String,
     },
   },
@@ -86,7 +86,7 @@ const pictureMacaronsSchema = mongoose.Schema(
       type: String,
       required: true,
     },
-    price: {
+    desc: {
       type: String,
     },
   },
@@ -105,7 +105,7 @@ const pictureCaveVinsSchema = mongoose.Schema(
       type: String,
       required: true,
     },
-    price: {
+    desc: {
       type: String,
     },
   },
@@ -124,7 +124,7 @@ const pictureCocktailsSchema = mongoose.Schema(
       type: String,
       required: true,
     },
-    price: {
+    desc: {
       type: String,
     },
   },
@@ -143,7 +143,7 @@ const pictureProduitsExcepSchema = mongoose.Schema(
       type: String,
       required: true,
     },
-    price: {
+    desc: {
       type: String,
     },
   },
@@ -162,7 +162,7 @@ const pictureSelection = mongoose.Schema(
       type: String,
       required: true,
     },
-    price: {
+    desc: {
       type: String,
     },
   },
