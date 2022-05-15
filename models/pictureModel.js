@@ -108,29 +108,19 @@ const pictureCaveVinsSchema = mongoose.Schema(
     desc: {
       type: String,
     },
+    winery: {
+      type: String,
+    },
     country: {
       type: String,
     },
-
-    designation: {
+    grapeVarieties: {
       type: String,
     },
-    colorWine: {
+    styleOfWine: {
       type: String,
     },
-    dress: {
-      type: String,
-    },
-    noze: {
-      type: String,
-    },
-    mouth: {
-      type: String,
-    },
-    vintage: {
-      type: String,
-    },
-    advice: {
+    alcoholContent: {
       type: String,
     },
   },
