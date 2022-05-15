@@ -29,7 +29,17 @@ const Card = ({ hide, gallery }) => {
               />
             </div>
             <div className='card-right-content'>
-              <h3> {gallery.price} </h3>
+              <h3> {gallery.desc} </h3>
+              <div className='list-card'>
+                <h2> INFORMATIONS SUR LE VIN : </h2>
+                <ul>
+                  <p>Domaine viticole : {gallery.winery} </p>
+                  <p>Cépages : {gallery.grapeVarieties} </p>
+                  <p>Région : {gallery.country} </p>
+                  <p>Style de vin : {gallery.styleOfWine} </p>
+                  <p>Teneur en alcool : {gallery.alcoholContent}% </p>
+                </ul>
+              </div>
             </div>
           </div>
         </div>

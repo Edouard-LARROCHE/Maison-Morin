@@ -53,9 +53,19 @@
   .card-right-header {
     display: flex;
     justify-content: space-between;
-    height: 6rem;
+    height: 3rem;
   }
 
-  //   .card-right-content {
-  //   }
+  .card-right-content {
+    h3,
+    h2 {
+      margin-bottom: 2rem;
+    }
+
+    .list-card,
+    ul,
+    p {
+      font-size: 20px;
+    }
+  }
 }
