@@ -108,6 +108,31 @@ const pictureCaveVinsSchema = mongoose.Schema(
     desc: {
       type: String,
     },
+    country: {
+      type: String,
+    },
+
+    designation: {
+      type: String,
+    },
+    colorWine: {
+      type: String,
+    },
+    dress: {
+      type: String,
+    },
+    noze: {
+      type: String,
+    },
+    mouth: {
+      type: String,
+    },
+    vintage: {
+      type: String,
+    },
+    advice: {
+      type: String,
+    },
   },
   {
     collection: 'pictureCaveVins',
