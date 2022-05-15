@@ -57,8 +57,15 @@
   }
 
   .card-right-content {
-    h3 {
+    h3,
+    h2 {
       margin-bottom: 2rem;
+    }
+
+    .list-card,
+    ul,
+    p {
+      font-size: 20px;
     }
   }
 }
