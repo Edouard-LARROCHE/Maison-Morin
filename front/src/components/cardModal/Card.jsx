@@ -29,7 +29,18 @@ const Card = ({ hide, gallery }) => {
               />
             </div>
             <div className='card-right-content'>
-              <h3> {gallery.price} </h3>
+              <h3> {gallery.desc} </h3>
+              <div className='list-card'>
+                <h2> INFORMATIONS SUR LE VIN : </h2>
+                <ul>
+                  <p> {gallery.winery} </p>
+                  <p> {} </p>
+                  <p> {} </p>
+                  <p> {} </p>
+                  <p> {} </p>
+                  <p> {} </p>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
