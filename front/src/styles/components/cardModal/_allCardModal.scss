@@ -26,7 +26,7 @@
 .card-modal {
   display: grid;
   grid-template-columns: 30% 1fr;
-  grid-template-rows: 1fr;
+  grid-template-rows: repeat(2, 1fr);
   z-index: 100;
   background: $color-6;
   position: relative;
@@ -83,11 +83,16 @@
     h2 {
       margin-bottom: 2rem;
     }
+  }
+}
 
-    .list-card,
-    ul,
-    p {
-      font-size: 20px;
-    }
+.product-info {
+  grid-area: 2 / 1 / 3 / 3;
+  background: #fff;
+
+  .list-card,
+  ul,
+  p {
+    font-size: 20px;
   }
 }
