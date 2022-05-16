@@ -126,6 +126,9 @@ const pictureCaveVinsSchema = mongoose.Schema(
     alcoholContent: {
       type: Number,
     },
+    price: {
+      type: Number,
+    },
   },
   {
     collection: 'pictureCaveVins',
