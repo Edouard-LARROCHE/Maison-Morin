@@ -9,9 +9,22 @@ const AddShopCart = ({ gallery }) => {
   const [confirm, setConfirm] = useState('confirm-before');
   const [add, setAdd] = useState('add-before');
   const [connect, setConnect] = useState('connect-before');
+  const [product, setProduct] = useState(1);
   const dispatch = useDispatch();
   const userData = useSelector((state) => state.userReducer);
   const uid = useContext(UidContext);
+
+  const moreProduct = () => {
+    if (product >= 6) {
+      setProduct(product);
+    } else setProduct(product + 1);
+  };
+
+  const lessProduct = () => {
+    if (product === 1) {
+      setProduct(product);
+    } else setProduct(product - 1);
+  };
 
   const addStore = () => {
     const data = {
@@ -50,6 +63,16 @@ const AddShopCart = ({ gallery }) => {
         <h1> € {gallery.price} </h1>
         <p>Prix à l'unité</p>
       </div>
+      <div className='more-less-product'>
+        <p onClick={lessProduct} className={product === 1 ? 'allowed' : 'pointer'}>
+          -
+        </p>
+        {product}
+        <p onClick={moreProduct} className='pointer'>
+          +
+        </p>
+      </div>
+
       <div className='add-shopping-cart' onClick={() => addStore()}>
         <p style={{ marginRight: '0.5rem' }}>AJOUTER AU PANIER</p>
         <ShoppingCartIcon />

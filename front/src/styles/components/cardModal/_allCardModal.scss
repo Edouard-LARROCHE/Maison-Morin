@@ -100,3 +100,15 @@
 }
 
 /****************** ADD SHOP CART ********************/
+
+.more-less-product {
+  display: flex;
+
+  .pointer {
+    cursor: pointer;
+  }
+
+  .allowed {
+    cursor: not-allowed;
+  }
+}
