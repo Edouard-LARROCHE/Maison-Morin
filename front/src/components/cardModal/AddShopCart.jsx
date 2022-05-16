@@ -16,6 +16,7 @@ const AddShopCart = ({ gallery }) => {
 
   const moreProduct = () => {
     if (product >= 6) {
+      alert('Si vous souhaitez commander plus de 6 bouteilles, veuillez nous contacter.');
       setProduct(product);
     } else setProduct(product + 1);
   };
@@ -66,17 +67,23 @@ const AddShopCart = ({ gallery }) => {
         </div>
         <div className='more-less-product'>
           <div className='less-button'>
-            <p onClick={lessProduct} className={product === 1 ? 'allowed' : 'pointer'}>
+            <button onClick={lessProduct} className={product === 1 ? 'allowed' : 'pointer'}>
               -
-            </p>
+            </button>
           </div>
           {product}
           <div className='more-button'>
-            <p onClick={moreProduct} className='pointer'>
+            <button onClick={moreProduct} className='pointer'>
               +
-            </p>
+            </button>
           </div>
         </div>
+      </div>
+      <div className='add-button'>
+        <button>Ajouter</button>
+      </div>
+      <div className='product-option'>
+        <ShoppingCartIcon />
       </div>
       {/* 
       <div className='add-shopping-cart' onClick={() => addStore()}>
