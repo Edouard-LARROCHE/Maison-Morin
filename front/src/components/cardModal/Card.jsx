@@ -3,6 +3,7 @@ import CloseIcon from '@material-ui/icons/Close';
 import { useDispatch } from 'react-redux';
 import { removeCard } from '../../actions/card.actions';
 import ProductInfo from './ProductInfo';
+import AddShopCart from './AddShopCart';
 
 const Card = ({ hide, gallery }) => {
   const dispatch = useDispatch();
@@ -40,6 +41,7 @@ const Card = ({ hide, gallery }) => {
                 <p> {gallery.grapeVarieties} </p>
               </div>
               <h3> {gallery.desc} </h3>
+              <AddShopCart gallery={gallery} />
             </div>
           </div>
           <div className='product-info'>
