@@ -1,19 +1,19 @@
 import React, { useContext, useState } from 'react';
-import axios from 'axios';
+// import axios from 'axios';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import StorefrontIcon from '@material-ui/icons/Storefront';
-import { useDispatch, useSelector } from 'react-redux';
-import { addCard } from '../../actions/user.actions';
-import { UidContext } from '../../AppContext';
+// import { useDispatch, useSelector } from 'react-redux';
+// import { addCard } from '../../actions/user.actions';
+// import { UidContext } from '../../AppContext';
 
 const AddShopCart = ({ gallery }) => {
-  const [confirm, setConfirm] = useState('confirm-before');
-  const [add, setAdd] = useState('add-before');
-  const [connect, setConnect] = useState('connect-before');
+  //   const [confirm, setConfirm] = useState('confirm-before');
+  //   const [add, setAdd] = useState('add-before');
+  //   const [connect, setConnect] = useState('connect-before');
   const [product, setProduct] = useState(1);
-  const dispatch = useDispatch();
-  const userData = useSelector((state) => state.userReducer);
-  const uid = useContext(UidContext);
+  //   const dispatch = useDispatch();
+  //   const userData = useSelector((state) => state.userReducer);
+  //   const uid = useContext(UidContext);
 
   const moreProduct = () => {
     if (product >= 6) {
@@ -28,36 +28,45 @@ const AddShopCart = ({ gallery }) => {
     } else setProduct(product - 1);
   };
 
-  const addStore = () => {
-    const data = {
-      shopCart: gallery._id,
-    };
+  const localStore = () => {
+    let cardData = window.localStorage.card ? window.localStorage.card.split(',') : [];
 
-    if (uid) {
-      if (!userData.shopCart.includes(gallery._id.toString())) {
-        dispatch(addCard(gallery._id));
-        axios
-          .patch(`/api/user/addCard/${uid}`, data)
-          .then((res) => {
-            setConfirm('confirm');
-            setTimeout(() => {
-              setConfirm('confirm-before');
-            }, 1500);
-          })
-          .catch((err) => console.log(err));
-      } else {
-        setAdd('add');
-        setTimeout(() => {
-          setAdd('add-before');
-        }, 1500);
-      }
-    } else {
-      setConnect('connect');
-      setTimeout(() => {
-        setConnect('connect-before');
-      }, 1500);
+    if (!cardData.includes(gallery._id.toString())) {
+      cardData.push(gallery._id);
+      window.localStorage.card = cardData;
     }
   };
+
+  //   const addStore = () => {
+  //     const data = {
+  //       shopCart: gallery._id,
+  //     };
+
+  //     if (uid) {
+  //       if (!userData.shopCart.includes(gallery._id.toString())) {
+  //         dispatch(addCard(gallery._id));
+  //         axios
+  //           .patch(`/api/user/addCard/${uid}`, data)
+  //           .then((res) => {
+  //             setConfirm('confirm');
+  //             setTimeout(() => {
+  //               setConfirm('confirm-before');
+  //             }, 1500);
+  //           })
+  //           .catch((err) => console.log(err));
+  //       } else {
+  //         setAdd('add');
+  //         setTimeout(() => {
+  //           setAdd('add-before');
+  //         }, 1500);
+  //       }
+  //     } else {
+  //       setConnect('connect');
+  //       setTimeout(() => {
+  //         setConnect('connect-before');
+  //       }, 1500);
+  //     }
+  //   };
 
   return (
     <div className='add-shop-cart'>
@@ -81,7 +90,7 @@ const AddShopCart = ({ gallery }) => {
         </div>
       </div>
       <div className='add-button'>
-        <button>Ajouter</button>
+        <button onClick={localStore}>Ajouter</button>
       </div>
       <div className='shopCart-option'>
         <ShoppingCartIcon style={{ color: '#012f6b' }} />
