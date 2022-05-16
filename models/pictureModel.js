@@ -114,6 +114,9 @@ const pictureCaveVinsSchema = mongoose.Schema(
     country: {
       type: String,
     },
+    region: {
+      type: String,
+    },
     grapeVarieties: {
       type: String,
     },
