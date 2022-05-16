@@ -163,4 +163,17 @@
       }
     }
   }
+
+  .shopCart-option {
+    cursor: pointer;
+    margin-top: 2rem;
+    display: flex;
+    width: 11.3rem;
+  }
+
+  .store-option {
+    margin-top: 1rem;
+    display: flex;
+    width: 18rem;
+  }
 }

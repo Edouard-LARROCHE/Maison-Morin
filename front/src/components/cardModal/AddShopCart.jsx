@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react';
 import axios from 'axios';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
+import StorefrontIcon from '@material-ui/icons/Storefront';
 import { useDispatch, useSelector } from 'react-redux';
 import { addCard } from '../../actions/user.actions';
 import { UidContext } from '../../AppContext';
@@ -82,8 +83,14 @@ const AddShopCart = ({ gallery }) => {
       <div className='add-button'>
         <button>Ajouter</button>
       </div>
-      <div className='product-option'>
-        <ShoppingCartIcon />
+      <div className='shopCart-option'>
+        <ShoppingCartIcon style={{ color: '#012f6b' }} />
+        <p> 0 </p>
+        <p style={{ marginLeft: '1rem' }}>VOIR LE PANIER</p>
+      </div>
+      <div className='store-option'>
+        <StorefrontIcon style={{ color: '#012f6b' }} />
+        <p style={{ marginLeft: '1.5rem' }}>VENDU PAR MAISON-MORIN</p>
       </div>
       {/* 
       <div className='add-shopping-cart' onClick={() => addStore()}>
