@@ -2,6 +2,8 @@ import React from 'react';
 import CloseIcon from '@material-ui/icons/Close';
 import { useDispatch } from 'react-redux';
 import { removeCard } from '../../actions/card.actions';
+import ProductInfo from './ProductInfo';
+import AddShopCart from './AddShopCart';
 
 const Card = ({ hide, gallery }) => {
   const dispatch = useDispatch();
@@ -29,18 +31,21 @@ const Card = ({ hide, gallery }) => {
               />
             </div>
             <div className='card-right-content'>
-              <h3> {gallery.desc} </h3>
-              <div className='list-card'>
-                <h2> INFORMATIONS SUR LE VIN : </h2>
-                <ul>
-                  <p>Domaine viticole : {gallery.winery} </p>
-                  <p>Cépages : {gallery.grapeVarieties} </p>
-                  <p>Région : {gallery.country} </p>
-                  <p>Style de vin : {gallery.styleOfWine} </p>
-                  <p>Teneur en alcool : {gallery.alcoholContent}% </p>
-                </ul>
+              <div className='point-info'>
+                <p> {gallery.country} </p>
+                <span>&#8228;</span>
+                <p> {gallery.styleOfWine} </p>
+                <span>&#8228;</span>
+                <p> {gallery.winery} </p>
+                <span>&#8228;</span>
+                <p> {gallery.grapeVarieties} </p>
               </div>
+              <h3> {gallery.desc} </h3>
+              <AddShopCart gallery={gallery} />
             </div>
+          </div>
+          <div className='product-info'>
+            <ProductInfo gallery={gallery} />
           </div>
         </div>
       </div>

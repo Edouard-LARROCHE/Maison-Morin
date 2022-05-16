@@ -68,7 +68,7 @@ const Card = ({ gallery }) => {
         />
         <div className='info-card'>
           <p> {gallery.name} </p>
-          <p> {gallery.price} </p>
+          <p> {gallery.desc} </p>
         </div>
         <div className='add-shopping-cart' onClick={() => addStore()}>
           <p style={{ marginRight: '0.5rem' }}>AJOUTER AU PANIER</p>
