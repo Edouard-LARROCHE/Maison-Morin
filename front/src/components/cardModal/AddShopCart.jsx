@@ -59,20 +59,26 @@ const AddShopCart = ({ gallery }) => {
 
   return (
     <div className='add-shop-cart'>
-      <div className='price'>
-        <h1> € {gallery.price} </h1>
-        <p>Prix à l'unité</p>
+      <div className='product-choise'>
+        <div className='price'>
+          <h1> € {gallery.price} </h1>
+          <p>Prix à l'unité</p>
+        </div>
+        <div className='more-less-product'>
+          <div className='less-button'>
+            <p onClick={lessProduct} className={product === 1 ? 'allowed' : 'pointer'}>
+              -
+            </p>
+          </div>
+          {product}
+          <div className='more-button'>
+            <p onClick={moreProduct} className='pointer'>
+              +
+            </p>
+          </div>
+        </div>
       </div>
-      <div className='more-less-product'>
-        <p onClick={lessProduct} className={product === 1 ? 'allowed' : 'pointer'}>
-          -
-        </p>
-        {product}
-        <p onClick={moreProduct} className='pointer'>
-          +
-        </p>
-      </div>
-
+      {/* 
       <div className='add-shopping-cart' onClick={() => addStore()}>
         <p style={{ marginRight: '0.5rem' }}>AJOUTER AU PANIER</p>
         <ShoppingCartIcon />
@@ -85,7 +91,7 @@ const AddShopCart = ({ gallery }) => {
       </div>
       <div className={connect}>
         <p>CONNEXION REQUISE</p>
-      </div>
+      </div> */}
     </div>
   );
 };

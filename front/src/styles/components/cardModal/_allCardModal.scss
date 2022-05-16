@@ -100,15 +100,43 @@
 }
 
 /****************** ADD SHOP CART ********************/
+.add-shop-cart {
+  margin-left: 1rem;
 
-.more-less-product {
-  display: flex;
+  .product-choise {
+    display: flex;
 
-  .pointer {
-    cursor: pointer;
-  }
+    .more-less-product {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 12rem;
+      height: 3rem;
+      margin-left: 5rem;
+      border: 1px solid $color-2;
+      border-radius: 20px;
 
-  .allowed {
-    cursor: not-allowed;
+      p {
+        font-size: 25px;
+      }
+
+      .less-button {
+        position: relative;
+        left: -50px;
+      }
+
+      .more-button {
+        position: relative;
+        left: 50px;
+      }
+
+      .pointer {
+        cursor: pointer;
+      }
+
+      .allowed {
+        cursor: not-allowed;
+      }
+    }
   }
 }
