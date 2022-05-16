@@ -28,7 +28,7 @@
   grid-template-columns: 30% 1fr;
   grid-template-rows: 1fr;
   z-index: 100;
-  background: #fff;
+  background: $color-5;
   position: relative;
   margin: auto;
   border-radius: 5px;
@@ -41,7 +41,7 @@
 
 .card-modal-left {
   grid-area: 1 / 1 / 2 / 2;
-  height: 25rem;
+  height: 30rem;
   display: flex;
   justify-content: center;
 
@@ -61,6 +61,24 @@
   }
 
   .card-right-content {
+    .point-info {
+      display: flex;
+
+      p {
+        font-size: 15px;
+        text-decoration: underline;
+
+        &:hover {
+          color: $color-3;
+        }
+      }
+      span {
+        font-size: 35px;
+        transform: translateY(-23px);
+        margin: 0 5px 0 5px;
+      }
+    }
+
     h3,
     h2 {
       margin-bottom: 2rem;
