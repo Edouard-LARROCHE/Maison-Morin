@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 // import axios from 'axios';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import StorefrontIcon from '@material-ui/icons/Storefront';
@@ -31,15 +31,20 @@ const AddShopCart = ({ gallery }) => {
 
   const localStore = () => {
     let cardData = window.localStorage.Vins ? window.localStorage.Vins.split(',') : [];
-    setLocalData(cardData);
-
     if (!cardData.includes(gallery._id.toString())) {
       cardData.push(gallery._id);
       window.localStorage.Vins = cardData;
+      setLocalData(cardData);
     }
   };
 
-  console.log(localData);
+  useEffect(() => {
+    let cardData = window.localStorage.Vins ? window.localStorage.Vins.split(',') : [];
+    console.log(cardData);
+    for (let i = 0; i < cardData.length; i++) {
+      setLocalData(cardData);
+    }
+  }, []);
 
   //   const addStore = () => {
   //     const data = {
@@ -94,7 +99,7 @@ const AddShopCart = ({ gallery }) => {
         </div>
       </div>
       <div className='add-button'>
-        <button onClick={localStore}>Ajouter</button>
+        <button onClick={() => localStore()}>Ajouter</button>
       </div>
       <div className='shopCart-option'>
         <ShoppingCartIcon style={{ color: '#012f6b' }} />
