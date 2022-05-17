@@ -11,6 +11,7 @@ const AddShopCart = ({ gallery }) => {
   //   const [add, setAdd] = useState('add-before');
   //   const [connect, setConnect] = useState('connect-before');
   const [product, setProduct] = useState(1);
+  const [localData, setLocalData] = useState([]);
   //   const dispatch = useDispatch();
   //   const userData = useSelector((state) => state.userReducer);
   //   const uid = useContext(UidContext);
@@ -29,13 +30,16 @@ const AddShopCart = ({ gallery }) => {
   };
 
   const localStore = () => {
-    let cardData = window.localStorage.card ? window.localStorage.card.split(',') : [];
+    let cardData = window.localStorage.Vins ? window.localStorage.Vins.split(',') : [];
+    setLocalData(cardData);
 
     if (!cardData.includes(gallery._id.toString())) {
       cardData.push(gallery._id);
-      window.localStorage.card = cardData;
+      window.localStorage.Vins = cardData;
     }
   };
+
+  console.log(localData);
 
   //   const addStore = () => {
   //     const data = {
@@ -94,7 +98,7 @@ const AddShopCart = ({ gallery }) => {
       </div>
       <div className='shopCart-option'>
         <ShoppingCartIcon style={{ color: '#012f6b' }} />
-        <p> 0 </p>
+        <p> {localData.length} </p>
         <p style={{ marginLeft: '1rem' }}>VOIR LE PANIER</p>
       </div>
       <div className='store-option'>
