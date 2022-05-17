@@ -35,6 +35,7 @@ const AddShopCart = ({ gallery }) => {
       cardData.push(gallery._id);
       window.localStorage.Vins = cardData;
       setLocalData(cardData);
+      setProduct(product);
     }
   };
 
