@@ -18,7 +18,7 @@ const AddShopCart = ({ gallery }) => {
 
   const moreProduct = () => {
     if (product >= 6) {
-      alert('Si vous souhaitez commander plus de 6 bouteilles, veuillez nous contacter.');
+      alert("Si vous souhaitez commander plus de 6 bouteilles d'une même référence, veuillez nous contacter.");
       setProduct(product);
     } else setProduct(product + 1);
   };
@@ -40,7 +40,6 @@ const AddShopCart = ({ gallery }) => {
 
   useEffect(() => {
     let cardData = window.localStorage.Vins ? window.localStorage.Vins.split(',') : [];
-    console.log(cardData);
     for (let i = 0; i < cardData.length; i++) {
       setLocalData(cardData);
     }
