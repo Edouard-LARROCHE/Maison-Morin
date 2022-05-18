@@ -31,13 +31,16 @@ const AddShopCart = ({ gallery }) => {
 
   const localStore = () => {
     let cardData = window.localStorage.Vins ? window.localStorage.Vins.split(',') : [];
-    if (!cardData.includes(gallery._id.toString())) {
+    if (cardData.length >= 6) {
+      alert("Si vous souhaitez commander plus de 6 bouteilles d'une même référence, veuillez nous contacter.");
+    } else {
       cardData.push(gallery._id);
       window.localStorage.Vins = cardData;
       setLocalData(cardData);
       setProduct(product);
     }
   };
+  // cardData.includes(gallery._id.toString())
 
   useEffect(() => {
     let cardData = window.localStorage.Vins ? window.localStorage.Vins.split(',') : [];
