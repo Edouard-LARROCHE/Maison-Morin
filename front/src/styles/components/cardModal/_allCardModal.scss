@@ -96,6 +96,31 @@
   ul,
   p {
     font-size: 20px;
+    margin: 0.5rem 0 0.5rem 0;
+  }
+
+  .list-card,
+  h2 {
+    padding: 0.5rem;
+  }
+
+  .wine-info {
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 30%, 1fr;
+
+    .info-left {
+      grid-area: 1 / 1 / 2 / 2;
+    }
+
+    .info-right {
+      grid-area: 1 / 2 / 2 / 3;
+
+      ul,
+      p {
+        opacity: 0.9;
+      }
+    }
   }
 }
 
