@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 // import axios from 'axios';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import StorefrontIcon from '@material-ui/icons/Storefront';
@@ -11,13 +11,14 @@ const AddShopCart = ({ gallery }) => {
   //   const [add, setAdd] = useState('add-before');
   //   const [connect, setConnect] = useState('connect-before');
   const [product, setProduct] = useState(1);
+  const [localData, setLocalData] = useState([]);
   //   const dispatch = useDispatch();
   //   const userData = useSelector((state) => state.userReducer);
   //   const uid = useContext(UidContext);
 
   const moreProduct = () => {
     if (product >= 6) {
-      alert('Si vous souhaitez commander plus de 6 bouteilles, veuillez nous contacter.');
+      alert("Si vous souhaitez commander plus de 6 bouteilles d'une même référence, veuillez nous contacter.");
       setProduct(product);
     } else setProduct(product + 1);
   };
@@ -29,13 +30,24 @@ const AddShopCart = ({ gallery }) => {
   };
 
   const localStore = () => {
-    let cardData = window.localStorage.card ? window.localStorage.card.split(',') : [];
-
-    if (!cardData.includes(gallery._id.toString())) {
+    let cardData = window.localStorage.Vins ? window.localStorage.Vins.split(',') : [];
+    if (cardData.length >= 6) {
+      alert("Si vous souhaitez commander plus de 6 bouteilles d'une même référence, veuillez nous contacter.");
+    } else {
       cardData.push(gallery._id);
-      window.localStorage.card = cardData;
+      window.localStorage.Vins = cardData;
+      setLocalData(cardData);
+      setProduct(product);
     }
   };
+  // cardData.includes(gallery._id.toString())
+
+  useEffect(() => {
+    let cardData = window.localStorage.Vins ? window.localStorage.Vins.split(',') : [];
+    for (let i = 0; i < cardData.length; i++) {
+      setLocalData(cardData);
+    }
+  }, []);
 
   //   const addStore = () => {
   //     const data = {
@@ -90,11 +102,11 @@ const AddShopCart = ({ gallery }) => {
         </div>
       </div>
       <div className='add-button'>
-        <button onClick={localStore}>Ajouter</button>
+        <button onClick={() => localStore()}>Ajouter</button>
       </div>
       <div className='shopCart-option'>
         <ShoppingCartIcon style={{ color: '#012f6b' }} />
-        <p> 0 </p>
+        <p> {localData.length} </p>
         <p style={{ marginLeft: '1rem' }}>VOIR LE PANIER</p>
       </div>
       <div className='store-option'>
