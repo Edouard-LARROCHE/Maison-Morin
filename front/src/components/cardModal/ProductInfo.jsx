@@ -13,12 +13,12 @@ const ProductInfo = ({ gallery }) => {
             </div>
             <div className='line2' />
             <div className='icons-wine'>
-              <img src='' alt='cépages' />
+              <img src='/assets/icons-cepages.svg' alt='cépages' />
               <p>Cépages : </p>
             </div>
             <div className='line2' />
             <div className='icons-wine'>
-              <img src='' alt='Région' />
+              <img src='/assets/icons-region.svg' alt='Région' />
               <p>Région : </p>
             </div>
             <div className='line2' />
