@@ -8,27 +8,27 @@ const ProductInfo = ({ gallery }) => {
         <div className='info-left'>
           <ul>
             <div className='icons-wine'>
-              <img src='/assets/icons-domain.svg' alt='domain' />
+              <img src='/svg/icons-domain.svg' alt='domain' />
               <p>Domaine viticole : </p>
             </div>
             <div className='line2' />
             <div className='icons-wine'>
-              <img src='/assets/icons-cepages.svg' alt='cépages' />
+              <img src='/svg/icons-cepages.svg' alt='cépages' />
               <p>Cépages : </p>
             </div>
             <div className='line2' />
             <div className='icons-wine'>
-              <img src='/assets/icons-region.svg' alt='Région' />
+              <img src='/svg/icons-region.svg' alt='Région' />
               <p>Région : </p>
             </div>
             <div className='line2' />
             <div className='icons-wine'>
-              <img src='/assets/icons-style.svg' alt='style' />
+              <img src='/svg/icons-style.svg' alt='style' />
               <p>Appellation : </p>
             </div>
             <div className='line2' />
             <div className='icons-wine'>
-              <img src='/assets/icons-temp.svg' alt='alcool' />
+              <img src='/svg/icons-temp.svg' alt='alcool' />
               <p>Teneur en alcool : </p>
             </div>
             <div className='line2' />

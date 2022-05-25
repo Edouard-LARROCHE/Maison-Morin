@@ -31,7 +31,7 @@ const Infos = () => {
               <p className='first-half-text-second'>Profitez des saveurs de notre magnifique région</p>
             </div>
             <div className='round-l'>
-              <img className='svg-button-left' src='/assets/add-svgrepo-com.svg' alt='' onClick={handleClick} />
+              <img className='svg-button-left' src='/svg/add-svgrepo-com.svg' alt='' onClick={handleClick} />
             </div>
             <div className='englo-anim-l'>
               <div className={display}>
@@ -57,7 +57,7 @@ const Infos = () => {
               <p className='first-half-text-second'>Nous faisons attention à l'envirronement</p>
             </div>
             <div className='round-center'>
-              <img className='svg-button-center' src='/assets/add-svgrepo-com.svg' alt='' onClick={handleClick3} />
+              <img className='svg-button-center' src='/svg/add-svgrepo-com.svg' alt='' onClick={handleClick3} />
             </div>
             <div className='englo-anim-c'>
               <div className={display3}>
@@ -84,7 +84,7 @@ const Infos = () => {
               <p className='first-half-text-second'>Découvrez nos nouveaux gâteaux succulents</p>
             </div>
             <div className='round-r'>
-              <img className='svg-button-right' src='/assets/add-svgrepo-com.svg' alt='' onClick={handleClick2} />
+              <img className='svg-button-right' src='/svg/add-svgrepo-com.svg' alt='' onClick={handleClick2} />
             </div>
             <div className='englo-anim-r'>
               <div className={display2}>
