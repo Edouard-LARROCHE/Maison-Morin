@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import CloseIcon from '@material-ui/icons/Close';
 import { useDispatch } from 'react-redux';
 import { removeCard } from '../../actions/card.actions';
@@ -6,10 +6,15 @@ import ProductInfo from './ProductInfo';
 import AddShopCart from './AddShopCart';
 
 const Card = ({ hide, gallery }) => {
+  const [comfirm, setComfirm] = useState('comfirm-add');
   const dispatch = useDispatch();
 
   const remove = () => {
     dispatch(removeCard(gallery._id));
+  };
+
+  const comfirmAdd = () => {
+    setComfirm();
   };
 
   return (
@@ -22,6 +27,9 @@ const Card = ({ hide, gallery }) => {
           <div className='card-modal-right'>
             <div className='card-right-header'>
               <h1> {gallery.name} </h1>
+              <div className='comfirm-add'>
+                <p>L'article à bien été ajouté à votre panier</p>
+              </div>
               <CloseIcon
                 onClick={() => {
                   hide();

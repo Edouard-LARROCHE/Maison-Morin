@@ -60,6 +60,22 @@
     height: 3rem;
   }
 
+  .comfirm-add {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+    background: $black;
+    position: relative;
+    right: -8rem;
+    top: -0.5rem;
+    // opacity: 0;
+
+    p {
+      color: #fff;
+    }
+  }
+
   .card-right-content {
     .point-info {
       display: flex;
@@ -95,8 +111,8 @@
   .list-card,
   ul,
   p {
-    font-size: 20px;
-    margin: 0.5rem 0 0.5rem 0;
+    font-size: 18px;
+    margin: 1.5rem 0 0.5rem 0;
   }
 
   .list-card,
@@ -106,20 +122,31 @@
 
   .wine-info {
     padding: 2rem;
+    margin-top: -2rem;
     display: grid;
     grid-template-columns: 30%, 1fr;
 
     .info-left {
       grid-area: 1 / 1 / 2 / 2;
+
+      .icons-wine {
+        display: flex;
+
+        img {
+          transform: translateY(13px);
+        }
+      }
     }
 
     .info-right {
       grid-area: 1 / 2 / 2 / 3;
+    }
 
-      ul,
-      p {
-        opacity: 0.9;
-      }
+    .info-right,
+    ul,
+    p {
+      opacity: 0.9;
+      margin: 1.5rem 0 0.5rem 0;
     }
   }
 }
