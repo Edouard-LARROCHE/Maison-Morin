@@ -96,7 +96,7 @@
   ul,
   p {
     font-size: 20px;
-    margin: 0.5rem 0 0.5rem 0;
+    margin: 1.5rem 0 0.5rem 0;
   }
 
   .list-card,
@@ -106,6 +106,7 @@
 
   .wine-info {
     padding: 2rem;
+    margin-top: -2rem;
     display: grid;
     grid-template-columns: 30%, 1fr;
 
