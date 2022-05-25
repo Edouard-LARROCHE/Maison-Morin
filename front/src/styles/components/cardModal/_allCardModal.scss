@@ -60,6 +60,22 @@
     height: 3rem;
   }
 
+  .comfirm-add {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+    background: $black;
+    position: relative;
+    right: -8rem;
+    top: -0.5rem;
+    // opacity: 0;
+
+    p {
+      color: #fff;
+    }
+  }
+
   .card-right-content {
     .point-info {
       display: flex;
