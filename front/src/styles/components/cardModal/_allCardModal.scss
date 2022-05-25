@@ -124,11 +124,13 @@
 
     .info-right {
       grid-area: 1 / 2 / 2 / 3;
+    }
 
-      ul,
-      p {
-        opacity: 0.9;
-      }
+    .info-right,
+    ul,
+    p {
+      opacity: 0.9;
+      margin: 1.5rem 0 0.5rem 0;
     }
   }
 }
