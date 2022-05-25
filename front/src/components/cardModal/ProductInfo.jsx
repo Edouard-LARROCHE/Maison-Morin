@@ -15,7 +15,10 @@ const ProductInfo = ({ gallery }) => {
             <div className='line2' />
             <p>Style de vin : </p>
             <div className='line2' />
-            <p>Teneur en alcool : </p>
+            <div className='icons-wine'>
+              <img src='/assets/icons.svg' alt='test' />
+              <p>Teneur en alcool : </p>
+            </div>
             <div className='line2' />
           </ul>
         </div>

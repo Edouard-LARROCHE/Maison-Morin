@@ -112,6 +112,14 @@
 
     .info-left {
       grid-area: 1 / 1 / 2 / 2;
+
+      .icons-wine {
+        display: flex;
+
+        img {
+          transform: translateY(13px);
+        }
+      }
     }
 
     .info-right {
