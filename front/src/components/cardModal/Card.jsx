@@ -14,7 +14,10 @@ const Card = ({ hide, gallery }) => {
   };
 
   const comfirmAdd = () => {
-    setComfirm();
+    setComfirm('comfirm-add-after');
+    setTimeout(() => {
+      setComfirm(comfirm);
+    }, 2500);
   };
 
   return (
@@ -27,7 +30,7 @@ const Card = ({ hide, gallery }) => {
           <div className='card-modal-right'>
             <div className='card-right-header'>
               <h1> {gallery.name} </h1>
-              <div className='comfirm-add'>
+              <div className={comfirm}>
                 <p>L'article à bien été ajouté à votre panier</p>
               </div>
               <CloseIcon
@@ -49,7 +52,7 @@ const Card = ({ hide, gallery }) => {
                 <p> {gallery.grapeVarieties} </p>
               </div>
               <h3> {gallery.desc} </h3>
-              <AddShopCart gallery={gallery} />
+              <AddShopCart gallery={gallery} comfirmAdd={comfirmAdd} />
             </div>
           </div>
           <div className='product-info'>
