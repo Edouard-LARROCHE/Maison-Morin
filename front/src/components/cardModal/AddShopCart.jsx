@@ -6,7 +6,7 @@ import StorefrontIcon from '@material-ui/icons/Storefront';
 // import { addCard } from '../../actions/user.actions';
 // import { UidContext } from '../../AppContext';
 
-const AddShopCart = ({ gallery }) => {
+const AddShopCart = ({ gallery, comfirmAdd }) => {
   //   const [confirm, setConfirm] = useState('confirm-before');
   //   const [add, setAdd] = useState('add-before');
   //   const [connect, setConnect] = useState('connect-before');
@@ -102,7 +102,13 @@ const AddShopCart = ({ gallery }) => {
         </div>
       </div>
       <div className='add-button'>
-        <button onClick={() => localStore()}>Ajouter</button>
+        <button
+          onClick={() => {
+            localStore();
+            comfirmAdd();
+          }}>
+          Ajouter
+        </button>
       </div>
       <div className='shopCart-option'>
         <ShoppingCartIcon style={{ color: '#012f6b' }} />

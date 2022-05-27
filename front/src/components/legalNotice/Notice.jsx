@@ -35,7 +35,7 @@ const Notice = () => {
       </span>
       <div className='dev'>
         <div className='dev-ed'>
-          <img src='/upload/avatar1.jpg' alt='avatar' />
+          <img src='/upload/perso.jpg' alt='avatar' />
           <div className='name'>
             <p>Edouard LARROCHE</p>
             <p>Developer web Full-Stack</p>
