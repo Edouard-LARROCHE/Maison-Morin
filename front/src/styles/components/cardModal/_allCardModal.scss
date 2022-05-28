@@ -247,10 +247,13 @@
   }
 
   .shopCart-option {
-    cursor: pointer;
     margin-top: 2rem;
     display: flex;
     width: 11.8rem;
+
+    p:nth-child(3) {
+      cursor: pointer;
+    }
   }
 
   .store-option {
