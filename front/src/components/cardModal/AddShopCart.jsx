@@ -1,21 +1,11 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-// import axios from 'axios';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import StorefrontIcon from '@material-ui/icons/Storefront';
-// import { useDispatch, useSelector } from 'react-redux';
-// import { addCard } from '../../actions/user.actions';
-// import { UidContext } from '../../AppContext';
 
 const AddShopCart = ({ gallery, comfirmAdd, emptyShop, hide, remove }) => {
-  //   const [confirm, setConfirm] = useState('confirm-before');
-  //   const [add, setAdd] = useState('add-before');
-  //   const [connect, setConnect] = useState('connect-before');
   const [product, setProduct] = useState(1);
   const [localData, setLocalData] = useState([]);
-  //   const dispatch = useDispatch();
-  //   const userData = useSelector((state) => state.userReducer);
-  //   const uid = useContext(UidContext);
 
   const moreProduct = () => {
     if (product >= 6) {
@@ -135,20 +125,6 @@ const AddShopCart = ({ gallery, comfirmAdd, emptyShop, hide, remove }) => {
         <StorefrontIcon style={{ color: '#012f6b' }} />
         <p style={{ marginLeft: '1.5rem' }}>VENDU PAR MAISON-MORIN</p>
       </div>
-      {/* 
-      <div className='add-shopping-cart' onClick={() => addStore()}>
-        <p style={{ marginRight: '0.5rem' }}>AJOUTER AU PANIER</p>
-        <ShoppingCartIcon />
-      </div>
-      <div className={confirm}>
-        <p>BIEN AJOUTER</p>
-      </div>
-      <div className={add}>
-        <p>DÉJÀ AJOUTER</p>
-      </div>
-      <div className={connect}>
-        <p>CONNEXION REQUISE</p>
-      </div> */}
     </div>
   );
 };
