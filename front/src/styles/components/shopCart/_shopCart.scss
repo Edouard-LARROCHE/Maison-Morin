@@ -42,3 +42,21 @@
   height: 8rem;
   border-radius: 5px;
 }
+
+.grid-article {
+  display: grid;
+  grid-template-columns: 20% 50% 1fr;
+  grid-template-rows: 1fr;
+
+  .picture-article {
+    grid-area: 1 / 1 / 2 / 2;
+  }
+
+  .article {
+    grid-area: 1 / 2 / 2 / 3;
+  }
+
+  .price-more-less {
+    grid-area: 1 / 3 / 2 / 4;
+  }
+}

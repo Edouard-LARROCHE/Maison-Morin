@@ -4,6 +4,7 @@ const Articles = () => {
   return (
     <div className='articles'>
       <div className='grid-article'>
+        <div className='picture-article'></div>
         <div className='article'></div>
         <div className='price-more-less'></div>
       </div>
