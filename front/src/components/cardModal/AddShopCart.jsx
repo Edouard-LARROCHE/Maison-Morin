@@ -1,4 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 // import axios from 'axios';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import StorefrontIcon from '@material-ui/icons/Storefront';
@@ -6,7 +7,7 @@ import StorefrontIcon from '@material-ui/icons/Storefront';
 // import { addCard } from '../../actions/user.actions';
 // import { UidContext } from '../../AppContext';
 
-const AddShopCart = ({ gallery, comfirmAdd }) => {
+const AddShopCart = ({ gallery, comfirmAdd, emptyShop, hide, remove }) => {
   //   const [confirm, setConfirm] = useState('confirm-before');
   //   const [add, setAdd] = useState('add-before');
   //   const [connect, setConnect] = useState('connect-before');
@@ -113,7 +114,22 @@ const AddShopCart = ({ gallery, comfirmAdd }) => {
       <div className='shopCart-option'>
         <ShoppingCartIcon style={{ color: '#012f6b' }} />
         <p> {localData.length} </p>
-        <p style={{ marginLeft: '1rem' }}>VOIR LE PANIER</p>
+        {localData.length > 0 ? (
+          <Link to='/mon-panier'>
+            <p
+              onClick={() => {
+                hide();
+                remove();
+              }}
+              style={{ marginLeft: '1rem' }}>
+              VOIR LE PANIER
+            </p>
+          </Link>
+        ) : (
+          <p onClick={emptyShop} style={{ marginLeft: '1rem' }}>
+            VOIR LE PANIER
+          </p>
+        )}
       </div>
       <div className='store-option'>
         <StorefrontIcon style={{ color: '#012f6b' }} />
