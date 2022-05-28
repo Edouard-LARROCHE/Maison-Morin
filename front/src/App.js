@@ -12,6 +12,7 @@ import Admin from './pages/Admin';
 import Shop from './pages/Shop';
 import MaisonMorin from './pages/MaisonMorin';
 import Transition from './pages/Transition';
+import ShopCartIndex from './pages/ShopCartIndex';
 // IMPORT GALLERY
 import TraiteurCharcuterie from './pages/gallery/traiteur/TraiteurCharcuterie';
 import TraiteurViande from './pages/gallery/traiteur/TraiteurViande';
@@ -100,6 +101,7 @@ function App() {
                   <Route path='/signup' exact element={<Register />} />
                   <Route path='/login' exact element={<Login />} />
                   <Route path='/' element={<Navigate replace to='/login' />} />
+                  <Route path='/mon-panier' element={<ShopCartIndex />} />
                 </Routes>
               </ScrollToTop>
             </div>
