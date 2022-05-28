@@ -1,3 +1,5 @@
+/****************** SHOPCART *******************/
+
 .shopCart {
   margin: 0px 300px 0px 300px;
 
@@ -8,7 +10,7 @@
 
 .grid-list {
   display: grid;
-  grid-template-columns: 70% 1fr;
+  grid-template-columns: 60% 1fr;
   grid-template-rows: 1fr;
 
   .article-list {
@@ -20,10 +22,23 @@
       height: 2.5rem;
       border-radius: 5px;
       background: rgb(247, 244, 244);
+      margin-bottom: 2rem;
     }
   }
 
   .total-list {
     grid-area: 1 / 2 / 2 / 3;
+    background: rgb(247, 244, 244);
+    height: 30rem;
+    border-radius: 5px;
+    margin-left: 3rem;
   }
+}
+
+/****************** ARTICLES *******************/
+
+.articles {
+  background: rgb(247, 244, 244);
+  height: 8rem;
+  border-radius: 5px;
 }

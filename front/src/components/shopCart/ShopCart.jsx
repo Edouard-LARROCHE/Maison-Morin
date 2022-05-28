@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Articles from './Articles';
 
 const ShopCart = () => {
   const [localData, setLocalData] = useState([]);
@@ -18,6 +19,7 @@ const ShopCart = () => {
       <div className='grid-list'>
         <div className='article-list'>
           <p>Produits vendus par Maison-Morin</p>
+          <Articles />
         </div>
         <div className='total-list'></div>
       </div>
