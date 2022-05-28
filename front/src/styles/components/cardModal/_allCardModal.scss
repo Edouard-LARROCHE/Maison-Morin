@@ -83,6 +83,29 @@
     opacity: 1;
   }
 
+  .empty-shop-cart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+    background: $black;
+    position: absolute;
+    right: 5rem;
+    top: -1rem;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+
+    p {
+      color: #fff;
+    }
+  }
+
+  .empty-shop-cart-after {
+    @extend .empty-shop-cart;
+    top: 1.5rem;
+    opacity: 1;
+  }
+
   .card-right-content {
     .point-info {
       display: flex;

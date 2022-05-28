@@ -7,6 +7,7 @@ import AddShopCart from './AddShopCart';
 
 const Card = ({ hide, gallery }) => {
   const [comfirm, setComfirm] = useState('comfirm-add');
+  const [emptyShopCart, setEmptyShopCart] = useState('empty-shop-cart');
   const dispatch = useDispatch();
 
   const remove = () => {
@@ -17,6 +18,13 @@ const Card = ({ hide, gallery }) => {
     setComfirm('comfirm-add-after');
     setTimeout(() => {
       setComfirm(comfirm);
+    }, 2500);
+  };
+
+  const emptyShop = () => {
+    setEmptyShopCart('empty-shop-cart-after');
+    setTimeout(() => {
+      setEmptyShopCart(emptyShopCart);
     }, 2500);
   };
 
@@ -32,6 +40,9 @@ const Card = ({ hide, gallery }) => {
               <h1> {gallery.name} </h1>
               <div className={comfirm}>
                 <p>L'article à bien été ajouté à votre panier</p>
+              </div>
+              <div className={emptyShopCart}>
+                <p>Votre panier est vide</p>
               </div>
               <CloseIcon
                 onClick={() => {
@@ -52,7 +63,7 @@ const Card = ({ hide, gallery }) => {
                 <p> {gallery.grapeVarieties} </p>
               </div>
               <h3> {gallery.desc} </h3>
-              <AddShopCart gallery={gallery} comfirmAdd={comfirmAdd} hide={hide} remove={remove} />
+              <AddShopCart gallery={gallery} comfirmAdd={comfirmAdd} emptyShop={emptyShop} hide={hide} remove={remove} />
             </div>
           </div>
           <div className='product-info'>

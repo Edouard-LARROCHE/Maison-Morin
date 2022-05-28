@@ -7,7 +7,7 @@ import StorefrontIcon from '@material-ui/icons/Storefront';
 // import { addCard } from '../../actions/user.actions';
 // import { UidContext } from '../../AppContext';
 
-const AddShopCart = ({ gallery, comfirmAdd, hide, remove }) => {
+const AddShopCart = ({ gallery, comfirmAdd, emptyShop, hide, remove }) => {
   //   const [confirm, setConfirm] = useState('confirm-before');
   //   const [add, setAdd] = useState('add-before');
   //   const [connect, setConnect] = useState('connect-before');
@@ -126,7 +126,9 @@ const AddShopCart = ({ gallery, comfirmAdd, hide, remove }) => {
             </p>
           </Link>
         ) : (
-          <p style={{ marginLeft: '1rem' }}>VOIR LE PANIER</p>
+          <p onClick={emptyShop} style={{ marginLeft: '1rem' }}>
+            VOIR LE PANIER
+          </p>
         )}
       </div>
       <div className='store-option'>
