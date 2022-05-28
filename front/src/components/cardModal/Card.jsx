@@ -52,7 +52,7 @@ const Card = ({ hide, gallery }) => {
                 <p> {gallery.grapeVarieties} </p>
               </div>
               <h3> {gallery.desc} </h3>
-              <AddShopCart gallery={gallery} comfirmAdd={comfirmAdd} />
+              <AddShopCart gallery={gallery} comfirmAdd={comfirmAdd} hide={hide} remove={remove} />
             </div>
           </div>
           <div className='product-info'>
