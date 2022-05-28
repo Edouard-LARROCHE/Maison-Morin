@@ -1,0 +1,29 @@
+.shopCart {
+  margin: 0px 300px 0px 300px;
+
+  h2 {
+    margin: 2rem 0 5rem 0;
+  }
+}
+
+.grid-list {
+  display: grid;
+  grid-template-columns: 70% 1fr;
+  grid-template-rows: 1fr;
+
+  .article-list {
+    grid-area: 1 / 1 / 2 / 2;
+
+    p {
+      padding: 0.5rem;
+      padding-left: 1rem;
+      height: 2.5rem;
+      border-radius: 5px;
+      background: rgb(247, 244, 244);
+    }
+  }
+
+  .total-list {
+    grid-area: 1 / 2 / 2 / 3;
+  }
+}
