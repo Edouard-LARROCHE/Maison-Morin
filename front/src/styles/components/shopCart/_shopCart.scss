@@ -16,7 +16,7 @@
   .article-list {
     grid-area: 1 / 1 / 2 / 2;
 
-    p {
+    p:nth-child(1) {
       padding: 0.5rem;
       padding-left: 1rem;
       height: 2.5rem;
@@ -39,7 +39,7 @@
 
 .articles {
   background: rgb(247, 244, 244);
-  height: 8rem;
+  height: 10.5rem;
   border-radius: 5px;
 }
 
@@ -50,10 +50,26 @@
 
   .picture-article {
     grid-area: 1 / 1 / 2 / 2;
+    margin-top: 0.3rem;
+
+    img {
+      width: 100%;
+    }
   }
 
   .article {
     grid-area: 1 / 2 / 2 / 3;
+
+    p:nth-child(1) {
+      margin: 0;
+      margin-top: 1rem;
+      padding: 0;
+      height: 1.2rem;
+    }
+
+    p:nth-child(2) {
+      opacity: 0.7;
+    }
   }
 
   .price-more-less {

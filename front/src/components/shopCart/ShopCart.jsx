@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import Articles from './Articles';
 
 const ShopCart = () => {
@@ -6,8 +7,35 @@ const ShopCart = () => {
 
   useEffect(() => {
     let cardData = window.localStorage.Vins ? window.localStorage.Vins.split(',') : [];
+    let urls = [
+      '/picture/cave/vins/',
+      '/picture/traiteur/viande/',
+      '/picture/traiteur/poisson/',
+      '/picture/traiteur/charcuterie/',
+      '/picture/patisserie/macaron/',
+      '/picture/patisserie/patisseries/',
+      '/picture/cocktails/',
+      '/picture/produitsExcep/',
+    ];
+
     for (let i = 0; i < cardData.length; i++) {
-      setLocalData(cardData);
+      Promise.all(urls.map((url) => axios.get(url + cardData[i]))).then(
+        ([
+          { data: vins },
+          { data: viandes },
+          { data: poisson },
+          { data: charcuterie },
+          { data: macaron },
+          { data: patisserie },
+          { data: cocktails },
+          { data: produitsexcep },
+        ]) => {
+          setLocalData((localData) => [
+            ...localData,
+            vins || viandes || poisson || charcuterie || macaron || patisserie || cocktails || produitsexcep,
+          ]);
+        },
+      );
     }
   }, []);
 
@@ -19,7 +47,9 @@ const ShopCart = () => {
       <div className='grid-list'>
         <div className='article-list'>
           <p>Produits vendus par Maison-Morin</p>
-          <Articles />
+          {localData.map((gallery) => (
+            <Articles gallery={gallery} key={gallery._id} />
+          ))}
         </div>
         <div className='total-list'></div>
       </div>
