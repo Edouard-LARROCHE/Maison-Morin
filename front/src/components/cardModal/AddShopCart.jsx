@@ -2,10 +2,14 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import StorefrontIcon from '@material-ui/icons/Storefront';
+import { useDispatch, useSelector } from 'react-redux';
+import { getProduct } from '../../actions/product.actions';
 
 const AddShopCart = ({ gallery, comfirmAdd, emptyShop, hide, remove }) => {
   const [product, setProduct] = useState(1);
   const [localData, setLocalData] = useState([]);
+  const productId = useSelector((state) => state.productReducer);
+  const dispatch = useDispatch();
 
   const moreProduct = () => {
     if (product >= 6) {
@@ -21,24 +25,24 @@ const AddShopCart = ({ gallery, comfirmAdd, emptyShop, hide, remove }) => {
   };
 
   const localStore = () => {
-    let cardData = window.localStorage.Vins ? window.localStorage.Vins.split(',') : [];
-    if (cardData.length >= 6) {
-      alert("Si vous souhaitez commander plus de 6 bouteilles d'une même référence, veuillez nous contacter.");
-    } else {
-      cardData.push(gallery._id);
-      window.localStorage.Vins = cardData;
-      setLocalData(cardData);
-      setProduct(product);
-    }
+    // let cardData = window.localStorage.Vins ? window.localStorage.Vins.split(',') : [];
+    // if (cardData.length >= 6) {
+    //   alert("Si vous souhaitez commander plus de 6 bouteilles d'une même référence, veuillez nous contacter.");
+    // } else {
+    //   cardData.push(gallery._id);
+    //   window.localStorage.Vins = cardData;
+    //   setLocalData(cardData);
+    //   setProduct(product);
+    // }
+    dispatch(getProduct(gallery._id));
   };
   // cardData.includes(gallery._id.toString())
 
   useEffect(() => {
-    let cardData = window.localStorage.Vins ? window.localStorage.Vins.split(',') : [];
-    for (let i = 0; i < cardData.length; i++) {
-      setLocalData(cardData);
+    for (let i = 0; i < productId.length; i++) {
+      setLocalData(productId);
     }
-  }, []);
+  }, [productId]);
 
   // const addStore = () => {
   //   const data = {
