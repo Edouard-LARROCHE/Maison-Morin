@@ -39,7 +39,7 @@
 
 .articles {
   background: rgb(247, 244, 244);
-  height: 10.5rem;
+  height: 8rem;
   border-radius: 5px;
 }
 
@@ -53,7 +53,8 @@
     margin-top: 0.3rem;
 
     img {
-      width: 100%;
+      width: 70%;
+      height: 7rem;
     }
   }
 
@@ -69,6 +70,19 @@
 
     p:nth-child(2) {
       opacity: 0.7;
+    }
+
+    .delete-icon {
+      color: $color-2;
+      cursor: pointer;
+      margin-top: 1rem;
+      font-size: 18px;
+      opacity: 0.8;
+      &:hover {
+        opacity: 1;
+        font-size: 20px;
+        color: $color-2;
+      }
     }
   }
 

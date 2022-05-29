@@ -1,4 +1,5 @@
 import React from 'react';
+import DeleteIcon from '@material-ui/icons/Delete';
 
 const Articles = ({ gallery }) => {
   return (
@@ -10,6 +11,7 @@ const Articles = ({ gallery }) => {
         <div className='article'>
           <p> {gallery.name} </p>
           <p>Bouteille 75cl</p>
+          <DeleteIcon className='delete-icon' />
         </div>
         <div className='price-more-less'></div>
       </div>
