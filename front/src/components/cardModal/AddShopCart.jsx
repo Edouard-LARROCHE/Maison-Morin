@@ -1,15 +1,26 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
+import axios from 'axios';
 import { Link } from 'react-router-dom';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import StorefrontIcon from '@material-ui/icons/Storefront';
 import { useDispatch, useSelector } from 'react-redux';
 import { getProduct } from '../../actions/product.actions';
+import { addCard } from '../../actions/user.actions';
+import { UidContext } from '../../AppContext';
 
 const AddShopCart = ({ gallery, comfirmAdd, emptyShop, hide, remove }) => {
   const [product, setProduct] = useState(1);
   const [localData, setLocalData] = useState([]);
   const productId = useSelector((state) => state.productReducer);
+  const userData = useSelector((state) => state.userReducer);
   const dispatch = useDispatch();
+  const uid = useContext(UidContext);
+
+  useEffect(() => {
+    for (let i = 0; i < productId.length; i++) {
+      setLocalData(productId);
+    }
+  }, [productId]);
 
   const moreProduct = () => {
     if (product >= 6) {
@@ -25,42 +36,30 @@ const AddShopCart = ({ gallery, comfirmAdd, emptyShop, hide, remove }) => {
   };
 
   const localStore = () => {
-    // let cardData = window.localStorage.Vins ? window.localStorage.Vins.split(',') : [];
-    // if (cardData.length >= 6) {
-    //   alert("Si vous souhaitez commander plus de 6 bouteilles d'une même référence, veuillez nous contacter.");
-    // } else {
-    //   cardData.push(gallery._id);
-    //   window.localStorage.Vins = cardData;
-    //   setLocalData(cardData);
-    //   setProduct(product);
-    // }
     dispatch(getProduct(gallery._id));
+    setProduct(product);
   };
   // cardData.includes(gallery._id.toString())
 
-  useEffect(() => {
-    for (let i = 0; i < productId.length; i++) {
-      setLocalData(productId);
+  const addStore = () => {
+    const data = {
+      shopCart: gallery._id,
+    };
+
+    if (uid) {
+      if (!userData.shopCart.includes(gallery._id.toString())) {
+        dispatch(addCard(gallery._id));
+        axios
+          .patch(`/api/user/addCard/${uid}`, data)
+          .then((res) => {
+            return res;
+          })
+          .catch((err) => console.log(err));
+      }
+    } else {
+      console.log('user null');
     }
-  }, [productId]);
-
-  // const addStore = () => {
-  //   const data = {
-  //     shopCart: gallery._id,
-  //   };
-
-  //   if (uid) {
-  //     if (!userData.shopCart.includes(gallery._id.toString())) {
-  //       dispatch(addCard(gallery._id));
-  //       axios
-  //         .patch(`/api/user/addCard/${uid}`, data)
-  //         .then((res) => {
-  //           return res;
-  //         })
-  //         .catch((err) => console.log(err));
-  //     }
-  //   }
-  // };
+  };
 
   return (
     <div className='add-shop-cart'>
@@ -87,6 +86,7 @@ const AddShopCart = ({ gallery, comfirmAdd, emptyShop, hide, remove }) => {
         <button
           onClick={() => {
             localStore();
+            addStore();
             comfirmAdd();
           }}>
           Ajouter
