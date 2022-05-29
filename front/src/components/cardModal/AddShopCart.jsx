@@ -40,36 +40,23 @@ const AddShopCart = ({ gallery, comfirmAdd, emptyShop, hide, remove }) => {
     }
   }, []);
 
-  //   const addStore = () => {
-  //     const data = {
-  //       shopCart: gallery._id,
-  //     };
-
-  //     if (uid) {
-  //       if (!userData.shopCart.includes(gallery._id.toString())) {
-  //         dispatch(addCard(gallery._id));
-  //         axios
-  //           .patch(`/api/user/addCard/${uid}`, data)
-  //           .then((res) => {
-  //             setConfirm('confirm');
-  //             setTimeout(() => {
-  //               setConfirm('confirm-before');
-  //             }, 1500);
-  //           })
-  //           .catch((err) => console.log(err));
-  //       } else {
-  //         setAdd('add');
-  //         setTimeout(() => {
-  //           setAdd('add-before');
-  //         }, 1500);
-  //       }
-  //     } else {
-  //       setConnect('connect');
-  //       setTimeout(() => {
-  //         setConnect('connect-before');
-  //       }, 1500);
-  //     }
+  // const addStore = () => {
+  //   const data = {
+  //     shopCart: gallery._id,
   //   };
+
+  //   if (uid) {
+  //     if (!userData.shopCart.includes(gallery._id.toString())) {
+  //       dispatch(addCard(gallery._id));
+  //       axios
+  //         .patch(`/api/user/addCard/${uid}`, data)
+  //         .then((res) => {
+  //           return res;
+  //         })
+  //         .catch((err) => console.log(err));
+  //     }
+  //   }
+  // };
 
   return (
     <div className='add-shop-cart'>

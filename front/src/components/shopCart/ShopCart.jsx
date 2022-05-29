@@ -50,6 +50,7 @@ const ShopCart = () => {
           {localData.map((gallery) => (
             <Articles gallery={gallery} key={gallery._id} />
           ))}
+          <p>Vider le panier</p>
         </div>
         <div className='total-list'></div>
       </div>
