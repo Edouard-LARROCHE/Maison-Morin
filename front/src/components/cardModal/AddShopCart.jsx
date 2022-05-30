@@ -56,8 +56,6 @@ const AddShopCart = ({ gallery, comfirmAdd, emptyShop, hide, remove }) => {
           })
           .catch((err) => console.log(err));
       }
-    } else {
-      console.log('user null');
     }
   };
 
