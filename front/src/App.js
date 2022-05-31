@@ -31,7 +31,7 @@ import Login from './components/log/Login';
 import Purchase from './components/userInfo/Purchase';
 import Register from './components/log/Register';
 // REDUX
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { getUser } from './actions/user.actions';
 
 function App() {
