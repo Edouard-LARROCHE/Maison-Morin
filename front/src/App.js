@@ -31,7 +31,7 @@ import Login from './components/log/Login';
 import Purchase from './components/userInfo/Purchase';
 import Register from './components/log/Register';
 // REDUX
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { getUser } from './actions/user.actions';
 
 function App() {
@@ -39,6 +39,7 @@ function App() {
   const darkMode = theme.state.darkMode;
   const [transition, setTransition] = useState(true);
   const [uid, setUid] = useState(null);
+  const localStoreData = window.localStorage.Vins;
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -62,6 +63,17 @@ function App() {
     fetchToken();
     if (uid) {
       dispatch(getUser(uid));
+
+      const data = {
+        shopCart: localStoreData,
+      };
+
+      axios
+        .patch(`/api/user/addCard/${uid}`, data)
+        .then((res) => {
+          return res;
+        })
+        .catch((err) => console.log(err));
     }
   }, [uid, dispatch]);
 
