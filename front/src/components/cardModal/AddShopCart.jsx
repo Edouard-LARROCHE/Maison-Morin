@@ -11,16 +11,28 @@ import { UidContext } from '../../AppContext';
 const AddShopCart = ({ gallery, comfirmAdd, emptyShop, hide, remove }) => {
   const [product, setProduct] = useState(1);
   const [localData, setLocalData] = useState([]);
-  const productId = useSelector((state) => state.productReducer);
+  const localStoreData = window.localStorage.Vins;
   const userData = useSelector((state) => state.userReducer);
+  const shopcartData = useSelector((state) => state.userReducer.shopCart);
   const dispatch = useDispatch();
   const uid = useContext(UidContext);
 
   useEffect(() => {
-    for (let i = 0; i < productId.length; i++) {
-      setLocalData(productId);
+    if (localStoreData) {
+      let storeLocal = window.localStorage.Vins.split([',']);
+      for (let i = 0; i < storeLocal.length; i++) {
+        setLocalData(storeLocal);
+      }
+    } else {
+      if (shopcartData) {
+        if (localStoreData === undefined) {
+          for (let i = 0; i < shopcartData.length; i++) {
+            setLocalData(shopcartData);
+          }
+        }
+      }
     }
-  }, [productId]);
+  }, [localStoreData]);
 
   const moreProduct = () => {
     if (product >= 6) {
