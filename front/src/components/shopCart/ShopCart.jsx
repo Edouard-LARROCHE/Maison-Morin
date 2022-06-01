@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Articles from './Articles';
+import { useSelector } from 'react-redux';
 
 const ShopCart = () => {
   const [localData, setLocalData] = useState([]);
+  const shopCartData = useSelector((state) => state.userReducer.shopCart);
 
   useEffect(() => {
-    let cardData = window.localStorage.Vins ? window.localStorage.Vins.split(',') : [];
+    let cardData = shopCartData;
     let urls = [
       '/picture/cave/vins/',
       '/picture/traiteur/viande/',
