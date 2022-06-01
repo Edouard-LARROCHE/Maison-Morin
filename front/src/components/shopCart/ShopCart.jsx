@@ -8,7 +8,9 @@ const ShopCart = () => {
   const shopCartData = useSelector((state) => state.userReducer.shopCart);
 
   useEffect(() => {
-    let cardData = shopCartData;
+    let cardData = window.localStorage.Vins ? window.localStorage.Vins.split(',') : [];
+    let storeData = shopCartData;
+    let switchlocationData = shopCartData ? storeData : cardData;
     let urls = [
       '/picture/cave/vins/',
       '/picture/traiteur/viande/',
@@ -20,8 +22,8 @@ const ShopCart = () => {
       '/picture/produitsExcep/',
     ];
 
-    for (let i = 0; i < cardData.length; i++) {
-      Promise.all(urls.map((url) => axios.get(url + cardData[i]))).then(
+    for (let i = 0; i < switchlocationData.length; i++) {
+      Promise.all(urls.map((url) => axios.get(url + switchlocationData[i]))).then(
         ([
           { data: vins },
           { data: viandes },
@@ -44,7 +46,8 @@ const ShopCart = () => {
   return (
     <div className='shopCart'>
       <h2>
-        Votre panier contient {localData.length} article{localData.length > 1 ? 's' : ''}
+        Votre panier contient {shopCartData ? shopCartData.length : localData.length} article
+        {shopCartData ? (shopCartData.length > 1 ? 's' : '') : localData.length > 1 ? 's' : ''}
       </h2>
       <div className='grid-list'>
         <div className='article-list'>
