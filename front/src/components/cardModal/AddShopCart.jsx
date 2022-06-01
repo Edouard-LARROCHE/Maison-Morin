@@ -36,7 +36,7 @@ const AddShopCart = ({ gallery, comfirmAdd, emptyShop, hide, remove }) => {
   };
 
   const localStore = () => {
-    let storeLocal = window.localStorage.Vins ? window.localStorage.Vins.split([...gallery._id] + ',') : [];
+    let storeLocal = window.localStorage.Vins ? window.localStorage.Vins.split([',']) : [];
     storeLocal.push(gallery._id);
     window.localStorage.Vins = storeLocal;
     dispatch(getProduct(gallery._id));

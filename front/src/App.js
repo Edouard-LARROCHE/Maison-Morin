@@ -63,17 +63,19 @@ function App() {
     fetchToken();
     if (uid) {
       dispatch(getUser(uid));
+      if (localStoreData) {
+        let splitLocalStore = localStoreData.split([',']);
+        const data = {
+          shopCart: splitLocalStore,
+        };
 
-      const data = {
-        shopCart: localStoreData,
-      };
-
-      axios
-        .patch(`/api/user/addCard/${uid}`, data)
-        .then((res) => {
-          return res;
-        })
-        .catch((err) => console.log(err));
+        axios
+          .patch(`/api/user/addCard/${uid}`, data)
+          .then((res) => {
+            return res;
+          })
+          .catch((err) => console.log(err));
+      }
     }
   }, [uid, dispatch]);
 
