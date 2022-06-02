@@ -16,7 +16,7 @@
   .article-list {
     grid-area: 1 / 1 / 2 / 2;
 
-    p:nth-child(1) {
+    .send-product {
       padding: 0.5rem;
       padding-left: 1rem;
       height: 2.5rem;
@@ -46,7 +46,7 @@
 
 .grid-article {
   display: grid;
-  grid-template-columns: 20% 50% 1fr;
+  grid-template-columns: 20% 40% 1fr;
   grid-template-rows: 1fr;
 
   .picture-article {
@@ -89,5 +89,33 @@
 
   .price-more-less {
     grid-area: 1 / 3 / 2 / 4;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    .more-less-button {
+      font-size: 1.4rem;
+      width: 7rem;
+      display: flex;
+      justify-content: space-between;
+      border: 0.5px solid rgb(219, 215, 215);
+      border-radius: 5px;
+    }
+
+    .less {
+      margin-left: 0.5rem;
+    }
+
+    .more {
+      margin-right: 0.5rem;
+    }
+
+    .allowed {
+      cursor: not-allowed;
+    }
+
+    .pointer {
+      cursor: pointer;
+    }
   }
 }
