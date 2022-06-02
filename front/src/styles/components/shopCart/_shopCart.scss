@@ -50,6 +50,20 @@
 
     .send-return {
       grid-area: 3 / 1 / 4 / 2;
+      background: rgb(247, 244, 244);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      h3 {
+        margin: 0.5rem 0 0.5rem 0;
+      }
+
+      .buy-product,
+      .return-product {
+        display: flex;
+        justify-content: center;
+      }
     }
   }
 }
