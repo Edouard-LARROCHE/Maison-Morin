@@ -5,7 +5,7 @@ const Articles = ({ gallery }) => {
   const [newLocalArray, setNewLocalArray] = useState(window.localStorage.Vins.split([',']));
 
   const deleteItemsStore = () => {
-    let removeItemsStore = window.localStorage.Vins.split([',']);
+    let removeItemsStore = window.localStorage.Vins ? window.localStorage.Vins.split([',']) : [];
     let newArray = removeItemsStore.filter((id) => id !== gallery._id);
     window.localStorage.Vins = newArray;
     setNewLocalArray(newArray);
