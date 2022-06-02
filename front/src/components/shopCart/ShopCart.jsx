@@ -41,7 +41,7 @@ const ShopCart = () => {
         },
       );
     }
-  }, []);
+  }, [shopCartData]);
 
   return (
     <div className='shopCart'>
