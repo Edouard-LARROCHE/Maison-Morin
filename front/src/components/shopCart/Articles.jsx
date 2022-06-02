@@ -12,6 +12,19 @@ const Articles = ({ gallery }) => {
     setNewLocalArray(newArray);
   };
 
+  const moreProduct = () => {
+    if (product >= 6) {
+      alert("Si vous souhaitez commander plus de 6 bouteilles d'une même référence, veuillez nous contacter.");
+      setProduct(product);
+    } else setProduct(product + 1);
+  };
+
+  const lessProduct = () => {
+    if (product === 1) {
+      setProduct(product);
+    } else setProduct(product - 1);
+  };
+
   console.log(newLocalArray);
   return (
     <>
@@ -30,13 +43,13 @@ const Articles = ({ gallery }) => {
               <h3> € {gallery.price + " l'unité"} </h3>
               <div className='more-less-button'>
                 <div className='less'>
-                  <p onClick={() => setProduct(product - 1)} className={product === 1 ? 'allowed' : 'pointer'}>
+                  <p onClick={lessProduct} className={product === 1 ? 'allowed' : 'pointer'}>
                     -
                   </p>
                 </div>
                 <p>{product}</p>
                 <div className='more'>
-                  <p onClick={() => setProduct(product + 1)} className='pointer'>
+                  <p onClick={moreProduct} className='pointer'>
                     +
                   </p>
                 </div>
