@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Articles from './Articles';
 import { useSelector } from 'react-redux';
+import TotalShopCart from './TotalShopCart';
 
 const ShopCart = () => {
   const [localData, setLocalData] = useState([]);
@@ -71,7 +72,9 @@ const ShopCart = () => {
           ))}
           <p>Vider le panier</p>
         </div>
-        <div className='total-list'></div>
+        {localData.map((gallery) => (
+          <TotalShopCart gallery={gallery} key={gallery._id} />
+        ))}
       </div>
     </div>
   );

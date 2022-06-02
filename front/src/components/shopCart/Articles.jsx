@@ -25,7 +25,6 @@ const Articles = ({ gallery }) => {
     } else setProduct(product - 1);
   };
 
-  console.log(newLocalArray);
   return (
     <>
       {newLocalArray && (
