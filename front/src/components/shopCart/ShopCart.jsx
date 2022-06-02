@@ -10,7 +10,7 @@ const ShopCart = () => {
   useEffect(() => {
     let cardData = window.localStorage.Vins ? window.localStorage.Vins.split(',') : [];
     let storeData = shopCartData;
-    let switchlocationData = shopCartData ? storeData : cardData;
+    let switchLocationData = shopCartData ? storeData : cardData;
     let urls = [
       '/picture/cave/vins/',
       '/picture/traiteur/viande/',
@@ -22,8 +22,8 @@ const ShopCart = () => {
       '/picture/produitsExcep/',
     ];
 
-    for (let i = 0; i < switchlocationData.length; i++) {
-      Promise.all(urls.map((url) => axios.get(url + switchlocationData[i]))).then(
+    for (let i = 0; i < switchLocationData.length; i++) {
+      Promise.all(urls.map((url) => axios.get(url + switchLocationData[i]))).then(
         ([
           { data: vins },
           { data: viandes },
