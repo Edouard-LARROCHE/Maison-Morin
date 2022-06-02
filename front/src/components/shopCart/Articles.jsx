@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import DeleteIcon from '@material-ui/icons/Delete';
 
 const Articles = ({ gallery }) => {
@@ -11,17 +11,11 @@ const Articles = ({ gallery }) => {
     setNewLocalArray(newArray);
   };
 
-  useEffect(() => {
-    for (let i = 0; i < newLocalArray.length; i++) {
-      setNewLocalArray(newLocalArray);
-    }
-  }, [newLocalArray]);
-
   console.log(newLocalArray);
   return (
     <>
-      {newLocalArray.map((index) => (
-        <div key={index} className='articles'>
+      {newLocalArray && (
+        <div className='articles'>
           <div className='grid-article'>
             <div className='picture-article'>
               <img src={gallery.pictureUrl} alt='produit' />
@@ -34,7 +28,7 @@ const Articles = ({ gallery }) => {
             <div className='price-more-less'></div>
           </div>
         </div>
-      ))}
+      )}
     </>
   );
 };

@@ -45,20 +45,47 @@ const ShopCart = () => {
 
   return (
     <div className='shopCart'>
-      <h2>
-        Votre panier contient {shopCartData ? shopCartData.length : localData.length} article
-        {shopCartData ? (shopCartData.length > 1 ? 's' : '') : localData.length > 1 ? 's' : ''}
-      </h2>
-      <div className='grid-list'>
-        <div className='article-list'>
-          <p>Produits vendus par Maison-Morin</p>
-          {localData.map((gallery) => (
-            <Articles gallery={gallery} key={gallery._id} />
-          ))}
-          <p>Vider le panier</p>
-        </div>
-        <div className='total-list'></div>
-      </div>
+      {shopCartData ? (
+        shopCartData.length === 0 ? (
+          <h2>Votre panier est vide</h2>
+        ) : (
+          <>
+            <h2>
+              Votre panier contient {shopCartData ? shopCartData.length : localData.length} article
+              {shopCartData ? (shopCartData.length > 1 ? 's' : '') : localData.length > 1 ? 's' : ''}
+            </h2>
+            <div className='grid-list'>
+              <div className='article-list'>
+                <p>Produits vendus par Maison-Morin</p>
+                {localData.map((gallery) => (
+                  <Articles gallery={gallery} key={gallery._id} />
+                ))}
+                <p>Vider le panier</p>
+              </div>
+              <div className='total-list'></div>
+            </div>
+          </>
+        )
+      ) : localData.length === 0 ? (
+        <h2>Votre panier est vide</h2>
+      ) : (
+        <>
+          <h2>
+            Votre panier contient {shopCartData ? shopCartData.length : localData.length} article
+            {shopCartData ? (shopCartData.length > 1 ? 's' : '') : localData.length > 1 ? 's' : ''}
+          </h2>
+          <div className='grid-list'>
+            <div className='article-list'>
+              <p>Produits vendus par Maison-Morin</p>
+              {localData.map((gallery) => (
+                <Articles gallery={gallery} key={gallery._id} />
+              ))}
+              <p>Vider le panier</p>
+            </div>
+            <div className='total-list'></div>
+          </div>
+        </>
+      )}
     </div>
   );
 };
