@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Articles from './Articles';
-import { useSelector } from 'react-redux';
 import TotalShopCart from './TotalShopCart';
+import { useSelector } from 'react-redux';
 
 const ShopCart = () => {
   const [localData, setLocalData] = useState([]);
