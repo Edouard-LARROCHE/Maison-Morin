@@ -1,13 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import Loader from '../Loader';
 import ShoppingCartCard from './ShoppingCartCard';
 import { useSelector } from 'react-redux';
 
 const ShoppingCartData = () => {
+  const [loading, setLoading] = useState(true);
   const [listData, setListData] = useState([]);
   const cardId = useSelector((state) => state.userReducer.shopCart);
 
   useEffect(() => {
+    setLoading(false);
     let urls = [
       '/picture/cave/vins/',
       '/picture/traiteur/viande/',
@@ -42,6 +45,10 @@ const ShoppingCartData = () => {
     <div className='shopCart-connect'>
       {listData.length === 0 ? (
         <h2>Votre panier est vide</h2>
+      ) : loading ? (
+        <>
+          <Loader />
+        </>
       ) : (
         <>
           <h2>
