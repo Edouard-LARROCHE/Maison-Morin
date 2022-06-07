@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import { UidContext } from './AppContext';
 import axios from 'axios';
-// IMPORT
+// IMPORT GLOBAL
 import Cookie from './components/Cookie';
 import Home from './pages/Home';
 import LegalNotice from './pages/LegalNotice';
@@ -13,6 +13,7 @@ import Shop from './pages/Shop';
 import MaisonMorin from './pages/MaisonMorin';
 import Transition from './pages/Transition';
 import ShopCartIndex from './pages/ShopCartIndex';
+import Purchase from './components/userInfo/Purchase';
 // IMPORT GALLERY
 import TraiteurCharcuterie from './pages/gallery/traiteur/TraiteurCharcuterie';
 import TraiteurViande from './pages/gallery/traiteur/TraiteurViande';
@@ -28,7 +29,6 @@ import { ThemeContext } from './components/darkMode/ThemeContext';
 import ScrollToTop from './components/ScrollToTop';
 // AUTH
 import Login from './components/log/Login';
-import Purchase from './components/userInfo/Purchase';
 import Register from './components/log/Register';
 // REDUX
 import { useDispatch } from 'react-redux';
