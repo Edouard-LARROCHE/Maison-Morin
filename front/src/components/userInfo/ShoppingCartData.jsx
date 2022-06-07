@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Loader from '../Loader';
 import ShoppingCartCard from './ShoppingCartCard';
+import TotalShopCart from '../shopCart/TotalShopCart';
 import { useSelector } from 'react-redux';
 
 const ShoppingCartData = () => {
@@ -63,6 +64,9 @@ const ShoppingCartData = () => {
               ))}
               <p>Vider le panier</p>
             </div>
+            {listData.map((gallery) => (
+              <TotalShopCart gallery={gallery} key={gallery._id} />
+            ))}
           </div>
         </>
       )}

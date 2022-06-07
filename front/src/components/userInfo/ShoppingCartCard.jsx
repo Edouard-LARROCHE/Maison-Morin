@@ -8,6 +8,7 @@ import { UidContext } from '../../AppContext';
 
 const ShoppingCartCard = ({ gallery }) => {
   const [loading, setLoading] = useState(true);
+  const [product, setProduct] = useState(1);
   const dispatch = useDispatch();
   const uid = useContext(UidContext);
 
@@ -26,6 +27,19 @@ const ShoppingCartCard = ({ gallery }) => {
         return res;
       })
       .catch((err) => console.log(err));
+  };
+
+  const moreProduct = () => {
+    if (product >= 6) {
+      alert("Si vous souhaitez commander plus de 6 bouteilles d'une même référence, veuillez nous contacter.");
+      setProduct(product);
+    } else setProduct(product + 1);
+  };
+
+  const lessProduct = () => {
+    if (product === 1) {
+      setProduct(product);
+    } else setProduct(product - 1);
   };
 
   return (
@@ -48,7 +62,7 @@ const ShoppingCartCard = ({ gallery }) => {
             <div className='price-more-less'>
               <h3> € {gallery.price + " l'unité"} </h3>
               <div className='more-less-button'>
-                {/* <div className='less'>
+                <div className='less'>
                   <p onClick={lessProduct} className={product === 1 ? 'allowed' : 'pointer'}>
                     -
                   </p>
@@ -58,7 +72,7 @@ const ShoppingCartCard = ({ gallery }) => {
                   <p onClick={moreProduct} className='pointer'>
                     +
                   </p>
-                </div> */}
+                </div>
               </div>
             </div>
           </div>
