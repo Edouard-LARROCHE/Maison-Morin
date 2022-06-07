@@ -35,15 +35,31 @@ const ShoppingCartCard = ({ gallery }) => {
           <Loader />
         </>
       ) : (
-        <div className='photos'>
-          <img className='img-gallerie' src={gallery.pictureUrl} alt='MAISON-MORIN' />
-          <div className='icones'></div>
-          <div className='info-card'>
-            <p> {gallery.name} </p>
-            <p> {gallery.price} </p>
-            <div className='add-shopping-cart' onClick={() => deleteStore()}>
-              <p style={{ marginRight: '0.5rem' }}>SUPPRIMER AU PANIER</p>
-              <DeleteIcon style={{ transform: 'translateY(15px)' }} />
+        <div className='articles'>
+          <div className='grid-article'>
+            <div className='picture-article'>
+              <img src={gallery.pictureUrl} alt='produit' />
+            </div>
+            <div className='article'>
+              <p> {gallery.name} </p>
+              <p>Bouteille 75cl</p>
+              <DeleteIcon className='delete-icon' onClick={() => deleteStore()} />
+            </div>
+            <div className='price-more-less'>
+              <h3> € {gallery.price + " l'unité"} </h3>
+              <div className='more-less-button'>
+                {/* <div className='less'>
+                  <p onClick={lessProduct} className={product === 1 ? 'allowed' : 'pointer'}>
+                    -
+                  </p>
+                </div>
+                <p>{product}</p>
+                <div className='more'>
+                  <p onClick={moreProduct} className='pointer'>
+                    +
+                  </p>
+                </div> */}
+              </div>
             </div>
           </div>
         </div>
