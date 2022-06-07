@@ -108,7 +108,25 @@ const AddShopCart = ({ gallery, comfirmAdd, emptyShop, hide, remove }) => {
       <div className='shopCart-option'>
         <ShoppingCartIcon style={{ color: '#012f6b' }} />
         <p> {localData.length} </p>
-        {localData.length > 0 ? (
+
+        {uid ? (
+          localData.length > 0 ? (
+            <Link to='/mon-compte'>
+              <p
+                onClick={() => {
+                  hide();
+                  remove();
+                }}
+                style={{ marginLeft: '1rem' }}>
+                VOIR LE PANIER
+              </p>
+            </Link>
+          ) : (
+            <p onClick={emptyShop} style={{ marginLeft: '1rem' }}>
+              VOIR LE PANIER
+            </p>
+          )
+        ) : localData.length > 0 ? (
           <Link to='/mon-panier'>
             <p
               onClick={() => {
