@@ -4,7 +4,7 @@ import ButtonSwitch from '../darkMode/ButtonSwitch';
 import MenuIcon from '@material-ui/icons/Menu';
 import CloseIcon from '@material-ui/icons/Close';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
-import UserConnect from '../UserConnect';
+import UserConnect from '../userConnectBar/UserConnect';
 import { UidContext } from '../../AppContext';
 
 const NavBar = () => {

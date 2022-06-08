@@ -5,7 +5,7 @@ import HeadBand from '../../../components/HeadBand';
 import MenuDrop from '../../../components/dropDown/MenuDrop';
 import Charcuterie from '../../../components/gallery/traiteur/Charcuterie';
 import TopArrow from '../../../components/TopArrow';
-import UserBar from '../../../components/UserBar';
+import UserBar from '../../../components/userConnectBar/UserBar';
 import { UidContext } from '../../../AppContext';
 
 const TraiteurCharcuterie = () => {

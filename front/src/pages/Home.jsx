@@ -12,7 +12,7 @@ import Selection from '../components/Selection';
 import Menu from '../components/menu/Menu';
 import BottomCard from '../components/home/BottomCard';
 import { UidContext } from '../AppContext';
-import UserBar from '../components/UserBar';
+import UserBar from '../components/userConnectBar/UserBar';
 
 const Home = () => {
   const uid = useContext(UidContext);

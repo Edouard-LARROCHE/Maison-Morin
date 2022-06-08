@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { UidContext } from '../AppContext';
+import { UidContext } from '../../AppContext';
 import { useSelector } from 'react-redux';
 
 const UserConnect = () => {
