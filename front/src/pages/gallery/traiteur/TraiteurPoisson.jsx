@@ -7,6 +7,7 @@ import Poissons from '../../../components/gallery/traiteur/Poissons';
 import TopArrow from '../../../components/TopArrow';
 import UserBar from '../../../components/userConnectBar/UserBar';
 import { UidContext } from '../../../AppContext';
+import UserNoconnectBar from '../../../components/userNoConnectBar/UserNoConnectBar';
 
 const TraiteurPoisson = () => {
   const uid = useContext(UidContext);
@@ -24,6 +25,7 @@ const TraiteurPoisson = () => {
         </div>
       ) : (
         <div>
+          <UserNoconnectBar />
           <NavBar />
           <HeadBand />
           <MenuDrop />

@@ -32,6 +32,9 @@ const UserNoconnectBar = () => {
         <h3>{localStoreData.length}</h3>
         <p>ARTICLE{localStoreData.length > 1 ? 'S' : ''}</p>
       </div>
+      <div className='user-connect-bar'>
+        <img src='./logo/Or.png' alt='Maison-Morin' style={{ width: '1.5rem' }} />
+      </div>
     </div>
   );
 };

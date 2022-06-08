@@ -7,6 +7,7 @@ import ProduitsDexception from '../../components/gallery/ProduitsDexception';
 import TopArrow from '../../components/TopArrow';
 import UserBar from '../../components/userConnectBar/UserBar';
 import { UidContext } from '../../AppContext';
+import UserNoconnectBar from '../../components/userNoConnectBar/UserNoConnectBar';
 
 const PageProduitsDexception = () => {
   const uid = useContext(UidContext);
@@ -25,6 +26,7 @@ const PageProduitsDexception = () => {
         </div>
       ) : (
         <div>
+          <UserNoconnectBar />
           <NavBar />
           <HeadBand />
           <MenuDrop />

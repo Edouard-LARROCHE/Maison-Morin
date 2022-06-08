@@ -7,6 +7,7 @@ import Cocktails from '../../components/gallery/Cocktails';
 import TopArrow from '../../components/TopArrow';
 import UserBar from '../../components/userConnectBar/UserBar';
 import { UidContext } from '../../AppContext';
+import UserNoconnectBar from '../../components/userNoConnectBar/UserNoConnectBar';
 
 const PageCocktails = () => {
   const uid = useContext(UidContext);
@@ -24,6 +25,7 @@ const PageCocktails = () => {
         </div>
       ) : (
         <div>
+          <UserNoconnectBar />
           <NavBar />
           <HeadBand />
           <MenuDrop />

@@ -7,6 +7,7 @@ import Macarons from '../../../components/gallery/patisserie/Macarons';
 import TopArrow from '../../../components/TopArrow';
 import UserBar from '../../../components/userConnectBar/UserBar';
 import { UidContext } from '../../../AppContext';
+import UserNoconnectBar from '../../../components/userNoConnectBar/UserNoConnectBar';
 
 const PatisserieMacaron = () => {
   const uid = useContext(UidContext);
@@ -24,6 +25,7 @@ const PatisserieMacaron = () => {
         </div>
       ) : (
         <div>
+          <UserNoconnectBar />
           <NavBar />
           <HeadBand />
           <MenuDrop />

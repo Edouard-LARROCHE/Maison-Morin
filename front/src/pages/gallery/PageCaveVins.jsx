@@ -7,6 +7,7 @@ import CaveVins from '../../components/gallery/CaveVins';
 import TopArrow from '../../components/TopArrow';
 import UserBar from '../../components/userConnectBar/UserBar';
 import { UidContext } from '../../AppContext';
+import UserNoconnectBar from '../../components/userNoConnectBar/UserNoConnectBar';
 
 const PageCaveVins = () => {
   const uid = useContext(UidContext);
@@ -24,6 +25,7 @@ const PageCaveVins = () => {
         </div>
       ) : (
         <div>
+          <UserNoconnectBar />
           <NavBar />
           <HeadBand />
           <MenuDrop />
