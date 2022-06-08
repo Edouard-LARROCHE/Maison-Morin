@@ -13,6 +13,7 @@ import Menu from '../components/menu/Menu';
 import BottomCard from '../components/home/BottomCard';
 import { UidContext } from '../AppContext';
 import UserBar from '../components/userConnectBar/UserBar';
+import UserNoconnectBar from '../components/userNoConnectBar/UserNoConnectBar';
 
 const Home = () => {
   const uid = useContext(UidContext);
@@ -37,6 +38,7 @@ const Home = () => {
         </div>
       ) : (
         <div>
+          <UserNoconnectBar />
           <NavBar />
           <HeadBand />
           <MenuDrop />

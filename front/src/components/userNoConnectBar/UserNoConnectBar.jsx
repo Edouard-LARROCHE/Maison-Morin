@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 
-const UserBar = () => {
+const UserNoconnectBar = () => {
   const [bar, setBar] = useState('user-bar-before');
   const localStoreData = window.localStorage.Vins ? window.localStorage.Vins.split(',') : [];
 
@@ -30,10 +30,10 @@ const UserBar = () => {
       </div>
       <div className='lenght-article'>
         <h3>{localStoreData.length}</h3>
-        <p>ARTICLE{localStoreData.length > 1 ? 's' : ''}</p>
+        <p>ARTICLE{localStoreData.length > 1 ? 'S' : ''}</p>
       </div>
     </div>
   );
 };
 
-export default UserBar;
+export default UserNoconnectBar;
