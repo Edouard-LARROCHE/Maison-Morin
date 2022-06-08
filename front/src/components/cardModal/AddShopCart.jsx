@@ -107,7 +107,7 @@ const AddShopCart = ({ gallery, comfirmAdd, emptyShop, hide, remove }) => {
       </div>
       <div className='shopCart-option'>
         <ShoppingCartIcon style={{ color: '#012f6b' }} />
-        <p> {localData.length} </p>
+        <p> {uid ? shopcartData.length : localData.length} </p>
 
         {uid ? (
           localData.length > 0 ? (
