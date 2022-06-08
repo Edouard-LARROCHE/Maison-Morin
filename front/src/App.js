@@ -35,6 +35,7 @@ import { useDispatch } from 'react-redux';
 import { getUser } from './actions/user.actions';
 
 function App() {
+  const url = process.env.REACT_APP_UPDATE;
   const theme = useContext(ThemeContext);
   const darkMode = theme.state.darkMode;
   const [transition, setTransition] = useState(true);
@@ -96,7 +97,7 @@ function App() {
                   <Route path='/mentions-legales' element={<LegalNotice />} />
                   <Route path='/cookie' element={<Cookies />} />
                   <Route path='/contact' element={<FormContact />} />
-                  <Route path='/update' element={<Admin />} />
+                  <Route path={`/${url}`} element={<Admin />} />
                   <Route path='/boutique' element={<Shop />} />
                   <Route path='/maison-morin' element={<MaisonMorin />} />
                   <Route path='/traiteur-viandes' element={<TraiteurViande />} />

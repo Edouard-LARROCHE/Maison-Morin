@@ -27,7 +27,7 @@ const IndexModal = () => {
     })
       .then((res) => {
         if (res.data[0].name === name && res.data[0].password === password) {
-          window.location = '/update';
+          window.location = process.env.REACT_APP_UPDATE;
           err.style.display = 'none';
         } else {
           err.style.display = 'block';
