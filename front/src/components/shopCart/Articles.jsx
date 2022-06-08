@@ -6,10 +6,14 @@ const Articles = ({ gallery }) => {
   const [newLocalArray, setNewLocalArray] = useState(window.localStorage.Vins.split([',']));
 
   const deleteItemsStore = () => {
-    let removeItemsStore = window.localStorage.Vins ? window.localStorage.Vins.split([',']) : [];
-    let newArray = removeItemsStore.filter((id) => id !== gallery._id);
-    window.localStorage.Vins = newArray;
-    setNewLocalArray(newArray);
+    try {
+      let removeItemsStore = window.localStorage.Vins ? window.localStorage.Vins.split([',']) : [];
+      let newArray = removeItemsStore.filter((id) => id !== gallery._id);
+      window.localStorage.Vins = newArray;
+      setNewLocalArray(newArray);
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   const moreProduct = () => {

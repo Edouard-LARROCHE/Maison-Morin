@@ -92,7 +92,9 @@ const ShopCart = () => {
               {localData.map((gallery) => (
                 <Articles gallery={gallery} key={gallery._id} />
               ))}
-              <p onClick={deleteStrore}>Vider le panier</p>
+              <p onClick={deleteStrore} style={{ cursor: 'pointer', width: '7rem' }}>
+                Vider le panier
+              </p>
             </div>
             {localData.map((gallery) => (
               <TotalShopCart gallery={gallery} key={gallery._id} />
