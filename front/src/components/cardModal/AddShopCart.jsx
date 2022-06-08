@@ -10,6 +10,7 @@ import { UidContext } from '../../AppContext';
 
 const AddShopCart = ({ gallery, comfirmAdd, emptyShop, hide, remove }) => {
   const [product, setProduct] = useState(1);
+  const [productId, setProductId] = useState(gallery._id);
   const [localData, setLocalData] = useState([]);
   const localStoreData = window.localStorage.Vins;
   const userData = useSelector((state) => state.userReducer);
@@ -32,13 +33,16 @@ const AddShopCart = ({ gallery, comfirmAdd, emptyShop, hide, remove }) => {
         }
       }
     }
-  }, [localStoreData]);
+  }, [localStoreData, shopcartData]);
 
   const moreProduct = () => {
     if (product >= 6) {
       alert("Si vous souhaitez commander plus de 6 bouteilles d'une même référence, veuillez nous contacter.");
       setProduct(product);
-    } else setProduct(product + 1);
+    } else {
+      setProduct(product + 1);
+      setProductId(productId + ',' + gallery._id);
+    }
   };
 
   const lessProduct = () => {
@@ -49,10 +53,11 @@ const AddShopCart = ({ gallery, comfirmAdd, emptyShop, hide, remove }) => {
 
   const localStore = () => {
     let storeLocal = window.localStorage.Vins ? window.localStorage.Vins.split([',']) : [];
-    storeLocal.push(gallery._id);
+    storeLocal.push(productId);
     window.localStorage.Vins = storeLocal;
     dispatch(getProduct(gallery._id));
-    setProduct(product);
+    setProduct(1);
+    setProductId(gallery._id);
   };
   // cardData.includes(gallery._id.toString())
 
