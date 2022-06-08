@@ -8,6 +8,15 @@ const ShopCart = () => {
   const [localData, setLocalData] = useState([]);
   const shopCartData = useSelector((state) => state.userReducer.shopCart);
 
+  const deleteStrore = () => {
+    try {
+      localStorage.removeItem('Vins');
+      setLocalData([]);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
   useEffect(() => {
     let cardData = window.localStorage.Vins ? window.localStorage.Vins.split(',') : [];
     let storeData = shopCartData;
@@ -83,7 +92,7 @@ const ShopCart = () => {
               {localData.map((gallery) => (
                 <Articles gallery={gallery} key={gallery._id} />
               ))}
-              <p>Vider le panier</p>
+              <p onClick={deleteStrore}>Vider le panier</p>
             </div>
             {localData.map((gallery) => (
               <TotalShopCart gallery={gallery} key={gallery._id} />
