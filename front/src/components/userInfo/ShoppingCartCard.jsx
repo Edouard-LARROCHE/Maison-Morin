@@ -17,6 +17,10 @@ const ShoppingCartCard = ({ gallery }) => {
   }, []);
 
   const deleteStore = () => {
+    let removeItemsStore = window.localStorage.Vins ? window.localStorage.Vins.split([',']) : [];
+    let newArray = removeItemsStore.filter((id) => id !== gallery._id);
+    window.localStorage.Vins = newArray;
+
     axios({
       method: 'delete',
       url: `api/user/deleteCard/` + uid,
@@ -27,6 +31,8 @@ const ShoppingCartCard = ({ gallery }) => {
         return res;
       })
       .catch((err) => console.log(err));
+
+    return newArray;
   };
 
   const moreProduct = () => {
