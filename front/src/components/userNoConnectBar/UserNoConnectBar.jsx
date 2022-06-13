@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
+import { useSelector } from 'react-redux';
 
 const UserNoconnectBar = () => {
   const [bar, setBar] = useState('user-bar-before');
-  const localStoreData = window.localStorage.Vins ? window.localStorage.Vins.split(',') : [];
+  const productData = useSelector((state) => state.productReducer);
 
   const displayBar = () => {
     if (window.scrollY >= 500) {
@@ -29,8 +30,8 @@ const UserNoconnectBar = () => {
         </Link>
       </div>
       <div className='lenght-article'>
-        <h3>{localStoreData.length}</h3>
-        <p>ARTICLE{localStoreData.length > 1 ? 'S' : ''}</p>
+        <h3>{productData.length}</h3>
+        <p>ARTICLE{productData.length > 1 ? 'S' : ''}</p>
       </div>
       <div className='user-connect-bar'>
         <img src='./logo/Or.png' alt='Maison-Morin' style={{ width: '1.5rem' }} />
