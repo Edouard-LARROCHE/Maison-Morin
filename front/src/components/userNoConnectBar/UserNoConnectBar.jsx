@@ -31,7 +31,7 @@ const UserNoconnectBar = () => {
         </Link>
       </div>
       <div className='lenght-article'>
-        <h3>{productEffectData.length + productData.length < 1 ? 0 : productEffectData.length + productData.length}</h3>
+        <h3>{productEffectData.length + productData.length}</h3>
         <p>ARTICLE{productEffectData.length + productData.length > 1 ? 'S' : ''}</p>
       </div>
       <div className='user-connect-bar'>
