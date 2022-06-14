@@ -33,6 +33,7 @@ import Register from './components/log/Register';
 // REDUX
 import { useDispatch } from 'react-redux';
 import { getUser } from './actions/user.actions';
+import { getProductEffect } from './actions/productEffect.actions';
 
 function App() {
   const url = process.env.REACT_APP_UPDATE;
@@ -77,6 +78,11 @@ function App() {
           })
           .catch((err) => console.log(err));
       }
+    }
+
+    if (localStoreData) {
+      let splitLocalStore = localStoreData.split([',']);
+      dispatch(getProductEffect(splitLocalStore));
     }
   }, [uid, dispatch]);
 
